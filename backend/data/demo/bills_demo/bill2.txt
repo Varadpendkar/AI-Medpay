@@ -1,0 +1,3 @@
+MRI Abdomen 1800.00
+Surgeon Fee 2200.00
+Anesthesia 600.00

@@ -1,0 +1,7 @@
+plan_id,provider,plan_name,monthly_premium,deductible,network_size,addons,coverage_year
+P-1001,Acme Health,Acme Silver,350.00,2000,4200,dental;vision,2025
+P-1002,Acme Health,Acme Gold,420.00,1500,5200,dental;vision;maternity,2025
+P-2001,GoodCare,GoodCare Basic,300.00,4000,2500,,2025
+P-2002,GoodCare,GoodCare Plus,380.00,2500,3200,dental,2025
+MB-02,MarketB,MarketB Plus,380.00,2500,3200,,2025
+MA-002,MarketA,MarketA Gold,420.00,1500,5000,dental;vision,2025

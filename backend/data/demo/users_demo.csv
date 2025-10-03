@@ -1,0 +1,4 @@
+user_id,username,email,age,dependents,region,risk_score
+U0001,alice,alice@example.com,34,0,west,0.45
+U0002,bob,bob@example.com,46,2,east,0.65
+U0003,carol,carol@example.com,28,1,south,0.30

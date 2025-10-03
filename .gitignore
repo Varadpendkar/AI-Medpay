@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+# Env & secrets
+.env
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Uploads / outputs / models
+uploads/
+outputs/
+models/
+data/*.db
+
+# Migrations / caches
+*.sqlite3

@@ -1,0 +1,501 @@
+user_id,age,gender,marital_status,occupation,income_band,urban_rural,region,dependents,digital_literacy,preferred_payment_mode,preferred_providers,avg_annual_spend,risk_score,chronic_conditions,family_medical_history,existing_health_policy,claim_history_count,renewal_loyalty_years,has_diabetes,has_hypertension,has_asthma,has_cancer_history,has_heart_disease,has_thyroid,has_kidney_disease,has_obesity,has_disability,smoking_status
+U0001,66,other,divorced,retired,10-20L,rural,Karnataka,0,medium,monthly,Niva Bupa;Care Health;HDFC ERGO,180749,0.122,none,none,no,2,9,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0002,52,female,single,homemaker,3-6L,rural,Delhi,0,high,annual,Care Health;ICICI Lombard;LIC,67583,0.531,none,none,no,5,4,yes,no,no,no,no,no,no,no,no,non-smoker
+U0003,24,female,divorced,student,3-6L,rural,Maharashtra,1,high,annual,Niva Bupa;Care Health;LIC,91337,0.12,asthma,none,no,2,4,no,no,no,no,no,no,no,no,no,smoker
+U0004,41,other,widowed,student,10-20L,urban,Maharashtra,1,medium,quarterly,Star Health;LIC,89397,0.212,none,heart_disease,no,3,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0005,43,female,married,retired,6-10L,urban,Karnataka,2,low,annual,Bajaj Allianz,54119,0.444,none,cancer,no,4,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0006,70,female,divorced,self-employed,>20L,semi-urban,Tamil Nadu,0,medium,quarterly,HDFC ERGO;Niva Bupa,20093,0.476,asthma,heart_disease,yes,4,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0007,71,male,widowed,retired,3-6L,semi-urban,Uttar Pradesh,0,high,monthly,SBI Life;Star Health,67005,0.15,none,diabetes,yes,0,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0008,55,other,widowed,self-employed,6-10L,rural,Tamil Nadu,0,high,quarterly,HDFC ERGO,75187,0.373,none,none,no,1,7,no,yes,no,no,no,no,no,no,no,smoker
+U0009,21,female,single,retired,10-20L,semi-urban,Rajasthan,2,high,monthly,Care Health;Niva Bupa,170463,0.455,none,cancer,no,3,0,no,no,no,no,no,no,no,no,no,smoker
+U0010,34,female,married,student,<3L,semi-urban,Kerala,0,medium,monthly,Bajaj Allianz;Star Health;LIC,76326,0.536,none,cancer,yes,2,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0011,37,other,divorced,retired,>20L,urban,Gujarat,3,high,quarterly,Niva Bupa,51111,0.179,none,hypertension,no,2,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0012,55,other,married,retired,>20L,urban,Maharashtra,0,high,annual,Bajaj Allianz;Star Health,16995,0.487,diabetes,none,yes,3,10,yes,yes,no,no,no,no,no,yes,no,ex-smoker
+U0013,69,other,married,student,>20L,rural,Maharashtra,3,high,monthly,HDFC ERGO;Tata AIG;SBI Life,19795,0.521,none,none,no,2,8,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0014,37,male,divorced,self-employed,3-6L,urban,Tamil Nadu,0,high,annual,Care Health;LIC,95106,0.309,none,cancer,yes,5,9,no,yes,no,no,no,no,no,yes,no,ex-smoker
+U0015,25,male,widowed,self-employed,6-10L,semi-urban,Rajasthan,1,medium,monthly,Niva Bupa,97480,0.339,diabetes,cancer,yes,5,8,no,no,no,no,no,no,no,no,no,smoker
+U0016,74,female,widowed,student,<3L,urban,Kerala,1,low,annual,Care Health;HDFC Life,90312,0.388,none,hypertension,no,1,9,yes,yes,no,no,no,no,no,no,no,smoker
+U0017,69,male,married,retired,3-6L,urban,Tamil Nadu,3,high,annual,Niva Bupa;LIC;HDFC ERGO,67789,0.623,none,cancer,yes,0,4,no,no,no,no,no,no,yes,no,no,smoker
+U0018,65,other,married,student,10-20L,semi-urban,Kerala,2,low,annual,ICICI Lombard;Care Health,45567,0.378,none,hypertension,yes,4,1,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0019,53,female,single,retired,>20L,rural,Gujarat,1,high,monthly,HDFC ERGO,56259,0.202,hypertension,none,no,0,7,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0020,36,other,divorced,retired,<3L,urban,Karnataka,0,low,quarterly,Care Health;HDFC Life,113202,0.386,none,none,no,4,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0021,19,other,single,self-employed,<3L,semi-urban,Kerala,2,medium,monthly,Niva Bupa;SBI Life;HDFC ERGO,117175,0.17,none,heart_disease,yes,0,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0022,42,male,married,retired,>20L,semi-urban,Uttar Pradesh,0,medium,annual,Care Health,21516,0.386,none,heart_disease,yes,1,8,no,no,no,no,no,no,no,yes,no,non-smoker
+U0023,74,female,married,retired,6-10L,urban,Rajasthan,3,low,quarterly,ICICI Lombard;Care Health;HDFC ERGO,68697,0.502,none,heart_disease,no,0,10,no,no,no,no,no,no,no,no,no,ex-smoker
+U0024,29,male,married,self-employed,10-20L,rural,Tamil Nadu,3,low,annual,SBI Life,105009,0.136,none,hypertension,yes,4,7,yes,no,no,no,no,no,no,no,no,smoker
+U0025,29,male,divorced,self-employed,<3L,semi-urban,Maharashtra,1,low,annual,Star Health,35108,0.438,none,cancer,yes,1,9,no,no,no,yes,no,no,no,no,no,non-smoker
+U0026,50,other,married,homemaker,6-10L,urban,Gujarat,0,high,annual,Bajaj Allianz;HDFC ERGO,76949,0.304,none,cancer,yes,5,1,no,yes,yes,no,no,no,no,no,no,ex-smoker
+U0027,42,other,married,salaried,6-10L,rural,Karnataka,3,low,quarterly,HDFC Life;Niva Bupa,41835,0.148,none,none,no,2,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0028,25,other,widowed,self-employed,6-10L,rural,Rajasthan,1,medium,annual,HDFC ERGO;ICICI Lombard;Star Health,56081,0.475,heart_disease,heart_disease,no,5,0,no,no,yes,no,no,no,no,no,no,non-smoker
+U0029,52,female,married,self-employed,3-6L,urban,Maharashtra,0,high,quarterly,LIC,63761,0.293,hypertension,none,yes,0,0,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0030,44,female,widowed,salaried,3-6L,urban,Karnataka,2,medium,annual,LIC;HDFC ERGO,36881,0.274,none,cancer,yes,5,5,no,no,no,no,no,no,no,no,no,non-smoker
+U0031,46,female,widowed,retired,10-20L,urban,Rajasthan,0,high,quarterly,HDFC Life;HDFC ERGO,147898,0.425,diabetes,cancer,yes,3,7,no,yes,no,no,no,no,no,no,no,non-smoker
+U0032,27,female,divorced,self-employed,3-6L,rural,Tamil Nadu,0,high,annual,Tata AIG;HDFC ERGO;SBI Life,20675,0.201,none,cancer,yes,3,0,no,no,no,no,no,no,no,no,no,ex-smoker
+U0033,60,male,married,retired,<3L,rural,Maharashtra,3,high,monthly,Bajaj Allianz,87676,0.145,asthma,diabetes,yes,5,4,no,no,yes,no,no,no,no,no,no,smoker
+U0034,38,male,divorced,retired,<3L,semi-urban,Rajasthan,2,high,annual,Star Health;HDFC Life;Bajaj Allianz,90783,0.288,heart_disease,heart_disease,no,3,4,yes,no,no,no,yes,no,no,no,no,non-smoker
+U0035,18,female,single,student,10-20L,urban,Kerala,0,high,annual,Bajaj Allianz;HDFC ERGO,25834,0.297,none,cancer,yes,0,9,no,no,no,no,no,no,no,no,no,smoker
+U0036,38,female,divorced,self-employed,3-6L,rural,Delhi,1,medium,monthly,SBI Life;Star Health,74692,0.41,none,none,no,0,5,no,no,no,no,no,no,no,no,no,ex-smoker
+U0037,48,other,widowed,retired,>20L,rural,Gujarat,3,low,annual,SBI Life,65785,0.26,heart_disease,cancer,no,0,1,no,no,no,no,no,no,no,no,no,smoker
+U0038,70,male,widowed,retired,>20L,semi-urban,Maharashtra,0,low,annual,SBI Life;Care Health,58472,0.32,diabetes,none,yes,5,6,no,yes,no,no,no,no,no,no,no,non-smoker
+U0039,52,male,widowed,salaried,6-10L,rural,Karnataka,0,low,monthly,SBI Life;Niva Bupa,33480,0.162,none,heart_disease,yes,5,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0040,36,other,single,retired,3-6L,rural,Rajasthan,0,high,monthly,Tata AIG;Niva Bupa,15310,0.268,none,heart_disease,no,3,5,no,yes,yes,no,yes,no,no,no,no,non-smoker
+U0041,46,other,married,homemaker,<3L,rural,Rajasthan,0,high,monthly,Tata AIG;Care Health,76402,0.22,none,hypertension,yes,5,5,no,no,no,no,no,no,no,no,no,non-smoker
+U0042,53,male,single,homemaker,10-20L,urban,Rajasthan,0,high,monthly,HDFC ERGO;Care Health,110354,0.414,none,diabetes,no,1,3,no,no,no,no,no,no,no,no,no,smoker
+U0043,27,male,single,homemaker,>20L,rural,Tamil Nadu,3,medium,monthly,ICICI Lombard;Bajaj Allianz;Niva Bupa,103027,0.24,heart_disease,diabetes,yes,0,0,no,no,no,no,no,no,no,no,no,ex-smoker
+U0044,52,female,single,homemaker,10-20L,semi-urban,Uttar Pradesh,3,medium,monthly,HDFC ERGO;Bajaj Allianz;Care Health,81707,0.568,none,heart_disease,no,5,8,no,no,no,no,no,no,yes,no,no,smoker
+U0045,52,male,divorced,student,>20L,rural,Kerala,0,medium,quarterly,HDFC ERGO;Star Health,98386,0.137,none,none,no,3,2,no,no,no,no,no,yes,no,no,no,smoker
+U0046,49,female,widowed,homemaker,3-6L,rural,Rajasthan,0,low,annual,Star Health;LIC,29727,0.18,none,none,no,5,5,no,no,no,no,no,no,no,no,no,non-smoker
+U0047,29,male,divorced,self-employed,>20L,rural,Uttar Pradesh,0,medium,annual,Bajaj Allianz;HDFC Life;SBI Life,21019,0.342,none,cancer,yes,3,1,no,yes,no,no,no,no,no,no,no,smoker
+U0048,65,male,married,retired,6-10L,urban,Gujarat,2,high,quarterly,Care Health;HDFC Life,35800,0.353,none,diabetes,yes,2,4,no,yes,no,no,no,yes,no,no,no,smoker
+U0049,51,other,divorced,student,<3L,rural,Gujarat,0,medium,monthly,HDFC Life,75938,0.499,asthma,cancer,no,4,5,no,no,yes,no,yes,no,no,no,no,smoker
+U0050,34,female,married,homemaker,10-20L,urban,Karnataka,1,high,annual,Care Health,106935,0.542,none,heart_disease,yes,4,10,no,no,no,no,no,no,no,no,no,non-smoker
+U0051,49,other,divorced,salaried,3-6L,rural,Gujarat,3,low,annual,ICICI Lombard;SBI Life,90316,0.406,none,heart_disease,no,2,1,no,no,no,no,no,no,no,no,no,smoker
+U0052,72,female,divorced,student,>20L,urban,Rajasthan,1,medium,monthly,Care Health,157575,0.397,none,diabetes,no,0,0,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0053,18,male,divorced,retired,3-6L,urban,Tamil Nadu,1,high,annual,Tata AIG;HDFC Life,123074,0.404,heart_disease,hypertension,no,4,8,yes,yes,no,no,yes,no,no,no,no,ex-smoker
+U0054,37,male,divorced,homemaker,10-20L,rural,Karnataka,0,low,monthly,ICICI Lombard,116929,0.284,none,none,no,1,0,no,no,no,no,no,no,no,no,no,smoker
+U0055,54,male,single,homemaker,3-6L,urban,Kerala,2,low,quarterly,LIC;Tata AIG;HDFC ERGO,61358,0.101,heart_disease,cancer,yes,3,1,no,no,yes,no,no,no,no,yes,no,smoker
+U0056,45,other,married,retired,3-6L,semi-urban,Maharashtra,0,high,annual,Niva Bupa;SBI Life,80089,0.374,hypertension,cancer,no,3,4,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0057,75,female,married,salaried,3-6L,semi-urban,Karnataka,3,medium,quarterly,SBI Life;Tata AIG;Niva Bupa,56437,0.339,none,diabetes,yes,1,10,no,no,no,no,no,yes,no,no,no,non-smoker
+U0058,69,female,divorced,student,>20L,rural,Gujarat,0,high,annual,Care Health,94206,0.213,diabetes,none,yes,1,8,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0059,63,female,widowed,self-employed,3-6L,semi-urban,Karnataka,0,low,quarterly,LIC;ICICI Lombard,127354,0.648,none,hypertension,no,5,10,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0060,69,male,married,student,10-20L,semi-urban,Delhi,1,medium,annual,HDFC Life,110013,0.23,none,hypertension,no,2,1,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0061,40,other,married,retired,>20L,rural,Karnataka,2,low,annual,Care Health;HDFC Life,67482,0.256,none,none,yes,1,8,no,no,no,no,no,no,no,no,no,smoker
+U0062,20,other,single,self-employed,>20L,rural,Rajasthan,3,medium,quarterly,HDFC Life;HDFC ERGO;Star Health,44515,0.177,none,none,no,2,3,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0063,38,other,divorced,self-employed,<3L,rural,Maharashtra,1,medium,annual,HDFC Life;Care Health;LIC,22299,0.451,none,hypertension,no,1,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0064,27,female,divorced,salaried,10-20L,semi-urban,Maharashtra,0,low,annual,Star Health;Tata AIG;SBI Life,71549,0.174,diabetes,none,no,5,7,yes,no,no,no,no,no,no,no,no,non-smoker
+U0065,53,female,widowed,retired,10-20L,semi-urban,Rajasthan,1,medium,monthly,LIC;HDFC Life,34094,0.095,none,cancer,yes,1,8,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0066,61,male,married,student,10-20L,rural,Kerala,1,high,annual,HDFC Life;Tata AIG,65145,0.064,none,diabetes,no,4,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0067,51,female,widowed,student,3-6L,rural,Tamil Nadu,0,low,monthly,Bajaj Allianz,13535,0.382,none,none,no,4,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0068,40,female,widowed,salaried,>20L,rural,Karnataka,1,medium,annual,Tata AIG;LIC,16809,0.51,none,diabetes,no,4,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0069,20,other,married,salaried,10-20L,urban,Rajasthan,0,low,monthly,LIC,42184,0.442,heart_disease,diabetes,no,2,1,no,no,yes,no,no,no,no,no,no,non-smoker
+U0070,35,female,widowed,student,<3L,rural,Rajasthan,2,low,annual,HDFC Life,41848,0.281,asthma,hypertension,no,2,6,no,no,no,no,no,no,no,no,no,ex-smoker
+U0071,64,female,married,homemaker,6-10L,urban,Gujarat,0,low,monthly,HDFC ERGO,119789,0.247,asthma,none,yes,4,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0072,71,female,married,self-employed,<3L,semi-urban,Delhi,0,low,monthly,SBI Life;HDFC ERGO;Star Health,102675,0.424,hypertension,diabetes,yes,2,9,no,yes,no,no,no,no,no,no,no,non-smoker
+U0073,27,male,single,salaried,>20L,urban,Gujarat,3,medium,annual,Tata AIG;SBI Life,82739,0.365,none,hypertension,no,5,7,yes,yes,no,no,no,yes,no,yes,no,non-smoker
+U0074,61,other,single,self-employed,10-20L,semi-urban,Kerala,3,medium,annual,Niva Bupa,46156,0.682,none,hypertension,no,5,8,no,yes,no,no,no,no,no,yes,yes,non-smoker
+U0075,42,other,single,student,>20L,urban,Maharashtra,0,high,monthly,HDFC Life,15265,0.549,diabetes,cancer,no,0,7,yes,yes,no,no,no,no,no,no,no,smoker
+U0076,40,other,widowed,self-employed,3-6L,semi-urban,Karnataka,1,medium,monthly,Bajaj Allianz;Star Health,66205,0.223,none,heart_disease,no,4,8,no,yes,no,no,no,no,no,yes,no,non-smoker
+U0077,61,female,divorced,salaried,>20L,urban,Gujarat,2,low,monthly,Niva Bupa;LIC;HDFC Life,107423,0.13,hypertension,hypertension,yes,0,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0078,46,other,married,salaried,<3L,urban,Tamil Nadu,3,high,quarterly,LIC;Tata AIG,27957,0.463,none,cancer,no,3,0,no,no,no,no,no,no,no,no,no,ex-smoker
+U0079,61,other,widowed,homemaker,6-10L,rural,Tamil Nadu,1,high,monthly,HDFC Life;HDFC ERGO;Tata AIG,53353,0.176,none,cancer,no,0,4,no,yes,no,no,no,no,yes,no,no,ex-smoker
+U0080,36,other,married,retired,>20L,rural,Karnataka,2,low,annual,HDFC ERGO,115326,0.331,hypertension,hypertension,yes,0,0,no,yes,no,no,no,no,no,no,no,non-smoker
+U0081,31,female,single,salaried,10-20L,semi-urban,Tamil Nadu,0,low,quarterly,HDFC Life;Star Health;LIC,14923,0.367,none,heart_disease,no,4,7,no,no,no,no,no,no,no,no,no,smoker
+U0082,75,male,married,salaried,<3L,urban,Kerala,0,high,annual,HDFC ERGO,93130,0.494,none,none,no,0,10,no,no,no,no,no,no,no,no,no,smoker
+U0083,32,other,divorced,salaried,<3L,rural,Kerala,0,high,annual,Tata AIG;Care Health,153281,0.418,none,cancer,no,4,1,yes,no,no,no,no,no,no,no,no,smoker
+U0084,73,other,divorced,homemaker,<3L,rural,Maharashtra,2,high,quarterly,Tata AIG;SBI Life;ICICI Lombard,57767,0.247,none,cancer,no,1,3,no,no,yes,no,no,no,no,no,no,smoker
+U0085,75,male,divorced,salaried,10-20L,semi-urban,Tamil Nadu,0,high,quarterly,LIC;HDFC ERGO;Bajaj Allianz,64873,0.47,none,diabetes,no,5,1,no,no,no,no,no,no,no,yes,no,smoker
+U0086,52,male,widowed,salaried,10-20L,urban,Delhi,0,medium,annual,Tata AIG,72641,0.298,asthma,none,yes,0,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0087,62,other,divorced,retired,3-6L,rural,Tamil Nadu,2,low,annual,Niva Bupa;Star Health,17570,0.287,hypertension,hypertension,no,4,9,no,yes,no,no,no,no,no,no,no,non-smoker
+U0088,58,male,married,self-employed,6-10L,urban,Gujarat,3,medium,monthly,Niva Bupa;ICICI Lombard,11190,0.134,diabetes,hypertension,yes,4,1,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0089,68,male,single,self-employed,6-10L,rural,Gujarat,3,low,monthly,Care Health;Tata AIG,50899,0.484,none,diabetes,no,0,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0090,60,female,single,self-employed,10-20L,rural,Kerala,1,low,annual,Care Health,73298,0.367,none,hypertension,no,2,5,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0091,63,male,single,student,3-6L,urban,Kerala,1,medium,monthly,Bajaj Allianz,55832,0.059,none,diabetes,yes,0,7,yes,no,no,no,no,no,no,no,no,non-smoker
+U0092,18,male,divorced,salaried,10-20L,rural,Uttar Pradesh,2,high,quarterly,Star Health;HDFC ERGO,87621,0.329,none,diabetes,yes,3,7,yes,yes,yes,no,no,no,no,no,no,non-smoker
+U0093,71,female,divorced,homemaker,6-10L,urban,Uttar Pradesh,1,low,annual,Star Health,11626,0.219,hypertension,diabetes,yes,1,5,no,yes,no,no,no,no,no,no,no,non-smoker
+U0094,33,female,widowed,retired,6-10L,semi-urban,Rajasthan,1,low,quarterly,Bajaj Allianz;HDFC ERGO,120878,0.441,none,none,yes,4,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0095,35,female,single,salaried,>20L,rural,Kerala,3,high,quarterly,HDFC Life;Star Health;ICICI Lombard,57308,0.242,none,heart_disease,yes,1,1,no,no,no,no,no,no,no,no,no,smoker
+U0096,70,other,divorced,student,<3L,semi-urban,Tamil Nadu,2,high,monthly,Tata AIG;Bajaj Allianz;Star Health,69083,0.396,none,hypertension,no,1,7,no,no,yes,no,no,no,no,no,no,ex-smoker
+U0097,53,male,divorced,salaried,10-20L,semi-urban,Rajasthan,3,low,quarterly,Bajaj Allianz;Star Health,88867,0.247,none,cancer,no,0,8,yes,no,no,no,no,no,no,no,yes,ex-smoker
+U0098,52,other,divorced,retired,<3L,urban,Uttar Pradesh,2,medium,quarterly,ICICI Lombard;HDFC Life,38134,0.288,none,hypertension,yes,1,8,no,no,no,no,no,no,no,no,no,smoker
+U0099,33,other,married,student,>20L,semi-urban,Karnataka,0,medium,quarterly,Care Health;ICICI Lombard;Star Health,99793,0.229,heart_disease,none,yes,4,8,no,no,no,no,no,no,no,no,no,non-smoker
+U0100,31,male,married,student,10-20L,urban,Gujarat,1,low,quarterly,Tata AIG;LIC,122224,0.153,none,cancer,yes,2,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0101,31,male,divorced,salaried,10-20L,urban,Kerala,3,low,monthly,HDFC ERGO;HDFC Life;Tata AIG,32875,0.135,heart_disease,hypertension,no,0,6,no,no,no,no,yes,yes,yes,no,no,non-smoker
+U0102,50,male,single,self-employed,10-20L,semi-urban,Maharashtra,1,medium,annual,Star Health,95924,0.151,none,hypertension,yes,5,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0103,61,other,married,homemaker,<3L,rural,Tamil Nadu,3,low,annual,Star Health,48400,0.124,none,cancer,yes,4,5,no,yes,no,no,no,no,yes,yes,no,non-smoker
+U0104,45,other,married,salaried,<3L,semi-urban,Gujarat,1,low,quarterly,SBI Life,105817,0.4,diabetes,hypertension,no,5,8,no,no,no,no,no,no,no,no,no,non-smoker
+U0105,33,female,divorced,homemaker,6-10L,rural,Maharashtra,1,high,annual,SBI Life;Niva Bupa;Bajaj Allianz,68801,0.387,none,diabetes,no,3,4,yes,no,no,no,no,no,no,no,no,non-smoker
+U0106,30,male,married,self-employed,6-10L,rural,Karnataka,3,high,quarterly,Bajaj Allianz,6515,0.342,none,heart_disease,yes,1,4,no,no,no,no,no,no,no,yes,no,non-smoker
+U0107,65,male,widowed,student,6-10L,urban,Kerala,0,high,quarterly,Star Health;Care Health;ICICI Lombard,37157,0.451,none,diabetes,no,2,5,no,no,no,no,no,no,no,no,no,ex-smoker
+U0108,34,male,widowed,salaried,6-10L,urban,Tamil Nadu,2,medium,annual,Tata AIG,18373,0.593,none,diabetes,no,5,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0109,59,female,married,salaried,6-10L,rural,Gujarat,0,high,monthly,ICICI Lombard,123118,0.38,none,hypertension,no,1,10,no,no,no,no,no,no,no,no,no,ex-smoker
+U0110,37,other,divorced,self-employed,10-20L,urban,Rajasthan,3,low,quarterly,Star Health;ICICI Lombard;Bajaj Allianz,5031,0.465,asthma,none,no,5,7,no,no,yes,no,no,no,no,no,no,ex-smoker
+U0111,20,male,divorced,retired,10-20L,rural,Kerala,0,low,annual,Niva Bupa,27513,0.192,none,cancer,yes,2,8,no,no,no,no,no,no,no,no,no,smoker
+U0112,60,other,married,student,6-10L,rural,Rajasthan,2,low,annual,HDFC ERGO;Care Health,44727,0.481,none,cancer,no,0,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0113,39,female,widowed,student,6-10L,urban,Delhi,3,high,annual,HDFC ERGO,55798,0.365,none,diabetes,no,0,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0114,40,other,married,retired,>20L,rural,Gujarat,2,medium,monthly,Niva Bupa;Tata AIG,27361,0.169,heart_disease,heart_disease,no,5,2,no,no,no,no,yes,no,no,no,no,smoker
+U0115,38,other,single,student,<3L,urban,Tamil Nadu,2,high,quarterly,ICICI Lombard,33746,0.198,none,heart_disease,yes,5,8,yes,no,no,yes,no,no,no,no,no,non-smoker
+U0116,24,female,married,salaried,3-6L,rural,Rajasthan,1,low,annual,Tata AIG;ICICI Lombard;Niva Bupa,138455,0.301,none,heart_disease,yes,5,5,no,yes,no,no,no,no,no,no,yes,non-smoker
+U0117,33,other,divorced,retired,6-10L,semi-urban,Delhi,3,medium,monthly,Star Health,43237,0.231,none,cancer,yes,3,3,no,yes,no,no,no,no,no,no,no,smoker
+U0118,58,female,single,retired,10-20L,rural,Gujarat,1,high,annual,Niva Bupa,12177,0.52,none,cancer,no,0,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0119,23,other,divorced,student,<3L,urban,Tamil Nadu,3,medium,quarterly,HDFC ERGO;Tata AIG;Care Health,81921,0.188,none,heart_disease,yes,1,10,no,no,no,no,no,no,no,no,no,non-smoker
+U0120,20,other,married,retired,10-20L,semi-urban,Uttar Pradesh,3,high,annual,Bajaj Allianz;Tata AIG;LIC,21513,0.289,none,heart_disease,no,0,4,no,no,no,no,no,no,no,no,no,smoker
+U0121,58,male,widowed,homemaker,<3L,rural,Maharashtra,2,medium,monthly,Bajaj Allianz,48938,0.327,none,diabetes,no,3,9,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0122,39,other,married,self-employed,3-6L,urban,Rajasthan,3,low,monthly,LIC;ICICI Lombard;Care Health,44597,0.364,none,hypertension,no,3,1,no,no,no,no,no,no,no,no,no,smoker
+U0123,62,female,widowed,retired,3-6L,rural,Delhi,1,high,annual,Bajaj Allianz;SBI Life;HDFC ERGO,17802,0.105,none,heart_disease,yes,3,8,no,no,no,no,yes,no,no,no,no,non-smoker
+U0124,25,other,married,self-employed,<3L,rural,Gujarat,2,low,monthly,ICICI Lombard;HDFC ERGO,37579,0.349,none,diabetes,yes,3,1,no,no,no,no,no,no,no,no,no,ex-smoker
+U0125,67,female,widowed,salaried,>20L,rural,Delhi,1,high,quarterly,Niva Bupa;Star Health;SBI Life,94586,0.064,diabetes,none,yes,2,3,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0126,34,female,divorced,student,<3L,semi-urban,Rajasthan,0,high,quarterly,HDFC ERGO,132844,0.193,hypertension,heart_disease,yes,1,3,no,yes,no,no,no,no,no,no,no,smoker
+U0127,59,other,married,homemaker,6-10L,semi-urban,Karnataka,2,high,annual,Bajaj Allianz;Care Health,72836,0.188,none,cancer,no,3,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0128,61,other,widowed,student,6-10L,rural,Rajasthan,0,high,monthly,HDFC Life,26241,0.386,heart_disease,heart_disease,yes,1,10,no,no,no,no,yes,no,no,no,no,non-smoker
+U0129,58,male,married,student,6-10L,rural,Gujarat,0,low,quarterly,Niva Bupa;Star Health;HDFC Life,37707,0.552,diabetes,cancer,no,1,4,yes,yes,no,no,no,yes,no,no,no,smoker
+U0130,73,other,divorced,self-employed,10-20L,semi-urban,Rajasthan,3,high,quarterly,Niva Bupa;Star Health;LIC,80468,0.302,none,none,yes,0,9,no,no,yes,no,no,no,no,yes,no,smoker
+U0131,34,female,single,salaried,>20L,semi-urban,Rajasthan,1,medium,monthly,Bajaj Allianz;LIC,91823,0.384,none,none,no,1,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0132,25,male,divorced,homemaker,3-6L,semi-urban,Delhi,0,low,annual,HDFC Life,68476,0.184,none,none,no,0,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0133,64,other,married,retired,>20L,rural,Karnataka,2,high,quarterly,LIC;HDFC Life;Care Health,119275,0.222,none,none,yes,0,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0134,21,male,single,salaried,<3L,rural,Kerala,3,low,quarterly,ICICI Lombard;HDFC Life;Bajaj Allianz,24483,0.213,none,heart_disease,yes,4,1,yes,no,no,no,no,no,no,no,no,smoker
+U0135,29,other,widowed,self-employed,<3L,urban,Delhi,3,low,annual,Tata AIG;Niva Bupa,10105,0.312,none,diabetes,yes,1,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0136,39,other,widowed,retired,10-20L,semi-urban,Maharashtra,0,medium,annual,SBI Life,22011,0.155,none,cancer,yes,0,9,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0137,40,male,married,salaried,3-6L,semi-urban,Delhi,2,high,annual,Star Health;ICICI Lombard;SBI Life,54171,0.443,none,none,no,4,7,yes,no,no,no,no,no,no,no,no,smoker
+U0138,25,female,married,homemaker,>20L,rural,Gujarat,3,high,quarterly,Niva Bupa;HDFC Life;SBI Life,77833,0.382,none,diabetes,no,4,3,no,no,no,no,no,no,no,no,yes,non-smoker
+U0139,28,male,divorced,salaried,>20L,urban,Karnataka,0,low,quarterly,LIC;Care Health;Tata AIG,65864,0.41,none,cancer,yes,3,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0140,62,male,widowed,retired,<3L,rural,Gujarat,1,low,monthly,Care Health;Tata AIG;Star Health,70384,0.25,diabetes,diabetes,yes,1,4,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0141,26,female,married,salaried,>20L,urban,Karnataka,1,medium,annual,Tata AIG;ICICI Lombard,41880,0.127,heart_disease,diabetes,no,0,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0142,60,female,married,retired,3-6L,semi-urban,Uttar Pradesh,1,high,monthly,SBI Life,47193,0.299,none,diabetes,no,5,0,no,no,no,no,no,yes,no,yes,no,non-smoker
+U0143,74,male,widowed,retired,6-10L,rural,Delhi,0,high,annual,LIC;Bajaj Allianz;Niva Bupa,145846,0.674,none,diabetes,yes,2,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0144,21,female,widowed,self-employed,<3L,rural,Maharashtra,1,high,monthly,Care Health;Niva Bupa;ICICI Lombard,81494,0.151,none,diabetes,yes,5,5,no,no,no,no,no,no,no,no,no,smoker
+U0145,32,male,married,homemaker,10-20L,rural,Maharashtra,1,high,quarterly,Star Health,107392,0.262,none,heart_disease,yes,0,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0146,22,male,widowed,retired,6-10L,rural,Uttar Pradesh,0,low,quarterly,Star Health;ICICI Lombard;Bajaj Allianz,86948,0.304,diabetes,hypertension,no,4,9,yes,no,no,no,no,no,no,no,no,smoker
+U0147,19,female,widowed,student,6-10L,urban,Maharashtra,1,high,monthly,LIC;HDFC ERGO;ICICI Lombard,92898,0.244,none,hypertension,no,2,4,no,no,no,no,no,no,no,yes,no,non-smoker
+U0148,64,male,widowed,retired,6-10L,urban,Kerala,0,low,annual,Tata AIG,12434,0.503,none,none,no,2,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0149,54,female,divorced,self-employed,6-10L,urban,Gujarat,3,medium,annual,Bajaj Allianz;HDFC Life;ICICI Lombard,90864,0.185,none,cancer,yes,1,7,no,no,no,no,yes,no,no,no,no,smoker
+U0150,27,male,divorced,salaried,10-20L,semi-urban,Uttar Pradesh,3,high,annual,SBI Life;Star Health,73076,0.534,none,none,no,4,1,no,no,no,no,yes,no,no,yes,no,ex-smoker
+U0151,59,male,married,homemaker,10-20L,urban,Karnataka,3,medium,monthly,Niva Bupa,43595,0.242,none,diabetes,yes,1,2,no,no,no,no,no,no,no,yes,no,non-smoker
+U0152,33,other,divorced,self-employed,6-10L,urban,Karnataka,2,high,monthly,Star Health;LIC;HDFC ERGO,42359,0.311,heart_disease,diabetes,no,0,4,yes,yes,no,no,no,no,no,no,no,ex-smoker
+U0153,68,other,married,retired,3-6L,semi-urban,Uttar Pradesh,0,medium,quarterly,Care Health;HDFC Life;SBI Life,100119,0.341,none,hypertension,no,3,9,no,no,no,no,no,no,no,no,no,smoker
+U0154,61,male,married,self-employed,>20L,rural,Uttar Pradesh,0,medium,monthly,Bajaj Allianz;ICICI Lombard;LIC,83376,0.387,none,cancer,no,1,1,no,no,no,no,no,no,no,no,no,smoker
+U0155,30,male,married,salaried,3-6L,semi-urban,Tamil Nadu,2,medium,monthly,HDFC ERGO;SBI Life,74223,0.144,none,none,no,5,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0156,49,other,divorced,self-employed,3-6L,rural,Maharashtra,0,medium,monthly,HDFC Life;SBI Life;Niva Bupa,110658,0.337,none,none,yes,1,4,no,no,no,no,no,no,no,yes,no,non-smoker
+U0157,50,male,married,salaried,10-20L,semi-urban,Gujarat,3,high,annual,Tata AIG;Bajaj Allianz;Care Health,82376,0.247,none,hypertension,yes,2,4,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0158,27,other,single,retired,<3L,semi-urban,Delhi,3,medium,quarterly,SBI Life;Tata AIG,50548,0.305,heart_disease,hypertension,yes,1,7,no,yes,no,no,yes,no,no,no,no,ex-smoker
+U0159,75,female,married,student,>20L,rural,Karnataka,0,low,annual,Care Health;Bajaj Allianz,33862,0.173,diabetes,none,no,0,4,no,yes,no,no,no,yes,no,no,no,smoker
+U0160,41,male,single,self-employed,6-10L,semi-urban,Kerala,1,medium,quarterly,HDFC Life;Care Health,115159,0.329,diabetes,heart_disease,no,5,8,no,no,no,no,no,yes,no,no,no,smoker
+U0161,26,female,single,salaried,>20L,urban,Delhi,3,high,annual,HDFC ERGO;SBI Life;Niva Bupa,66664,0.383,none,cancer,no,2,7,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0162,32,male,widowed,retired,>20L,urban,Gujarat,2,medium,annual,ICICI Lombard;Star Health;SBI Life,96003,0.535,none,hypertension,yes,0,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0163,19,other,widowed,self-employed,3-6L,urban,Karnataka,1,medium,monthly,ICICI Lombard,80117,0.438,none,cancer,no,3,10,no,no,no,no,no,no,no,no,no,smoker
+U0164,22,other,divorced,homemaker,6-10L,urban,Tamil Nadu,2,medium,quarterly,HDFC ERGO,92479,0.324,diabetes,none,yes,1,9,yes,no,no,no,no,no,no,no,no,smoker
+U0165,75,other,divorced,homemaker,>20L,rural,Delhi,2,high,monthly,ICICI Lombard;Care Health;HDFC Life,7777,0.543,none,cancer,yes,5,2,no,no,no,no,no,no,no,no,no,smoker
+U0166,22,male,single,homemaker,3-6L,urban,Maharashtra,3,medium,monthly,HDFC ERGO;Bajaj Allianz,61487,0.321,none,diabetes,yes,1,5,yes,no,no,no,no,no,no,no,no,smoker
+U0167,64,other,married,retired,6-10L,semi-urban,Rajasthan,3,medium,annual,Care Health;Bajaj Allianz;LIC,20629,0.437,none,hypertension,yes,0,3,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0168,26,female,widowed,student,<3L,rural,Uttar Pradesh,1,medium,monthly,ICICI Lombard;Niva Bupa;Tata AIG,33094,0.296,none,heart_disease,yes,5,10,no,no,no,no,no,no,no,no,no,non-smoker
+U0169,70,female,widowed,retired,<3L,urban,Tamil Nadu,1,high,annual,Care Health;Star Health,15669,0.507,none,cancer,yes,2,2,no,no,no,no,no,no,no,no,no,smoker
+U0170,46,female,divorced,retired,>20L,urban,Karnataka,1,high,quarterly,HDFC ERGO;Care Health;Tata AIG,118783,0.261,none,hypertension,no,3,1,yes,yes,no,no,no,no,no,no,no,non-smoker
+U0171,37,male,single,student,<3L,semi-urban,Maharashtra,0,high,annual,SBI Life;LIC;HDFC ERGO,54968,0.231,none,heart_disease,no,3,0,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0172,41,female,single,homemaker,>20L,rural,Uttar Pradesh,1,medium,annual,HDFC Life,9468,0.445,none,cancer,yes,3,7,no,no,no,no,no,no,no,no,no,smoker
+U0173,59,other,divorced,self-employed,10-20L,semi-urban,Delhi,2,high,annual,HDFC Life,21858,0.364,asthma,hypertension,yes,1,7,no,yes,yes,no,no,no,no,no,no,ex-smoker
+U0174,20,male,married,retired,<3L,urban,Rajasthan,2,medium,monthly,ICICI Lombard;Star Health,46383,0.252,none,none,yes,0,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0175,46,female,widowed,student,3-6L,urban,Rajasthan,0,medium,annual,ICICI Lombard;Care Health;Bajaj Allianz,36869,0.138,none,diabetes,yes,5,1,no,no,no,no,no,no,no,no,no,smoker
+U0176,51,female,married,self-employed,6-10L,urban,Gujarat,0,high,annual,Star Health;Care Health,38816,0.284,none,cancer,yes,1,0,yes,no,no,no,no,no,no,no,no,non-smoker
+U0177,72,male,divorced,self-employed,10-20L,semi-urban,Karnataka,2,low,annual,Star Health;Niva Bupa;Care Health,82265,0.487,none,cancer,no,5,10,yes,no,no,no,no,yes,yes,no,no,non-smoker
+U0178,75,female,divorced,student,10-20L,rural,Delhi,1,low,monthly,LIC;HDFC Life;Tata AIG,6905,0.257,none,heart_disease,yes,1,2,no,no,no,no,no,no,no,no,no,smoker
+U0179,34,female,married,self-employed,3-6L,rural,Gujarat,3,medium,quarterly,Care Health;LIC,23078,0.101,hypertension,heart_disease,no,2,7,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0180,44,other,married,student,>20L,urban,Kerala,2,low,monthly,ICICI Lombard;Niva Bupa,14855,0.575,none,cancer,yes,4,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0181,68,other,married,retired,>20L,semi-urban,Uttar Pradesh,3,low,quarterly,Niva Bupa,76924,0.541,heart_disease,diabetes,no,3,0,no,no,no,no,no,no,no,no,no,smoker
+U0182,57,female,widowed,homemaker,3-6L,semi-urban,Maharashtra,3,medium,annual,Tata AIG,80106,0.133,none,cancer,yes,2,3,no,no,no,no,yes,yes,no,yes,no,ex-smoker
+U0183,54,male,widowed,retired,<3L,urban,Tamil Nadu,3,high,annual,ICICI Lombard,35224,0.391,none,heart_disease,yes,1,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0184,38,female,widowed,retired,<3L,urban,Tamil Nadu,2,medium,annual,SBI Life,95305,0.386,asthma,cancer,yes,4,6,no,no,yes,no,no,no,no,no,no,ex-smoker
+U0185,53,other,single,student,>20L,rural,Tamil Nadu,1,high,monthly,LIC;Tata AIG;Bajaj Allianz,54811,0.328,none,diabetes,no,4,2,yes,no,no,no,no,no,no,yes,no,ex-smoker
+U0186,64,other,widowed,student,3-6L,rural,Gujarat,1,low,monthly,LIC,79242,0.211,none,diabetes,no,0,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0187,50,other,single,homemaker,>20L,rural,Uttar Pradesh,3,high,quarterly,Tata AIG;HDFC Life;Bajaj Allianz,18471,0.611,none,diabetes,no,4,10,no,no,no,no,no,no,no,no,no,non-smoker
+U0188,25,male,divorced,homemaker,6-10L,urban,Karnataka,2,high,quarterly,Care Health;HDFC Life;SBI Life,25051,0.176,none,heart_disease,no,3,3,no,no,no,no,no,no,no,no,no,smoker
+U0189,30,female,divorced,retired,6-10L,rural,Kerala,2,medium,monthly,Niva Bupa;Star Health,116789,0.1,none,cancer,no,0,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0190,59,other,divorced,salaried,3-6L,semi-urban,Uttar Pradesh,0,low,monthly,HDFC ERGO;HDFC Life;Tata AIG,95009,0.3,none,heart_disease,no,4,4,no,yes,no,no,no,yes,no,yes,no,ex-smoker
+U0191,30,other,divorced,homemaker,>20L,rural,Kerala,3,high,annual,Tata AIG;Niva Bupa,79863,0.318,none,diabetes,no,5,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0192,74,male,married,self-employed,3-6L,semi-urban,Rajasthan,1,low,monthly,Niva Bupa;HDFC ERGO,163208,0.275,none,hypertension,no,3,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0193,55,other,single,retired,<3L,semi-urban,Gujarat,0,low,monthly,HDFC ERGO,45451,0.303,none,heart_disease,no,4,3,no,no,no,no,no,no,no,no,no,smoker
+U0194,36,male,widowed,homemaker,>20L,semi-urban,Rajasthan,2,high,quarterly,HDFC Life;LIC,113491,0.151,none,none,yes,1,5,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0195,40,female,divorced,salaried,<3L,semi-urban,Delhi,1,medium,quarterly,Tata AIG;SBI Life,67549,0.245,heart_disease,cancer,yes,2,10,no,no,no,no,yes,no,no,no,no,non-smoker
+U0196,48,other,divorced,salaried,6-10L,urban,Rajasthan,2,low,annual,LIC,10701,0.134,hypertension,hypertension,yes,5,7,no,no,no,no,no,no,no,no,no,smoker
+U0197,74,other,divorced,salaried,6-10L,semi-urban,Tamil Nadu,2,high,annual,Care Health;LIC,140814,0.167,none,hypertension,no,5,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0198,65,male,divorced,homemaker,3-6L,rural,Delhi,0,low,monthly,LIC;Star Health;Bajaj Allianz,17900,0.225,none,cancer,no,3,8,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0199,52,female,married,student,3-6L,urban,Gujarat,1,medium,monthly,ICICI Lombard,86456,0.464,hypertension,cancer,no,3,0,no,yes,no,no,no,no,no,no,no,non-smoker
+U0200,56,other,married,retired,6-10L,urban,Karnataka,3,medium,annual,Tata AIG,72751,0.459,none,heart_disease,no,3,9,no,yes,no,no,no,no,no,no,no,non-smoker
+U0201,36,other,married,student,<3L,rural,Delhi,3,low,quarterly,HDFC Life,75773,0.52,none,hypertension,yes,0,5,no,no,yes,no,no,no,no,no,no,smoker
+U0202,74,other,divorced,self-employed,3-6L,urban,Uttar Pradesh,2,medium,quarterly,Star Health;Tata AIG;HDFC Life,22327,0.214,none,none,yes,1,2,no,no,yes,no,no,no,no,no,no,non-smoker
+U0203,40,other,married,salaried,>20L,semi-urban,Uttar Pradesh,3,high,annual,Tata AIG;Care Health,58352,0.45,none,diabetes,yes,2,1,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0204,69,male,divorced,homemaker,10-20L,rural,Kerala,3,low,monthly,Bajaj Allianz;Star Health;HDFC ERGO,88249,0.653,none,heart_disease,yes,3,1,yes,no,no,no,no,no,no,no,no,non-smoker
+U0205,67,male,widowed,student,6-10L,rural,Delhi,2,medium,monthly,Niva Bupa,65421,0.112,none,heart_disease,yes,5,7,no,yes,no,no,no,no,no,no,no,non-smoker
+U0206,51,other,widowed,self-employed,<3L,semi-urban,Uttar Pradesh,0,medium,quarterly,LIC;Star Health,89647,0.28,diabetes,none,yes,4,7,yes,no,no,no,no,no,no,no,no,smoker
+U0207,61,male,widowed,retired,<3L,rural,Karnataka,2,low,quarterly,Star Health;SBI Life;Bajaj Allianz,76853,0.359,hypertension,cancer,no,3,9,no,yes,no,no,no,no,no,no,no,smoker
+U0208,28,other,widowed,retired,<3L,urban,Karnataka,2,low,quarterly,ICICI Lombard,16723,0.396,none,diabetes,no,4,0,no,no,no,no,no,no,no,no,no,smoker
+U0209,20,other,married,retired,>20L,urban,Kerala,2,low,quarterly,Niva Bupa;Tata AIG,47176,0.407,none,cancer,no,5,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0210,63,male,divorced,salaried,>20L,urban,Tamil Nadu,3,high,quarterly,LIC;Star Health;ICICI Lombard,35261,0.459,none,none,no,3,0,no,no,no,no,no,no,no,no,no,smoker
+U0211,34,other,widowed,self-employed,10-20L,rural,Kerala,1,medium,annual,Star Health;Tata AIG,30663,0.127,asthma,heart_disease,no,1,0,yes,no,yes,no,no,no,no,no,no,smoker
+U0212,37,male,widowed,student,10-20L,urban,Kerala,3,high,annual,LIC;SBI Life,72445,0.413,none,heart_disease,yes,1,1,yes,no,no,no,no,no,no,no,no,smoker
+U0213,41,female,widowed,retired,>20L,semi-urban,Uttar Pradesh,2,low,quarterly,ICICI Lombard,67839,0.278,none,hypertension,yes,5,10,no,no,no,no,no,no,no,no,no,ex-smoker
+U0214,43,other,widowed,self-employed,6-10L,urban,Tamil Nadu,3,low,annual,Bajaj Allianz;SBI Life,50359,0.36,diabetes,cancer,yes,5,10,yes,no,no,no,no,no,no,no,no,non-smoker
+U0215,59,male,single,self-employed,10-20L,semi-urban,Rajasthan,0,high,quarterly,HDFC ERGO;Tata AIG,90578,0.279,none,none,no,0,1,no,yes,no,no,no,no,no,yes,no,non-smoker
+U0216,74,female,divorced,homemaker,3-6L,rural,Uttar Pradesh,0,medium,annual,Tata AIG;LIC,110918,0.297,diabetes,hypertension,no,5,5,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0217,73,male,married,homemaker,6-10L,rural,Delhi,0,medium,quarterly,Niva Bupa,5124,0.451,none,heart_disease,yes,1,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0218,45,other,divorced,homemaker,3-6L,rural,Gujarat,0,medium,annual,HDFC ERGO;SBI Life;Tata AIG,16682,0.266,none,none,yes,4,10,no,no,no,no,no,no,no,yes,no,smoker
+U0219,68,other,widowed,retired,3-6L,rural,Rajasthan,0,low,annual,HDFC ERGO;Care Health;ICICI Lombard,109234,0.167,heart_disease,hypertension,yes,3,5,yes,no,no,no,yes,yes,no,no,no,ex-smoker
+U0220,41,other,widowed,retired,3-6L,urban,Kerala,2,high,annual,SBI Life;ICICI Lombard,91763,0.283,none,hypertension,no,3,1,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0221,66,female,divorced,student,3-6L,semi-urban,Uttar Pradesh,3,high,annual,Niva Bupa,60614,0.459,none,diabetes,no,0,9,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0222,67,male,single,retired,<3L,semi-urban,Gujarat,0,high,annual,LIC;SBI Life,75877,0.14,none,none,yes,5,6,no,no,no,no,no,no,no,no,no,ex-smoker
+U0223,38,other,divorced,self-employed,10-20L,rural,Tamil Nadu,3,high,monthly,Niva Bupa,84732,0.367,none,heart_disease,no,4,8,no,yes,no,no,no,no,no,no,no,smoker
+U0224,57,female,married,self-employed,<3L,rural,Maharashtra,2,low,monthly,Niva Bupa,7850,0.416,asthma,none,no,2,3,no,no,yes,no,no,no,no,no,no,non-smoker
+U0225,52,male,single,student,3-6L,rural,Delhi,1,high,quarterly,HDFC Life;Care Health,55613,0.331,none,diabetes,yes,3,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0226,36,female,widowed,self-employed,<3L,urban,Kerala,1,medium,annual,HDFC Life;LIC;Tata AIG,111524,0.176,none,hypertension,yes,5,6,no,no,yes,no,no,no,no,yes,no,non-smoker
+U0227,66,female,divorced,homemaker,<3L,rural,Kerala,1,medium,quarterly,LIC;Star Health;Bajaj Allianz,78476,0.515,heart_disease,none,yes,0,10,no,no,no,no,yes,no,no,no,no,smoker
+U0228,47,female,widowed,self-employed,<3L,urban,Kerala,0,medium,monthly,Bajaj Allianz,75885,0.367,none,hypertension,no,3,7,no,no,no,no,no,no,no,no,no,smoker
+U0229,33,other,widowed,student,10-20L,rural,Tamil Nadu,1,medium,annual,Star Health,125251,0.256,diabetes,none,no,1,8,no,no,no,no,no,yes,no,yes,no,smoker
+U0230,64,female,single,student,6-10L,rural,Uttar Pradesh,1,low,quarterly,Niva Bupa;Bajaj Allianz,98270,0.485,none,hypertension,yes,2,5,no,no,no,no,no,no,no,yes,no,non-smoker
+U0231,49,other,single,salaried,3-6L,rural,Tamil Nadu,2,low,quarterly,HDFC Life;HDFC ERGO,67215,0.242,none,hypertension,no,1,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0232,18,female,divorced,student,6-10L,rural,Rajasthan,2,low,monthly,HDFC Life;ICICI Lombard,68585,0.467,hypertension,diabetes,yes,3,1,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0233,46,female,single,self-employed,3-6L,urban,Delhi,2,high,quarterly,ICICI Lombard;LIC;Bajaj Allianz,80771,0.467,none,heart_disease,yes,3,4,no,no,no,no,no,no,no,no,no,smoker
+U0234,68,male,married,student,3-6L,semi-urban,Karnataka,3,low,quarterly,HDFC Life;SBI Life;Niva Bupa,114263,0.255,none,none,yes,4,7,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0235,43,female,widowed,self-employed,>20L,semi-urban,Gujarat,0,low,monthly,SBI Life;Star Health;HDFC Life,26895,0.124,hypertension,heart_disease,yes,3,9,no,no,no,no,no,no,no,no,no,smoker
+U0236,45,male,single,homemaker,6-10L,semi-urban,Uttar Pradesh,0,medium,monthly,HDFC Life,148184,0.266,none,heart_disease,no,1,10,no,no,yes,no,no,no,no,no,no,ex-smoker
+U0237,39,other,divorced,student,<3L,urban,Rajasthan,1,low,quarterly,HDFC ERGO;Star Health;Care Health,28494,0.314,hypertension,none,yes,3,1,no,yes,no,no,no,no,no,no,no,smoker
+U0238,46,female,widowed,homemaker,<3L,semi-urban,Maharashtra,0,low,annual,Star Health;SBI Life;LIC,74386,0.187,none,cancer,yes,3,3,yes,no,no,no,no,no,no,no,no,smoker
+U0239,30,female,divorced,self-employed,10-20L,rural,Rajasthan,0,low,quarterly,Bajaj Allianz;LIC;Star Health,82101,0.217,none,hypertension,yes,0,0,no,no,no,no,no,no,no,no,no,smoker
+U0240,42,other,widowed,student,6-10L,urban,Gujarat,3,high,quarterly,SBI Life,85575,0.186,none,cancer,no,1,3,no,no,no,no,no,no,no,no,no,ex-smoker
+U0241,38,other,married,salaried,>20L,semi-urban,Rajasthan,3,high,annual,HDFC Life,45288,0.438,none,none,yes,3,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0242,34,male,married,homemaker,6-10L,urban,Tamil Nadu,3,low,annual,LIC;ICICI Lombard,57047,0.647,none,diabetes,yes,5,0,no,no,no,no,no,no,no,yes,no,smoker
+U0243,73,male,married,self-employed,6-10L,semi-urban,Delhi,0,high,annual,Star Health;HDFC ERGO,76862,0.207,none,diabetes,yes,0,3,no,yes,no,no,yes,no,no,no,no,non-smoker
+U0244,74,male,divorced,salaried,10-20L,rural,Karnataka,1,low,annual,Bajaj Allianz,56124,0.133,none,none,no,0,0,no,no,yes,no,no,no,no,no,no,non-smoker
+U0245,37,female,divorced,student,10-20L,semi-urban,Maharashtra,0,medium,quarterly,SBI Life,47904,0.385,none,cancer,yes,3,3,no,no,no,no,no,no,no,no,no,smoker
+U0246,40,other,married,salaried,3-6L,urban,Delhi,0,high,annual,LIC;HDFC Life;Star Health,98165,0.345,none,diabetes,yes,2,0,no,yes,no,no,no,no,no,no,no,smoker
+U0247,26,female,married,salaried,3-6L,rural,Uttar Pradesh,2,high,annual,LIC;Niva Bupa,28127,0.412,hypertension,cancer,no,5,4,no,yes,no,no,no,no,no,no,no,smoker
+U0248,71,male,widowed,salaried,>20L,urban,Uttar Pradesh,0,low,quarterly,LIC;ICICI Lombard;HDFC ERGO,69911,0.371,none,heart_disease,no,0,2,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0249,46,other,widowed,student,>20L,semi-urban,Maharashtra,0,high,quarterly,Bajaj Allianz;Niva Bupa;Star Health,94588,0.118,heart_disease,cancer,yes,3,10,no,yes,no,no,no,no,no,no,no,smoker
+U0250,31,female,widowed,salaried,6-10L,urban,Uttar Pradesh,3,medium,quarterly,SBI Life;HDFC Life;HDFC ERGO,38489,0.289,none,diabetes,no,4,0,no,no,no,no,no,no,no,no,no,smoker
+U0251,69,other,divorced,retired,>20L,urban,Kerala,2,low,monthly,Care Health;LIC,136051,0.219,diabetes,diabetes,no,4,10,yes,no,no,no,yes,no,no,no,no,smoker
+U0252,51,other,divorced,self-employed,6-10L,rural,Delhi,1,high,annual,SBI Life;ICICI Lombard;Care Health,95601,0.442,none,none,yes,3,9,no,no,no,no,no,no,no,no,no,smoker
+U0253,73,other,widowed,homemaker,6-10L,rural,Karnataka,0,medium,quarterly,LIC,80895,0.301,none,hypertension,yes,4,10,no,no,no,no,no,no,no,no,no,smoker
+U0254,54,other,married,salaried,10-20L,urban,Rajasthan,0,low,monthly,HDFC ERGO,8048,0.658,none,diabetes,no,5,2,no,no,no,no,no,yes,no,no,no,smoker
+U0255,18,other,divorced,retired,>20L,rural,Delhi,0,medium,monthly,Niva Bupa;Star Health,33832,0.084,hypertension,diabetes,yes,4,2,yes,yes,no,no,no,yes,no,no,yes,non-smoker
+U0256,45,female,single,retired,3-6L,semi-urban,Uttar Pradesh,3,high,monthly,HDFC Life;LIC,78981,0.323,none,diabetes,yes,0,3,yes,no,no,no,no,no,no,yes,no,ex-smoker
+U0257,50,female,married,retired,3-6L,rural,Karnataka,2,high,annual,HDFC ERGO;LIC,51415,0.54,none,hypertension,no,1,2,no,yes,yes,no,no,no,no,no,no,ex-smoker
+U0258,39,other,widowed,salaried,3-6L,urban,Maharashtra,0,medium,quarterly,HDFC ERGO;Star Health,24403,0.15,diabetes,diabetes,no,1,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0259,28,female,divorced,student,3-6L,urban,Kerala,1,high,quarterly,ICICI Lombard;Star Health;Niva Bupa,32384,0.128,none,diabetes,yes,1,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0260,33,female,widowed,self-employed,3-6L,semi-urban,Kerala,1,low,annual,SBI Life;Bajaj Allianz,109513,0.425,none,hypertension,yes,4,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0261,22,male,widowed,homemaker,6-10L,urban,Kerala,1,high,annual,LIC;Bajaj Allianz;HDFC Life,17855,0.201,none,diabetes,yes,3,6,no,no,no,no,no,no,yes,yes,no,non-smoker
+U0262,24,male,single,retired,<3L,semi-urban,Rajasthan,1,low,quarterly,Star Health;Care Health;HDFC Life,76139,0.096,none,heart_disease,yes,5,1,no,yes,no,no,no,no,no,no,no,non-smoker
+U0263,58,other,married,student,10-20L,semi-urban,Rajasthan,1,high,annual,Care Health;HDFC ERGO,60932,0.217,none,none,no,3,9,yes,no,no,no,no,no,no,no,no,non-smoker
+U0264,34,female,widowed,salaried,6-10L,urban,Uttar Pradesh,1,low,monthly,Niva Bupa,65592,0.089,none,cancer,no,3,2,no,yes,no,no,no,no,no,no,no,smoker
+U0265,63,male,married,self-employed,3-6L,semi-urban,Maharashtra,3,high,monthly,HDFC ERGO;Niva Bupa;Tata AIG,105038,0.131,none,none,yes,1,8,no,no,no,no,no,no,no,no,no,smoker
+U0266,53,other,single,self-employed,3-6L,semi-urban,Tamil Nadu,2,medium,annual,HDFC Life;SBI Life;Care Health,72634,0.323,heart_disease,cancer,yes,1,9,no,no,no,no,yes,no,yes,yes,no,smoker
+U0267,36,other,divorced,self-employed,3-6L,urban,Tamil Nadu,3,low,quarterly,Bajaj Allianz,56015,0.147,none,cancer,no,4,6,no,no,no,no,no,no,no,no,no,ex-smoker
+U0268,58,other,single,self-employed,10-20L,urban,Delhi,2,medium,quarterly,Niva Bupa;SBI Life;ICICI Lombard,19806,0.339,none,none,yes,4,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0269,29,female,widowed,salaried,3-6L,semi-urban,Delhi,3,medium,annual,Tata AIG,88586,0.252,none,diabetes,no,2,9,no,no,no,no,no,no,no,no,no,smoker
+U0270,26,male,widowed,homemaker,>20L,rural,Kerala,0,medium,annual,HDFC Life,10706,0.355,heart_disease,heart_disease,no,1,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0271,71,other,single,homemaker,<3L,semi-urban,Uttar Pradesh,1,low,monthly,SBI Life;Star Health,91658,0.191,diabetes,cancer,yes,3,1,yes,no,no,no,no,yes,no,no,no,ex-smoker
+U0272,39,female,widowed,student,3-6L,urban,Karnataka,3,high,annual,HDFC Life;Care Health,30139,0.254,diabetes,hypertension,yes,5,8,no,no,no,no,no,no,no,no,no,smoker
+U0273,55,male,married,retired,<3L,urban,Maharashtra,0,high,quarterly,Star Health,13606,0.218,heart_disease,heart_disease,no,0,1,no,no,no,no,no,no,no,no,no,smoker
+U0274,42,male,married,student,<3L,urban,Delhi,3,medium,monthly,ICICI Lombard;HDFC ERGO,144296,0.359,diabetes,none,no,5,1,no,no,no,no,no,no,no,no,no,smoker
+U0275,68,other,single,salaried,>20L,rural,Gujarat,3,high,annual,Bajaj Allianz,6483,0.508,hypertension,heart_disease,yes,5,9,no,no,no,no,no,no,no,no,no,smoker
+U0276,50,other,single,self-employed,<3L,rural,Maharashtra,0,low,annual,Tata AIG;SBI Life,87553,0.219,none,cancer,no,0,2,no,yes,no,no,no,no,no,no,no,smoker
+U0277,24,male,widowed,retired,10-20L,semi-urban,Gujarat,1,high,annual,Bajaj Allianz;SBI Life;ICICI Lombard,21122,0.108,heart_disease,cancer,no,2,0,yes,yes,no,no,no,no,no,no,no,smoker
+U0278,51,other,married,self-employed,10-20L,semi-urban,Tamil Nadu,0,high,monthly,Bajaj Allianz,16991,0.245,none,heart_disease,no,2,7,no,no,no,no,no,no,no,no,no,smoker
+U0279,69,female,single,retired,<3L,urban,Delhi,2,high,quarterly,SBI Life,59276,0.562,none,heart_disease,yes,5,0,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0280,75,other,single,self-employed,3-6L,urban,Gujarat,3,low,quarterly,Bajaj Allianz,52871,0.242,heart_disease,hypertension,no,0,4,no,no,no,no,yes,no,no,no,no,non-smoker
+U0281,31,male,divorced,self-employed,6-10L,rural,Maharashtra,3,high,quarterly,Care Health;ICICI Lombard;Star Health,54397,0.264,none,none,yes,4,0,no,no,no,no,no,no,yes,yes,no,smoker
+U0282,47,other,single,student,10-20L,rural,Delhi,3,medium,annual,Niva Bupa;Care Health,17039,0.214,hypertension,diabetes,yes,1,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0283,23,other,married,self-employed,<3L,semi-urban,Delhi,2,high,quarterly,Niva Bupa,15826,0.333,none,diabetes,yes,1,8,yes,no,no,no,no,no,no,no,no,non-smoker
+U0284,48,other,widowed,salaried,10-20L,urban,Tamil Nadu,2,high,quarterly,LIC,98871,0.258,none,diabetes,yes,2,6,no,no,no,no,no,no,no,no,no,smoker
+U0285,51,male,widowed,salaried,>20L,rural,Delhi,3,medium,annual,Care Health,59266,0.304,none,cancer,yes,2,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0286,37,female,divorced,homemaker,>20L,rural,Karnataka,1,low,quarterly,HDFC Life;Care Health;Niva Bupa,54808,0.301,none,cancer,no,1,2,no,no,no,no,no,no,no,no,yes,smoker
+U0287,75,male,married,salaried,<3L,urban,Delhi,1,medium,monthly,Niva Bupa,75374,0.314,none,cancer,yes,5,7,no,no,no,no,no,no,no,no,no,smoker
+U0288,65,male,single,salaried,<3L,rural,Tamil Nadu,2,high,monthly,HDFC ERGO;ICICI Lombard,9604,0.352,none,cancer,yes,4,6,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0289,47,male,divorced,retired,10-20L,rural,Delhi,2,low,monthly,Niva Bupa;LIC,57955,0.32,none,diabetes,yes,5,1,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0290,54,other,widowed,self-employed,<3L,semi-urban,Delhi,3,low,annual,Bajaj Allianz;ICICI Lombard,59920,0.368,none,cancer,no,3,4,no,no,no,no,no,no,no,no,no,smoker
+U0291,37,male,divorced,salaried,6-10L,urban,Delhi,2,medium,annual,Niva Bupa,122791,0.189,none,none,yes,3,4,no,no,no,no,no,no,no,no,no,smoker
+U0292,35,female,divorced,retired,>20L,urban,Rajasthan,2,low,annual,Niva Bupa,80354,0.111,none,heart_disease,yes,1,7,yes,yes,no,no,no,no,no,no,no,smoker
+U0293,24,female,single,salaried,<3L,semi-urban,Karnataka,3,medium,annual,ICICI Lombard;Niva Bupa,41462,0.312,none,hypertension,yes,1,4,no,no,no,no,no,no,no,no,no,non-smoker
+U0294,57,male,married,retired,10-20L,rural,Tamil Nadu,3,medium,quarterly,LIC;Care Health,89625,0.392,hypertension,cancer,no,0,1,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0295,60,female,married,retired,10-20L,rural,Maharashtra,0,low,annual,Care Health;Niva Bupa,31614,0.308,none,hypertension,yes,3,7,no,no,no,yes,no,no,no,no,no,non-smoker
+U0296,22,female,single,salaried,10-20L,rural,Delhi,0,medium,quarterly,Bajaj Allianz;Tata AIG,33896,0.298,none,cancer,no,2,9,no,no,yes,no,no,no,no,no,no,non-smoker
+U0297,54,female,single,retired,10-20L,semi-urban,Uttar Pradesh,2,high,monthly,HDFC ERGO,78424,0.302,none,heart_disease,no,4,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0298,46,male,single,student,>20L,semi-urban,Gujarat,0,low,quarterly,Tata AIG;Star Health,77203,0.193,diabetes,heart_disease,yes,5,1,yes,no,no,no,no,no,no,no,no,non-smoker
+U0299,66,female,widowed,self-employed,10-20L,semi-urban,Uttar Pradesh,0,low,monthly,LIC;SBI Life;ICICI Lombard,80754,0.147,diabetes,none,yes,2,4,yes,no,no,no,no,no,no,no,no,non-smoker
+U0300,72,male,widowed,self-employed,3-6L,semi-urban,Gujarat,0,high,annual,HDFC ERGO;LIC;HDFC Life,21145,0.353,none,cancer,yes,1,8,no,no,no,no,no,no,no,yes,no,smoker
+U0301,53,male,widowed,retired,>20L,rural,Delhi,0,low,annual,SBI Life;Tata AIG;Care Health,73743,0.291,none,cancer,yes,5,3,no,yes,no,no,no,no,no,no,no,non-smoker
+U0302,58,male,divorced,retired,10-20L,semi-urban,Maharashtra,3,high,monthly,HDFC ERGO;ICICI Lombard;Tata AIG,117116,0.249,none,hypertension,yes,2,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0303,46,female,single,salaried,3-6L,urban,Tamil Nadu,1,medium,quarterly,Tata AIG,76814,0.125,asthma,heart_disease,yes,2,2,no,no,yes,no,no,no,yes,no,no,non-smoker
+U0304,55,female,widowed,student,10-20L,semi-urban,Tamil Nadu,1,low,annual,Bajaj Allianz;SBI Life,109102,0.203,hypertension,diabetes,yes,3,0,no,no,no,no,no,no,no,no,no,smoker
+U0305,38,other,single,self-employed,10-20L,rural,Uttar Pradesh,3,low,annual,Bajaj Allianz,73554,0.404,none,diabetes,no,2,6,no,yes,no,no,no,no,no,no,no,non-smoker
+U0306,29,other,widowed,retired,<3L,rural,Kerala,1,high,annual,ICICI Lombard;HDFC ERGO,67309,0.413,none,cancer,no,2,6,no,yes,no,no,no,no,no,no,no,smoker
+U0307,36,female,married,homemaker,>20L,rural,Karnataka,0,high,monthly,Bajaj Allianz;HDFC Life;ICICI Lombard,32886,0.355,none,diabetes,yes,0,8,no,yes,no,no,yes,no,no,no,no,ex-smoker
+U0308,21,male,single,salaried,3-6L,semi-urban,Kerala,0,medium,quarterly,HDFC ERGO,10351,0.808,none,none,no,0,1,no,no,no,no,no,no,no,no,no,smoker
+U0309,46,male,widowed,salaried,<3L,urban,Tamil Nadu,1,medium,annual,Tata AIG;SBI Life,89600,0.562,hypertension,heart_disease,yes,4,8,no,yes,no,no,no,no,no,no,yes,non-smoker
+U0310,67,other,single,self-employed,10-20L,rural,Delhi,3,medium,quarterly,HDFC Life;Star Health;HDFC ERGO,65079,0.451,diabetes,cancer,no,0,6,yes,no,no,no,no,no,no,no,no,non-smoker
+U0311,23,other,divorced,retired,<3L,semi-urban,Delhi,1,medium,monthly,Niva Bupa;HDFC Life,75344,0.108,none,heart_disease,yes,1,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0312,55,other,single,homemaker,6-10L,semi-urban,Kerala,0,high,monthly,Niva Bupa,91787,0.237,none,heart_disease,no,5,6,no,yes,no,no,no,no,no,yes,no,ex-smoker
+U0313,30,male,single,self-employed,6-10L,urban,Delhi,0,medium,annual,HDFC ERGO,144079,0.219,none,none,no,1,6,no,no,no,no,no,no,no,yes,no,non-smoker
+U0314,44,female,single,student,6-10L,rural,Maharashtra,2,medium,annual,HDFC ERGO;HDFC Life;Niva Bupa,80982,0.529,heart_disease,heart_disease,no,2,0,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0315,65,female,single,self-employed,3-6L,urban,Rajasthan,2,high,quarterly,ICICI Lombard;Star Health;HDFC ERGO,47238,0.302,none,heart_disease,no,4,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0316,65,other,single,self-employed,3-6L,rural,Tamil Nadu,0,medium,monthly,HDFC ERGO;Niva Bupa,35596,0.146,none,heart_disease,no,3,7,no,no,no,no,no,no,no,no,no,smoker
+U0317,52,male,divorced,student,<3L,semi-urban,Karnataka,0,medium,annual,SBI Life;Niva Bupa;LIC,25881,0.398,none,heart_disease,yes,1,5,no,yes,no,no,no,no,no,no,no,smoker
+U0318,55,other,widowed,salaried,<3L,rural,Gujarat,2,medium,annual,SBI Life;Star Health;Care Health,30375,0.237,none,cancer,yes,1,3,no,no,no,no,no,no,no,no,no,smoker
+U0319,20,male,divorced,salaried,6-10L,semi-urban,Karnataka,2,low,annual,Care Health,53058,0.675,none,cancer,yes,5,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0320,33,other,widowed,salaried,<3L,urban,Delhi,2,high,monthly,Bajaj Allianz;Care Health;Niva Bupa,78964,0.296,none,heart_disease,no,4,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0321,28,other,widowed,homemaker,>20L,semi-urban,Karnataka,2,high,monthly,Star Health;ICICI Lombard,40290,0.184,heart_disease,heart_disease,no,4,7,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0322,33,female,married,student,3-6L,rural,Uttar Pradesh,0,high,monthly,Star Health;Bajaj Allianz,49851,0.437,asthma,diabetes,no,5,10,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0323,36,female,single,self-employed,3-6L,urban,Delhi,0,medium,quarterly,HDFC ERGO,43004,0.196,none,hypertension,yes,1,5,no,no,no,yes,no,no,no,no,no,non-smoker
+U0324,34,male,widowed,salaried,6-10L,rural,Gujarat,1,medium,quarterly,SBI Life;Tata AIG,88652,0.367,asthma,heart_disease,yes,0,1,no,no,no,no,no,no,no,no,no,smoker
+U0325,24,male,single,homemaker,<3L,rural,Delhi,0,high,monthly,Care Health;Star Health,58439,0.587,none,cancer,yes,1,1,yes,no,no,no,no,no,no,no,no,smoker
+U0326,75,female,single,student,>20L,rural,Karnataka,1,low,annual,SBI Life,110678,0.253,none,none,yes,2,0,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0327,37,male,widowed,retired,6-10L,urban,Karnataka,1,high,monthly,ICICI Lombard,96122,0.477,none,hypertension,yes,2,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0328,29,female,single,self-employed,10-20L,semi-urban,Karnataka,3,medium,monthly,SBI Life;Care Health;HDFC Life,56096,0.277,none,diabetes,no,5,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0329,43,male,widowed,salaried,>20L,rural,Uttar Pradesh,1,low,annual,Care Health;SBI Life;Bajaj Allianz,7708,0.274,asthma,hypertension,no,5,1,no,no,yes,no,no,no,no,no,no,smoker
+U0330,56,female,widowed,homemaker,10-20L,urban,Kerala,2,low,monthly,Star Health,36860,0.243,none,cancer,no,3,4,no,no,no,no,no,no,no,no,no,smoker
+U0331,35,other,married,salaried,>20L,semi-urban,Karnataka,3,medium,monthly,Niva Bupa;HDFC Life,112211,0.309,none,diabetes,yes,5,10,no,no,no,no,no,no,no,no,no,smoker
+U0332,34,male,divorced,self-employed,>20L,semi-urban,Gujarat,1,high,monthly,Niva Bupa;ICICI Lombard,9139,0.174,none,none,no,2,0,no,yes,no,no,no,no,no,yes,no,smoker
+U0333,61,male,married,retired,6-10L,urban,Tamil Nadu,3,low,annual,ICICI Lombard;Tata AIG;Star Health,26429,0.352,hypertension,diabetes,no,1,7,yes,no,no,no,no,no,no,no,no,smoker
+U0334,68,male,single,student,3-6L,rural,Karnataka,0,high,quarterly,Star Health;LIC,8954,0.211,none,diabetes,no,1,1,no,yes,yes,no,no,no,no,no,no,non-smoker
+U0335,53,other,divorced,student,3-6L,rural,Gujarat,2,medium,quarterly,ICICI Lombard;Tata AIG;Star Health,82966,0.296,asthma,none,no,4,8,no,no,yes,yes,no,no,no,no,no,non-smoker
+U0336,50,other,divorced,student,6-10L,urban,Maharashtra,1,medium,quarterly,Niva Bupa;Bajaj Allianz;Care Health,69626,0.195,none,heart_disease,no,5,10,no,no,no,no,no,no,no,no,no,non-smoker
+U0337,34,male,widowed,student,>20L,semi-urban,Rajasthan,1,low,annual,LIC;Niva Bupa;HDFC Life,29957,0.217,hypertension,none,no,0,9,no,no,no,no,no,no,no,no,no,smoker
+U0338,56,male,married,self-employed,6-10L,rural,Maharashtra,3,medium,monthly,Niva Bupa;LIC;ICICI Lombard,87368,0.124,none,cancer,yes,1,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0339,26,other,divorced,homemaker,>20L,rural,Tamil Nadu,2,medium,annual,Bajaj Allianz,80925,0.369,diabetes,diabetes,yes,2,1,no,no,no,no,no,no,no,no,yes,smoker
+U0340,69,other,single,student,6-10L,urban,Gujarat,1,high,annual,SBI Life,47037,0.395,hypertension,heart_disease,no,0,6,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0341,56,female,widowed,retired,6-10L,urban,Maharashtra,3,medium,annual,Bajaj Allianz;Tata AIG,133350,0.144,none,cancer,no,0,8,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0342,66,other,single,student,10-20L,urban,Rajasthan,0,low,monthly,SBI Life;HDFC Life,15097,0.285,none,cancer,yes,1,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0343,39,female,single,retired,6-10L,semi-urban,Uttar Pradesh,2,medium,quarterly,Star Health,77245,0.247,diabetes,diabetes,no,5,4,yes,no,no,no,no,no,no,yes,no,ex-smoker
+U0344,65,other,married,homemaker,10-20L,urban,Rajasthan,2,medium,quarterly,Care Health;Star Health;Tata AIG,116304,0.336,hypertension,cancer,yes,5,9,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0345,42,male,married,homemaker,6-10L,urban,Gujarat,2,low,annual,Niva Bupa;Care Health;ICICI Lombard,60193,0.265,none,diabetes,no,1,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0346,29,male,single,self-employed,10-20L,semi-urban,Maharashtra,1,low,annual,ICICI Lombard;Star Health;Niva Bupa,42766,0.117,none,none,yes,1,7,no,no,no,no,no,no,no,no,no,ex-smoker
+U0347,63,other,married,self-employed,>20L,rural,Gujarat,2,medium,monthly,Star Health;Bajaj Allianz;HDFC ERGO,81736,0.137,none,none,no,5,0,no,no,no,no,no,no,no,yes,no,non-smoker
+U0348,21,male,married,student,>20L,semi-urban,Gujarat,2,medium,monthly,Care Health;HDFC Life;Niva Bupa,14046,0.181,none,heart_disease,no,4,1,no,no,no,no,no,no,no,no,no,ex-smoker
+U0349,26,male,single,student,10-20L,semi-urban,Kerala,3,high,quarterly,Niva Bupa;Care Health;HDFC Life,102644,0.37,none,diabetes,no,4,5,no,no,no,no,no,no,no,no,no,ex-smoker
+U0350,63,other,married,student,>20L,urban,Kerala,2,medium,quarterly,Bajaj Allianz;Star Health;HDFC ERGO,140024,0.269,none,hypertension,yes,1,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0351,24,other,married,self-employed,>20L,rural,Delhi,0,medium,annual,Star Health;ICICI Lombard,65333,0.312,asthma,none,yes,2,9,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0352,39,other,widowed,homemaker,>20L,urban,Tamil Nadu,3,low,monthly,HDFC ERGO,20939,0.148,none,hypertension,no,0,5,no,no,no,no,no,no,no,no,no,smoker
+U0353,41,male,single,salaried,>20L,semi-urban,Gujarat,2,medium,annual,HDFC Life;ICICI Lombard;Niva Bupa,76532,0.504,none,diabetes,yes,0,6,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0354,59,male,widowed,homemaker,3-6L,urban,Tamil Nadu,0,low,annual,SBI Life;Tata AIG;Bajaj Allianz,12446,0.469,none,heart_disease,no,2,8,no,yes,no,no,no,no,no,no,no,non-smoker
+U0355,25,male,divorced,self-employed,10-20L,urban,Tamil Nadu,2,low,quarterly,ICICI Lombard;Tata AIG;Niva Bupa,34883,0.309,none,hypertension,no,5,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0356,41,other,single,retired,3-6L,rural,Maharashtra,2,low,annual,Star Health,28658,0.491,asthma,cancer,yes,5,3,yes,no,no,no,no,no,yes,no,no,non-smoker
+U0357,60,female,divorced,salaried,10-20L,urban,Maharashtra,3,medium,annual,HDFC Life;HDFC ERGO;SBI Life,94374,0.35,none,diabetes,no,0,7,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0358,39,male,divorced,homemaker,6-10L,rural,Delhi,1,medium,monthly,HDFC Life;Bajaj Allianz;Star Health,24641,0.551,none,hypertension,no,2,10,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0359,48,female,divorced,salaried,>20L,rural,Delhi,0,low,monthly,HDFC Life;HDFC ERGO;ICICI Lombard,110826,0.252,none,cancer,no,3,2,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0360,18,other,single,salaried,3-6L,semi-urban,Gujarat,0,low,quarterly,Niva Bupa,108244,0.099,heart_disease,none,no,2,0,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0361,53,female,single,retired,6-10L,rural,Gujarat,1,medium,quarterly,HDFC Life;Tata AIG;HDFC ERGO,11182,0.336,none,cancer,yes,0,5,no,no,no,no,no,yes,no,no,no,smoker
+U0362,73,other,married,homemaker,>20L,urban,Gujarat,0,medium,quarterly,LIC;ICICI Lombard,19385,0.57,none,diabetes,no,3,10,no,no,no,no,no,no,no,no,no,smoker
+U0363,48,male,single,retired,>20L,rural,Karnataka,2,medium,quarterly,Niva Bupa;SBI Life,40365,0.196,none,hypertension,no,2,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0364,63,other,married,retired,<3L,urban,Rajasthan,1,medium,annual,Bajaj Allianz;Star Health,19538,0.292,none,diabetes,yes,4,3,no,no,no,no,no,no,no,no,no,smoker
+U0365,39,female,single,self-employed,6-10L,semi-urban,Uttar Pradesh,0,high,monthly,Care Health,6572,0.301,hypertension,diabetes,yes,4,3,no,yes,yes,no,no,no,no,no,no,non-smoker
+U0366,69,male,widowed,retired,10-20L,urban,Karnataka,0,high,monthly,ICICI Lombard;Star Health,147002,0.206,heart_disease,cancer,yes,1,9,no,yes,no,no,yes,no,no,no,no,non-smoker
+U0367,20,male,widowed,homemaker,3-6L,urban,Gujarat,3,high,monthly,Bajaj Allianz;SBI Life,130787,0.169,diabetes,heart_disease,yes,4,8,yes,no,no,no,no,no,no,no,no,smoker
+U0368,58,male,single,retired,6-10L,rural,Rajasthan,0,low,monthly,Tata AIG;Niva Bupa;HDFC ERGO,33714,0.258,diabetes,none,yes,2,0,yes,no,no,no,no,no,no,no,no,smoker
+U0369,25,other,single,student,<3L,urban,Uttar Pradesh,3,low,monthly,Bajaj Allianz,69176,0.713,hypertension,diabetes,no,3,1,yes,yes,yes,no,no,no,no,no,no,smoker
+U0370,38,other,widowed,homemaker,10-20L,semi-urban,Karnataka,0,medium,monthly,LIC,102794,0.412,hypertension,diabetes,no,2,8,no,yes,no,no,no,no,no,no,no,non-smoker
+U0371,52,other,widowed,salaried,<3L,rural,Maharashtra,2,high,monthly,Tata AIG;LIC;SBI Life,14021,0.419,none,diabetes,no,5,1,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0372,56,female,divorced,student,<3L,semi-urban,Rajasthan,0,medium,monthly,HDFC ERGO;ICICI Lombard;Star Health,108739,0.426,none,diabetes,no,1,2,no,no,no,yes,no,no,no,yes,no,smoker
+U0373,47,male,divorced,retired,6-10L,rural,Tamil Nadu,2,high,monthly,SBI Life,8793,0.288,none,diabetes,yes,5,10,no,no,no,no,no,no,no,no,no,ex-smoker
+U0374,50,female,widowed,student,<3L,urban,Tamil Nadu,1,low,annual,Bajaj Allianz;HDFC ERGO;Star Health,124424,0.27,none,heart_disease,yes,3,7,no,yes,no,no,no,no,no,no,no,smoker
+U0375,21,female,married,self-employed,10-20L,urban,Karnataka,0,medium,annual,Niva Bupa;HDFC Life,92269,0.3,hypertension,cancer,yes,3,0,yes,no,yes,no,no,no,no,no,no,non-smoker
+U0376,70,male,divorced,student,>20L,semi-urban,Tamil Nadu,0,high,annual,HDFC Life;ICICI Lombard;SBI Life,53736,0.227,diabetes,hypertension,yes,1,6,no,no,no,no,no,no,no,yes,no,non-smoker
+U0377,22,male,married,retired,10-20L,urban,Karnataka,2,high,quarterly,HDFC ERGO;HDFC Life;SBI Life,125307,0.59,none,diabetes,no,1,2,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0378,27,male,divorced,retired,3-6L,urban,Kerala,3,high,quarterly,HDFC Life;HDFC ERGO,30076,0.175,diabetes,heart_disease,yes,2,6,yes,no,no,no,no,no,no,no,no,non-smoker
+U0379,75,other,divorced,salaried,<3L,urban,Maharashtra,2,low,annual,SBI Life;Niva Bupa;Star Health,17186,0.323,none,none,yes,3,4,no,no,no,no,no,no,no,no,no,smoker
+U0380,19,female,widowed,self-employed,10-20L,rural,Tamil Nadu,1,high,annual,HDFC ERGO;SBI Life,52134,0.232,none,hypertension,no,2,8,no,no,no,no,no,yes,no,no,no,non-smoker
+U0381,35,female,single,student,6-10L,rural,Kerala,1,low,quarterly,HDFC Life,110483,0.362,none,heart_disease,yes,2,1,no,no,no,no,no,no,no,no,no,ex-smoker
+U0382,68,female,divorced,salaried,6-10L,urban,Karnataka,2,high,quarterly,Tata AIG,26768,0.277,none,hypertension,no,1,10,no,no,no,no,no,no,yes,no,no,ex-smoker
+U0383,34,other,single,student,>20L,urban,Gujarat,3,low,monthly,Bajaj Allianz;SBI Life,72411,0.27,asthma,hypertension,yes,3,7,no,no,yes,no,no,no,no,no,no,smoker
+U0384,64,female,single,self-employed,10-20L,rural,Delhi,0,low,annual,Tata AIG;Care Health;Star Health,95056,0.138,none,heart_disease,no,5,2,no,no,no,no,no,no,yes,no,no,ex-smoker
+U0385,56,other,single,student,<3L,semi-urban,Maharashtra,0,low,annual,Bajaj Allianz,27391,0.39,hypertension,diabetes,no,5,6,no,yes,no,no,no,no,no,yes,no,ex-smoker
+U0386,28,other,widowed,student,3-6L,urban,Gujarat,1,medium,annual,HDFC ERGO,93729,0.225,asthma,diabetes,yes,4,9,yes,no,yes,no,no,no,no,no,no,smoker
+U0387,72,other,widowed,salaried,10-20L,semi-urban,Tamil Nadu,1,low,monthly,Star Health;HDFC Life,12232,0.256,none,heart_disease,no,2,6,no,yes,no,no,no,no,yes,no,no,non-smoker
+U0388,24,female,widowed,retired,10-20L,urban,Rajasthan,3,low,annual,LIC;Care Health;Tata AIG,23821,0.122,none,hypertension,yes,3,9,no,no,no,no,no,no,no,yes,no,ex-smoker
+U0389,59,female,married,student,10-20L,urban,Maharashtra,0,high,annual,SBI Life;HDFC Life;Care Health,80513,0.25,none,diabetes,no,4,1,no,no,yes,no,no,no,no,no,no,ex-smoker
+U0390,71,female,divorced,homemaker,>20L,urban,Kerala,3,medium,monthly,ICICI Lombard;Niva Bupa,86891,0.112,none,heart_disease,yes,2,5,no,no,no,no,yes,no,no,yes,no,smoker
+U0391,34,other,widowed,self-employed,10-20L,semi-urban,Karnataka,1,low,quarterly,Star Health,83800,0.276,none,heart_disease,yes,4,1,yes,no,no,no,no,no,no,no,no,non-smoker
+U0392,37,other,married,salaried,<3L,urban,Delhi,2,medium,monthly,ICICI Lombard,61510,0.348,none,none,yes,3,9,no,no,yes,no,no,no,no,no,no,smoker
+U0393,68,female,single,homemaker,10-20L,rural,Maharashtra,3,medium,annual,SBI Life;Bajaj Allianz,57299,0.356,none,diabetes,yes,1,8,no,yes,yes,no,no,no,no,no,no,ex-smoker
+U0394,52,male,married,homemaker,<3L,urban,Karnataka,2,medium,annual,Niva Bupa;Bajaj Allianz,55760,0.216,none,diabetes,no,4,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0395,55,other,single,salaried,3-6L,semi-urban,Uttar Pradesh,3,medium,annual,Star Health;HDFC Life,10633,0.536,none,diabetes,no,2,3,no,no,no,no,no,no,no,no,yes,smoker
+U0396,59,male,single,student,<3L,urban,Maharashtra,3,high,quarterly,SBI Life;HDFC ERGO,46767,0.489,hypertension,heart_disease,no,3,1,no,no,no,no,no,no,no,no,no,ex-smoker
+U0397,45,male,divorced,homemaker,<3L,rural,Maharashtra,3,medium,quarterly,Niva Bupa;HDFC Life;Care Health,51566,0.139,diabetes,diabetes,yes,3,0,yes,no,no,no,no,no,no,no,no,smoker
+U0398,27,female,divorced,student,>20L,rural,Rajasthan,1,high,quarterly,Tata AIG;SBI Life;Star Health,157793,0.102,none,none,yes,0,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0399,68,female,widowed,salaried,3-6L,rural,Tamil Nadu,3,high,monthly,Tata AIG;Star Health;SBI Life,20079,0.493,none,cancer,no,4,3,no,yes,no,no,no,no,no,no,no,non-smoker
+U0400,31,male,single,homemaker,>20L,semi-urban,Maharashtra,2,medium,monthly,Star Health;SBI Life;Tata AIG,108859,0.091,none,cancer,no,0,4,yes,no,no,no,no,no,no,yes,no,ex-smoker
+U0401,54,female,widowed,student,>20L,urban,Karnataka,2,medium,quarterly,HDFC ERGO;ICICI Lombard;SBI Life,115911,0.585,none,diabetes,yes,2,3,no,no,no,no,no,no,no,no,no,ex-smoker
+U0402,65,male,single,retired,10-20L,urban,Tamil Nadu,2,low,quarterly,Care Health,29212,0.252,none,diabetes,no,3,5,no,yes,no,no,no,no,no,no,no,smoker
+U0403,60,male,married,salaried,>20L,rural,Gujarat,2,low,monthly,HDFC Life;ICICI Lombard;Care Health,67037,0.228,none,cancer,no,1,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0404,73,other,divorced,salaried,>20L,semi-urban,Maharashtra,0,low,quarterly,HDFC ERGO;Care Health,105712,0.625,none,hypertension,no,1,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0405,28,other,widowed,salaried,>20L,urban,Tamil Nadu,0,low,annual,LIC;Star Health,26159,0.201,none,cancer,no,5,2,no,no,no,no,no,no,no,no,no,smoker
+U0406,67,male,married,student,10-20L,urban,Karnataka,2,low,quarterly,Care Health;Star Health,30956,0.163,diabetes,heart_disease,no,5,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0407,22,female,single,student,3-6L,urban,Karnataka,0,medium,annual,Care Health,82646,0.567,none,none,yes,5,5,no,no,no,no,no,no,no,yes,no,non-smoker
+U0408,39,other,divorced,student,6-10L,semi-urban,Delhi,2,high,quarterly,Bajaj Allianz;HDFC Life;Tata AIG,74705,0.218,hypertension,hypertension,yes,3,10,yes,yes,no,no,no,no,no,yes,no,ex-smoker
+U0409,42,other,single,salaried,10-20L,rural,Rajasthan,2,medium,quarterly,Care Health,111339,0.187,none,hypertension,yes,2,4,no,yes,no,no,yes,no,no,no,yes,smoker
+U0410,37,female,widowed,retired,3-6L,rural,Rajasthan,1,high,monthly,Care Health;LIC,92951,0.207,none,none,yes,1,5,no,no,no,no,no,yes,no,no,no,non-smoker
+U0411,73,other,single,retired,10-20L,semi-urban,Karnataka,3,medium,annual,Care Health,65746,0.119,hypertension,heart_disease,yes,1,2,yes,no,no,no,yes,yes,no,yes,no,smoker
+U0412,39,other,single,student,6-10L,rural,Kerala,2,low,monthly,Bajaj Allianz;HDFC Life;Care Health,60486,0.349,hypertension,none,yes,1,8,no,yes,no,no,no,no,no,no,no,smoker
+U0413,31,other,married,salaried,6-10L,semi-urban,Rajasthan,0,medium,quarterly,HDFC ERGO,122332,0.325,none,none,no,5,4,no,no,no,no,no,no,no,yes,no,smoker
+U0414,64,female,widowed,salaried,10-20L,semi-urban,Uttar Pradesh,3,high,monthly,Star Health,67314,0.267,heart_disease,cancer,no,0,9,no,no,no,no,yes,no,no,yes,no,smoker
+U0415,55,other,married,homemaker,6-10L,urban,Gujarat,1,high,annual,Star Health,88631,0.151,heart_disease,diabetes,no,5,7,no,no,no,no,no,no,no,yes,no,smoker
+U0416,56,female,single,homemaker,6-10L,semi-urban,Maharashtra,1,medium,quarterly,Niva Bupa;LIC,84831,0.39,none,none,no,4,7,yes,no,no,no,no,no,no,no,no,non-smoker
+U0417,60,male,divorced,retired,6-10L,semi-urban,Tamil Nadu,0,medium,annual,SBI Life;Star Health,79771,0.362,none,heart_disease,yes,0,3,no,no,no,no,no,no,no,yes,no,smoker
+U0418,20,male,widowed,salaried,6-10L,semi-urban,Uttar Pradesh,0,medium,annual,LIC;Bajaj Allianz;ICICI Lombard,72361,0.15,asthma,cancer,yes,5,5,no,no,no,no,no,no,no,no,no,smoker
+U0419,68,male,widowed,salaried,10-20L,rural,Karnataka,1,high,monthly,HDFC Life;Tata AIG,53936,0.277,hypertension,heart_disease,no,1,2,yes,yes,no,no,no,no,no,no,no,smoker
+U0420,47,male,single,self-employed,>20L,semi-urban,Delhi,3,medium,monthly,LIC;HDFC Life,76308,0.279,none,cancer,no,0,0,no,no,no,no,no,no,no,no,no,ex-smoker
+U0421,24,female,married,student,>20L,semi-urban,Karnataka,3,high,monthly,HDFC Life;ICICI Lombard,72403,0.69,none,diabetes,no,4,1,no,no,no,no,no,no,no,no,no,non-smoker
+U0422,22,other,single,retired,3-6L,urban,Gujarat,1,medium,quarterly,Tata AIG;Star Health,12680,0.661,none,hypertension,no,4,8,no,yes,no,no,no,no,no,no,no,smoker
+U0423,71,male,married,retired,>20L,rural,Kerala,3,medium,annual,LIC;HDFC Life;Care Health,64845,0.284,none,diabetes,no,4,9,no,no,no,no,yes,no,no,no,no,non-smoker
+U0424,43,other,widowed,salaried,>20L,urban,Kerala,1,medium,annual,Star Health,33148,0.083,none,none,yes,1,4,no,no,no,no,no,no,no,no,no,ex-smoker
+U0425,39,male,divorced,self-employed,>20L,rural,Kerala,1,high,quarterly,LIC;Tata AIG;HDFC ERGO,50636,0.464,none,heart_disease,no,1,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0426,37,male,married,salaried,10-20L,semi-urban,Karnataka,3,high,annual,SBI Life,44870,0.552,none,heart_disease,no,2,8,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0427,37,other,married,homemaker,<3L,urban,Gujarat,3,medium,monthly,Bajaj Allianz;HDFC Life,110508,0.151,none,cancer,no,3,9,yes,no,no,no,no,no,no,no,no,ex-smoker
+U0428,49,other,married,salaried,3-6L,urban,Karnataka,2,high,monthly,Care Health,71085,0.389,none,diabetes,yes,5,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0429,30,female,married,salaried,3-6L,rural,Maharashtra,3,high,annual,SBI Life;LIC;Niva Bupa,5696,0.195,hypertension,cancer,yes,1,5,no,no,no,no,no,no,no,no,no,non-smoker
+U0430,55,female,married,homemaker,10-20L,semi-urban,Uttar Pradesh,2,low,quarterly,Niva Bupa;HDFC Life;Star Health,88347,0.241,none,diabetes,yes,5,8,no,no,no,no,no,no,no,no,no,smoker
+U0431,29,other,single,student,<3L,semi-urban,Gujarat,3,medium,quarterly,Care Health,130342,0.673,none,none,no,4,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0432,39,other,widowed,student,>20L,rural,Delhi,1,low,monthly,HDFC ERGO;Tata AIG;Care Health,26936,0.401,none,diabetes,no,3,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0433,38,other,divorced,homemaker,>20L,urban,Kerala,2,low,quarterly,Care Health;Niva Bupa,81933,0.379,asthma,hypertension,no,5,7,yes,yes,no,yes,no,yes,no,yes,no,smoker
+U0434,67,female,divorced,retired,10-20L,semi-urban,Kerala,3,low,annual,Niva Bupa;SBI Life,22363,0.365,none,none,yes,4,8,no,no,no,no,no,no,no,no,yes,smoker
+U0435,20,other,widowed,retired,10-20L,rural,Uttar Pradesh,0,medium,quarterly,LIC;Care Health,102632,0.648,none,heart_disease,no,2,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0436,48,male,widowed,retired,<3L,semi-urban,Rajasthan,3,high,quarterly,Niva Bupa;Star Health;LIC,24554,0.257,none,none,yes,1,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0437,64,other,married,retired,6-10L,urban,Gujarat,3,low,annual,LIC;Care Health,95163,0.22,none,none,yes,0,5,no,no,no,no,yes,yes,no,yes,no,smoker
+U0438,47,male,widowed,retired,10-20L,rural,Rajasthan,0,high,monthly,Care Health,87923,0.261,heart_disease,diabetes,no,4,9,no,yes,no,no,no,yes,no,no,no,ex-smoker
+U0439,55,female,single,retired,10-20L,urban,Kerala,0,low,annual,Care Health,78015,0.512,none,heart_disease,no,4,4,no,no,no,no,no,no,no,yes,no,non-smoker
+U0440,67,female,single,salaried,<3L,urban,Kerala,3,medium,annual,HDFC ERGO,100691,0.075,diabetes,cancer,yes,5,7,no,no,no,no,no,no,no,no,no,non-smoker
+U0441,53,female,single,self-employed,3-6L,urban,Gujarat,0,high,monthly,SBI Life;HDFC ERGO,70270,0.315,none,none,yes,0,9,no,no,no,no,no,no,no,no,no,smoker
+U0442,20,female,widowed,student,6-10L,semi-urban,Karnataka,1,medium,monthly,HDFC ERGO;Tata AIG;Bajaj Allianz,80670,0.174,hypertension,heart_disease,yes,2,5,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0443,19,other,widowed,salaried,3-6L,urban,Karnataka,2,high,monthly,Bajaj Allianz,43179,0.208,none,cancer,no,4,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0444,60,female,divorced,salaried,>20L,semi-urban,Delhi,3,low,monthly,Care Health,82192,0.303,none,diabetes,yes,2,8,no,no,no,no,no,no,no,no,no,non-smoker
+U0445,72,other,married,retired,10-20L,urban,Delhi,3,low,monthly,LIC,78586,0.207,asthma,heart_disease,yes,4,6,no,no,yes,no,no,yes,no,yes,no,smoker
+U0446,50,male,single,retired,6-10L,semi-urban,Uttar Pradesh,0,low,annual,Niva Bupa;Care Health,35180,0.486,none,heart_disease,no,4,7,no,no,no,no,no,no,no,no,no,smoker
+U0447,65,female,divorced,retired,6-10L,rural,Gujarat,0,low,annual,LIC,49662,0.183,none,hypertension,no,5,9,yes,no,no,no,no,no,no,yes,no,ex-smoker
+U0448,35,female,single,student,10-20L,rural,Gujarat,1,high,annual,Care Health;Niva Bupa,12528,0.144,none,hypertension,no,3,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0449,33,other,married,self-employed,3-6L,urban,Karnataka,1,high,quarterly,LIC,23318,0.239,none,cancer,no,0,8,no,no,no,no,no,no,no,no,no,ex-smoker
+U0450,66,female,divorced,self-employed,<3L,rural,Gujarat,2,high,monthly,Star Health;HDFC Life;ICICI Lombard,36568,0.311,heart_disease,none,no,0,7,no,no,no,no,yes,no,no,no,no,smoker
+U0451,30,other,married,self-employed,>20L,semi-urban,Kerala,3,medium,monthly,SBI Life;Star Health,8602,0.28,diabetes,diabetes,yes,2,8,no,yes,no,no,no,no,no,no,no,non-smoker
+U0452,71,male,single,retired,6-10L,rural,Delhi,2,low,quarterly,SBI Life;Bajaj Allianz;Tata AIG,42288,0.337,none,diabetes,yes,1,2,no,yes,no,no,no,no,no,no,no,non-smoker
+U0453,21,other,married,self-employed,>20L,urban,Gujarat,1,low,monthly,Star Health;SBI Life,102903,0.21,none,hypertension,yes,3,2,no,no,no,no,no,no,no,no,no,smoker
+U0454,66,other,widowed,salaried,<3L,urban,Tamil Nadu,1,high,quarterly,SBI Life;LIC,40734,0.433,heart_disease,diabetes,yes,3,6,no,no,no,no,yes,no,no,yes,no,non-smoker
+U0455,47,other,married,self-employed,<3L,semi-urban,Uttar Pradesh,3,medium,quarterly,LIC,119262,0.285,none,hypertension,no,1,2,no,yes,no,no,no,no,no,no,no,smoker
+U0456,23,female,single,self-employed,>20L,rural,Uttar Pradesh,0,medium,annual,SBI Life;ICICI Lombard;Bajaj Allianz,115090,0.3,none,none,yes,5,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0457,66,other,widowed,salaried,>20L,rural,Maharashtra,0,high,quarterly,Tata AIG,82762,0.49,none,hypertension,yes,2,6,no,no,no,no,no,no,no,no,no,non-smoker
+U0458,24,female,divorced,self-employed,<3L,semi-urban,Gujarat,1,low,monthly,HDFC ERGO;Care Health,111141,0.284,none,none,yes,1,6,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0459,27,male,single,retired,10-20L,rural,Maharashtra,1,medium,annual,Tata AIG,30250,0.511,none,heart_disease,no,3,6,no,no,no,no,no,yes,no,no,no,smoker
+U0460,65,male,married,homemaker,6-10L,rural,Rajasthan,2,high,quarterly,SBI Life;HDFC Life,126256,0.28,heart_disease,none,no,4,5,no,yes,no,no,yes,no,no,no,no,non-smoker
+U0461,22,female,single,homemaker,6-10L,urban,Uttar Pradesh,2,medium,quarterly,Tata AIG,113326,0.592,none,cancer,no,1,10,no,no,no,no,no,no,no,no,no,ex-smoker
+U0462,19,male,divorced,homemaker,>20L,rural,Rajasthan,3,medium,annual,Bajaj Allianz;Star Health;Tata AIG,37971,0.2,none,hypertension,no,5,9,no,no,no,no,no,no,no,no,no,ex-smoker
+U0463,75,other,single,student,3-6L,semi-urban,Uttar Pradesh,3,medium,quarterly,Bajaj Allianz;SBI Life;HDFC ERGO,46652,0.667,none,hypertension,yes,4,3,no,no,no,no,no,no,no,no,no,non-smoker
+U0464,39,male,married,self-employed,>20L,urban,Gujarat,3,high,quarterly,Tata AIG,8006,0.265,heart_disease,none,no,5,3,no,no,no,no,no,yes,no,no,no,ex-smoker
+U0465,31,other,married,salaried,6-10L,urban,Delhi,3,high,quarterly,Star Health;Care Health,100271,0.461,none,hypertension,yes,2,10,no,no,yes,no,no,no,no,no,no,non-smoker
+U0466,60,other,married,self-employed,3-6L,rural,Kerala,0,high,quarterly,LIC;SBI Life,25442,0.416,heart_disease,cancer,yes,4,6,no,no,no,no,yes,no,no,no,no,non-smoker
+U0467,75,male,single,student,3-6L,semi-urban,Karnataka,3,high,monthly,Star Health;Care Health;HDFC ERGO,115827,0.334,none,heart_disease,yes,1,6,no,yes,no,no,no,no,no,no,no,non-smoker
+U0468,67,female,divorced,self-employed,<3L,urban,Gujarat,1,medium,quarterly,SBI Life;HDFC ERGO;Tata AIG,23047,0.277,none,heart_disease,no,0,3,no,no,yes,no,no,yes,no,no,no,non-smoker
+U0469,75,male,divorced,salaried,6-10L,urban,Delhi,1,medium,monthly,HDFC ERGO;SBI Life;Bajaj Allianz,14231,0.235,heart_disease,none,no,1,7,no,no,no,yes,yes,no,no,no,no,non-smoker
+U0470,45,male,divorced,self-employed,10-20L,semi-urban,Gujarat,2,medium,annual,Tata AIG,114444,0.411,none,heart_disease,no,2,6,no,no,no,no,no,no,no,no,no,ex-smoker
+U0471,40,female,single,salaried,3-6L,urban,Delhi,2,high,monthly,Tata AIG,55988,0.355,none,diabetes,yes,0,2,no,yes,no,no,yes,no,no,yes,no,non-smoker
+U0472,61,female,divorced,homemaker,10-20L,rural,Maharashtra,0,low,quarterly,HDFC ERGO,81375,0.51,none,diabetes,yes,1,9,no,no,no,no,no,no,no,no,no,non-smoker
+U0473,24,other,single,salaried,6-10L,rural,Maharashtra,2,high,annual,Niva Bupa,19582,0.107,heart_disease,heart_disease,no,5,1,no,no,no,no,no,no,no,no,no,ex-smoker
+U0474,66,female,single,self-employed,10-20L,rural,Karnataka,1,medium,monthly,HDFC Life,145051,0.08,none,diabetes,yes,4,5,no,no,yes,no,no,no,no,no,no,non-smoker
+U0475,68,female,widowed,salaried,<3L,rural,Karnataka,0,low,monthly,ICICI Lombard;Tata AIG;HDFC ERGO,5655,0.158,asthma,diabetes,yes,0,4,no,yes,no,no,no,no,no,no,no,smoker
+U0476,29,other,single,retired,>20L,rural,Tamil Nadu,0,medium,quarterly,Niva Bupa;HDFC Life,70206,0.338,diabetes,cancer,no,3,6,yes,no,no,no,no,no,yes,no,no,ex-smoker
+U0477,57,other,single,retired,>20L,rural,Delhi,1,high,monthly,ICICI Lombard;Bajaj Allianz,86756,0.23,none,none,no,5,1,no,yes,no,no,no,no,no,no,no,smoker
+U0478,33,female,single,retired,10-20L,rural,Kerala,0,medium,quarterly,ICICI Lombard;Bajaj Allianz;HDFC ERGO,6225,0.114,none,none,no,2,3,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0479,28,female,single,retired,3-6L,rural,Tamil Nadu,0,high,quarterly,LIC;ICICI Lombard,46911,0.062,asthma,cancer,no,3,0,no,no,no,no,no,no,no,no,no,non-smoker
+U0480,64,male,married,salaried,>20L,urban,Maharashtra,0,medium,monthly,LIC;Tata AIG;Bajaj Allianz,28735,0.116,none,heart_disease,no,0,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0481,63,other,single,student,6-10L,semi-urban,Rajasthan,3,high,quarterly,Tata AIG;Care Health,50086,0.348,none,cancer,no,1,6,no,no,no,no,no,no,no,yes,no,smoker
+U0482,70,other,divorced,salaried,6-10L,semi-urban,Maharashtra,3,high,quarterly,HDFC Life;Niva Bupa,61573,0.202,none,hypertension,yes,4,5,no,no,no,no,no,no,no,no,no,ex-smoker
+U0483,39,male,divorced,homemaker,>20L,urban,Tamil Nadu,1,medium,quarterly,Niva Bupa;Star Health,7775,0.363,none,cancer,yes,5,5,no,no,no,no,no,no,no,yes,no,non-smoker
+U0484,56,male,single,salaried,10-20L,urban,Tamil Nadu,2,low,monthly,Bajaj Allianz;Care Health,49974,0.512,none,heart_disease,no,0,4,yes,no,no,no,no,no,no,no,no,smoker
+U0485,64,female,single,homemaker,<3L,urban,Karnataka,1,low,annual,LIC;Niva Bupa;SBI Life,74511,0.269,none,hypertension,no,2,8,no,no,no,no,no,no,no,no,no,smoker
+U0486,45,male,married,self-employed,10-20L,urban,Delhi,0,high,monthly,Star Health;HDFC Life;Care Health,84089,0.357,none,hypertension,yes,3,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0487,61,male,single,salaried,>20L,semi-urban,Uttar Pradesh,2,medium,annual,HDFC ERGO;HDFC Life;ICICI Lombard,35905,0.276,none,heart_disease,no,5,2,no,no,no,no,yes,no,no,no,no,ex-smoker
+U0488,25,other,divorced,salaried,6-10L,urban,Rajasthan,0,medium,quarterly,ICICI Lombard,108229,0.19,heart_disease,none,yes,2,6,no,yes,no,no,yes,no,no,no,no,non-smoker
+U0489,28,other,divorced,homemaker,>20L,urban,Maharashtra,1,high,monthly,Tata AIG;Star Health,9264,0.167,none,diabetes,no,4,3,no,no,no,no,no,no,no,no,no,ex-smoker
+U0490,22,female,divorced,salaried,10-20L,rural,Gujarat,0,high,annual,LIC,78743,0.36,none,diabetes,yes,1,5,no,no,no,no,no,no,no,no,no,smoker
+U0491,31,female,single,salaried,10-20L,urban,Karnataka,1,medium,monthly,Tata AIG;ICICI Lombard,28305,0.197,none,hypertension,yes,3,9,yes,yes,no,no,no,no,no,yes,no,non-smoker
+U0492,56,female,single,homemaker,3-6L,urban,Karnataka,1,medium,quarterly,HDFC Life;Niva Bupa,144549,0.117,diabetes,none,no,2,5,no,no,no,no,no,no,no,no,no,smoker
+U0493,58,other,single,homemaker,<3L,semi-urban,Karnataka,1,high,annual,HDFC Life,34471,0.323,none,none,yes,1,2,no,no,no,no,no,no,no,no,no,non-smoker
+U0494,27,female,divorced,student,>20L,semi-urban,Karnataka,1,medium,monthly,Niva Bupa;Star Health;SBI Life,69986,0.204,none,none,yes,2,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0495,44,male,single,salaried,10-20L,urban,Tamil Nadu,1,medium,quarterly,SBI Life;Star Health;Care Health,116458,0.5,none,none,no,4,1,no,no,no,no,no,no,no,no,no,smoker
+U0496,62,female,widowed,self-employed,6-10L,rural,Uttar Pradesh,0,high,monthly,Niva Bupa;HDFC ERGO,28147,0.236,none,heart_disease,no,4,0,no,no,no,no,no,no,no,no,no,ex-smoker
+U0497,38,female,divorced,retired,10-20L,semi-urban,Delhi,3,high,monthly,Care Health;Star Health;HDFC Life,93363,0.103,none,diabetes,no,4,6,no,no,no,no,no,no,no,no,no,smoker
+U0498,57,male,divorced,student,10-20L,urban,Tamil Nadu,0,low,monthly,Care Health;Tata AIG;Bajaj Allianz,24038,0.065,none,heart_disease,yes,4,6,no,yes,no,no,no,no,no,no,no,ex-smoker
+U0499,64,male,widowed,homemaker,<3L,rural,Maharashtra,1,high,annual,ICICI Lombard;HDFC ERGO,24399,0.076,hypertension,diabetes,yes,0,2,no,no,no,no,no,no,no,no,no,ex-smoker
+U0500,26,female,married,self-employed,3-6L,rural,Maharashtra,1,medium,monthly,HDFC Life;ICICI Lombard;HDFC ERGO,78348,0.231,none,diabetes,yes,3,2,yes,no,no,no,no,no,no,no,no,smoker

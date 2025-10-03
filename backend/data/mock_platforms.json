@@ -1,0 +1,16 @@
+[
+  {
+    "platform": "MarketA",
+    "plans": [
+      {"id":"MA-001","title":"MarketA Silver","price_monthly":350,"deductible":2000,"network_size":3000,"riders":["dental"]},
+      {"id":"MA-002","title":"MarketA Gold","price_monthly":420,"deductible":1500,"network_size":5000,"riders":["dental","vision"]}
+    ]
+  },
+  {
+    "platform": "MarketB",
+    "plans": [
+      {"id":"MB-01","title":"MarketB Basic","price_monthly":300,"deductible":4000,"network_size":2500},
+      {"id":"MB-02","title":"MarketB Plus","price_monthly":380,"deductible":2500,"network_size":3200}
+    ]
+  }
+]
