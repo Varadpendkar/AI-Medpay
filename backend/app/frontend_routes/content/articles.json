@@ -1,0 +1,110 @@
+[
+  {
+    "id": "how-insurance-works",
+    "title": "How Health Insurance Works — A Beginner's Guide",
+    "summary": "Understand premiums, deductibles, copays, network hospitals, and how to choose the right coverage.",
+    "category": "Basics",
+    "tags": ["premium", "deductible", "network"],
+    "author": "AI-MEDPAY",
+    "published": "2025-01-15",
+    "featured": true,
+    "views": 4200,
+    "url": "/resources/how-insurance-works"
+  },
+  {
+    "id": "save-on-hospital-bills",
+    "title": "5 Ways to Save on Hospital Bills (Real Examples)",
+    "summary": "Practical tips and a case study showing how AI bill analysis can find overcharges and save money.",
+    "category": "Savings",
+    "tags": ["bill-buster", "case-study", "savings"],
+    "author": "Healthcare Analyst",
+    "published": "2024-11-21",
+    "featured": true,
+    "views": 3300,
+    "url": "/resources/save-on-hospital-bills"
+  },
+  {
+    "id": "explainable-ai",
+    "title": "Explainable AI in Insurance Recommendations",
+    "summary": "What explainability means, why it matters, and how we make recommendations transparent.",
+    "category": "AI",
+    "tags": ["explainability", "model"],
+    "author": "Data Science Team",
+    "published": "2025-04-02",
+    "featured": false,
+    "views": 2100,
+    "url": "/resources/explainable-ai"
+  },
+  {
+    "id": "read-medical-bill",
+    "title": "How to Read Your Medical Bill: Line by Line",
+    "summary": "Learn to identify common overcharges, understand billing codes, and spot duplicate entries on medical bills.",
+    "category": "Savings",
+    "tags": ["billing", "overcharges", "duplicates"],
+    "author": "Medical Billing Expert",
+    "published": "2024-12-10",
+    "featured": true,
+    "views": 2800,
+    "url": "/resources/read-medical-bill"
+  },
+  {
+    "id": "claim-settlement-ratios",
+    "title": "Claim Settlement Ratios: What They Mean and How to Use Them",
+    "summary": "Understand how insurers' claim settlement ratios affect your coverage and what to look for when choosing a plan.",
+    "category": "Basics",
+    "tags": ["claims", "settlement", "ratio"],
+    "author": "Insurance Analyst",
+    "published": "2024-10-15",
+    "featured": false,
+    "views": 1950,
+    "url": "/resources/claim-settlement-ratios"
+  },
+  {
+    "id": "family-floater-questions",
+    "title": "Top Questions to Ask Before Buying a Family Floater Plan",
+    "summary": "Essential questions about coverage limits, waiting periods, and exclusions to ask before purchasing family health insurance.",
+    "category": "Planning",
+    "tags": ["family", "floater", "checklist"],
+    "author": "Family Insurance Advisor",
+    "published": "2024-09-25",
+    "featured": false,
+    "views": 2300,
+    "url": "/resources/family-floater-questions"
+  },
+  {
+    "id": "insurance-add-ons",
+    "title": "Add-ons Explained — Critical Illness, Maternity, OPD",
+    "summary": "When you need insurance add-ons, how much they cost, and which ones provide the most value for your situation.",
+    "category": "Planning",
+    "tags": ["add-ons", "critical-illness", "maternity", "opd"],
+    "author": "Coverage Specialist",
+    "published": "2024-08-18",
+    "featured": false,
+    "views": 2600,
+    "url": "/resources/insurance-add-ons"
+  },
+  {
+    "id": "hospital-negotiation-tips",
+    "title": "Negotiation Tips with Hospitals — What to Ask and Common Mistakes",
+    "summary": "Strategies for discussing bills with hospital billing departments, payment plans, and what discounts are available.",
+    "category": "Savings",
+    "tags": ["negotiation", "hospital", "payment-plans"],
+    "author": "Patient Advocate",
+    "published": "2024-07-12",
+    "featured": false,
+    "views": 1800,
+    "url": "/resources/hospital-negotiation-tips"
+  },
+  {
+    "id": "insurance-glossary",
+    "title": "Insurance Terms Glossary — Copay, Deductible, Sum Insured, NCB",
+    "summary": "Complete definitions of essential insurance terminology with practical examples and usage context.",
+    "category": "Reference",
+    "tags": ["glossary", "terminology", "definitions"],
+    "author": "Editorial Team",
+    "published": "2024-06-30",
+    "featured": false,
+    "views": 3100,
+    "url": "/resources/insurance-glossary"
+  }
+]

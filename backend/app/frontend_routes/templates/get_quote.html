@@ -1,0 +1,419 @@
+{% extends "base.html" %} {% block title %}Get Insurance Quote - AI-MEDPAY{%
+endblock %} {% block head_extra %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('frontend_get_quote.static', filename='css/get_quote_enhanced.css') }}"
+/>
+<!-- CDN fallbacks (Three.js + GSAP) loaded at end of body too -->
+{% endblock %} {% block content %}
+<div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+  <!-- LEFT: Wizard -->
+  <div class="lg:col-span-2">
+    <div class="bg-white rounded-xl p-6 card-shadow">
+      <h2 class="text-2xl font-semibold mb-2">Get a Quote</h2>
+      <p class="text-sm text-slate-500 mb-4">
+        Answer a few quick questions — we'll show a personalized recommendation.
+      </p>
+
+      <!-- Orb progress (small for mobile) -->
+      <div class="flex items-center gap-4 mb-4">
+        <div id="orb-wrap" class="w-20 h-20" aria-hidden="true"></div>
+        <div class="flex-1">
+          <div id="progress-label" class="text-sm text-slate-600">
+            Step <span id="step-num">1</span> of <span id="step-total">4</span>
+          </div>
+          <div id="progress-desc" class="text-xs text-slate-400">
+            Fill the form to improve recommendation confidence.
+          </div>
+        </div>
+        <div class="ml-auto text-xs">
+          <label class="flex items-center gap-2">
+            <input
+              id="reduced-motion-toggle"
+              type="checkbox"
+              aria-label="Reduce animations"
+            />
+            Reduced motion
+          </label>
+        </div>
+      </div>
+
+      <form
+        id="quote-form"
+        method="post"
+        action="/get-quote"
+        enctype="multipart/form-data"
+        novalidate
+      >
+        <!-- STEPS -->
+        <fieldset class="wizard-step" data-step="1" aria-hidden="false">
+          <legend class="sr-only">Personal info</legend>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Age</label>
+              <input
+                name="age"
+                id="age"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Gender</label>
+              <select
+                name="gender"
+                id="gender"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option>male</option>
+                <option>female</option>
+                <option>other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Annual income (INR)</label>
+              <input
+                name="annual_income"
+                id="annual_income"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Dependents</label>
+              <input
+                name="dependents"
+                id="dependents"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Region</label>
+              <input
+                name="region"
+                id="region"
+                type="text"
+                class="w-full rounded-md border px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Urban / Rural</label>
+              <select
+                name="urban_rural"
+                id="urban_rural"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option>urban</option>
+                <option>rural</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wizard-step hidden" data-step="2" aria-hidden="true">
+          <legend class="sr-only">Coverage & preferences</legend>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Preferred Coverage</label>
+              <select
+                name="coverage_amount"
+                id="coverage_amount"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option value="300000">3 L</option>
+                <option value="500000">5 L</option>
+                <option value="1000000">10 L</option>
+                <option value="2000000">20 L</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Payment Mode</label>
+              <select
+                name="payment_mode"
+                id="payment_mode"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option>monthly</option>
+                <option>quarterly</option>
+                <option>annual</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1"
+                >Preferred Providers (optional)</label
+              >
+              <input
+                name="preferred_providers"
+                id="preferred_providers"
+                type="text"
+                class="w-full rounded-md border px-3 py-2"
+                placeholder="comma-separated"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Existing Health Policy?</label>
+              <select
+                name="existing_policy"
+                id="existing_policy"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wizard-step hidden" data-step="3" aria-hidden="true">
+          <legend class="sr-only">Budget & health</legend>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1"
+                >Max Monthly Premium (INR)</label
+              >
+              <input
+                name="max_premium_monthly"
+                id="max_premium_monthly"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Smoking Status</label>
+              <select
+                name="smoking_status"
+                id="smoking_status"
+                class="w-full rounded-md border px-3 py-2"
+              >
+                <option value="">Select</option>
+                <option>non-smoker</option>
+                <option>ex-smoker</option>
+                <option>smoker</option>
+              </select>
+            </div>
+
+            <div class="col-span-1 md:col-span-2">
+              <label class="block text-sm mb-1"
+                >Health conditions (check all that apply)</label
+              >
+              <div class="grid grid-cols-2 gap-2">
+                <label
+                  ><input
+                    name="has_diabetes"
+                    id="has_diabetes"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Diabetes</label
+                >
+                <label
+                  ><input
+                    name="has_hypertension"
+                    id="has_hypertension"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Hypertension</label
+                >
+                <label
+                  ><input
+                    name="has_asthma"
+                    id="has_asthma"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Asthma</label
+                >
+                <label
+                  ><input
+                    name="has_cancer_history"
+                    id="has_cancer_history"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Cancer</label
+                >
+                <label
+                  ><input
+                    name="has_heart_disease"
+                    id="has_heart_disease"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Heart</label
+                >
+                <label
+                  ><input
+                    name="has_obesity"
+                    id="has_obesity"
+                    value="1"
+                    type="checkbox"
+                  />
+                  Obesity</label
+                >
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Claim History Count</label>
+              <input
+                name="claim_history_count"
+                id="claim_history_count"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Renewal Loyalty Years</label>
+              <input
+                name="renewal_loyalty_years"
+                id="renewal_loyalty_years"
+                type="number"
+                min="0"
+                class="w-full rounded-md border px-3 py-2"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wizard-step hidden" data-step="4" aria-hidden="true">
+          <legend class="sr-only">Upload bill</legend>
+          <div
+            class="border-dashed border-2 border-slate-200 p-6 rounded-md text-center"
+          >
+            <input
+              type="file"
+              name="bill_file"
+              id="bill_file"
+              accept="image/*,application/pdf"
+              class="mb-3"
+            />
+            <p class="text-xs text-slate-400 mt-2">
+              Optional — upload a bill to improve accuracy (max 10MB)
+            </p>
+          </div>
+        </fieldset>
+
+        <!-- Navigation -->
+        <div class="mt-6 flex items-center justify-between">
+          <button
+            type="button"
+            id="wizard-prev"
+            class="px-4 py-2 rounded-md border bg-white hover:bg-gray-50 transition-colors"
+          >
+            Previous
+          </button>
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              id="wizard-next"
+              class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+            >
+              Next
+            </button>
+            <button
+              type="submit"
+              id="wizard-submit"
+              class="px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white hidden transition-colors"
+            >
+              Finish & Get Recommendation
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- RIGHT: Live Preview + Confidence -->
+  <aside>
+    <div class="bg-white rounded-xl p-4 card-shadow sticky top-6">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-14 h-14 rounded-xl bg-slate-50 flex items-center justify-center"
+        >
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold"
+          >
+            👤
+          </div>
+        </div>
+        <div>
+          <div id="preview-name" class="font-semibold">Your Profile</div>
+          <div id="preview-summary" class="text-xs text-slate-500">
+            Live preview as you type
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4" id="preview-card">
+        <div class="text-sm text-slate-500">
+          Coverage: <span id="preview-coverage">—</span>
+        </div>
+        <div class="text-sm text-slate-500">
+          Budget: <span id="preview-budget">—</span>
+        </div>
+        <div class="text-sm text-slate-500">
+          Health: <span id="preview-health">—</span>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="text-xs text-slate-500">Recommendation confidence</div>
+        <div class="mt-2 flex items-center gap-3">
+          <div id="confidence-radial" class="w-16 h-16"></div>
+          <div>
+            <div id="confidence-percent" class="text-2xl font-bold">0%</div>
+            <div id="confidence-text" class="text-xs text-slate-500">
+              Complete more fields to increase confidence.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a
+          id="quick-get-quote"
+          class="inline-block w-full text-center px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+          href="#"
+          onclick="return false;"
+          >Continue</a
+        >
+        <a
+          href="/bill-buster"
+          class="inline-block w-full mt-2 text-center px-4 py-2 rounded-md border hover:bg-gray-50 transition-colors"
+          >Analyze a bill</a
+        >
+      </div>
+    </div>
+  </aside>
+</div>
+{% endblock %} {% block scripts %}
+<!-- Load CDN libs (fallback friendly) -->
+<script>
+  // Load Three.js & GSAP only when needed; we also dynamically load in JS
+</script>
+<script src="{{ url_for('frontend_get_quote.static', filename='js/get_quote_enhanced.js') }}"></script>
+{% endblock %}

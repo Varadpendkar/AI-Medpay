@@ -1,0 +1,207 @@
+{% extends "base.html" %} {% block title %}Your Insurance Recommendations -
+AI-MEDPAY{% endblock %} {% block head_extra %}
+<style>
+  .results-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  .recommendation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .best-match {
+    border: 3px solid #10b981;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  }
+
+  .best-match .badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .success-animation {
+    animation: successBounce 0.8s ease-out;
+  }
+
+  @keyframes successBounce {
+    0% {
+      transform: scale(0.8) translateY(20px);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05) translateY(-5px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    animation: confettiFall 2s linear forwards;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  @keyframes confettiFall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="results-container py-12">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Success Header -->
+      <div class="text-center mb-12 success-animation">
+        <div class="text-6xl mb-4">🎉</div>
+        <h1 class="text-4xl font-bold mb-4 text-gray-800">
+          Perfect Match Found!
+        </h1>
+        <p class="text-xl text-gray-600">
+          We found personalized insurance recommendations just for you
+        </p>
+      </div>
+
+      <!-- Recommendations Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {% for rec in recommendations %}
+        <div
+          class="recommendation-card {% if loop.first %}best-match{% endif %} success-animation"
+          style="animation-delay: {{ loop.index * 0.2 }}s"
+        >
+          {% if loop.first %}
+          <div class="badge">🏆 BEST MATCH FOR YOU</div>
+          {% endif %}
+
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-800">{{ rec.plan_name }}</h3>
+            <div class="flex items-center gap-1">
+              <span class="text-yellow-500">⭐</span>
+              <span class="font-semibold">{{ rec.rating }}</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+              <div class="text-sm text-gray-500">Coverage</div>
+              <div class="text-lg font-bold text-blue-600">
+                {{ rec.coverage }}
+              </div>
+            </div>
+            <div>
+              <div class="text-sm text-gray-500">Premium</div>
+              <div class="text-lg font-bold text-green-600">
+                {{ rec.price }}
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-3">
+            <a
+              href="/compare?plan={{ rec.plan_name | urlencode }}"
+              class="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            >
+              Compare Plans
+            </a>
+            <a
+              href="#"
+              onclick="alert('Demo: This would redirect to buy the plan!')"
+              class="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+            >
+              Buy Now
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="text-center space-y-4">
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/get-quote"
+            class="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+          >
+            ← Get Another Quote
+          </a>
+          <a
+            href="/dashboard"
+            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+          >
+            View Dashboard
+          </a>
+          <a
+            href="/bill-buster"
+            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+          >
+            Analyze Medical Bill
+          </a>
+        </div>
+
+        <div class="text-sm text-gray-500 mt-6">
+          Need help deciding?
+          <a href="tel:+911800123456" class="text-blue-600 hover:underline"
+            >Call our experts: 1800-123-456</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Confetti animation
+  function createConfetti() {
+    const colors = ["#10B981", "#3B82F6", "#F59E0B", "#EF4444", "#8B5CF6"];
+
+    for (let i = 0; i < 30; i++) {
+      setTimeout(() => {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "%";
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 0.5 + "s";
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 2000);
+      }, i * 50);
+    }
+  }
+
+  // Trigger confetti when page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(createConfetti, 500);
+  });
+</script>
+{% endblock %}

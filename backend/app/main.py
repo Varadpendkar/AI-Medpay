@@ -1,6 +1,10 @@
+from backend.app.frontend_routes.dashboard import frontend_bp
+from backend.app.frontend_routes.get_quote import frontend_bp as get_quote_bp
+from backend.app.frontend_routes.bill_buster import frontend_bp as bill_buster_bp
+from backend.app.frontend_routes.resources import resources_bp
 import os
 import logging
-from flask import Flask, render_template, redirect, url_for, flash, request, jsonify, session
+from flask import Flask, render_template, redirect, url_for, flash, request, jsonify, session, send_from_directory, current_app
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from authlib.integrations.flask_client import OAuth
 from urllib.parse import urlencode as url_encode
@@ -25,6 +29,12 @@ FRONTEND_DIR = PROJECT_ROOT.parent.parent / 'frontend'
 app = Flask(__name__,
             template_folder=str(FRONTEND_DIR / 'templates'),
             static_folder=str(FRONTEND_DIR / 'static'))
+
+# Configure server settings to fix URL building issues
+# Note: SERVER_NAME can cause routing issues, so we'll handle url_for differently
+app.config['APPLICATION_ROOT'] = '/'
+app.config['PREFERRED_URL_SCHEME'] = 'http'
+
 logging.basicConfig(level=logging.INFO)
 
 # Initialize ranker with graceful failure for development
@@ -39,10 +49,37 @@ BASE_DIR = os.path.dirname(__file__)
 app.config.setdefault('UPLOAD_FOLDER', os.path.join(BASE_DIR, 'uploads'))
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 db.init_app(app)
+
+# Template context processor to handle url_for safely
+
+
+@app.context_processor
+def inject_safe_url_for():
+    """Provide a safe url_for function for templates"""
+    def safe_url_for(endpoint, **values):
+        try:
+            from flask import url_for
+            return url_for(endpoint, **values)
+        except Exception:
+            # Fallback for static files and common routes
+            if endpoint == 'static':
+                filename = values.get('filename', '')
+                return f"/static/{filename}"
+            elif endpoint == 'frontend_home':
+                return "/"
+            elif endpoint == 'frontend_get_quote.get_quote':
+                return "/get-quote"
+            else:
+                return f"/{endpoint.replace('_', '-')}"
+    return dict(url_for=safe_url_for)
+
+
 migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'frontend_login'
+login_manager.login_message = 'Please log in to access this page.'
+login_manager.login_message_category = 'info'
 
 # --- OAuth Configuration ---
 oauth = OAuth()
@@ -63,6 +100,12 @@ oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 oauth.init_app(app)
+
+# Register frontend routes blueprints
+app.register_blueprint(frontend_bp)
+app.register_blueprint(get_quote_bp)
+app.register_blueprint(bill_buster_bp)
+app.register_blueprint(resources_bp)
 
 
 @login_manager.user_loader
@@ -139,7 +182,7 @@ def safe_num(rec, *keys, default=None):
 def logout():
     logout_user()
     flash('You have been logged out successfully.', 'success')
-    return redirect(url_for('frontend_home'))
+    return redirect(url_for('index'))
 
 
 def _load_user_profile(user_id):
@@ -308,7 +351,8 @@ def api_plan_detail(plan_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    print("🚀 Starting Flask server on http://127.0.0.1:5001")
+    app.run(debug=True, host='0.0.0.0', port=8000, threaded=True)
 
 
 # -------------------------------
@@ -322,7 +366,7 @@ if __name__ == '__main__':
 @app.route("/auth/google")
 def auth_google():
     next_url = request.args.get(
-        'next') or request.referrer or url_for('frontend_home')
+        'next') or request.referrer or url_for('index')
     # state can carry 'next' so we return properly after callback
     redirect_uri = url_for('auth_google_callback', _external=True)
     return oauth.google.authorize_redirect(redirect_uri, state=url_encode({'next': next_url}))
@@ -333,7 +377,7 @@ def auth_google_callback():
     token = oauth.google.authorize_access_token()
     if not token:
         flash("Google sign-in failed.", "error")
-        return redirect(url_for('frontend_login'))
+        return redirect(url_for('frontend.login'))
 
     userinfo = oauth.google.parse_id_token(
         token) or oauth.google.get('userinfo').json()
@@ -373,18 +417,18 @@ def auth_google_callback():
     except Exception as e:
         app.logger.error(f"Google OAuth error: {e}")
         flash("Sign-in failed. Please try again.", "error")
-        return redirect(url_for('frontend_register'))
+        return redirect(url_for('frontend.register'))
 
     # Redirect to next URL
     state = request.args.get('state')
     if state:
         try:
             decoded = dict([kv.split('=') for kv in state.split('&')])
-            next_url = decoded.get('next') or url_for('frontend_dashboard')
+            next_url = decoded.get('next') or url_for('frontend.dashboard')
         except Exception:
-            next_url = url_for('frontend_dashboard')
+            next_url = url_for('frontend.dashboard')
     else:
-        next_url = url_for('frontend_dashboard')
+        next_url = url_for('frontend.dashboard')
 
     return redirect(next_url)
 
@@ -401,11 +445,11 @@ def auth_login():
         user = User.query.filter_by(email=email).first()
         if user and user.check_password(password):
             login_user(user, remember=remember)
-            return redirect(url_for('frontend_dashboard'))
+            return redirect(url_for('frontend.dashboard'))
         else:
             flash('Invalid email or password', 'error')
 
-    return redirect(url_for('frontend_login'))
+    return redirect(url_for('frontend.login'))
 
 
 @app.route("/auth/register", methods=["POST"])
@@ -419,11 +463,11 @@ def auth_register():
 
         if User.query.filter_by(email=email).first():
             flash('Email already registered', 'error')
-            return redirect(url_for('frontend_register'))
+            return redirect(url_for('frontend.register'))
 
         if User.query.filter_by(username=username).first():
             flash('Username already taken', 'error')
-            return redirect(url_for('frontend_register'))
+            return redirect(url_for('frontend.register'))
 
         user = User(
             username=username,
@@ -435,18 +479,72 @@ def auth_register():
 
         login_user(user)
         flash('Registration successful!', 'success')
-        return redirect(url_for('frontend_dashboard'))
+        return redirect(url_for('frontend.dashboard'))
 
     flash('Registration failed. Please check your information.', 'error')
-    return redirect(url_for('frontend_register'))
+    return redirect(url_for('frontend.register'))
 
 
 # --- FRONTEND ROUTES (Home) ---
 
 @app.route("/")
-def frontend_home():
-    # Render the new home page template created under backend/app/templates/home.html
-    return render_template("home.html", title="AI-MEDPAY — Smart Insurance Recommendations")
+def index():
+    """Root route - redirect to enhanced get-quote page"""
+    print("🏠 Root route called - redirecting to /get-quote")
+    return redirect(url_for("frontend_get_quote.get_quote"))
+
+
+@app.route("/favicon.ico")
+def favicon():
+    """Serve favicon to stop 404 requests"""
+    # Try multiple possible locations for favicon
+    static_dirs = [
+        os.path.join(app.static_folder, "images"),
+        os.path.join(app.static_folder),
+        os.path.join(os.path.dirname(__file__), "..",
+                     "..", "frontend", "static", "images"),
+        os.path.join(os.path.dirname(__file__), "..",
+                     "..", "frontend", "static")
+    ]
+
+    for static_dir in static_dirs:
+        static_dir = os.path.abspath(static_dir)
+        favicon_path = os.path.join(static_dir, "favicon.ico")
+        if os.path.exists(favicon_path):
+            return send_from_directory(static_dir, "favicon.ico")
+
+    # If no favicon found, return a simple 1x1 transparent PNG
+    from flask import Response
+    # Minimal 1x1 transparent PNG in base64
+    png_data = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\rIDATx\x9cc\xf8\x0f\x00\x00\x01\x00\x01\x00\x18\xdd\x8d\xb4\x1c\x00\x00\x00\x00IEND\xaeB`\x82'
+    return Response(png_data, mimetype='image/png')
+
+
+@app.route('/_dev/endpoints')
+def _dev_list_endpoints():
+    if not app.debug:
+        return jsonify(error="not allowed"), 403
+    return jsonify(sorted([f"{r.endpoint} {r.rule}" for r in current_app.url_map.iter_rules()]))
+
+
+@app.route("/debug-routes")
+def debug_routes():
+    """Debug route to show all registered routes"""
+    routes = []
+    for rule in app.url_map.iter_rules():
+        routes.append({
+            'rule': rule.rule,
+            'endpoint': rule.endpoint,
+            'methods': list(rule.methods - {'HEAD', 'OPTIONS'})
+        })
+    routes.sort(key=lambda x: x['rule'])
+
+    html = "<h1>Debug: All Registered Routes</h1><ul>"
+    for route in routes:
+        html += f"<li><b>{route['rule']}</b> -> {route['endpoint']} {route['methods']}</li>"
+    html += "</ul>"
+    html += "<p><a href='/'>Test Home Route</a></p>"
+    return html
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -463,7 +561,7 @@ def frontend_login():
         if user and user.check_password(password):
             login_user(user, remember=remember)
             next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('frontend_dashboard'))
+            return redirect(next_page) if next_page else redirect(url_for('frontend.dashboard'))
         else:
             flash('Invalid email or password', 'error')
 
@@ -499,68 +597,12 @@ def frontend_register():
 
         login_user(user)
         flash('Registration successful!', 'success')
-        return redirect(url_for('frontend_dashboard'))
+        return redirect(url_for('frontend.dashboard'))
 
     return render_template("register.html", title="Register", form=form)
 
 
-@app.route("/dashboard")
-@login_required
-def frontend_dashboard():
-    """
-    Render the dashboard page with user recommendations and savings data.
-    This integrates with existing backend services when available.
-    """
-    # Try to fetch real recommendations from existing services
-    plans = []
-    savings_summary = {"total_saved": 25000, "year_saved": 12000}
-    explains = []
-    
-    try:
-        # Attempt to call existing recommendation service if available
-        # Replace this with actual service calls when services are implemented
-        if ranker is not None:
-            # Example: plans = ranker.get_top_recommendations(current_user.id, limit=3)
-            pass
-    except Exception as e:
-        app.logger.debug(f"Recommendation service not available: {e}")
-    
-    # Sample data when no real recommendations available
-    if not plans:
-        plans = [
-            {
-                "id": "hdfc_optima",
-                "provider": "HDFC ERGO", 
-                "name": "Optima Restore",
-                "summary": "Family floater with 5L coverage & restoration benefit",
-                "price": "12,440",
-                "badge": "Best Match"
-            },
-            {
-                "id": "star_health",
-                "provider": "Star Health",
-                "name": "Family Health Optima", 
-                "summary": "Individual plan with pre-existing disease coverage",
-                "price": "15,200",
-                "badge": "High Value"
-            },
-            {
-                "id": "care_joy",
-                "provider": "Care Health",
-                "name": "Joy Essential",
-                "summary": "Budget-friendly plan with essential coverage", 
-                "price": "8,900",
-                "badge": "Budget"
-            }
-        ]
-    
-    return render_template(
-        "dashboard.html", 
-        title="Dashboard - AI-MEDPAY",
-        plans=plans,
-        savings_summary=savings_summary,
-        explains=explains
-    )
+# Dashboard route moved to frontend_routes blueprint
 
 
 @app.route("/recommendation")
@@ -573,11 +615,7 @@ def frontend_compare():
     return render_template("compare.html", title="Compare")
 
 
-@app.route("/bill-buster", methods=["GET", "POST"])
-def frontend_bill_buster():
-    return render_template("bill_buster.html", title="Bill Buster")
+# Bill Buster route moved to frontend_routes blueprint
 
 
-@app.route("/resources")
-def frontend_resources():
-    return render_template("resources.html", title="Resources")
+# Resources route moved to blueprint
