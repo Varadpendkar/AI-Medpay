@@ -1,7 +1,9 @@
 import os
 import logging
-from flask import Flask, render_template, redirect, url_for, flash, request, jsonify
+from flask import Flask, render_template, redirect, url_for, flash, request, jsonify, session
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from authlib.integrations.flask_client import OAuth
+from urllib.parse import urlencode as url_encode
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash
 from flask_migrate import Migrate
@@ -20,9 +22,9 @@ from backend.app.core.config import DevelopmentConfig
 # Configure Flask to use frontend folder for templates and static files
 PROJECT_ROOT = Path(__file__).resolve().parent
 FRONTEND_DIR = PROJECT_ROOT.parent.parent / 'frontend'
-app = Flask(__name__, 
-           template_folder=str(FRONTEND_DIR / 'templates'), 
-           static_folder=str(FRONTEND_DIR / 'static'))
+app = Flask(__name__,
+            template_folder=str(FRONTEND_DIR / 'templates'),
+            static_folder=str(FRONTEND_DIR / 'static'))
 logging.basicConfig(level=logging.INFO)
 
 # Initialize ranker with graceful failure for development
@@ -41,6 +43,26 @@ migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+# --- OAuth Configuration ---
+oauth = OAuth()
+# Ensure these environment vars are set by deployer
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
+
+oauth.register(
+    name='google',
+    client_id=GOOGLE_CLIENT_ID,
+    client_secret=GOOGLE_CLIENT_SECRET,
+    access_token_url='https://oauth2.googleapis.com/token',
+    access_token_params=None,
+    authorize_url='https://accounts.google.com/o/oauth2/v2/auth',
+    authorize_params=None,
+    api_base_url='https://www.googleapis.com/oauth2/v1/',
+    userinfo_endpoint='https://www.googleapis.com/oauth2/v3/userinfo',
+    client_kwargs={'scope': 'openid email profile'},
+)
+oauth.init_app(app)
 
 
 @login_manager.user_loader
@@ -295,6 +317,130 @@ if __name__ == '__main__':
 # Replace template names with actual templates when scaffolding the new frontend.
 # -------------------------------
 
+# --- GOOGLE OAUTH ROUTES ---
+
+@app.route("/auth/google")
+def auth_google():
+    next_url = request.args.get('next') or request.referrer or url_for('frontend_home')
+    # state can carry 'next' so we return properly after callback
+    redirect_uri = url_for('auth_google_callback', _external=True)
+    return oauth.google.authorize_redirect(redirect_uri, state=url_encode({'next': next_url}))
+
+
+@app.route("/auth/google/callback")
+def auth_google_callback():
+    token = oauth.google.authorize_access_token()
+    if not token:
+        flash("Google sign-in failed.", "error")
+        return redirect(url_for('frontend_login'))
+    
+    userinfo = oauth.google.parse_id_token(token) or oauth.google.get('userinfo').json()
+    
+    # userinfo contains email, name, picture, sub
+    email = userinfo.get('email')
+    name = userinfo.get('name') or ''
+    google_id = userinfo.get('sub')
+    
+    # Integrate with existing user model & login logic
+    try:
+        user = User.query.filter_by(email=email).first()
+        if not user:
+            # Create user using existing model structure
+            # Use email as username and name as display name
+            username = email.split('@')[0]  # Use part before @ as username
+            counter = 1
+            original_username = username
+            # Ensure username is unique
+            while User.query.filter_by(username=username).first():
+                username = f"{original_username}{counter}"
+                counter += 1
+            
+            user = User(
+                username=username,
+                email=email
+            )
+            # Set a random password for Google users
+            user.set_password(os.urandom(24).hex())
+            db.session.add(user)
+            db.session.commit()
+        
+        # Login the user using existing login mechanism
+        login_user(user)
+        flash("Successfully signed in with Google!", "success")
+        
+    except Exception as e:
+        app.logger.error(f"Google OAuth error: {e}")
+        flash("Sign-in failed. Please try again.", "error")
+        return redirect(url_for('frontend_register'))
+    
+    # Redirect to next URL
+    state = request.args.get('state')
+    if state:
+        try:
+            decoded = dict([kv.split('=') for kv in state.split('&')])
+            next_url = decoded.get('next') or url_for('frontend_dashboard')
+        except Exception:
+            next_url = url_for('frontend_dashboard')
+    else:
+        next_url = url_for('frontend_dashboard')
+    
+    return redirect(next_url)
+
+
+@app.route("/auth/login", methods=["POST"])
+def auth_login():
+    """API endpoint for form-based login"""
+    form = LoginForm()
+    if form.validate_on_submit():
+        email = form.email.data
+        password = form.password.data
+        remember = form.remember.data
+        
+        user = User.query.filter_by(email=email).first()
+        if user and user.check_password(password):
+            login_user(user, remember=remember)
+            return redirect(url_for('frontend_dashboard'))
+        else:
+            flash('Invalid email or password', 'error')
+    
+    return redirect(url_for('frontend_login'))
+
+
+@app.route("/auth/register", methods=["POST"])
+def auth_register():
+    """API endpoint for form-based registration"""
+    form = RegisterForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        email = form.email.data
+        password = form.password.data
+        
+        if User.query.filter_by(email=email).first():
+            flash('Email already registered', 'error')
+            return redirect(url_for('frontend_register'))
+        
+        if User.query.filter_by(username=username).first():
+            flash('Username already taken', 'error')
+            return redirect(url_for('frontend_register'))
+        
+        user = User(
+            username=username,
+            email=email
+        )
+        user.set_password(password)
+        db.session.add(user)
+        db.session.commit()
+        
+        login_user(user)
+        flash('Registration successful!', 'success')
+        return redirect(url_for('frontend_dashboard'))
+    
+    flash('Registration failed. Please check your information.', 'error')
+    return redirect(url_for('frontend_register'))
+
+
+# --- FRONTEND ROUTES (Home) ---
+
 @app.route("/")
 def frontend_home():
     # Render the new home page template created under backend/app/templates/home.html
@@ -303,13 +449,57 @@ def frontend_home():
 
 @app.route("/login", methods=["GET", "POST"])
 def frontend_login():
-    # placeholder - render new login page (Flask-WTF forms expected)
-    return render_template("login.html", title="Login")
+    form = LoginForm()
+    if form.validate_on_submit():
+        # Handle form submission - integrate with existing auth logic if available
+        email = form.email.data
+        password = form.password.data
+        remember = form.remember.data
+        
+        # Try to find and authenticate user
+        user = User.query.filter_by(email=email).first()
+        if user and user.check_password(password):
+            login_user(user, remember=remember)
+            next_page = request.args.get('next')
+            return redirect(next_page) if next_page else redirect(url_for('frontend_dashboard'))
+        else:
+            flash('Invalid email or password', 'error')
+    
+    return render_template("login.html", title="Login", form=form)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def frontend_register():
-    return render_template("register.html", title="Register")
+    form = RegisterForm()
+    if form.validate_on_submit():
+        # Handle form submission - create new user
+        username = form.username.data
+        email = form.email.data
+        password = form.password.data
+        
+        # Check if user already exists
+        if User.query.filter_by(email=email).first():
+            flash('Email already registered', 'error')
+            return render_template("register.html", title="Register", form=form)
+        
+        if User.query.filter_by(username=username).first():
+            flash('Username already taken', 'error')
+            return render_template("register.html", title="Register", form=form)
+        
+        # Create new user
+        user = User(
+            username=username,
+            email=email
+        )
+        user.set_password(password)
+        db.session.add(user)
+        db.session.commit()
+        
+        login_user(user)
+        flash('Registration successful!', 'success')
+        return redirect(url_for('frontend_dashboard'))
+    
+    return render_template("register.html", title="Register", form=form)
 
 
 @app.route("/dashboard")

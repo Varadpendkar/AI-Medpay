@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="min-h-[70vh] flex items-center justify-center py-16">
+  <div class="max-w-lg w-full bg-white rounded-xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold mb-3">Welcome back</h2>
+    <p class="text-sm text-slate-500 mb-6">Sign in to access your personalized recommendations and bill analysis.</p>
+
+    <!-- Google Sign-In -->
+    <div class="mb-4">
+      <button id="google-signin" class="w-full flex items-center justify-center gap-3 py-3 rounded-md border hover:shadow">
+        <img src="{{ url_for('static', filename='images/google-icon.svg') }}" alt="" class="h-5 w-5">
+        <span class="font-medium">Continue with Google</span>
+      </button>
+    </div>
+
+    <div class="my-4 text-center text-slate-400">or</div>
+
+    <!-- Email / Password form (Flask-WTF friendly) -->
+    <form method="post" action="{{ url_for('auth_login') }}" novalidate>
+      {{ form.csrf_token }}
+      <div class="mb-3">
+        <label class="block text-sm mb-1">Email</label>
+        {{ form.email(class="w-full rounded-md border px-3 py-2") }}
+        {% if form.email.errors %}
+          <div class="text-xs text-red-600 mt-1">{{ form.email.errors[0] }}</div>
+        {% endif %}
+      </div>
+
+      <div class="mb-3">
+        <label class="block text-sm mb-1">Password</label>
+        {{ form.password(class="w-full rounded-md border px-3 py-2") }}
+        {% if form.password.errors %}
+          <div class="text-xs text-red-600 mt-1">{{ form.password.errors[0] }}</div>
+        {% endif %}
+      </div>
+
+      <div class="flex items-center justify-between mb-4">
+        <label class="flex items-center gap-2 text-sm">
+          {{ form.remember() }} Remember me
+        </label>
+        <a href="/forgot-password" class="text-sm text-sky-600 hover:underline">Forgot?</a>
+      </div>
+
+      <div>
+        <button type="submit" class="w-full py-3 rounded-md bg-primary text-white font-semibold">Sign In</button>
+      </div>
+    </form>
+
+    <p class="text-sm text-slate-600 mt-4">Don't have an account? <a href="/register" class="text-primary font-medium">Create one</a></p>
+  </div>
+</section>
+{% endblock %}
