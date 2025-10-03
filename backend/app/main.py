@@ -16,9 +16,14 @@ from urllib.parse import urlparse, urljoin
 from backend.app.models.models import db, User
 from backend.app.core.forms import RegisterForm, LoginForm, CompareForm
 from backend.app.core.config import DevelopmentConfig
-app = Flask(__name__, template_folder='templates', static_folder='static')
-logging.basicConfig(level=logging.INFO)
+
+# Configure Flask to use frontend folder for templates and static files
 PROJECT_ROOT = Path(__file__).resolve().parent
+FRONTEND_DIR = PROJECT_ROOT.parent.parent / 'frontend'
+app = Flask(__name__, 
+           template_folder=str(FRONTEND_DIR / 'templates'), 
+           static_folder=str(FRONTEND_DIR / 'static'))
+logging.basicConfig(level=logging.INFO)
 
 # Initialize ranker with graceful failure for development
 try:
@@ -154,7 +159,8 @@ def api_recommendations():
     user = _load_user_profile(user_id)
     try:
         if ranker is None:
-            app.logger.warning('Ranker not available - using fallback recommendations')
+            app.logger.warning(
+                'Ranker not available - using fallback recommendations')
             recs = []
         else:
             recs = ranker.rank(user, k=limit)
