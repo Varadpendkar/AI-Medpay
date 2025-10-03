@@ -15,7 +15,7 @@ def test_recommendations_schema():
     if recs:
         r0 = recs[0]
         # canonical fields
-        for key in ['plan_id','provider','plan_name','monthly_premium','deductible','network_size','score','rank']:
+        for key in ['plan_id', 'provider', 'plan_name', 'monthly_premium', 'deductible', 'network_size', 'score', 'rank']:
             assert key in r0
         # explainability
         assert 'explain_text' in r0

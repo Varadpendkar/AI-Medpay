@@ -51,7 +51,8 @@ def main():
         try:
             db.create_all()
         except Exception as e:
-            print("⚠️ Could not auto-create tables (this is fine if you use migrations):", e)
+            print(
+                "⚠️ Could not auto-create tables (this is fine if you use migrations):", e)
 
         # List tables
         inspector = inspect(db.engine)
@@ -59,13 +60,15 @@ def main():
         print("📋 Tables in DB:", tables or "None found")
 
         if not tables:
-            print("⚠️ No tables found. Run migrations or ensure create_all() is called in app startup.")
+            print(
+                "⚠️ No tables found. Run migrations or ensure create_all() is called in app startup.")
             return
 
         # Test user
         user = User.query.filter_by(email="test@example.com").first()
         if user:
-            print(f"👤 Found test user: id={user.id}, username={user.username}, email={user.email}")
+            print(
+                f"👤 Found test user: id={user.id}, username={user.username}, email={user.email}")
         else:
             print("ℹ️ No test user found. Creating one...")
             u = User(username="test", email="test@example.com")
@@ -81,4 +84,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

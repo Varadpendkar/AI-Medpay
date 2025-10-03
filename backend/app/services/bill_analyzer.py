@@ -4,7 +4,8 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 from backend.app.utils.ocr_processor import ocr_from_image_bytes
 
-AMOUNT_RE = re.compile(r"(?P<amount>\d{1,3}(?:[,\s]\d{3})*(?:\.\d{1,2})?)")  # crude
+AMOUNT_RE = re.compile(
+    r"(?P<amount>\d{1,3}(?:[,\s]\d{3})*(?:\.\d{1,2})?)")  # crude
 
 
 def normalize_amount(s: Optional[str]) -> float:
@@ -48,9 +49,11 @@ def parse_text_lines(raw_text: str) -> List[Dict[str, Any]]:
             date_text = date_match.group(0)
             try:
                 if '-' in date_text:
-                    date_val = datetime.strptime(date_text, "%Y-%m-%d").date().isoformat()
+                    date_val = datetime.strptime(
+                        date_text, "%Y-%m-%d").date().isoformat()
                 else:
-                    date_val = datetime.strptime(date_text, "%d/%m/%Y").date().isoformat()
+                    date_val = datetime.strptime(
+                        date_text, "%d/%m/%Y").date().isoformat()
             except Exception:
                 date_val = None
         parsed.append({
@@ -75,7 +78,8 @@ def parse_bill_file(file_storage=None, text: Optional[str] = None, tesseract_cmd
     if file_storage is not None:
         # consume file bytes
         b = file_storage.read()
-        text_from_ocr, err = ocr_from_image_bytes(b, tesseract_cmd=tesseract_cmd)
+        text_from_ocr, err = ocr_from_image_bytes(
+            b, tesseract_cmd=tesseract_cmd)
         if text_from_ocr:
             raw_text = text_from_ocr
         else:

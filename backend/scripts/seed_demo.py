@@ -4,7 +4,9 @@ Seed demo users, plans, and bills.
 
 Usage: python scripts/seed_demo.py
 """
-import os, sys, pathlib
+import os
+import sys
+import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -13,11 +15,13 @@ DEMO_DIR.mkdir(parents=True, exist_ok=True)
 
 # copy demo CSVs into main data if not present
 
+
 def copy_demo_file(src_name, dest_name):
     src = DEMO_DIR / src_name
     dest = DATA_DIR / dest_name
     if not src.exists():
-        print(f"Missing demo file: {src}. Please ensure data/demo/ contains demo files.")
+        print(
+            f"Missing demo file: {src}. Please ensure data/demo/ contains demo files.")
         return
     if dest.exists():
         print(f"{dest_name} already exists at data/; skipping copy.")
@@ -58,13 +62,15 @@ def main():
         for p in bills_src.iterdir():
             if p.is_file():
                 print("Copying bill:", p.name)
-                (bills_dest / p.name).write_text(p.read_text(encoding="utf-8"), encoding="utf-8")
+                (bills_dest / p.name).write_text(p.read_text(encoding="utf-8"),
+                                                 encoding="utf-8")
 
     # 2) attempt DB seeding via SQLAlchemy if available
     try:
         sys.path.insert(0, str(ROOT))
         from backend.app.main import app
-        from backend.app.models.models import db, User, Plan  # Plan may not exist; will raise
+        # Plan may not exist; will raise
+        from backend.app.models.models import db, User, Plan
         with app.app_context():
             print("Trying to seed DB via SQLAlchemy models...")
             users_csv = str(DATA_DIR / "users.csv")
@@ -76,7 +82,8 @@ def main():
             print("DB seeding done.")
             return
     except Exception as e:
-        print("DB seeding skipped (couldn't import models/db or Plan not defined). Reason:", e)
+        print(
+            "DB seeding skipped (couldn't import models/db or Plan not defined). Reason:", e)
 
     print("Demo files copied to data/. If you want DB seeds, ensure models.py exposes SQLAlchemy models named User and Plan and re-run this script.")
 

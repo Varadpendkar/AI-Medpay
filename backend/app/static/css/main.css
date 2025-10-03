@@ -1,0 +1,31 @@
+/* Custom tweaks on top of Tailwind utilities */
+:root {
+  --primary: #00a693;
+  --accent: #0ea5e9;
+}
+
+html, body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* subtle card shadow */
+.card-shadow {
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+}
+
+/* 3D canvas fallback styling */
+#hero-3d-canvas {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  h1 { font-size: 2.25rem; }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

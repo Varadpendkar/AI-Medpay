@@ -9,6 +9,7 @@ Returns a list of {name, value} sorted by absolute contribution.
 """
 from typing import List, Dict
 
+
 def shap_top_contributors(model, X_row, feature_names: List[str], top_k: int = 3) -> List[Dict]:
     try:
         import shap  # type: ignore

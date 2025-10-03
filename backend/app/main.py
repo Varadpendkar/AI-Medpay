@@ -16,7 +16,7 @@ from urllib.parse import urlparse, urljoin
 from backend.app.models.models import db, User
 from backend.app.core.forms import RegisterForm, LoginForm, CompareForm
 from backend.app.core.config import DevelopmentConfig
-app = Flask(__name__, template_folder='Templates')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 logging.basicConfig(level=logging.INFO)
 PROJECT_ROOT = Path(__file__).resolve().parent
 ranker = PlanRanker(PROJECT_ROOT)
@@ -280,8 +280,8 @@ if __name__ == '__main__':
 
 @app.route("/")
 def frontend_home():
-    # placeholder - render new home template
-    return render_template("home.html", title="Home")
+    # Render the new home page template created under backend/app/templates/home.html
+    return render_template("home.html", title="AI-MEDPAY — Smart Insurance Recommendations")
 
 
 @app.route("/login", methods=["GET", "POST"])

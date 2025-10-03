@@ -18,7 +18,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--user_id", required=True)
     ap.add_argument("--topk", type=int, default=5)
-    ap.add_argument("--model", default="/mnt/models/recommender/current/model.txt")
+    ap.add_argument(
+        "--model", default="/mnt/models/recommender/current/model.txt")
     args = ap.parse_args()
 
     # Load model
@@ -41,10 +42,12 @@ def main():
     # Candidate generation: top 50 by network_hospitals_count (or random if not present)
     if "network_hospitals_count" not in plans.columns:
         plans["network_hospitals_count"] = 0
-    cands = plans.sort_values("network_hospitals_count", ascending=False).head(50)
+    cands = plans.sort_values(
+        "network_hospitals_count", ascending=False).head(50)
 
     # Pre-merge
-    hosp_cols = [c for c in ["hospital_id","city","state","latitude","longitude"] if c in hosp.columns]
+    hosp_cols = [c for c in ["hospital_id", "city", "state",
+                             "latitude", "longitude"] if c in hosp.columns]
     ph = mapdf.merge(hosp[hosp_cols], on="hospital_id", how="left")
 
     rows = []
@@ -69,22 +72,28 @@ def main():
             user_lon = urec.get("longitude") if "longitude" in urec else None
             plan_hospitals = ph[ph["plan_id"] == pid]
             if user_state is not None and "state" in plan_hospitals.columns:
-                plan_in_user_state = int(plan_hospitals[plan_hospitals["state"] == user_state].shape[0] > 0)
+                plan_in_user_state = int(
+                    plan_hospitals[plan_hospitals["state"] == user_state].shape[0] > 0)
             else:
                 plan_in_user_state = 0
             if user_city is not None and "city" in plan_hospitals.columns:
-                plan_network_size_in_user_city = int(plan_hospitals[plan_hospitals["city"] == user_city].shape[0])
+                plan_network_size_in_user_city = int(
+                    plan_hospitals[plan_hospitals["city"] == user_city].shape[0])
             else:
                 plan_network_size_in_user_city = 0
-            total = max(1, int(plan_hospitals["hospital_id"].nunique())) if "hospital_id" in plan_hospitals.columns else 1
-            in_state = int(plan_hospitals[plan_hospitals.get("state") == user_state]["hospital_id"].nunique()) if (user_state is not None and "state" in plan_hospitals.columns and "hospital_id" in plan_hospitals.columns) else 0
+            total = max(1, int(plan_hospitals["hospital_id"].nunique(
+            ))) if "hospital_id" in plan_hospitals.columns else 1
+            in_state = int(plan_hospitals[plan_hospitals.get("state") == user_state]["hospital_id"].nunique()) if (
+                user_state is not None and "state" in plan_hospitals.columns and "hospital_id" in plan_hospitals.columns) else 0
             plan_network_fraction_in_user_state = in_state / total
             if (user_lat is not None and user_lon is not None and "latitude" in plan_hospitals.columns and "longitude" in plan_hospitals.columns):
                 dists = []
                 for _, h in plan_hospitals.iterrows():
-                    d = haversine_km(urec.get('latitude', float('nan')), urec.get('longitude', float('nan')), h.get('latitude', float('nan')), h.get('longitude', float('nan')))
+                    d = haversine_km(urec.get('latitude', float('nan')), urec.get('longitude', float(
+                        'nan')), h.get('latitude', float('nan')), h.get('longitude', float('nan')))
                     dists.append(d)
-                distance_to_nearest_in_network_hospital = float(min(dists)) if dists else 9999.0
+                distance_to_nearest_in_network_hospital = float(
+                    min(dists)) if dists else 9999.0
             else:
                 distance_to_nearest_in_network_hospital = 9999.0
         except Exception:
@@ -105,10 +114,12 @@ def main():
     # Align features with model expectations if needed — here we assume model was trained with the same columns
     X = feat_df.values
     scores = booster.predict(X)
-    out = sorted(list(zip([pid for pid, _ in rows], scores)), key=lambda t: -t[1])[:args.topk]
+    out = sorted(list(zip([pid for pid, _ in rows], scores)),
+                 key=lambda t: -t[1])[:args.topk]
     print("Top-{}:".format(args.topk))
     for pid, s in out:
         print(pid, float(s))
+
 
 if __name__ == "__main__":
     main()

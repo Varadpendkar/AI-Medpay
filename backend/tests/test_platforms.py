@@ -1,5 +1,6 @@
 from backend.app.main import app
 
+
 def test_platform_endpoints():
     c = app.test_client()
     rp = c.get('/api/platforms')
