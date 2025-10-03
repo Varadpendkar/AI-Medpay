@@ -19,7 +19,14 @@ from backend.app.core.config import DevelopmentConfig
 app = Flask(__name__, template_folder='templates', static_folder='static')
 logging.basicConfig(level=logging.INFO)
 PROJECT_ROOT = Path(__file__).resolve().parent
-ranker = PlanRanker(PROJECT_ROOT)
+
+# Initialize ranker with graceful failure for development
+try:
+    ranker = PlanRanker(PROJECT_ROOT)
+    logging.info("✅ PlanRanker initialized successfully")
+except FileNotFoundError as e:
+    logging.warning(f"⚠️ PlanRanker not available: {e}")
+    ranker = None
 app.config.from_object(DevelopmentConfig)
 BASE_DIR = os.path.dirname(__file__)
 app.config.setdefault('UPLOAD_FOLDER', os.path.join(BASE_DIR, 'uploads'))
@@ -146,7 +153,11 @@ def api_recommendations():
     variant = request.args.get('variant', 'hybrid')
     user = _load_user_profile(user_id)
     try:
-        recs = ranker.rank(user, k=limit)
+        if ranker is None:
+            app.logger.warning('Ranker not available - using fallback recommendations')
+            recs = []
+        else:
+            recs = ranker.rank(user, k=limit)
     except Exception as e:
         app.logger.error('Ranker failed: %s', e)
         recs = []
