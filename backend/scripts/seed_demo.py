@@ -63,8 +63,8 @@ def main():
     # 2) attempt DB seeding via SQLAlchemy if available
     try:
         sys.path.insert(0, str(ROOT))
-        from app import app
-        from models import db, User, Plan  # Plan may not exist; will raise
+        from backend.app.main import app
+        from backend.app.models.models import db, User, Plan  # Plan may not exist; will raise
         with app.app_context():
             print("Trying to seed DB via SQLAlchemy models...")
             users_csv = str(DATA_DIR / "users.csv")

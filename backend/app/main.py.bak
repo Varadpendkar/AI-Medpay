@@ -6,16 +6,16 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash
 from flask_migrate import Migrate
 from pathlib import Path
-from backend.app.utils.ranker import PlanRanker
+from utils.ranker import PlanRanker
 import pandas as pd
 from datetime import datetime
-from backend.app.services.bill_analyzer import parse_bill_file
-from backend.app.services.negotiation_engine import analyze_parsed_items
-import backend.app.services.platform_integrator as integrator
+from bill_buster import parse_bill_file
+from negotiation_engine import analyze_parsed_items
+import platform_integrator as integrator
 from urllib.parse import urlparse, urljoin
-from backend.app.models.models import db, User
-from backend.app.core.forms import RegisterForm, LoginForm, CompareForm
-from backend.app.core.config import DevelopmentConfig
+from models import db, User
+from forms import RegisterForm, LoginForm, CompareForm
+from config import DevelopmentConfig
 app = Flask(__name__, template_folder='Templates')
 logging.basicConfig(level=logging.INFO)
 PROJECT_ROOT = Path(__file__).resolve().parent

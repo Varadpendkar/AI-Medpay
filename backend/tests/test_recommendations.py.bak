@@ -1,6 +1,6 @@
 import json
 import pytest
-from backend.app.main import app
+from app import app
 
 
 def test_recommendations_schema():

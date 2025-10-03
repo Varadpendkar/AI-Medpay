@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import lightgbm as lgb
 
-from scripts.build_features import haversine_km  # reuse helper if needed
+from backend.scripts.build_features import haversine_km  # reuse helper if needed
 
 
 def main():

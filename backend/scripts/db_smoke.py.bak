@@ -16,7 +16,7 @@ except Exception:
     pass  # dotenv is optional but recommended
 
 # Import models now that path is set
-from backend.app.models.models import db, User  # noqa: E402
+from models import db, User  # noqa: E402
 
 
 def create_app():

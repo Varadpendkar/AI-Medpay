@@ -3,7 +3,7 @@
 Optional SHAP explainability helper for LightGBM models.
 
 Usage:
-  from utils.explain_shap import shap_top_contributors
+  from backend.app.utils.explain_shap import shap_top_contributors
   top = shap_top_contributors(model, X_row, feature_names, top_k=3)
 Returns a list of {name, value} sorted by absolute contribution.
 """
