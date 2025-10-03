@@ -1,14 +1,22 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <section class="min-h-[70vh] flex items-center justify-center py-16">
   <div class="max-w-lg w-full bg-white rounded-xl shadow-lg p-8">
     <h2 class="text-2xl font-bold mb-3">Create your account</h2>
-    <p class="text-sm text-slate-500 mb-6">Sign up and get personalized insurance recommendations.</p>
+    <p class="text-sm text-slate-500 mb-6">
+      Sign up and get personalized insurance recommendations.
+    </p>
 
     <!-- Google Sign-Up / Sign-In -->
     <div class="mb-4">
-      <button id="google-signup" class="w-full flex items-center justify-center gap-3 py-3 rounded-md border hover:shadow">
-        <img src="{{ url_for('static', filename='images/google-icon.svg') }}" alt="" class="h-5 w-5">
+      <button
+        id="google-signup"
+        class="w-full flex items-center justify-center gap-3 py-3 rounded-md border hover:shadow"
+      >
+        <img
+          src="{{ url_for('static', filename='images/google-icon.svg') }}"
+          alt=""
+          class="h-5 w-5"
+        />
         <span class="font-medium">Sign up with Google</span>
       </button>
     </div>
@@ -19,43 +27,59 @@
       {{ form.csrf_token }}
       <div class="mb-3">
         <label class="block text-sm mb-1">Username</label>
-        {{ form.username(class="w-full rounded-md border px-3 py-2") }}
-        {% if form.username.errors %}
-          <div class="text-xs text-red-600 mt-1">{{ form.username.errors[0] }}</div>
+        {{ form.username(class="w-full rounded-md border px-3 py-2") }} {% if
+        form.username.errors %}
+        <div class="text-xs text-red-600 mt-1">
+          {{ form.username.errors[0] }}
+        </div>
         {% endif %}
       </div>
 
       <div class="mb-3">
         <label class="block text-sm mb-1">Email</label>
-        {{ form.email(class="w-full rounded-md border px-3 py-2") }}
-        {% if form.email.errors %}
-          <div class="text-xs text-red-600 mt-1">{{ form.email.errors[0] }}</div>
+        {{ form.email(class="w-full rounded-md border px-3 py-2") }} {% if
+        form.email.errors %}
+        <div class="text-xs text-red-600 mt-1">{{ form.email.errors[0] }}</div>
         {% endif %}
       </div>
 
       <div class="mb-3">
         <label class="block text-sm mb-1">Password</label>
-        {{ form.password(class="w-full rounded-md border px-3 py-2") }}
-        {% if form.password.errors %}
-          <div class="text-xs text-red-600 mt-1">{{ form.password.errors[0] }}</div>
+        {{ form.password(class="w-full rounded-md border px-3 py-2") }} {% if
+        form.password.errors %}
+        <div class="text-xs text-red-600 mt-1">
+          {{ form.password.errors[0] }}
+        </div>
         {% endif %}
-        <div class="text-xs text-slate-400 mt-1">Use at least 6 characters.</div>
+        <div class="text-xs text-slate-400 mt-1">
+          Use at least 6 characters.
+        </div>
       </div>
 
       <div class="mb-3">
         <label class="block text-sm mb-1">Confirm Password</label>
         {{ form.confirm_password(class="w-full rounded-md border px-3 py-2") }}
         {% if form.confirm_password.errors %}
-          <div class="text-xs text-red-600 mt-1">{{ form.confirm_password.errors[0] }}</div>
+        <div class="text-xs text-red-600 mt-1">
+          {{ form.confirm_password.errors[0] }}
+        </div>
         {% endif %}
       </div>
 
       <div>
-        <button type="submit" class="w-full py-3 rounded-md bg-primary text-white font-semibold">Create Account</button>
+        <button
+          type="submit"
+          class="w-full py-3 rounded-md bg-primary text-white font-semibold"
+        >
+          Create Account
+        </button>
       </div>
     </form>
 
-    <p class="text-sm text-slate-600 mt-4">Already have an account? <a href="/login" class="text-primary font-medium">Sign in</a></p>
+    <p class="text-sm text-slate-600 mt-4">
+      Already have an account?
+      <a href="/login" class="text-primary font-medium">Sign in</a>
+    </p>
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,38 @@
+/* frontend dashboard CSS */
+.card-shadow { 
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06); 
+}
+
+.explain-toggle { 
+  padding: 0.5rem; 
+  border-radius: 0.5rem; 
+  transition: background-color 0.2s ease;
+}
+
+.explain-toggle:hover {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+.explain-body { 
+  transition: max-height 0.25s ease; 
+}
+
+/* Accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+@media (max-width: 768px) {
+  #dashboard-3d { display: none; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+/* Dashboard specific styling */
+.savings-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}

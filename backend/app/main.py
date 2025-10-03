@@ -321,7 +321,8 @@ if __name__ == '__main__':
 
 @app.route("/auth/google")
 def auth_google():
-    next_url = request.args.get('next') or request.referrer or url_for('frontend_home')
+    next_url = request.args.get(
+        'next') or request.referrer or url_for('frontend_home')
     # state can carry 'next' so we return properly after callback
     redirect_uri = url_for('auth_google_callback', _external=True)
     return oauth.google.authorize_redirect(redirect_uri, state=url_encode({'next': next_url}))
@@ -333,14 +334,15 @@ def auth_google_callback():
     if not token:
         flash("Google sign-in failed.", "error")
         return redirect(url_for('frontend_login'))
-    
-    userinfo = oauth.google.parse_id_token(token) or oauth.google.get('userinfo').json()
-    
+
+    userinfo = oauth.google.parse_id_token(
+        token) or oauth.google.get('userinfo').json()
+
     # userinfo contains email, name, picture, sub
     email = userinfo.get('email')
     name = userinfo.get('name') or ''
     google_id = userinfo.get('sub')
-    
+
     # Integrate with existing user model & login logic
     try:
         user = User.query.filter_by(email=email).first()
@@ -354,7 +356,7 @@ def auth_google_callback():
             while User.query.filter_by(username=username).first():
                 username = f"{original_username}{counter}"
                 counter += 1
-            
+
             user = User(
                 username=username,
                 email=email
@@ -363,16 +365,16 @@ def auth_google_callback():
             user.set_password(os.urandom(24).hex())
             db.session.add(user)
             db.session.commit()
-        
+
         # Login the user using existing login mechanism
         login_user(user)
         flash("Successfully signed in with Google!", "success")
-        
+
     except Exception as e:
         app.logger.error(f"Google OAuth error: {e}")
         flash("Sign-in failed. Please try again.", "error")
         return redirect(url_for('frontend_register'))
-    
+
     # Redirect to next URL
     state = request.args.get('state')
     if state:
@@ -383,7 +385,7 @@ def auth_google_callback():
             next_url = url_for('frontend_dashboard')
     else:
         next_url = url_for('frontend_dashboard')
-    
+
     return redirect(next_url)
 
 
@@ -395,14 +397,14 @@ def auth_login():
         email = form.email.data
         password = form.password.data
         remember = form.remember.data
-        
+
         user = User.query.filter_by(email=email).first()
         if user and user.check_password(password):
             login_user(user, remember=remember)
             return redirect(url_for('frontend_dashboard'))
         else:
             flash('Invalid email or password', 'error')
-    
+
     return redirect(url_for('frontend_login'))
 
 
@@ -414,15 +416,15 @@ def auth_register():
         username = form.username.data
         email = form.email.data
         password = form.password.data
-        
+
         if User.query.filter_by(email=email).first():
             flash('Email already registered', 'error')
             return redirect(url_for('frontend_register'))
-        
+
         if User.query.filter_by(username=username).first():
             flash('Username already taken', 'error')
             return redirect(url_for('frontend_register'))
-        
+
         user = User(
             username=username,
             email=email
@@ -430,11 +432,11 @@ def auth_register():
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
-        
+
         login_user(user)
         flash('Registration successful!', 'success')
         return redirect(url_for('frontend_dashboard'))
-    
+
     flash('Registration failed. Please check your information.', 'error')
     return redirect(url_for('frontend_register'))
 
@@ -455,7 +457,7 @@ def frontend_login():
         email = form.email.data
         password = form.password.data
         remember = form.remember.data
-        
+
         # Try to find and authenticate user
         user = User.query.filter_by(email=email).first()
         if user and user.check_password(password):
@@ -464,7 +466,7 @@ def frontend_login():
             return redirect(next_page) if next_page else redirect(url_for('frontend_dashboard'))
         else:
             flash('Invalid email or password', 'error')
-    
+
     return render_template("login.html", title="Login", form=form)
 
 
@@ -476,16 +478,16 @@ def frontend_register():
         username = form.username.data
         email = form.email.data
         password = form.password.data
-        
+
         # Check if user already exists
         if User.query.filter_by(email=email).first():
             flash('Email already registered', 'error')
             return render_template("register.html", title="Register", form=form)
-        
+
         if User.query.filter_by(username=username).first():
             flash('Username already taken', 'error')
             return render_template("register.html", title="Register", form=form)
-        
+
         # Create new user
         user = User(
             username=username,
@@ -494,18 +496,71 @@ def frontend_register():
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
-        
+
         login_user(user)
         flash('Registration successful!', 'success')
         return redirect(url_for('frontend_dashboard'))
-    
+
     return render_template("register.html", title="Register", form=form)
 
 
 @app.route("/dashboard")
+@login_required
 def frontend_dashboard():
-    # login_required should already be handled in backend; keep existing decorators if required.
-    return render_template("dashboard.html", title="Dashboard")
+    """
+    Render the dashboard page with user recommendations and savings data.
+    This integrates with existing backend services when available.
+    """
+    # Try to fetch real recommendations from existing services
+    plans = []
+    savings_summary = {"total_saved": 25000, "year_saved": 12000}
+    explains = []
+    
+    try:
+        # Attempt to call existing recommendation service if available
+        # Replace this with actual service calls when services are implemented
+        if ranker is not None:
+            # Example: plans = ranker.get_top_recommendations(current_user.id, limit=3)
+            pass
+    except Exception as e:
+        app.logger.debug(f"Recommendation service not available: {e}")
+    
+    # Sample data when no real recommendations available
+    if not plans:
+        plans = [
+            {
+                "id": "hdfc_optima",
+                "provider": "HDFC ERGO", 
+                "name": "Optima Restore",
+                "summary": "Family floater with 5L coverage & restoration benefit",
+                "price": "12,440",
+                "badge": "Best Match"
+            },
+            {
+                "id": "star_health",
+                "provider": "Star Health",
+                "name": "Family Health Optima", 
+                "summary": "Individual plan with pre-existing disease coverage",
+                "price": "15,200",
+                "badge": "High Value"
+            },
+            {
+                "id": "care_joy",
+                "provider": "Care Health",
+                "name": "Joy Essential",
+                "summary": "Budget-friendly plan with essential coverage", 
+                "price": "8,900",
+                "badge": "Budget"
+            }
+        ]
+    
+    return render_template(
+        "dashboard.html", 
+        title="Dashboard - AI-MEDPAY",
+        plans=plans,
+        savings_summary=savings_summary,
+        explains=explains
+    )
 
 
 @app.route("/recommendation")
