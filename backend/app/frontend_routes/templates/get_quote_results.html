@@ -1,207 +1,440 @@
-{% extends "base.html" %} {% block title %}Your Insurance Recommendations -
-AI-MEDPAY{% endblock %} {% block head_extra %}
+{% extends 'base.html' %} {% block extra_head %}
+<!-- Tailwind CSS for modern styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        backdropBlur: {
+          xs: "2px",
+        },
+      },
+    },
+  };
+</script>
 <style>
-  .results-container {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  /* Custom CSS for card animations and 3D effects */
+  .rec-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .recommendation-card {
-    background: white;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+  .rec-card:focus {
+    outline: 2px solid rgba(99, 102, 241, 0.4);
+    outline-offset: 2px;
   }
 
-  .recommendation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  .rec-card:hover .card-content {
+    transform: translateZ(8px);
   }
 
-  .best-match {
-    border: 3px solid #10b981;
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  .explain-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
   }
 
-  .best-match .badge {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 1rem;
+  .explain-text.expanded {
+    max-height: 200px;
+    opacity: 1;
   }
 
-  .success-animation {
-    animation: successBounce 0.8s ease-out;
+  .score-badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+    animation: pulse-subtle 2s infinite;
   }
 
-  @keyframes successBounce {
-    0% {
-      transform: scale(0.8) translateY(20px);
-      opacity: 0;
+  @keyframes pulse-subtle {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
     }
     50% {
-      transform: scale(1.05) translateY(-5px);
-      opacity: 0.8;
-    }
-    100% {
-      transform: scale(1) translateY(0);
-      opacity: 1;
+      box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
     }
   }
 
-  .confetti {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: #10b981;
-    animation: confettiFall 2s linear forwards;
-    pointer-events: none;
-    z-index: 1000;
+  .card-enter {
+    animation: cardEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
-  @keyframes confettiFall {
-    0% {
-      transform: translateY(-100vh) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(720deg);
+  @keyframes cardEnter {
+    from {
       opacity: 0;
+      transform: translateY(30px) rotateX(15deg);
     }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg);
+    }
+  }
+
+  /* Floating animation for idle state */
+  .card-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  /* Glass morphism effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 </style>
 {% endblock %} {% block content %}
-<div class="results-container py-12">
-  <div class="container mx-auto px-6">
-    <div class="max-w-4xl mx-auto">
-      <!-- Success Header -->
-      <div class="text-center mb-12 success-animation">
-        <div class="text-6xl mb-4">🎉</div>
-        <h1 class="text-4xl font-bold mb-4 text-gray-800">
-          Perfect Match Found!
-        </h1>
-        <p class="text-xl text-gray-600">
-          We found personalized insurance recommendations just for you
-        </p>
+<div
+  class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Your Insurance Quote Results
+      </h1>
+      <p class="text-lg text-gray-600">
+        Personalized recommendations based on your preferences
+      </p>
+    </div>
+
+    {% if error %}
+    <div
+      role="alert"
+      class="mb-8 p-4 rounded-xl bg-red-50 border border-red-100 text-red-800"
+    >
+      <div class="flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        {{ error }}
       </div>
-
-      <!-- Recommendations Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        {% for rec in recommendations %}
-        <div
-          class="recommendation-card {% if loop.first %}best-match{% endif %} success-animation"
-          style="animation-delay: {{ loop.index * 0.2 }}s"
-        >
-          {% if loop.first %}
-          <div class="badge">🏆 BEST MATCH FOR YOU</div>
-          {% endif %}
-
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-gray-800">{{ rec.plan_name }}</h3>
-            <div class="flex items-center gap-1">
-              <span class="text-yellow-500">⭐</span>
-              <span class="font-semibold">{{ rec.rating }}</span>
+    </div>
+    {% endif %} {% if recommendations %}
+    <div
+      class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      id="plan-cards-grid"
+    >
+      {% for r in recommendations %}
+      <article
+        tabindex="0"
+        class="rec-card group relative transform-gpu will-change-transform glass-card rounded-2xl p-6 shadow-xl hover:shadow-2xl focus:shadow-2xl transition-all duration-300 max-w-sm mx-auto"
+        data-score="{{ '%.3f'|format(r.score|float|default(0)) }}"
+        data-index="{{ loop.index0 }}"
+        style="animation-delay: {{ loop.index0 * 100 }}ms;"
+      >
+        <!-- Card Content Wrapper for 3D transform -->
+        <div class="card-content">
+          <!-- Score badge -->
+          <div class="absolute -top-3 -right-3 z-10">
+            <div
+              class="score-badge px-3 py-1.5 rounded-full text-white text-sm font-bold shadow-lg"
+            >
+              {{ '%.2f'|format(r.score|float|default(0)) }}
             </div>
           </div>
 
+          <!-- Plan Header -->
+          <header class="mb-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
+              {{ r.plan_name or r.plan_id or 'Unknown Plan' }}
+            </h2>
+            <p class="text-sm text-gray-600 flex items-center">
+              <svg
+                class="w-4 h-4 mr-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+              {{ r.provider or 'Unknown Provider' }}
+            </p>
+          </header>
+
+          <!-- Metrics Grid -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <div>
-              <div class="text-sm text-gray-500">Coverage</div>
-              <div class="text-lg font-bold text-blue-600">
-                {{ rec.coverage }}
+            <div class="bg-white/50 rounded-lg p-3 border border-gray-100">
+              <div
+                class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1"
+              >
+                Premium
+              </div>
+              <div class="text-lg font-bold text-gray-900">
+                {% if r.monthly_premium %} ₹{{
+                "{:,}".format(r.monthly_premium|int) }} {% else %} N/A {% endif
+                %}
               </div>
             </div>
-            <div>
-              <div class="text-sm text-gray-500">Premium</div>
-              <div class="text-lg font-bold text-green-600">
-                {{ rec.price }}
+
+            <div class="bg-white/50 rounded-lg p-3 border border-gray-100">
+              <div
+                class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1"
+              >
+                Deductible
+              </div>
+              <div class="text-lg font-bold text-gray-900">
+                {% if r.deductible %} ₹{{ "{:,}".format(r.deductible|int) }} {%
+                else %} ₹0 {% endif %}
+              </div>
+            </div>
+
+            <div class="bg-white/50 rounded-lg p-3 border border-gray-100">
+              <div
+                class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1"
+              >
+                Network
+              </div>
+              <div class="text-lg font-bold text-gray-900">
+                {% if r.network_size %} {{ "{:,}".format(r.network_size|int) }}
+                {% else %} N/A {% endif %}
+              </div>
+            </div>
+
+            <div class="bg-white/50 rounded-lg p-3 border border-gray-100">
+              <div
+                class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1"
+              >
+                Rank
+              </div>
+              <div class="text-lg font-bold text-indigo-600">
+                #{{ r.rank or loop.index }}
               </div>
             </div>
           </div>
 
-          <div class="flex gap-3">
-            <a
-              href="/compare?plan={{ rec.plan_name | urlencode }}"
-              class="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+          <!-- Hidden explanation text -->
+          <div class="explain-text mb-4" id="explain-{{ loop.index }}">
+            <div
+              class="text-sm text-gray-600 p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400"
             >
-              Compare Plans
-            </a>
-            <a
-              href="#"
-              onclick="alert('Demo: This would redirect to buy the plan!')"
-              class="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+              {{ r.explain_text or 'This plan matches your preferences and
+              requirements.' }}
+            </div>
+          </div>
+
+          <!-- Action buttons -->
+          <div
+            class="flex items-center justify-between pt-4 border-t border-gray-100"
+          >
+            <button
+              class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-              Buy Now
-            </a>
+              <svg
+                class="w-4 h-4 mr-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              Compare
+            </button>
+
+            <button
+              class="details-toggle text-sm text-gray-500 hover:text-indigo-600 focus:outline-none focus:text-indigo-600 transition-colors duration-200"
+              aria-expanded="false"
+              data-target="explain-{{ loop.index }}"
+            >
+              <span class="toggle-text">Details</span>
+              <svg
+                class="toggle-icon w-4 h-4 inline ml-1 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        {% endfor %}
-      </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-12">
+      <svg
+        class="mx-auto h-12 w-12 text-gray-400"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+      <h3 class="mt-2 text-lg font-medium text-gray-900">
+        No recommendations available
+      </h3>
+      <p class="mt-1 text-gray-500">
+        {% if payload %} We received your request but could not produce
+        recommendations at this time. {% else %} Please try submitting the form
+        again. {% endif %}
+      </p>
+    </div>
+    {% endif %}
 
-      <!-- Action Buttons -->
-      <div class="text-center space-y-4">
-        <div class="flex flex-wrap justify-center gap-4">
-          <a
-            href="/get-quote"
-            class="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
-          >
-            ← Get Another Quote
-          </a>
-          <a
-            href="/dashboard"
-            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-          >
-            View Dashboard
-          </a>
-          <a
-            href="/bill-buster"
-            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
-          >
-            Analyze Medical Bill
-          </a>
-        </div>
-
-        <div class="text-sm text-gray-500 mt-6">
-          Need help deciding?
-          <a href="tel:+911800123456" class="text-blue-600 hover:underline"
-            >Call our experts: 1800-123-456</a
-          >
-        </div>
-      </div>
+    <!-- Back to form link -->
+    <div class="text-center mt-12">
+      <a
+        href="{{ url_for('frontend_get_quote.get_quote') }}"
+        class="inline-flex items-center text-indigo-600 hover:text-indigo-500 font-medium transition-colors duration-200"
+      >
+        <svg
+          class="w-4 h-4 mr-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          />
+        </svg>
+        Back to form
+      </a>
     </div>
   </div>
 </div>
 
+<!-- Include VanillaTilt for 3D effects -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+
 <script>
-  // Confetti animation
-  function createConfetti() {
-    const colors = ["#10B981", "#3B82F6", "#F59E0B", "#EF4444", "#8B5CF6"];
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize 3D card animations
+    const cards = document.querySelectorAll("#plan-cards-grid .rec-card");
 
-    for (let i = 0; i < 30; i++) {
+    // Staggered entrance animation
+    cards.forEach((card, index) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(30px) rotateX(15deg)";
+
       setTimeout(() => {
-        const confetti = document.createElement("div");
-        confetti.className = "confetti";
-        confetti.style.left = Math.random() * 100 + "%";
-        confetti.style.background =
-          colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.animationDelay = Math.random() * 0.5 + "s";
-        document.body.appendChild(confetti);
+        card.classList.add("card-enter");
 
-        setTimeout(() => confetti.remove(), 2000);
-      }, i * 50);
-    }
-  }
+        // Initialize VanillaTilt after animation
+        setTimeout(() => {
+          VanillaTilt.init(card, {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1,
+            perspective: 1000,
+            scale: 1.05,
+            transition: true,
+            "glare-prerender": false,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,
+            gyroscopeMinAngleY: -45,
+            gyroscopeMaxAngleY: 45,
+          });
 
-  // Trigger confetti when page loads
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(createConfetti, 500);
+          // Add floating animation after tilt is initialized
+          card.classList.add("card-float");
+        }, 600);
+      }, index * 150);
+    });
+
+    // Details toggle functionality
+    document.querySelectorAll(".details-toggle").forEach((button) => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("data-target");
+        const explainDiv = document.getElementById(targetId);
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+        // Toggle expanded state
+        this.setAttribute("aria-expanded", String(!isExpanded));
+        explainDiv.classList.toggle("expanded");
+
+        // Update button text and icon
+        const toggleText = this.querySelector(".toggle-text");
+        const toggleIcon = this.querySelector(".toggle-icon");
+
+        if (!isExpanded) {
+          toggleText.textContent = "Hide";
+          toggleIcon.style.transform = "rotate(180deg)";
+        } else {
+          toggleText.textContent = "Details";
+          toggleIcon.style.transform = "rotate(0deg)";
+        }
+      });
+    });
+
+    // Add subtle parallax effect on mouse move
+    let ticking = false;
+
+    document.addEventListener("mousemove", function (e) {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          const { clientX, clientY } = e;
+          const centerX = window.innerWidth / 2;
+          const centerY = window.innerHeight / 2;
+
+          const deltaX = (clientX - centerX) / centerX;
+          const deltaY = (clientY - centerY) / centerY;
+
+          cards.forEach((card, index) => {
+            const intensity = 0.5;
+            const x = deltaX * intensity * (index % 2 === 0 ? 1 : -1);
+            const y = deltaY * intensity * (index % 3 === 0 ? 1 : -1);
+
+            if (!card.classList.contains("js-tilt-glare-hover")) {
+              card.style.transform = `translate(${x}px, ${y}px)`;
+            }
+          });
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    });
+
+    // Reset parallax on mouse leave
+    document.addEventListener("mouseleave", function () {
+      cards.forEach((card) => {
+        if (!card.classList.contains("js-tilt-glare-hover")) {
+          card.style.transform = "";
+        }
+      });
+    });
   });
 </script>
 {% endblock %}

@@ -1,0 +1,189 @@
+{% extends "base.html" %} {% block title %}{{ article.title }} - AI-MEDPAY{%
+endblock %} {% block content %}
+<div class="article-detail-page">
+  <!-- Hero Section -->
+  <section
+    class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-16"
+  >
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav class="mb-6">
+          <a href="/resources" class="text-blue-200 hover:text-white"
+            >← Back to Resources</a
+          >
+        </nav>
+
+        <!-- Article Meta -->
+        <div class="mb-4">
+          <span
+            class="inline-block px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full"
+          >
+            {{ article.category }}
+          </span>
+          {% if article.featured %}
+          <span
+            class="inline-block px-3 py-1 bg-yellow-200 text-yellow-800 text-sm font-medium rounded-full ml-2"
+          >
+            ⭐ Featured
+          </span>
+          {% endif %}
+        </div>
+
+        <!-- Article Title -->
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ article.title }}</h1>
+
+        <!-- Article Summary -->
+        <p class="text-xl text-blue-100 mb-6 leading-relaxed">
+          {{ article.summary }}
+        </p>
+
+        <!-- Meta Info -->
+        <div
+          class="flex flex-wrap items-center text-sm text-blue-200 space-x-6"
+        >
+          <span>By {{ article.author }}</span>
+          <span>{{ article.published }}</span>
+          <div class="flex items-center space-x-1">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              ></path>
+            </svg>
+            <span>{{ article.views }} views</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <div class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <!-- Main Content -->
+      <article class="lg:col-span-3">
+        <div class="prose prose-lg max-w-none">
+          <!-- Placeholder content - in a real implementation, this would come from a CMS or markdown files -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+            <p class="text-blue-800 font-medium">📖 Article Content</p>
+            <p class="text-blue-700 mt-2">
+              This is a placeholder for the full article content. In a
+              production system, this would be loaded from a content management
+              system or markdown files.
+            </p>
+          </div>
+
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>
+              Understanding the basics is crucial for making informed decisions
+            </li>
+            <li>AI-powered analysis can help identify potential savings</li>
+            <li>
+              Regular review of your insurance coverage ensures optimal
+              protection
+            </li>
+          </ul>
+
+          <h2>Next Steps</h2>
+          <p>
+            Ready to put this knowledge into action? Use our tools to analyze
+            your current situation:
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a
+              href="/get-quote"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Insurance Quote
+            </a>
+            <a
+              href="/bill-buster"
+              class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+            >
+              Analyze Your Bills
+            </a>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h3 class="text-lg font-medium text-gray-800 mb-4">Tags</h3>
+          <div class="flex flex-wrap gap-2">
+            {% for tag in article.tags %}
+            <span
+              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+              >{{ tag }}</span
+            >
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1">
+        <!-- Related Articles -->
+        {% if related_articles %}
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+          <div class="space-y-4">
+            {% for related in related_articles %}
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h4
+                class="font-medium text-gray-800 hover:text-blue-600 transition-colors"
+              >
+                <a href="{{ related.url }}">{{ related.title }}</a>
+              </h4>
+              <p class="text-sm text-gray-600 mt-1">
+                {{ related.summary[:80] }}...
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Quick Actions -->
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-gray-800 mb-4">Take Action</h3>
+          <div class="space-y-3">
+            <a
+              href="/dashboard"
+              class="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              View Dashboard
+            </a>
+            <a
+              href="/get-quote"
+              class="block w-full bg-white text-blue-600 border border-blue-600 text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            >
+              Get Quote
+            </a>
+            <a
+              href="/resources"
+              class="block w-full text-gray-600 text-center py-2 px-4 rounded-lg font-medium hover:bg-white/50 transition-colors"
+            >
+              More Resources
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+{% endblock %}

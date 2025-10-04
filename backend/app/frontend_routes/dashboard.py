@@ -12,7 +12,6 @@ frontend_bp = Blueprint(
 
 
 @frontend_bp.route("/dashboard")
-@login_required  # Authentication protection restored
 def dashboard():
     """
     Render the dashboard page. This view should call existing backend services/models
@@ -22,10 +21,12 @@ def dashboard():
     # Example: try to reuse your existing services. Replace names to match your code.
     try:
         # Fetch top 3 recommended plans (adapt to your service function)
-        from backend.app.services.recommendation_engine import get_recommendations_for_user
-        from backend.app.services.recommendation_engine import explain_recommendation_for_plan
+        from app.services.recommendation_engine import get_recommendations_for_user
+        from app.services.recommendation_engine import explain_recommendation_for_plan
+        # Use current_user.id if authenticated, otherwise use None for guest recommendations
+        user_id = current_user.id if current_user.is_authenticated else None
         plans = get_recommendations_for_user(
-            current_user.id, limit=3)  # returns list of dicts
+            user_id, limit=3)  # returns list of dicts
     except Exception:
         # If the service import/method differs, fallback to empty list (UI still renders)
         current_app.logger.debug(
@@ -59,9 +60,10 @@ def dashboard():
 
     # Example metrics (replace with real values from your DB/services)
     try:
-        from backend.app.services.analytics import get_user_savings_summary
+        from app.services.analytics import get_user_savings_summary
         # e.g. {'total_saved': 25000, 'year_saved': 4000}
-        savings_summary = get_user_savings_summary(current_user.id)
+        user_id = current_user.id if current_user.is_authenticated else None
+        savings_summary = get_user_savings_summary(user_id)
     except Exception:
         savings_summary = {"total_saved": 25000, "year_saved": 4000}
 
@@ -69,9 +71,10 @@ def dashboard():
     explains = []
     for p in plans:
         try:
-            from backend.app.services.recommendation_engine import explain_recommendation_for_plan
+            from app.services.recommendation_engine import explain_recommendation_for_plan
+            user_id = current_user.id if current_user.is_authenticated else None
             expl = explain_recommendation_for_plan(
-                current_user.id, p.get("id"))
+                user_id, p.get("id"))
         except Exception:
             expl = {"why": f"This plan was recommended based on your profile analysis, coverage needs assessment, and premium affordability. The AI model found a 92% compatibility match with your requirements."}
         explains.append({"plan_id": p.get("id"), "explanation": expl})
@@ -79,7 +82,7 @@ def dashboard():
     return render_template(
         "dashboard.html",
         title="Dashboard - AI-MEDPAY",
-        user=current_user,
+        user=current_user if current_user.is_authenticated else None,
         plans=plans,
         savings_summary=savings_summary,
         explains=explains

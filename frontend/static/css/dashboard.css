@@ -1,11 +1,11 @@
 /* frontend dashboard CSS */
-.card-shadow { 
-  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06); 
+.card-shadow {
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
 }
 
-.explain-toggle { 
-  padding: 0.5rem; 
-  border-radius: 0.5rem; 
+.explain-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   transition: background-color 0.2s ease;
 }
 
@@ -13,18 +13,25 @@
   background-color: rgba(248, 250, 252, 0.8);
 }
 
-.explain-body { 
-  transition: max-height 0.25s ease; 
+.explain-body {
+  transition: max-height 0.25s ease;
 }
 
 /* Accessibility and performance */
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 @media (max-width: 768px) {
-  #dashboard-3d { display: none; }
-  .dashboard-grid { grid-template-columns: 1fr; }
+  #dashboard-3d {
+    display: none;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Dashboard specific styling */

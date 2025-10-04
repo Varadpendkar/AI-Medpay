@@ -491,6 +491,42 @@ document.addEventListener('DOMContentLoaded', function () {
     start();
   }
 
+    // Demo lecturer button handlers
+    const demoBtns = $$('.demo-btn');
+    demoBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Get data from button
+        const age = this.dataset.age;
+        const dependents = this.dataset.dependents;
+        const income = this.dataset.income;
+        const coverage = this.dataset.coverage;
+        const premium = this.dataset.premium;
+        
+        // Fill form fields
+        if ($('#age')) $('#age').value = age;
+        if ($('#dependents')) $('#dependents').value = dependents;
+        if ($('#annual_income')) $('#annual_income').value = income;
+        if ($('#coverage_amount')) $('#coverage_amount').value = coverage;
+        if ($('#max_premium_monthly')) $('#max_premium_monthly').value = premium;
+        if ($('#demo_lecturer')) $('#demo_lecturer').value = '1';
+        
+        // Update preview
+        updatePreview();
+        updateConfidence();
+        
+        // Visual feedback
+        demoBtns.forEach(b => b.classList.remove('bg-blue-500', 'text-white'));
+        this.classList.add('bg-blue-500', 'text-white');
+        
+        // Auto-advance to next step or submit
+        if (current < totalSteps - 1) {
+          showStep(totalSteps - 1); // Go to last step
+        }
+      });
+    });
+
     // expose small API for debug
     window.quoteWizard = { 
       showStep, 

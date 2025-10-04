@@ -1,0 +1,32 @@
+{# backend/app/templates/get_quote_results.html #} {% extends 'base.html' %} {%
+block content %}
+<h1>Quote Results</h1>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %} {% if recommendations %}
+<div id="recommendations" class="recommendations-grid">
+  {% for r in recommendations %}
+  <div class="rec-card">
+    <h3>{{ r.plan_name or r.plan_id }}</h3>
+    <p><strong>Provider:</strong> {{ r.provider or 'N/A' }}</p>
+    <p>
+      <strong>Monthly premium:</strong> {{ r.monthly_premium | default('N/A') }}
+    </p>
+    <p><strong>Deductible:</strong> {{ r.deductible | default('N/A') }}</p>
+    <p><strong>Network size:</strong> {{ r.network_size | default('N/A') }}</p>
+    <p><strong>Score:</strong> {{ '%.3f'|format(r.score|default(0)) }}</p>
+    <p class="explain">{{ r.explain_text or r.get('explain_text', '') }}</p>
+    {# You can add CTA buttons here (view details, save plan, compare) #}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>
+  No recommendations available at the moment. {% if payload %} We received your
+  request but could not produce recommendations. {% endif %}
+</p>
+{% endif %}
+
+<p><a href="{{ url_for('frontend_get_quote.get_quote') }}">Back to form</a></p>
+{% endblock %}

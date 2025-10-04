@@ -2,7 +2,7 @@
 import re
 from datetime import datetime
 from typing import List, Dict, Any, Optional
-from backend.app.utils.ocr_processor import ocr_from_image_bytes
+from app.utils.ocr_processor import ocr_from_image_bytes
 
 AMOUNT_RE = re.compile(
     r"(?P<amount>\d{1,3}(?:[,\s]\d{3})*(?:\.\d{1,2})?)")  # crude

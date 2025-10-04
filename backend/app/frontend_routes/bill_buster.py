@@ -34,7 +34,7 @@ def bill_buster_submit():
     try:
         # call your bill parsing / analysis service (DO NOT reimplement)
         # Replace parse_and_analyze_bill with your actual function
-        from backend.app.services.bill_analyzer import parse_and_analyze_bill
+        from app.services.bill_analyzer import parse_and_analyze_bill
 
         # parse_and_analyze_bill should accept file-like and return structured dict:
         # { "savings": 12600, "duplicate_lines": [...], "benchmarks": {...}, "parsed_items": [...] }
@@ -44,7 +44,7 @@ def bill_buster_submit():
         current_app.logger.exception("Bill analysis failed")
         # fallback: return friendly error; optionally queue for manual analysis
         try:
-            from backend.app.services.lead_capture import capture_lead_bill
+            from app.services.lead_capture import capture_lead_bill
             user_id = getattr(current_user, 'id', 'guest')
             capture_lead_bill(user_id, {"error": str(e)})
         except Exception:

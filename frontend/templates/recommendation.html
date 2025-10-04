@@ -1,0 +1,539 @@
+{% extends "base.html" %} {% block title %}Insurance Recommendations -
+AI-MEDPAY{% endblock %} {% block head_extra %}
+<style>
+  /* Recommendation Page Styles */
+  .recommendation-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  .hero-banner {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 3rem 0;
+  }
+
+  .recommendation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .best-match {
+    border: 3px solid #10b981;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  }
+
+  .best-match .badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .plan-price {
+    text-align: right;
+  }
+
+  .price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #059669;
+  }
+
+  .price-period {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f9fafb;
+    border-radius: 8px;
+  }
+
+  .feature-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    color: #10b981;
+  }
+
+  .rating-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .star {
+    color: #fcd34d;
+    font-size: 1.25rem;
+  }
+
+  .rating-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #374151;
+    padding: 12px 24px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: #9ca3af;
+    background: #f9fafb;
+  }
+
+  .summary-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .savings-highlight {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .plan-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="recommendation-page">
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl font-bold mb-4">
+        🎉 Your Personalized Insurance Recommendations
+      </h1>
+      <p class="text-xl opacity-90">
+        Based on your profile, we found the perfect insurance plans for you!
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Summary Section -->
+        <div class="summary-section">
+          <div class="savings-highlight">
+            <h2 class="text-2xl font-bold mb-2">
+              💰 Potential Annual Savings: ₹15,000
+            </h2>
+            <p class="opacity-90">
+              Compared to your current plan or market average
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-3xl font-bold text-blue-600">3</div>
+              <div class="text-gray-600">Recommended Plans</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-green-600">₹5L+</div>
+              <div class="text-gray-600">Coverage Amount</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-purple-600">4.2★</div>
+              <div class="text-gray-600">Average Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Match -->
+        <div class="recommendation-card best-match">
+          <div class="badge">🏆 BEST MATCH FOR YOU</div>
+
+          <div class="plan-header">
+            <div>
+              <h3 class="plan-title">Star Health Individual Plus</h3>
+              <div class="rating-section">
+                <div class="stars">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">☆</span>
+                </div>
+                <span class="rating-text">4.2 (2,847 reviews)</span>
+              </div>
+            </div>
+            <div class="plan-price">
+              <div class="price-amount">₹8,450</div>
+              <div class="price-period">per year</div>
+            </div>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>₹5 Lakh Sum Insured</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Cashless in 9,000+ Hospitals</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Pre & Post Hospitalization</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Day Care Procedures</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>No Room Rent Limit</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Annual Health Checkup</span>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="#" class="btn-primary">Buy Now - ₹8,450/year</a>
+            <a href="#" class="btn-secondary">View Details</a>
+            <a href="#" class="btn-secondary">Compare Plans</a>
+          </div>
+        </div>
+
+        <!-- Alternative Options -->
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+          Other Great Options
+        </h2>
+
+        <!-- Option 2 -->
+        <div class="recommendation-card">
+          <div class="plan-header">
+            <div>
+              <h3 class="plan-title">HDFC ERGO Health Suraksha</h3>
+              <div class="rating-section">
+                <div class="stars">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">☆</span>
+                </div>
+                <span class="rating-text">4.0 (1,923 reviews)</span>
+              </div>
+            </div>
+            <div class="plan-price">
+              <div class="price-amount">₹9,200</div>
+              <div class="price-period">per year</div>
+            </div>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>₹5 Lakh Sum Insured</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Cashless in 10,000+ Hospitals</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Maternity Coverage</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Wellness Benefits</span>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="#" class="btn-primary">Buy Now - ₹9,200/year</a>
+            <a href="#" class="btn-secondary">View Details</a>
+          </div>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="recommendation-card">
+          <div class="plan-header">
+            <div>
+              <h3 class="plan-title">Max Bupa Heartbeat Family</h3>
+              <div class="rating-section">
+                <div class="stars">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-text">4.5 (3,124 reviews)</span>
+              </div>
+            </div>
+            <div class="plan-price">
+              <div class="price-amount">₹11,500</div>
+              <div class="price-period">per year</div>
+            </div>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>₹10 Lakh Sum Insured</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Premium Network Hospitals</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>International Coverage</span>
+            </div>
+            <div class="feature-item">
+              <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Zero Waiting Period</span>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="#" class="btn-primary">Buy Now - ₹11,500/year</a>
+            <a href="#" class="btn-secondary">View Details</a>
+          </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="summary-section">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">
+            🚀 Ready to Get Protected?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="text-center">
+              <h3 class="text-lg font-bold mb-3">Need Help Deciding?</h3>
+              <p class="text-gray-600 mb-4">
+                Talk to our insurance experts for free consultation
+              </p>
+              <a href="tel:+911800123456" class="btn-secondary"
+                >📞 Call Now: 1800-123-456</a
+              >
+            </div>
+            <div class="text-center">
+              <h3 class="text-lg font-bold mb-3">Compare All Plans</h3>
+              <p class="text-gray-600 mb-4">
+                See detailed side-by-side comparison
+              </p>
+              <a href="/compare" class="btn-primary">📊 Compare Plans</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Add smooth scrolling and animations
+    const cards = document.querySelectorAll(".recommendation-card");
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 100);
+      }, index * 150);
+    });
+
+    // Add click tracking for demo purposes
+    document.querySelectorAll(".btn-primary, .btn-secondary").forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        if (this.href === "#") {
+          e.preventDefault();
+          alert(
+            "Demo: This would redirect to the insurance provider or comparison page!"
+          );
+        }
+      });
+    });
+  });
+</script>
+{% endblock %}

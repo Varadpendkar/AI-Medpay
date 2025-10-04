@@ -9,10 +9,12 @@ def client():
         yield c
 
 
-def test_root_redirects_to_get_quote(client):
+def test_root_renders_homepage(client):
     resp = client.get('/', follow_redirects=False)
-    assert resp.status_code in (301, 302, 303)
-    assert '/get-quote' in resp.headers['Location']
+    assert resp.status_code == 200
+    text = resp.get_data(as_text=True)
+    # Check for homepage content
+    assert 'Smart Insurance' in text or 'AI-MEDPAY' in text
 
 
 def test_get_quote_page_contains_expected_content(client):
