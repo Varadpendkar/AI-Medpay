@@ -1,0 +1,501 @@
+user_id,age,gender,marital_status,dependents,region,urban_rural
+U0001,66,other,divorced,0,Karnataka,rural
+U0002,52,female,single,0,Delhi,rural
+U0003,24,female,divorced,1,Maharashtra,rural
+U0004,41,other,widowed,1,Maharashtra,urban
+U0005,43,female,married,2,Karnataka,urban
+U0006,70,female,divorced,0,Tamil Nadu,semi-urban
+U0007,71,male,widowed,0,Uttar Pradesh,semi-urban
+U0008,55,other,widowed,0,Tamil Nadu,rural
+U0009,21,female,single,2,Rajasthan,semi-urban
+U0010,34,female,married,0,Kerala,semi-urban
+U0011,37,other,divorced,3,Gujarat,urban
+U0012,55,other,married,0,Maharashtra,urban
+U0013,69,other,married,3,Maharashtra,rural
+U0014,37,male,divorced,0,Tamil Nadu,urban
+U0015,25,male,widowed,1,Rajasthan,semi-urban
+U0016,74,female,widowed,1,Kerala,urban
+U0017,69,male,married,3,Tamil Nadu,urban
+U0018,65,other,married,2,Kerala,semi-urban
+U0019,53,female,single,1,Gujarat,rural
+U0020,36,other,divorced,0,Karnataka,urban
+U0021,19,other,single,2,Kerala,semi-urban
+U0022,42,male,married,0,Uttar Pradesh,semi-urban
+U0023,74,female,married,3,Rajasthan,urban
+U0024,29,male,married,3,Tamil Nadu,rural
+U0025,29,male,divorced,1,Maharashtra,semi-urban
+U0026,50,other,married,0,Gujarat,urban
+U0027,42,other,married,3,Karnataka,rural
+U0028,25,other,widowed,1,Rajasthan,rural
+U0029,52,female,married,0,Maharashtra,urban
+U0030,44,female,widowed,2,Karnataka,urban
+U0031,46,female,widowed,0,Rajasthan,urban
+U0032,27,female,divorced,0,Tamil Nadu,rural
+U0033,60,male,married,3,Maharashtra,rural
+U0034,38,male,divorced,2,Rajasthan,semi-urban
+U0035,18,female,single,0,Kerala,urban
+U0036,38,female,divorced,1,Delhi,rural
+U0037,48,other,widowed,3,Gujarat,rural
+U0038,70,male,widowed,0,Maharashtra,semi-urban
+U0039,52,male,widowed,0,Karnataka,rural
+U0040,36,other,single,0,Rajasthan,rural
+U0041,46,other,married,0,Rajasthan,rural
+U0042,53,male,single,0,Rajasthan,urban
+U0043,27,male,single,3,Tamil Nadu,rural
+U0044,52,female,single,3,Uttar Pradesh,semi-urban
+U0045,52,male,divorced,0,Kerala,rural
+U0046,49,female,widowed,0,Rajasthan,rural
+U0047,29,male,divorced,0,Uttar Pradesh,rural
+U0048,65,male,married,2,Gujarat,urban
+U0049,51,other,divorced,0,Gujarat,rural
+U0050,34,female,married,1,Karnataka,urban
+U0051,49,other,divorced,3,Gujarat,rural
+U0052,72,female,divorced,1,Rajasthan,urban
+U0053,18,male,divorced,1,Tamil Nadu,urban
+U0054,37,male,divorced,0,Karnataka,rural
+U0055,54,male,single,2,Kerala,urban
+U0056,45,other,married,0,Maharashtra,semi-urban
+U0057,75,female,married,3,Karnataka,semi-urban
+U0058,69,female,divorced,0,Gujarat,rural
+U0059,63,female,widowed,0,Karnataka,semi-urban
+U0060,69,male,married,1,Delhi,semi-urban
+U0061,40,other,married,2,Karnataka,rural
+U0062,20,other,single,3,Rajasthan,rural
+U0063,38,other,divorced,1,Maharashtra,rural
+U0064,27,female,divorced,0,Maharashtra,semi-urban
+U0065,53,female,widowed,1,Rajasthan,semi-urban
+U0066,61,male,married,1,Kerala,rural
+U0067,51,female,widowed,0,Tamil Nadu,rural
+U0068,40,female,widowed,1,Karnataka,rural
+U0069,20,other,married,0,Rajasthan,urban
+U0070,35,female,widowed,2,Rajasthan,rural
+U0071,64,female,married,0,Gujarat,urban
+U0072,71,female,married,0,Delhi,semi-urban
+U0073,27,male,single,3,Gujarat,urban
+U0074,61,other,single,3,Kerala,semi-urban
+U0075,42,other,single,0,Maharashtra,urban
+U0076,40,other,widowed,1,Karnataka,semi-urban
+U0077,61,female,divorced,2,Gujarat,urban
+U0078,46,other,married,3,Tamil Nadu,urban
+U0079,61,other,widowed,1,Tamil Nadu,rural
+U0080,36,other,married,2,Karnataka,rural
+U0081,31,female,single,0,Tamil Nadu,semi-urban
+U0082,75,male,married,0,Kerala,urban
+U0083,32,other,divorced,0,Kerala,rural
+U0084,73,other,divorced,2,Maharashtra,rural
+U0085,75,male,divorced,0,Tamil Nadu,semi-urban
+U0086,52,male,widowed,0,Delhi,urban
+U0087,62,other,divorced,2,Tamil Nadu,rural
+U0088,58,male,married,3,Gujarat,urban
+U0089,68,male,single,3,Gujarat,rural
+U0090,60,female,single,1,Kerala,rural
+U0091,63,male,single,1,Kerala,urban
+U0092,18,male,divorced,2,Uttar Pradesh,rural
+U0093,71,female,divorced,1,Uttar Pradesh,urban
+U0094,33,female,widowed,1,Rajasthan,semi-urban
+U0095,35,female,single,3,Kerala,rural
+U0096,70,other,divorced,2,Tamil Nadu,semi-urban
+U0097,53,male,divorced,3,Rajasthan,semi-urban
+U0098,52,other,divorced,2,Uttar Pradesh,urban
+U0099,33,other,married,0,Karnataka,semi-urban
+U0100,31,male,married,1,Gujarat,urban
+U0101,31,male,divorced,3,Kerala,urban
+U0102,50,male,single,1,Maharashtra,semi-urban
+U0103,61,other,married,3,Tamil Nadu,rural
+U0104,45,other,married,1,Gujarat,semi-urban
+U0105,33,female,divorced,1,Maharashtra,rural
+U0106,30,male,married,3,Karnataka,rural
+U0107,65,male,widowed,0,Kerala,urban
+U0108,34,male,widowed,2,Tamil Nadu,urban
+U0109,59,female,married,0,Gujarat,rural
+U0110,37,other,divorced,3,Rajasthan,urban
+U0111,20,male,divorced,0,Kerala,rural
+U0112,60,other,married,2,Rajasthan,rural
+U0113,39,female,widowed,3,Delhi,urban
+U0114,40,other,married,2,Gujarat,rural
+U0115,38,other,single,2,Tamil Nadu,urban
+U0116,24,female,married,1,Rajasthan,rural
+U0117,33,other,divorced,3,Delhi,semi-urban
+U0118,58,female,single,1,Gujarat,rural
+U0119,23,other,divorced,3,Tamil Nadu,urban
+U0120,20,other,married,3,Uttar Pradesh,semi-urban
+U0121,58,male,widowed,2,Maharashtra,rural
+U0122,39,other,married,3,Rajasthan,urban
+U0123,62,female,widowed,1,Delhi,rural
+U0124,25,other,married,2,Gujarat,rural
+U0125,67,female,widowed,1,Delhi,rural
+U0126,34,female,divorced,0,Rajasthan,semi-urban
+U0127,59,other,married,2,Karnataka,semi-urban
+U0128,61,other,widowed,0,Rajasthan,rural
+U0129,58,male,married,0,Gujarat,rural
+U0130,73,other,divorced,3,Rajasthan,semi-urban
+U0131,34,female,single,1,Rajasthan,semi-urban
+U0132,25,male,divorced,0,Delhi,semi-urban
+U0133,64,other,married,2,Karnataka,rural
+U0134,21,male,single,3,Kerala,rural
+U0135,29,other,widowed,3,Delhi,urban
+U0136,39,other,widowed,0,Maharashtra,semi-urban
+U0137,40,male,married,2,Delhi,semi-urban
+U0138,25,female,married,3,Gujarat,rural
+U0139,28,male,divorced,0,Karnataka,urban
+U0140,62,male,widowed,1,Gujarat,rural
+U0141,26,female,married,1,Karnataka,urban
+U0142,60,female,married,1,Uttar Pradesh,semi-urban
+U0143,74,male,widowed,0,Delhi,rural
+U0144,21,female,widowed,1,Maharashtra,rural
+U0145,32,male,married,1,Maharashtra,rural
+U0146,22,male,widowed,0,Uttar Pradesh,rural
+U0147,19,female,widowed,1,Maharashtra,urban
+U0148,64,male,widowed,0,Kerala,urban
+U0149,54,female,divorced,3,Gujarat,urban
+U0150,27,male,divorced,3,Uttar Pradesh,semi-urban
+U0151,59,male,married,3,Karnataka,urban
+U0152,33,other,divorced,2,Karnataka,urban
+U0153,68,other,married,0,Uttar Pradesh,semi-urban
+U0154,61,male,married,0,Uttar Pradesh,rural
+U0155,30,male,married,2,Tamil Nadu,semi-urban
+U0156,49,other,divorced,0,Maharashtra,rural
+U0157,50,male,married,3,Gujarat,semi-urban
+U0158,27,other,single,3,Delhi,semi-urban
+U0159,75,female,married,0,Karnataka,rural
+U0160,41,male,single,1,Kerala,semi-urban
+U0161,26,female,single,3,Delhi,urban
+U0162,32,male,widowed,2,Gujarat,urban
+U0163,19,other,widowed,1,Karnataka,urban
+U0164,22,other,divorced,2,Tamil Nadu,urban
+U0165,75,other,divorced,2,Delhi,rural
+U0166,22,male,single,3,Maharashtra,urban
+U0167,64,other,married,3,Rajasthan,semi-urban
+U0168,26,female,widowed,1,Uttar Pradesh,rural
+U0169,70,female,widowed,1,Tamil Nadu,urban
+U0170,46,female,divorced,1,Karnataka,urban
+U0171,37,male,single,0,Maharashtra,semi-urban
+U0172,41,female,single,1,Uttar Pradesh,rural
+U0173,59,other,divorced,2,Delhi,semi-urban
+U0174,20,male,married,2,Rajasthan,urban
+U0175,46,female,widowed,0,Rajasthan,urban
+U0176,51,female,married,0,Gujarat,urban
+U0177,72,male,divorced,2,Karnataka,semi-urban
+U0178,75,female,divorced,1,Delhi,rural
+U0179,34,female,married,3,Gujarat,rural
+U0180,44,other,married,2,Kerala,urban
+U0181,68,other,married,3,Uttar Pradesh,semi-urban
+U0182,57,female,widowed,3,Maharashtra,semi-urban
+U0183,54,male,widowed,3,Tamil Nadu,urban
+U0184,38,female,widowed,2,Tamil Nadu,urban
+U0185,53,other,single,1,Tamil Nadu,rural
+U0186,64,other,widowed,1,Gujarat,rural
+U0187,50,other,single,3,Uttar Pradesh,rural
+U0188,25,male,divorced,2,Karnataka,urban
+U0189,30,female,divorced,2,Kerala,rural
+U0190,59,other,divorced,0,Uttar Pradesh,semi-urban
+U0191,30,other,divorced,3,Kerala,rural
+U0192,74,male,married,1,Rajasthan,semi-urban
+U0193,55,other,single,0,Gujarat,semi-urban
+U0194,36,male,widowed,2,Rajasthan,semi-urban
+U0195,40,female,divorced,1,Delhi,semi-urban
+U0196,48,other,divorced,2,Rajasthan,urban
+U0197,74,other,divorced,2,Tamil Nadu,semi-urban
+U0198,65,male,divorced,0,Delhi,rural
+U0199,52,female,married,1,Gujarat,urban
+U0200,56,other,married,3,Karnataka,urban
+U0201,36,other,married,3,Delhi,rural
+U0202,74,other,divorced,2,Uttar Pradesh,urban
+U0203,40,other,married,3,Uttar Pradesh,semi-urban
+U0204,69,male,divorced,3,Kerala,rural
+U0205,67,male,widowed,2,Delhi,rural
+U0206,51,other,widowed,0,Uttar Pradesh,semi-urban
+U0207,61,male,widowed,2,Karnataka,rural
+U0208,28,other,widowed,2,Karnataka,urban
+U0209,20,other,married,2,Kerala,urban
+U0210,63,male,divorced,3,Tamil Nadu,urban
+U0211,34,other,widowed,1,Kerala,rural
+U0212,37,male,widowed,3,Kerala,urban
+U0213,41,female,widowed,2,Uttar Pradesh,semi-urban
+U0214,43,other,widowed,3,Tamil Nadu,urban
+U0215,59,male,single,0,Rajasthan,semi-urban
+U0216,74,female,divorced,0,Uttar Pradesh,rural
+U0217,73,male,married,0,Delhi,rural
+U0218,45,other,divorced,0,Gujarat,rural
+U0219,68,other,widowed,0,Rajasthan,rural
+U0220,41,other,widowed,2,Kerala,urban
+U0221,66,female,divorced,3,Uttar Pradesh,semi-urban
+U0222,67,male,single,0,Gujarat,semi-urban
+U0223,38,other,divorced,3,Tamil Nadu,rural
+U0224,57,female,married,2,Maharashtra,rural
+U0225,52,male,single,1,Delhi,rural
+U0226,36,female,widowed,1,Kerala,urban
+U0227,66,female,divorced,1,Kerala,rural
+U0228,47,female,widowed,0,Kerala,urban
+U0229,33,other,widowed,1,Tamil Nadu,rural
+U0230,64,female,single,1,Uttar Pradesh,rural
+U0231,49,other,single,2,Tamil Nadu,rural
+U0232,18,female,divorced,2,Rajasthan,rural
+U0233,46,female,single,2,Delhi,urban
+U0234,68,male,married,3,Karnataka,semi-urban
+U0235,43,female,widowed,0,Gujarat,semi-urban
+U0236,45,male,single,0,Uttar Pradesh,semi-urban
+U0237,39,other,divorced,1,Rajasthan,urban
+U0238,46,female,widowed,0,Maharashtra,semi-urban
+U0239,30,female,divorced,0,Rajasthan,rural
+U0240,42,other,widowed,3,Gujarat,urban
+U0241,38,other,married,3,Rajasthan,semi-urban
+U0242,34,male,married,3,Tamil Nadu,urban
+U0243,73,male,married,0,Delhi,semi-urban
+U0244,74,male,divorced,1,Karnataka,rural
+U0245,37,female,divorced,0,Maharashtra,semi-urban
+U0246,40,other,married,0,Delhi,urban
+U0247,26,female,married,2,Uttar Pradesh,rural
+U0248,71,male,widowed,0,Uttar Pradesh,urban
+U0249,46,other,widowed,0,Maharashtra,semi-urban
+U0250,31,female,widowed,3,Uttar Pradesh,urban
+U0251,69,other,divorced,2,Kerala,urban
+U0252,51,other,divorced,1,Delhi,rural
+U0253,73,other,widowed,0,Karnataka,rural
+U0254,54,other,married,0,Rajasthan,urban
+U0255,18,other,divorced,0,Delhi,rural
+U0256,45,female,single,3,Uttar Pradesh,semi-urban
+U0257,50,female,married,2,Karnataka,rural
+U0258,39,other,widowed,0,Maharashtra,urban
+U0259,28,female,divorced,1,Kerala,urban
+U0260,33,female,widowed,1,Kerala,semi-urban
+U0261,22,male,widowed,1,Kerala,urban
+U0262,24,male,single,1,Rajasthan,semi-urban
+U0263,58,other,married,1,Rajasthan,semi-urban
+U0264,34,female,widowed,1,Uttar Pradesh,urban
+U0265,63,male,married,3,Maharashtra,semi-urban
+U0266,53,other,single,2,Tamil Nadu,semi-urban
+U0267,36,other,divorced,3,Tamil Nadu,urban
+U0268,58,other,single,2,Delhi,urban
+U0269,29,female,widowed,3,Delhi,semi-urban
+U0270,26,male,widowed,0,Kerala,rural
+U0271,71,other,single,1,Uttar Pradesh,semi-urban
+U0272,39,female,widowed,3,Karnataka,urban
+U0273,55,male,married,0,Maharashtra,urban
+U0274,42,male,married,3,Delhi,urban
+U0275,68,other,single,3,Gujarat,rural
+U0276,50,other,single,0,Maharashtra,rural
+U0277,24,male,widowed,1,Gujarat,semi-urban
+U0278,51,other,married,0,Tamil Nadu,semi-urban
+U0279,69,female,single,2,Delhi,urban
+U0280,75,other,single,3,Gujarat,urban
+U0281,31,male,divorced,3,Maharashtra,rural
+U0282,47,other,single,3,Delhi,rural
+U0283,23,other,married,2,Delhi,semi-urban
+U0284,48,other,widowed,2,Tamil Nadu,urban
+U0285,51,male,widowed,3,Delhi,rural
+U0286,37,female,divorced,1,Karnataka,rural
+U0287,75,male,married,1,Delhi,urban
+U0288,65,male,single,2,Tamil Nadu,rural
+U0289,47,male,divorced,2,Delhi,rural
+U0290,54,other,widowed,3,Delhi,semi-urban
+U0291,37,male,divorced,2,Delhi,urban
+U0292,35,female,divorced,2,Rajasthan,urban
+U0293,24,female,single,3,Karnataka,semi-urban
+U0294,57,male,married,3,Tamil Nadu,rural
+U0295,60,female,married,0,Maharashtra,rural
+U0296,22,female,single,0,Delhi,rural
+U0297,54,female,single,2,Uttar Pradesh,semi-urban
+U0298,46,male,single,0,Gujarat,semi-urban
+U0299,66,female,widowed,0,Uttar Pradesh,semi-urban
+U0300,72,male,widowed,0,Gujarat,semi-urban
+U0301,53,male,widowed,0,Delhi,rural
+U0302,58,male,divorced,3,Maharashtra,semi-urban
+U0303,46,female,single,1,Tamil Nadu,urban
+U0304,55,female,widowed,1,Tamil Nadu,semi-urban
+U0305,38,other,single,3,Uttar Pradesh,rural
+U0306,29,other,widowed,1,Kerala,rural
+U0307,36,female,married,0,Karnataka,rural
+U0308,21,male,single,0,Kerala,semi-urban
+U0309,46,male,widowed,1,Tamil Nadu,urban
+U0310,67,other,single,3,Delhi,rural
+U0311,23,other,divorced,1,Delhi,semi-urban
+U0312,55,other,single,0,Kerala,semi-urban
+U0313,30,male,single,0,Delhi,urban
+U0314,44,female,single,2,Maharashtra,rural
+U0315,65,female,single,2,Rajasthan,urban
+U0316,65,other,single,0,Tamil Nadu,rural
+U0317,52,male,divorced,0,Karnataka,semi-urban
+U0318,55,other,widowed,2,Gujarat,rural
+U0319,20,male,divorced,2,Karnataka,semi-urban
+U0320,33,other,widowed,2,Delhi,urban
+U0321,28,other,widowed,2,Karnataka,semi-urban
+U0322,33,female,married,0,Uttar Pradesh,rural
+U0323,36,female,single,0,Delhi,urban
+U0324,34,male,widowed,1,Gujarat,rural
+U0325,24,male,single,0,Delhi,rural
+U0326,75,female,single,1,Karnataka,rural
+U0327,37,male,widowed,1,Karnataka,urban
+U0328,29,female,single,3,Karnataka,semi-urban
+U0329,43,male,widowed,1,Uttar Pradesh,rural
+U0330,56,female,widowed,2,Kerala,urban
+U0331,35,other,married,3,Karnataka,semi-urban
+U0332,34,male,divorced,1,Gujarat,semi-urban
+U0333,61,male,married,3,Tamil Nadu,urban
+U0334,68,male,single,0,Karnataka,rural
+U0335,53,other,divorced,2,Gujarat,rural
+U0336,50,other,divorced,1,Maharashtra,urban
+U0337,34,male,widowed,1,Rajasthan,semi-urban
+U0338,56,male,married,3,Maharashtra,rural
+U0339,26,other,divorced,2,Tamil Nadu,rural
+U0340,69,other,single,1,Gujarat,urban
+U0341,56,female,widowed,3,Maharashtra,urban
+U0342,66,other,single,0,Rajasthan,urban
+U0343,39,female,single,2,Uttar Pradesh,semi-urban
+U0344,65,other,married,2,Rajasthan,urban
+U0345,42,male,married,2,Gujarat,urban
+U0346,29,male,single,1,Maharashtra,semi-urban
+U0347,63,other,married,2,Gujarat,rural
+U0348,21,male,married,2,Gujarat,semi-urban
+U0349,26,male,single,3,Kerala,semi-urban
+U0350,63,other,married,2,Kerala,urban
+U0351,24,other,married,0,Delhi,rural
+U0352,39,other,widowed,3,Tamil Nadu,urban
+U0353,41,male,single,2,Gujarat,semi-urban
+U0354,59,male,widowed,0,Tamil Nadu,urban
+U0355,25,male,divorced,2,Tamil Nadu,urban
+U0356,41,other,single,2,Maharashtra,rural
+U0357,60,female,divorced,3,Maharashtra,urban
+U0358,39,male,divorced,1,Delhi,rural
+U0359,48,female,divorced,0,Delhi,rural
+U0360,18,other,single,0,Gujarat,semi-urban
+U0361,53,female,single,1,Gujarat,rural
+U0362,73,other,married,0,Gujarat,urban
+U0363,48,male,single,2,Karnataka,rural
+U0364,63,other,married,1,Rajasthan,urban
+U0365,39,female,single,0,Uttar Pradesh,semi-urban
+U0366,69,male,widowed,0,Karnataka,urban
+U0367,20,male,widowed,3,Gujarat,urban
+U0368,58,male,single,0,Rajasthan,rural
+U0369,25,other,single,3,Uttar Pradesh,urban
+U0370,38,other,widowed,0,Karnataka,semi-urban
+U0371,52,other,widowed,2,Maharashtra,rural
+U0372,56,female,divorced,0,Rajasthan,semi-urban
+U0373,47,male,divorced,2,Tamil Nadu,rural
+U0374,50,female,widowed,1,Tamil Nadu,urban
+U0375,21,female,married,0,Karnataka,urban
+U0376,70,male,divorced,0,Tamil Nadu,semi-urban
+U0377,22,male,married,2,Karnataka,urban
+U0378,27,male,divorced,3,Kerala,urban
+U0379,75,other,divorced,2,Maharashtra,urban
+U0380,19,female,widowed,1,Tamil Nadu,rural
+U0381,35,female,single,1,Kerala,rural
+U0382,68,female,divorced,2,Karnataka,urban
+U0383,34,other,single,3,Gujarat,urban
+U0384,64,female,single,0,Delhi,rural
+U0385,56,other,single,0,Maharashtra,semi-urban
+U0386,28,other,widowed,1,Gujarat,urban
+U0387,72,other,widowed,1,Tamil Nadu,semi-urban
+U0388,24,female,widowed,3,Rajasthan,urban
+U0389,59,female,married,0,Maharashtra,urban
+U0390,71,female,divorced,3,Kerala,urban
+U0391,34,other,widowed,1,Karnataka,semi-urban
+U0392,37,other,married,2,Delhi,urban
+U0393,68,female,single,3,Maharashtra,rural
+U0394,52,male,married,2,Karnataka,urban
+U0395,55,other,single,3,Uttar Pradesh,semi-urban
+U0396,59,male,single,3,Maharashtra,urban
+U0397,45,male,divorced,3,Maharashtra,rural
+U0398,27,female,divorced,1,Rajasthan,rural
+U0399,68,female,widowed,3,Tamil Nadu,rural
+U0400,31,male,single,2,Maharashtra,semi-urban
+U0401,54,female,widowed,2,Karnataka,urban
+U0402,65,male,single,2,Tamil Nadu,urban
+U0403,60,male,married,2,Gujarat,rural
+U0404,73,other,divorced,0,Maharashtra,semi-urban
+U0405,28,other,widowed,0,Tamil Nadu,urban
+U0406,67,male,married,2,Karnataka,urban
+U0407,22,female,single,0,Karnataka,urban
+U0408,39,other,divorced,2,Delhi,semi-urban
+U0409,42,other,single,2,Rajasthan,rural
+U0410,37,female,widowed,1,Rajasthan,rural
+U0411,73,other,single,3,Karnataka,semi-urban
+U0412,39,other,single,2,Kerala,rural
+U0413,31,other,married,0,Rajasthan,semi-urban
+U0414,64,female,widowed,3,Uttar Pradesh,semi-urban
+U0415,55,other,married,1,Gujarat,urban
+U0416,56,female,single,1,Maharashtra,semi-urban
+U0417,60,male,divorced,0,Tamil Nadu,semi-urban
+U0418,20,male,widowed,0,Uttar Pradesh,semi-urban
+U0419,68,male,widowed,1,Karnataka,rural
+U0420,47,male,single,3,Delhi,semi-urban
+U0421,24,female,married,3,Karnataka,semi-urban
+U0422,22,other,single,1,Gujarat,urban
+U0423,71,male,married,3,Kerala,rural
+U0424,43,other,widowed,1,Kerala,urban
+U0425,39,male,divorced,1,Kerala,rural
+U0426,37,male,married,3,Karnataka,semi-urban
+U0427,37,other,married,3,Gujarat,urban
+U0428,49,other,married,2,Karnataka,urban
+U0429,30,female,married,3,Maharashtra,rural
+U0430,55,female,married,2,Uttar Pradesh,semi-urban
+U0431,29,other,single,3,Gujarat,semi-urban
+U0432,39,other,widowed,1,Delhi,rural
+U0433,38,other,divorced,2,Kerala,urban
+U0434,67,female,divorced,3,Kerala,semi-urban
+U0435,20,other,widowed,0,Uttar Pradesh,rural
+U0436,48,male,widowed,3,Rajasthan,semi-urban
+U0437,64,other,married,3,Gujarat,urban
+U0438,47,male,widowed,0,Rajasthan,rural
+U0439,55,female,single,0,Kerala,urban
+U0440,67,female,single,3,Kerala,urban
+U0441,53,female,single,0,Gujarat,urban
+U0442,20,female,widowed,1,Karnataka,semi-urban
+U0443,19,other,widowed,2,Karnataka,urban
+U0444,60,female,divorced,3,Delhi,semi-urban
+U0445,72,other,married,3,Delhi,urban
+U0446,50,male,single,0,Uttar Pradesh,semi-urban
+U0447,65,female,divorced,0,Gujarat,rural
+U0448,35,female,single,1,Gujarat,rural
+U0449,33,other,married,1,Karnataka,urban
+U0450,66,female,divorced,2,Gujarat,rural
+U0451,30,other,married,3,Kerala,semi-urban
+U0452,71,male,single,2,Delhi,rural
+U0453,21,other,married,1,Gujarat,urban
+U0454,66,other,widowed,1,Tamil Nadu,urban
+U0455,47,other,married,3,Uttar Pradesh,semi-urban
+U0456,23,female,single,0,Uttar Pradesh,rural
+U0457,66,other,widowed,0,Maharashtra,rural
+U0458,24,female,divorced,1,Gujarat,semi-urban
+U0459,27,male,single,1,Maharashtra,rural
+U0460,65,male,married,2,Rajasthan,rural
+U0461,22,female,single,2,Uttar Pradesh,urban
+U0462,19,male,divorced,3,Rajasthan,rural
+U0463,75,other,single,3,Uttar Pradesh,semi-urban
+U0464,39,male,married,3,Gujarat,urban
+U0465,31,other,married,3,Delhi,urban
+U0466,60,other,married,0,Kerala,rural
+U0467,75,male,single,3,Karnataka,semi-urban
+U0468,67,female,divorced,1,Gujarat,urban
+U0469,75,male,divorced,1,Delhi,urban
+U0470,45,male,divorced,2,Gujarat,semi-urban
+U0471,40,female,single,2,Delhi,urban
+U0472,61,female,divorced,0,Maharashtra,rural
+U0473,24,other,single,2,Maharashtra,rural
+U0474,66,female,single,1,Karnataka,rural
+U0475,68,female,widowed,0,Karnataka,rural
+U0476,29,other,single,0,Tamil Nadu,rural
+U0477,57,other,single,1,Delhi,rural
+U0478,33,female,single,0,Kerala,rural
+U0479,28,female,single,0,Tamil Nadu,rural
+U0480,64,male,married,0,Maharashtra,urban
+U0481,63,other,single,3,Rajasthan,semi-urban
+U0482,70,other,divorced,3,Maharashtra,semi-urban
+U0483,39,male,divorced,1,Tamil Nadu,urban
+U0484,56,male,single,2,Tamil Nadu,urban
+U0485,64,female,single,1,Karnataka,urban
+U0486,45,male,married,0,Delhi,urban
+U0487,61,male,single,2,Uttar Pradesh,semi-urban
+U0488,25,other,divorced,0,Rajasthan,urban
+U0489,28,other,divorced,1,Maharashtra,urban
+U0490,22,female,divorced,0,Gujarat,rural
+U0491,31,female,single,1,Karnataka,urban
+U0492,56,female,single,1,Karnataka,urban
+U0493,58,other,single,1,Karnataka,semi-urban
+U0494,27,female,divorced,1,Karnataka,semi-urban
+U0495,44,male,single,1,Tamil Nadu,urban
+U0496,62,female,widowed,0,Uttar Pradesh,rural
+U0497,38,female,divorced,3,Delhi,semi-urban
+U0498,57,male,divorced,0,Tamil Nadu,urban
+U0499,64,male,widowed,1,Maharashtra,rural
+U0500,26,female,married,1,Maharashtra,rural

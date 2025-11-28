@@ -2,9 +2,10 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-export PYTHONPATH="$ROOT"
-export FLASK_APP=backend.app.main
+export PYTHONPATH="$ROOT/backend"
+export FLASK_APP=app.main
 export FLASK_ENV=development
+export LLAMA_MODEL_PATH="$ROOT/models/llm/ggml-model-q4_0.gguf"
 
 PORT=5001
 HOST=0.0.0.0
@@ -20,6 +21,7 @@ fi
 
 echo "Starting Flask (dev) on http://${HOST}:${PORT} (PYTHONPATH=$PYTHONPATH)"
 # Run in foreground so logs are easy to see (ctrl+c to stop)
+cd "$ROOT/backend"
 python -m flask run --debug --host="$HOST" --port="$PORT" &
 FLASK_PID=$!
 

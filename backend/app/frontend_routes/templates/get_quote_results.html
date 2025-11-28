@@ -44,15 +44,20 @@
   .score-badge {
     background: linear-gradient(135deg, #10b981, #059669);
     animation: pulse-subtle 2s infinite;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
   }
 
   @keyframes pulse-subtle {
     0%,
     100% {
-      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
     }
     50% {
-      box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.6),
+        0 0 0 8px rgba(16, 185, 129, 0);
     }
   }
 
@@ -133,18 +138,21 @@
       <article
         tabindex="0"
         class="rec-card group relative transform-gpu will-change-transform glass-card rounded-2xl p-6 shadow-xl hover:shadow-2xl focus:shadow-2xl transition-all duration-300 max-w-sm mx-auto"
-        data-score="{{ '%.3f'|format(r.score|float|default(0)) }}"
+        data-score="{{ '%.2f'|format(r.confidence|float|default(0)) }}"
         data-index="{{ loop.index0 }}"
         style="animation-delay: {{ loop.index0 * 100 }}ms;"
       >
         <!-- Card Content Wrapper for 3D transform -->
         <div class="card-content">
-          <!-- Score badge -->
+          <!-- Confidence badge -->
           <div class="absolute -top-3 -right-3 z-10">
             <div
-              class="score-badge px-3 py-1.5 rounded-full text-white text-sm font-bold shadow-lg"
+              class="score-badge px-4 py-2 rounded-full text-white text-base font-bold shadow-lg"
+              style="min-width: 60px; text-align: center"
             >
-              {{ '%.2f'|format(r.score|float|default(0)) }}
+              {{ r.confidence_label if r.confidence_label else
+              (r.confidence|default(0)|round(1)|string + '%' if r.confidence
+              else '0%') }}
             </div>
           </div>
 
@@ -180,9 +188,14 @@
                 Premium
               </div>
               <div class="text-lg font-bold text-gray-900">
-                {% if r.monthly_premium %} ₹{{
-                "{:,}".format(r.monthly_premium|int) }} {% else %} N/A {% endif
-                %}
+                {% if r.premium_missing %}
+                <div class="text-sm">N/A</div>
+                <a
+                  href="/contact-insurer?plan={{ r.plan_id }}"
+                  class="text-xs text-indigo-600 hover:underline"
+                  >Check premium</a
+                >
+                {% else %} {{ r.premium_display or 'N/A' }} {% endif %}
               </div>
             </div>
 
@@ -193,8 +206,7 @@
                 Deductible
               </div>
               <div class="text-lg font-bold text-gray-900">
-                {% if r.deductible %} ₹{{ "{:,}".format(r.deductible|int) }} {%
-                else %} ₹0 {% endif %}
+                {{ r.deductible_display or 'N/A' }}
               </div>
             </div>
 
@@ -205,8 +217,7 @@
                 Network
               </div>
               <div class="text-lg font-bold text-gray-900">
-                {% if r.network_size %} {{ "{:,}".format(r.network_size|int) }}
-                {% else %} N/A {% endif %}
+                {{ r.network_display or 'N/A' }}
               </div>
             </div>
 
@@ -227,8 +238,14 @@
             <div
               class="text-sm text-gray-600 p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400"
             >
-              {{ r.explain_text or 'This plan matches your preferences and
-              requirements.' }}
+              {% if r.why %}
+              <ul class="list-disc list-inside space-y-1">
+                {% for bullet in r.why %}
+                <li>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+              {% else %} This plan matches your preferences and requirements. {%
+              endif %}
             </div>
           </div>
 
@@ -339,36 +356,30 @@
     // Initialize 3D card animations
     const cards = document.querySelectorAll("#plan-cards-grid .rec-card");
 
-    // Staggered entrance animation
+    // Make cards visible immediately - NO ANIMATION DELAYS
     cards.forEach((card, index) => {
-      card.style.opacity = "0";
-      card.style.transform = "translateY(30px) rotateX(15deg)";
+      // Cards are VISIBLE by default now
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0) rotateX(0deg)";
 
-      setTimeout(() => {
-        card.classList.add("card-enter");
+      // Simple fade in animation
+      card.classList.add("card-enter");
 
-        // Initialize VanillaTilt after animation
-        setTimeout(() => {
-          VanillaTilt.init(card, {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.1,
-            perspective: 1000,
-            scale: 1.05,
-            transition: true,
-            "glare-prerender": false,
-            gyroscope: true,
-            gyroscopeMinAngleX: -45,
-            gyroscopeMaxAngleX: 45,
-            gyroscopeMinAngleY: -45,
-            gyroscopeMaxAngleY: 45,
-          });
-
-          // Add floating animation after tilt is initialized
-          card.classList.add("card-float");
-        }, 600);
-      }, index * 150);
+      // Initialize VanillaTilt immediately
+      try {
+        VanillaTilt.init(card, {
+          max: 15,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.1,
+          perspective: 1000,
+          scale: 1.05,
+          transition: true,
+          "glare-prerender": false,
+        });
+      } catch (e) {
+        console.log("VanillaTilt not available:", e);
+      }
     });
 
     // Details toggle functionality

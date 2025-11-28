@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "Unable to get page count. Is poppler installed and in PATH?",
+  "job_id": "80931ac4-61dd-4642-a7a2-f9e0f6c8c808"
+}

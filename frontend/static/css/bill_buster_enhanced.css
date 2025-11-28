@@ -1,0 +1,24 @@
+/* bill_buster_enhanced.css - REPLACE ENTIRE FILE */
+#preauthForm label { font-size: 0.9rem; color: #374151; }
+#preauthForm select, #preauthForm input { font-size: 0.95rem; }
+
+.results-grid-modern .plan-card { min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; }
+
+/* skeleton card shape for loading state */
+.skeleton-card {
+  height: 220px;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* small toast */
+.toast {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  background: rgba(16,24,40,0.95);
+  color: white;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  z-index: 10000;
+}

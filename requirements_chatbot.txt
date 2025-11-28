@@ -1,0 +1,23 @@
+# ========================================
+# RAG Chatbot Dependencies
+# Add to your existing requirements.txt
+# ========================================
+
+# Sentence Transformers for embeddings
+sentence-transformers>=2.2.2
+
+# FAISS for vector search (CPU version)
+faiss-cpu>=1.7.4
+
+# llama.cpp Python bindings for local LLM inference
+llama-cpp-python>=0.2.20
+
+# Web scraping for document indexing
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Note: For Apple Silicon with Metal acceleration, install llama-cpp-python with:
+# CMAKE_ARGS="-DLLAMA_METAL=on" pip install llama-cpp-python
+#
+# For CUDA GPU support:
+# CMAKE_ARGS="-DLLAMA_CUBLAS=on" pip install llama-cpp-python

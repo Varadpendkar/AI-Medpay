@@ -1,0 +1,69 @@
+[
+  {
+    "id": "http://127.0.0.1:5001/#chunk0",
+    "text": "AI-MEDPAY ⚡ AI-Powered Healthcare Finance Smart Insurance Recommendations Personalized health insurance recommendations and medical bill overcharge detection — powered by explainable AI to help you save money and make confident healthcare choices. Start Free Analysis → View Demo 500+ Insurance Plans 95% Accuracy Rate ₹25K Avg. Savings Top Recommendation Best Match HDFC ERGO Optima Restore Family Floater · 5L Coverage ₹12,440 ⭐ 4.8 10,000+ claims Powerful Features for Smart Healthcare Decisions AI-driven recommendations, bill analysis, and explainable decisions to help you save and choose confidently. 🧠 AI-Powered Recommendations Advanced ML analyzes your profile and recommends the best plans. 🧾 Bill Buster Analysis Upload medical bills; find overcharges & savings quickly. 🔍 Explainable AI See why each plan was suggested with transparent explanations. 🛡️ Comprehensive Coverage Compare top insurers across networks and claim ratios. What Our Users Say ★★★★★ \"AI-MEDPAY saved me ₹15,000 on my family's insurance. The recommendations were spot-on!\" Priya Sharma Software Engineer ★★★★★ \"Bill Buster identified overcharges I never noticed — saved ₹8,000 on a hospital bill.\" Rajesh Kumar Business Owner ★★★★★ \"Transparent recommendations and excellent support. Highly recommended!\" Dr. Anita Patel Medical Professional",
+    "meta": {
+      "url": "http://127.0.0.1:5001/",
+      "chunk": 0,
+      "source_type": "web"
+    }
+  },
+  {
+    "id": "http://127.0.0.1:5001/get-quote#chunk0",
+    "text": "AI-MEDPAY Get a Quote Answer a few quick questions — we'll show a personalized recommendation. Step 1 of 4 Fill the form to improve recommendation confidence. Reduced motion Personal info Age Gender Select male female other Annual income (INR) Dependents Region Urban / Rural Select urban rural Marital Status * Select Single Married Divorced Widowed City * State * Occupation Type * Select Salaried Self-Employed Student Retired Plan Type * Select Individual Family Floater Coverage & preferences Preferred Coverage Select 3 L 5 L 10 L 20 L Payment Mode Select monthly quarterly annual Preferred Providers (optional) Existing Health Policy? Select Yes No Budget & health Premium Budget (INR/month) * Smoking Status * Select Non-smoker Smoker / Ex-smoker Health conditions (check all that apply) Diabetes Hypertension Asthma Cancer Heart Obesity Claim History Count Renewal Loyalty Years Upload bill Optional — upload a bill to improve accuracy (max 10MB) Previous Next Finish & Get Recommendation Generating personalized quotes... ⚠️ No recommendations available. Please adjust your preferences and try again.",
+    "meta": {
+      "url": "http://127.0.0.1:5001/get-quote",
+      "chunk": 0,
+      "source_type": "web"
+    }
+  },
+  {
+    "id": "http://127.0.0.1:5001/bill-buster#chunk0",
+    "text": "Bill Buster - AI-MEDPAY Bill Buster Upload your medical bills and let AI find overcharges, duplicates, and potential savings ₹2.3L+ Savings Found 15K+ Bills Analyzed 94% Accuracy Rate ✨ NEW FEATURE Estimate Procedure Costs Before Treatment Know exactly how much you'll pay out-of-pocket across 50+ insurance plans. Find the plan that saves you the most money before your procedure. 50+ procedures Real-time estimates Savings guaranteed Estimate Costs Now 💰 Save up to ₹50,000 by choosing the right plan 🔍 AI-POWERED SCANNER Medical Bill Scanner Upload your hospital bill and let AI automatically detect overcharges, duplicates, and billing errors in seconds 📋 How It Works 📤 1. Upload Your Bill Drop your medical bill (PDF, JPG, PNG) - up to 10MB 🤖 2. AI Analyzes Bill OCR reads text, extracts line items, checks for anomalies 💰 3. Get Savings Report See flagged charges, estimated savings, and next steps ⚠️ What We Detect: Duplicate charges Overcharges Total mismatches High room rent Drop Your Bill Here or click to browse files PDF, JPG, PNG, HEIC • Max 10MB Analyzing your bill... 0% This may take 10-30 seconds 🔒 Secure & Private: Your bill is encrypted, processed locally, and deleted immediately after analysis. We never store your medical data. Drop your medical bill here Or click to browse files (PDF, JPG, PNG up to 10MB) Choose File 🔍 Analyze Bill for Savings Privacy & Security Your medical bills are processed securely and deleted immediately after analysis. We use end-to-end encryption and never store your personal health information. Analyzing Your Bill AI is scanning for overcharges, duplicates, and savings opportunities... 💰 Potential Savings Found! ₹0 Total overcharges and duplicates detected 🔍 Duplicate Charges 📊 Price Benchmark Compare Insurance Plans Download Report How Bill Buster Works Advanced AI technology to protect you from medical billing errors 📄 Upload Your Bill Simply upload your medical bill in PDF, JPG, or PNG format 🤖 AI Analysis Our AI scans for duplicates, overcharges, and compares against benchmarks 💰 Get Savings Receive detailed report with potential savings and next steps",
+    "meta": {
+      "url": "http://127.0.0.1:5001/bill-buster",
+      "chunk": 0,
+      "source_type": "web"
+    }
+  },
+  {
+    "id": "kb://health-insurance-basics",
+    "text": "Health insurance is a contract that requires an insurer to pay some or all of a person's healthcare costs in exchange for a premium. Health insurance plans in India typically cover hospitalization expenses, pre and post-hospitalization costs, daycare procedures, and ambulance charges. Key components include: Premium (amount paid to insurer), Sum Insured (maximum coverage amount), Deductible (amount you pay before insurance kicks in), Co-payment (percentage you pay for each claim), Network Hospitals (cashless treatment facilities), and Waiting Period (time before certain conditions are covered).",
+    "meta": {
+      "category": "basics",
+      "source_type": "kb"
+    }
+  },
+  {
+    "id": "kb://claim-process",
+    "text": "To file a health insurance claim: 1) Cashless Claim - Contact insurer's helpline before hospitalization, get pre-authorization from network hospital, insurer settles directly with hospital. 2) Reimbursement Claim - Pay hospital bills yourself, collect all bills/prescriptions/discharge summary, submit claim form with documents within claim intimation period (usually 7-30 days), insurer reviews and reimburses approved amount. Required documents: Claim form, Hospital bills, Discharge summary, Prescriptions, Diagnostic reports, Pre-authorization form (for cashless).",
+    "meta": {
+      "category": "claims",
+      "source_type": "kb"
+    }
+  },
+  {
+    "id": "kb://pre-existing-conditions",
+    "text": "Pre-existing conditions are illnesses or medical conditions that exist before buying health insurance. Most insurers impose a waiting period of 2-4 years before covering pre-existing conditions. During waiting period, any treatment related to pre-existing condition is not covered. Some insurers offer plans with reduced waiting periods (1 year) at higher premiums. Common pre-existing conditions: Diabetes, Hypertension, Heart disease, Asthma, Thyroid disorders. Always disclose pre-existing conditions truthfully to avoid claim rejection.",
+    "meta": {
+      "category": "coverage",
+      "source_type": "kb"
+    }
+  },
+  {
+    "id": "kb://network-hospitals",
+    "text": "Network hospitals are medical facilities that have tie-ups with insurance companies for cashless treatment. Benefits: No upfront payment required, Direct billing between hospital and insurer, Faster claim settlement, Reduced paperwork. To use network hospital: Check insurer's hospital list online or app, Inform hospital about your insurance at admission, Provide insurance card and policy details, Hospital contacts insurer for pre-authorization. For non-network hospitals, you must pay and file reimbursement claim.",
+    "meta": {
+      "category": "hospitals",
+      "source_type": "kb"
+    }
+  },
+  {
+    "id": "kb://exclusions",
+    "text": "Common health insurance exclusions (not covered): Cosmetic surgery, Dental treatment (unless due to accident), Alternative therapies (Ayurveda, Homeopathy unless specified), Self-inflicted injuries, War/nuclear risks, Pre-existing diseases during waiting period, Experimental treatments, Congenital diseases (unless covered), Infertility treatment, Pregnancy complications (unless maternity rider added). Always read policy exclusions carefully before buying.",
+    "meta": {
+      "category": "exclusions",
+      "source_type": "kb"
+    }
+  }
+]

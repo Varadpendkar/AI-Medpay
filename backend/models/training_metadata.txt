@@ -1,0 +1,10 @@
+training_date: 2025-10-19 23:14:41
+total_samples: 2594
+train_samples: 2067
+test_samples: 527
+num_features: 48
+num_users: 500
+num_plans: 204
+positive_ratio: 0.036237471087124135
+best_iteration: 1
+best_score: defaultdict(<class 'collections.OrderedDict'>, {'train': OrderedDict({'ndcg@5': 1.0, 'ndcg@10': 1.0, 'ndcg@20': 1.0}), 'test': OrderedDict({'ndcg@5': 0.9985034490553475, 'ndcg@10': 0.9985034490553475, 'ndcg@20': 0.9985034490553475})})

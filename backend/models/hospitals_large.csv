@@ -1,0 +1,1001 @@
+hospital_id,name,state,city,pincode,bed_count,specialties,address,latitude,longitude,is_empanelled_public,created_at
+H200000,Gurgaon Health Institute 4893,Haryana,Gurgaon,300000,774,"Oncology,ENT,Cardiology",192 Gurgaon Medical Road,11.106672,76.658725,no,2025-09-30
+H200001,Vadodara Health Institute 9064,Gujarat,Vadodara,300001,402,"Cardiology,ENT,Oncology,Gastroenterology",86 Vadodara Medical Road,11.703654,82.379343,no,2025-09-30
+H200002,Amritsar Health Institute 386,Punjab,Amritsar,300002,959,"General Medicine,ENT,Nephrology,Gastroenterology",84 Amritsar Medical Road,27.270858,71.577475,yes,2025-09-30
+H200003,Gurgaon Health Institute 9472,Haryana,Gurgaon,300003,392,"Neurology,Pediatrics,ENT,General Medicine,Cardiology",62 Gurgaon Medical Road,29.829749,72.327609,no,2025-09-30
+H200004,Surat Health Institute 9644,Gujarat,Surat,300004,908,"General Medicine,Orthopedics,Gastroenterology",5 Surat Medical Road,11.756812,72.582259,no,2025-09-30
+H200005,Surat Health Institute 5305,Gujarat,Surat,300005,46,"General Medicine,Gastroenterology",41 Surat Medical Road,17.702511,83.981552,no,2025-09-30
+H200006,Nagpur Health Institute 3529,Maharashtra,Nagpur,300006,1069,"Gastroenterology,General Medicine",8 Nagpur Medical Road,23.652599,74.515217,no,2025-09-30
+H200007,Gurgaon Health Institute 5969,Haryana,Gurgaon,300007,264,"Cardiology,Gastroenterology,Nephrology",172 Gurgaon Medical Road,13.766063,71.270861,no,2025-09-30
+H200008,South Delhi Health Institute 55,Delhi,South Delhi,300008,320,"Gastroenterology,Orthopedics",50 South Delhi Medical Road,14.606967,83.000467,yes,2025-09-30
+H200009,Guwahati Health Institute 2981,Assam,Guwahati,300009,518,"General Medicine,Pediatrics,Orthopedics",91 Guwahati Medical Road,17.869378,71.559677,no,2025-09-30
+H200010,Raipur Health Institute 6771,Chhattisgarh,Raipur,300010,1071,"Pediatrics,Cardiology,General Medicine,Nephrology,Neurology",100 Raipur Medical Road,23.703596,79.424698,no,2025-09-30
+H200011,Raipur Health Institute 5412,Chhattisgarh,Raipur,300011,1182,"Orthopedics,General Medicine,Nephrology,Neurology",23 Raipur Medical Road,17.099007,78.333741,no,2025-09-30
+H200012,New Delhi Health Institute 6083,Delhi,New Delhi,300012,92,"Gastroenterology,Pediatrics,Neurology,Orthopedics",230 New Delhi Medical Road,23.259342,74.236974,no,2025-09-30
+H200013,Mangalore Health Institute 7301,Karnataka,Mangalore,300013,80,"Pediatrics,Orthopedics,General Medicine",43 Mangalore Medical Road,8.765125,80.049128,no,2025-09-30
+H200014,Cuttack Health Institute 2980,Odisha,Cuttack,300014,578,"Neurology,Oncology,Pediatrics,Orthopedics",199 Cuttack Medical Road,9.887093,74.016868,no,2025-09-30
+H200015,Hubli Health Institute 3109,Karnataka,Hubli,300015,348,"Orthopedics,Oncology",119 Hubli Medical Road,16.32081,72.018106,no,2025-09-30
+H200016,Raipur Health Institute 5588,Chhattisgarh,Raipur,300016,823,"General Medicine,Neurology,Nephrology,Gastroenterology",77 Raipur Medical Road,22.45976,73.183088,no,2025-09-30
+H200017,Vadodara Health Institute 4655,Gujarat,Vadodara,300017,97,"Cardiology,Neurology",282 Vadodara Medical Road,20.605013,87.226551,no,2025-09-30
+H200018,Aurangabad Health Institute 2484,Maharashtra,Aurangabad,300018,1108,"Orthopedics,Gastroenterology,Neurology,ENT",13 Aurangabad Medical Road,17.293784,68.547051,no,2025-09-30
+H200019,Nagpur Health Institute 7705,Maharashtra,Nagpur,300019,916,"Pediatrics,Nephrology",200 Nagpur Medical Road,28.015977,70.509203,no,2025-09-30
+H200020,Bengaluru Health Institute 7966,Karnataka,Bengaluru,300020,263,"Orthopedics,General Medicine",27 Bengaluru Medical Road,15.721272,72.329811,yes,2025-09-30
+H200021,Ranchi Health Institute 965,Jharkhand,Ranchi,300021,887,"Neurology,Pediatrics,Gastroenterology",84 Ranchi Medical Road,17.580017,78.865521,no,2025-09-30
+H200022,Ranchi Health Institute 3416,Jharkhand,Ranchi,300022,1153,"Orthopedics,Gastroenterology,ENT",8 Ranchi Medical Road,24.265201,69.464253,no,2025-09-30
+H200023,South Delhi Health Institute 2004,Delhi,South Delhi,300023,213,"Neurology,Nephrology,Orthopedics,Cardiology",255 South Delhi Medical Road,17.253054,81.780657,no,2025-09-30
+H200024,Agra Health Institute 8265,Uttar Pradesh,Agra,300024,242,"Nephrology,Pediatrics",123 Agra Medical Road,17.992428,81.698198,no,2025-09-30
+H200025,Madurai Health Institute 4084,Tamil Nadu,Madurai,300025,929,"ENT,Cardiology,Gastroenterology,Nephrology",198 Madurai Medical Road,14.555567,85.616217,no,2025-09-30
+H200026,Vadodara Health Institute 92,Gujarat,Vadodara,300026,1077,"General Medicine,Gastroenterology,Orthopedics,Pediatrics",104 Vadodara Medical Road,27.759287,74.044277,no,2025-09-30
+H200027,Patna Health Institute 9196,Bihar,Patna,300027,532,"Cardiology,Neurology,Orthopedics",287 Patna Medical Road,8.146239,71.026701,no,2025-09-30
+H200028,Siliguri Health Institute 3493,West Bengal,Siliguri,300028,282,"Nephrology,Oncology,General Medicine,Cardiology",220 Siliguri Medical Road,17.833045,81.644111,no,2025-09-30
+H200029,Guwahati Health Institute 8226,Assam,Guwahati,300029,598,"Gastroenterology,Nephrology",82 Guwahati Medical Road,30.483383,68.950106,yes,2025-09-30
+H200030,Madurai Health Institute 5157,Tamil Nadu,Madurai,300030,865,"Gastroenterology,Cardiology,Neurology,Pediatrics,General Medicine",221 Madurai Medical Road,13.746891,80.413551,no,2025-09-30
+H200031,Asansol Health Institute 235,West Bengal,Asansol,300031,748,"Oncology,Orthopedics,Neurology",83 Asansol Medical Road,15.799947,80.545268,no,2025-09-30
+H200032,Mangalore Health Institute 4019,Karnataka,Mangalore,300032,957,"Pediatrics,ENT",255 Mangalore Medical Road,11.427972,83.348074,no,2025-09-30
+H200033,Kozhikode Health Institute 2168,Kerala,Kozhikode,300033,1041,"General Medicine,Gastroenterology,ENT,Orthopedics,Cardiology",210 Kozhikode Medical Road,32.414711,72.508552,no,2025-09-30
+H200034,Ranchi Health Institute 9752,Jharkhand,Ranchi,300034,488,"Pediatrics,Cardiology,Gastroenterology,ENT,Oncology",24 Ranchi Medical Road,27.015631,87.706377,no,2025-09-30
+H200035,Tiruchirappalli Health Institute 2051,Tamil Nadu,Tiruchirappalli,300035,778,"Neurology,Nephrology",1 Tiruchirappalli Medical Road,10.391179,73.216678,no,2025-09-30
+H200036,Warangal Health Institute 5681,Telangana,Warangal,300036,665,"General Medicine,Cardiology,Oncology,Neurology,Pediatrics",162 Warangal Medical Road,13.892014,69.988674,no,2025-09-30
+H200037,Mysuru Health Institute 2310,Karnataka,Mysuru,300037,1100,"Oncology,Neurology,ENT",131 Mysuru Medical Road,31.153762,68.943242,no,2025-09-30
+H200038,Asansol Health Institute 3823,West Bengal,Asansol,300038,111,"General Medicine,Nephrology,Cardiology",194 Asansol Medical Road,18.60936,76.416924,no,2025-09-30
+H200039,Asansol Health Institute 8357,West Bengal,Asansol,300039,1078,"Gastroenterology,Cardiology,Orthopedics",39 Asansol Medical Road,26.538318,68.448557,no,2025-09-30
+H200040,Patna Health Institute 5913,Bihar,Patna,300040,720,"Oncology,Neurology,Nephrology",170 Patna Medical Road,18.1442,74.631211,no,2025-09-30
+H200041,Vadodara Health Institute 2163,Gujarat,Vadodara,300041,807,"Gastroenterology,Orthopedics",132 Vadodara Medical Road,11.408543,81.673244,no,2025-09-30
+H200042,Warangal Health Institute 4749,Telangana,Warangal,300042,24,"ENT,Neurology,Gastroenterology,General Medicine",56 Warangal Medical Road,24.007995,71.396999,no,2025-09-30
+H200043,Ahmedabad Health Institute 9612,Gujarat,Ahmedabad,300043,243,"ENT,Orthopedics",24 Ahmedabad Medical Road,19.229645,70.42136,no,2025-09-30
+H200044,Asansol Health Institute 8539,West Bengal,Asansol,300044,481,"Cardiology,ENT,Nephrology",143 Asansol Medical Road,14.098064,70.394621,no,2025-09-30
+H200045,Cuttack Health Institute 3498,Odisha,Cuttack,300045,785,"Oncology,General Medicine,Orthopedics,Pediatrics,Nephrology",222 Cuttack Medical Road,19.272641,77.707742,yes,2025-09-30
+H200046,Ranchi Health Institute 9631,Jharkhand,Ranchi,300046,114,"Orthopedics,Neurology,Cardiology,General Medicine",299 Ranchi Medical Road,28.307506,84.092075,no,2025-09-30
+H200047,Kolkata Health Institute 77,West Bengal,Kolkata,300047,228,"General Medicine,Nephrology,Orthopedics",63 Kolkata Medical Road,28.726236,73.971683,no,2025-09-30
+H200048,Nashik Health Institute 9968,Maharashtra,Nashik,300048,480,"Cardiology,General Medicine,Gastroenterology,Pediatrics",211 Nashik Medical Road,10.494732,76.872398,yes,2025-09-30
+H200049,Bhubaneswar Health Institute 7393,Odisha,Bhubaneswar,300049,691,"Orthopedics,ENT,Gastroenterology,Cardiology,Neurology",74 Bhubaneswar Medical Road,18.814257,84.747497,no,2025-09-30
+H200050,Agra Health Institute 227,Uttar Pradesh,Agra,300050,965,"Cardiology,Gastroenterology,ENT,Orthopedics",62 Agra Medical Road,23.210414,69.518385,no,2025-09-30
+H200051,Tiruchirappalli Health Institute 5300,Tamil Nadu,Tiruchirappalli,300051,1162,"Orthopedics,Neurology,Pediatrics,Nephrology,Gastroenterology",13 Tiruchirappalli Medical Road,11.682404,71.416605,no,2025-09-30
+H200052,Coimbatore Health Institute 6682,Tamil Nadu,Coimbatore,300052,46,"Gastroenterology,ENT,Oncology",170 Coimbatore Medical Road,22.088109,76.403615,no,2025-09-30
+H200053,Mysuru Health Institute 1590,Karnataka,Mysuru,300053,770,"General Medicine,Oncology,ENT,Nephrology,Neurology",280 Mysuru Medical Road,28.462778,70.078932,no,2025-09-30
+H200054,Guwahati Health Institute 2154,Assam,Guwahati,300054,105,"Orthopedics,Nephrology",225 Guwahati Medical Road,31.520025,79.337039,yes,2025-09-30
+H200055,Amritsar Health Institute 5354,Punjab,Amritsar,300055,723,"Nephrology,Gastroenterology,Orthopedics,Pediatrics,ENT",218 Amritsar Medical Road,9.99368,83.65868,no,2025-09-30
+H200056,North Delhi Health Institute 4405,Delhi,North Delhi,300056,1133,"Gastroenterology,Pediatrics,Oncology,Orthopedics",273 North Delhi Medical Road,16.827119,71.640102,yes,2025-09-30
+H200057,Guwahati Health Institute 7530,Assam,Guwahati,300057,943,"ENT,Neurology,Pediatrics",125 Guwahati Medical Road,28.440979,77.186559,no,2025-09-30
+H200058,Gurgaon Health Institute 402,Haryana,Gurgaon,300058,742,"General Medicine,Neurology,Pediatrics,Nephrology,Cardiology",192 Gurgaon Medical Road,22.625965,80.552059,no,2025-09-30
+H200059,Nagpur Health Institute 6494,Maharashtra,Nagpur,300059,1046,"Neurology,Pediatrics,Orthopedics",175 Nagpur Medical Road,18.556939,72.896811,no,2025-09-30
+H200060,Guwahati Health Institute 3821,Assam,Guwahati,300060,488,"Gastroenterology,Orthopedics,ENT",21 Guwahati Medical Road,31.597988,82.153491,no,2025-09-30
+H200061,Guwahati Health Institute 2226,Assam,Guwahati,300061,974,"Neurology,Pediatrics,General Medicine,ENT",82 Guwahati Medical Road,11.353826,70.452272,no,2025-09-30
+H200062,Ludhiana Health Institute 7121,Punjab,Ludhiana,300062,700,"Neurology,ENT,General Medicine,Nephrology",102 Ludhiana Medical Road,19.114203,70.337756,no,2025-09-30
+H200063,Patna Health Institute 2037,Bihar,Patna,300063,583,"Pediatrics,Neurology,Oncology",291 Patna Medical Road,32.099452,77.561437,yes,2025-09-30
+H200064,Warangal Health Institute 5450,Telangana,Warangal,300064,20,"Nephrology,General Medicine,Pediatrics,Orthopedics",125 Warangal Medical Road,8.55403,82.214473,no,2025-09-30
+H200065,Kanpur Health Institute 4791,Uttar Pradesh,Kanpur,300065,938,"General Medicine,Nephrology,Pediatrics,Oncology,Gastroenterology",289 Kanpur Medical Road,22.130871,83.676816,no,2025-09-30
+H200066,Faridabad Health Institute 8476,Haryana,Faridabad,300066,52,"Nephrology,Neurology",155 Faridabad Medical Road,11.424503,76.408953,no,2025-09-30
+H200067,Jodhpur Health Institute 5404,Rajasthan,Jodhpur,300067,356,"Pediatrics,Orthopedics,Gastroenterology,Cardiology,Neurology",220 Jodhpur Medical Road,26.235406,87.692683,no,2025-09-30
+H200068,Kochi Health Institute 7041,Kerala,Kochi,300068,192,"ENT,Orthopedics,Oncology",299 Kochi Medical Road,24.021597,68.195301,no,2025-09-30
+H200069,Warangal Health Institute 197,Telangana,Warangal,300069,661,"Oncology,Gastroenterology,General Medicine,Orthopedics,Pediatrics",111 Warangal Medical Road,21.646147,68.146783,no,2025-09-30
+H200070,Patna Health Institute 2612,Bihar,Patna,300070,398,"ENT,Cardiology,Neurology,Oncology",44 Patna Medical Road,32.191612,75.610021,no,2025-09-30
+H200071,Tiruchirappalli Health Institute 1239,Tamil Nadu,Tiruchirappalli,300071,242,"General Medicine,Orthopedics,Gastroenterology",30 Tiruchirappalli Medical Road,32.542023,72.973095,no,2025-09-30
+H200072,Udaipur Health Institute 9847,Rajasthan,Udaipur,300072,245,"Orthopedics,Pediatrics,ENT,Gastroenterology,Neurology",146 Udaipur Medical Road,24.890382,69.446767,no,2025-09-30
+H200073,Guwahati Health Institute 5031,Assam,Guwahati,300073,23,"Oncology,Pediatrics,Gastroenterology",16 Guwahati Medical Road,14.680356,86.71069,yes,2025-09-30
+H200074,Faridabad Health Institute 196,Haryana,Faridabad,300074,1068,"Cardiology,Nephrology",203 Faridabad Medical Road,26.86444,84.763268,no,2025-09-30
+H200075,Gurgaon Health Institute 9476,Haryana,Gurgaon,300075,727,"Cardiology,Pediatrics,Oncology,Gastroenterology,General Medicine",268 Gurgaon Medical Road,16.417238,87.473921,no,2025-09-30
+H200076,Gurgaon Health Institute 5172,Haryana,Gurgaon,300076,1140,"Pediatrics,Oncology,General Medicine,Neurology",94 Gurgaon Medical Road,9.225284,85.411146,no,2025-09-30
+H200077,Vadodara Health Institute 1422,Gujarat,Vadodara,300077,199,"Nephrology,Oncology,ENT",202 Vadodara Medical Road,8.272291,84.230766,no,2025-09-30
+H200078,Cuttack Health Institute 1209,Odisha,Cuttack,300078,127,"Cardiology,Nephrology",120 Cuttack Medical Road,26.912189,68.035842,no,2025-09-30
+H200079,Noida Health Institute 3033,Uttar Pradesh,Noida,300079,742,"Cardiology,Neurology,General Medicine,Gastroenterology",183 Noida Medical Road,30.675197,77.289665,no,2025-09-30
+H200080,Ranchi Health Institute 6922,Jharkhand,Ranchi,300080,272,"ENT,Gastroenterology,Oncology",160 Ranchi Medical Road,19.60048,76.105356,no,2025-09-30
+H200081,Raipur Health Institute 9824,Chhattisgarh,Raipur,300081,825,"Nephrology,Cardiology,General Medicine,Orthopedics,ENT",130 Raipur Medical Road,28.185663,78.280618,no,2025-09-30
+H200082,Raipur Health Institute 7438,Chhattisgarh,Raipur,300082,555,"ENT,Oncology",132 Raipur Medical Road,27.707843,68.392816,no,2025-09-30
+H200083,Amritsar Health Institute 4727,Punjab,Amritsar,300083,346,"Orthopedics,Neurology,Cardiology,Nephrology",61 Amritsar Medical Road,16.993923,72.975664,no,2025-09-30
+H200084,Patna Health Institute 7260,Bihar,Patna,300084,755,"Nephrology,General Medicine",255 Patna Medical Road,24.848583,85.431585,no,2025-09-30
+H200085,Surat Health Institute 9881,Gujarat,Surat,300085,414,"Neurology,Oncology,ENT,Cardiology",276 Surat Medical Road,19.0066,87.521383,no,2025-09-30
+H200086,Patna Health Institute 349,Bihar,Patna,300086,386,"General Medicine,Cardiology,Pediatrics",264 Patna Medical Road,12.62115,82.978813,no,2025-09-30
+H200087,Chandigarh Health Institute 285,Punjab,Chandigarh,300087,181,"ENT,Orthopedics,Neurology,Gastroenterology",237 Chandigarh Medical Road,18.667562,73.101474,no,2025-09-30
+H200088,South Delhi Health Institute 6576,Delhi,South Delhi,300088,1138,"Pediatrics,ENT,Nephrology,Neurology,General Medicine",1 South Delhi Medical Road,25.393867,80.434415,no,2025-09-30
+H200089,Pune Health Institute 6765,Maharashtra,Pune,300089,915,"Orthopedics,General Medicine,ENT,Gastroenterology,Nephrology",276 Pune Medical Road,18.615652,84.758897,no,2025-09-30
+H200090,Raipur Health Institute 9996,Chhattisgarh,Raipur,300090,810,"Cardiology,ENT,Pediatrics,General Medicine",174 Raipur Medical Road,29.269376,83.86237,no,2025-09-30
+H200091,Raipur Health Institute 6445,Chhattisgarh,Raipur,300091,148,"Orthopedics,Pediatrics,Cardiology,General Medicine",287 Raipur Medical Road,10.886757,74.216951,no,2025-09-30
+H200092,Gurgaon Health Institute 4686,Haryana,Gurgaon,300092,730,"Neurology,Oncology,Gastroenterology",241 Gurgaon Medical Road,11.619465,78.234731,no,2025-09-30
+H200093,Patna Health Institute 9038,Bihar,Patna,300093,1059,"ENT,General Medicine",12 Patna Medical Road,32.224978,68.865339,no,2025-09-30
+H200094,Cuttack Health Institute 4279,Odisha,Cuttack,300094,652,"Gastroenterology,ENT",108 Cuttack Medical Road,13.764846,73.070646,no,2025-09-30
+H200095,Siliguri Health Institute 7233,West Bengal,Siliguri,300095,892,"General Medicine,Neurology",35 Siliguri Medical Road,30.564401,79.839052,no,2025-09-30
+H200096,Thiruvananthapuram Health Institute 8321,Kerala,Thiruvananthapuram,300096,45,"Gastroenterology,General Medicine,Nephrology",294 Thiruvananthapuram Medical Road,22.875333,71.800496,no,2025-09-30
+H200097,Bhubaneswar Health Institute 4293,Odisha,Bhubaneswar,300097,720,"Pediatrics,General Medicine",109 Bhubaneswar Medical Road,27.826935,70.441567,no,2025-09-30
+H200098,Cuttack Health Institute 2816,Odisha,Cuttack,300098,61,"Nephrology,Gastroenterology",9 Cuttack Medical Road,19.026692,85.600958,no,2025-09-30
+H200099,Ludhiana Health Institute 3043,Punjab,Ludhiana,300099,116,"Oncology,ENT,General Medicine,Neurology,Gastroenterology",257 Ludhiana Medical Road,28.434592,78.245255,no,2025-09-30
+H200100,Kanpur Health Institute 1362,Uttar Pradesh,Kanpur,300100,323,"Orthopedics,Cardiology,Pediatrics,Neurology,Nephrology",178 Kanpur Medical Road,19.716882,80.41515,no,2025-09-30
+H200101,Thiruvananthapuram Health Institute 2448,Kerala,Thiruvananthapuram,300101,187,"Orthopedics,Oncology,Nephrology",28 Thiruvananthapuram Medical Road,11.676222,87.113045,no,2025-09-30
+H200102,Gurgaon Health Institute 8047,Haryana,Gurgaon,300102,782,"Nephrology,General Medicine",15 Gurgaon Medical Road,10.695247,76.642078,no,2025-09-30
+H200103,Faridabad Health Institute 661,Haryana,Faridabad,300103,1181,"Cardiology,ENT,Oncology",171 Faridabad Medical Road,31.137116,87.027276,no,2025-09-30
+H200104,Jaipur Health Institute 5080,Rajasthan,Jaipur,300104,509,"General Medicine,ENT,Cardiology,Oncology,Gastroenterology",190 Jaipur Medical Road,25.354874,83.793588,yes,2025-09-30
+H200105,Agra Health Institute 2450,Uttar Pradesh,Agra,300105,433,"Neurology,General Medicine,Nephrology",122 Agra Medical Road,17.561878,70.838419,no,2025-09-30
+H200106,North Delhi Health Institute 9495,Delhi,North Delhi,300106,627,"Orthopedics,Neurology,Oncology,Cardiology",227 North Delhi Medical Road,19.496291,77.740947,no,2025-09-30
+H200107,Mangalore Health Institute 8889,Karnataka,Mangalore,300107,567,"Oncology,Neurology,ENT",187 Mangalore Medical Road,30.719504,71.856326,yes,2025-09-30
+H200108,Chandigarh Health Institute 3727,Punjab,Chandigarh,300108,424,"General Medicine,Oncology,Nephrology,Cardiology,Orthopedics",88 Chandigarh Medical Road,18.153253,77.92188,no,2025-09-30
+H200109,Faridabad Health Institute 3276,Haryana,Faridabad,300109,954,"Gastroenterology,General Medicine,Oncology,Nephrology",32 Faridabad Medical Road,10.117667,75.236204,no,2025-09-30
+H200110,Chandigarh Health Institute 6296,Punjab,Chandigarh,300110,305,"Cardiology,Orthopedics",92 Chandigarh Medical Road,28.473068,85.777149,no,2025-09-30
+H200111,Siliguri Health Institute 5340,West Bengal,Siliguri,300111,305,"General Medicine,Pediatrics",277 Siliguri Medical Road,28.984493,72.401877,no,2025-09-30
+H200112,Bhubaneswar Health Institute 8438,Odisha,Bhubaneswar,300112,458,"Gastroenterology,Pediatrics",298 Bhubaneswar Medical Road,11.131875,75.769495,no,2025-09-30
+H200113,Kolkata Health Institute 6698,West Bengal,Kolkata,300113,670,"Oncology,Cardiology,Orthopedics,Nephrology,Gastroenterology",174 Kolkata Medical Road,9.262226,69.658163,no,2025-09-30
+H200114,Bengaluru Health Institute 3144,Karnataka,Bengaluru,300114,1039,"Gastroenterology,Cardiology,Orthopedics,Oncology,General Medicine",127 Bengaluru Medical Road,14.660171,77.031153,no,2025-09-30
+H200115,Gaya Health Institute 9183,Bihar,Gaya,300115,865,"Oncology,Cardiology",141 Gaya Medical Road,10.36351,77.566485,no,2025-09-30
+H200116,Jodhpur Health Institute 1161,Rajasthan,Jodhpur,300116,561,"Oncology,Neurology",169 Jodhpur Medical Road,8.965144,78.65136,yes,2025-09-30
+H200117,Thiruvananthapuram Health Institute 7901,Kerala,Thiruvananthapuram,300117,675,"Gastroenterology,Cardiology",6 Thiruvananthapuram Medical Road,14.868254,87.218478,no,2025-09-30
+H200118,Tiruchirappalli Health Institute 6929,Tamil Nadu,Tiruchirappalli,300118,702,"ENT,Neurology,Gastroenterology",140 Tiruchirappalli Medical Road,22.771392,85.218458,no,2025-09-30
+H200119,Raipur Health Institute 1214,Chhattisgarh,Raipur,300119,1075,"Cardiology,General Medicine,Orthopedics,Neurology,Nephrology",64 Raipur Medical Road,22.928647,73.383374,no,2025-09-30
+H200120,Raipur Health Institute 1909,Chhattisgarh,Raipur,300120,610,"Cardiology,Gastroenterology,Neurology,Pediatrics,ENT",247 Raipur Medical Road,22.083031,86.648552,no,2025-09-30
+H200121,Madurai Health Institute 3396,Tamil Nadu,Madurai,300121,1087,"Neurology,Pediatrics",221 Madurai Medical Road,19.08191,87.585409,no,2025-09-30
+H200122,Tiruchirappalli Health Institute 1962,Tamil Nadu,Tiruchirappalli,300122,891,"General Medicine,Gastroenterology,Cardiology",297 Tiruchirappalli Medical Road,29.472086,83.776037,no,2025-09-30
+H200123,Jodhpur Health Institute 1786,Rajasthan,Jodhpur,300123,706,"Cardiology,General Medicine,Pediatrics,ENT,Gastroenterology",213 Jodhpur Medical Road,29.373068,74.298237,no,2025-09-30
+H200124,Mangalore Health Institute 2087,Karnataka,Mangalore,300124,678,"Oncology,Orthopedics,Cardiology,General Medicine",290 Mangalore Medical Road,24.680187,73.415672,no,2025-09-30
+H200125,North Delhi Health Institute 2185,Delhi,North Delhi,300125,667,"Neurology,Oncology,Cardiology,General Medicine,Gastroenterology",188 North Delhi Medical Road,27.479734,82.23882,no,2025-09-30
+H200126,Raipur Health Institute 3656,Chhattisgarh,Raipur,300126,100,"General Medicine,Cardiology,Pediatrics,Oncology",93 Raipur Medical Road,20.908798,78.814418,no,2025-09-30
+H200127,Bengaluru Health Institute 3098,Karnataka,Bengaluru,300127,1032,"Pediatrics,Oncology,General Medicine,Neurology,ENT",286 Bengaluru Medical Road,14.85123,83.531527,no,2025-09-30
+H200128,Thiruvananthapuram Health Institute 5432,Kerala,Thiruvananthapuram,300128,413,"Pediatrics,Neurology,Orthopedics,Gastroenterology,Cardiology",177 Thiruvananthapuram Medical Road,22.446452,81.459111,no,2025-09-30
+H200129,Pune Health Institute 4944,Maharashtra,Pune,300129,1135,"Pediatrics,Oncology,Gastroenterology,Orthopedics",267 Pune Medical Road,28.013076,73.452779,no,2025-09-30
+H200130,Cuttack Health Institute 9882,Odisha,Cuttack,300130,120,"Nephrology,Gastroenterology",162 Cuttack Medical Road,19.164193,84.87589,no,2025-09-30
+H200131,Jaipur Health Institute 8876,Rajasthan,Jaipur,300131,611,"Cardiology,Orthopedics,Neurology,ENT,Nephrology",89 Jaipur Medical Road,21.575136,76.794523,no,2025-09-30
+H200132,Faridabad Health Institute 8374,Haryana,Faridabad,300132,112,"Cardiology,General Medicine,ENT",232 Faridabad Medical Road,30.168149,81.957025,no,2025-09-30
+H200133,Bhubaneswar Health Institute 5571,Odisha,Bhubaneswar,300133,835,"Orthopedics,Pediatrics,ENT,General Medicine,Cardiology",158 Bhubaneswar Medical Road,18.612186,85.348578,no,2025-09-30
+H200134,Jaipur Health Institute 7276,Rajasthan,Jaipur,300134,543,"Oncology,Cardiology",250 Jaipur Medical Road,9.826376,86.364719,no,2025-09-30
+H200135,Kochi Health Institute 942,Kerala,Kochi,300135,950,"ENT,Cardiology",7 Kochi Medical Road,32.020416,79.783677,no,2025-09-30
+H200136,Bhubaneswar Health Institute 9566,Odisha,Bhubaneswar,300136,277,"Pediatrics,Gastroenterology,ENT",158 Bhubaneswar Medical Road,12.707041,68.835958,no,2025-09-30
+H200137,Ranchi Health Institute 47,Jharkhand,Ranchi,300137,298,"Pediatrics,Cardiology,General Medicine,Gastroenterology",89 Ranchi Medical Road,15.578785,70.064307,no,2025-09-30
+H200138,Kochi Health Institute 4340,Kerala,Kochi,300138,130,"Cardiology,Oncology",205 Kochi Medical Road,24.290487,87.666129,no,2025-09-30
+H200139,Mumbai Health Institute 7270,Maharashtra,Mumbai,300139,611,"Oncology,Orthopedics,Cardiology,Gastroenterology",283 Mumbai Medical Road,22.776875,83.629846,no,2025-09-30
+H200140,Mangalore Health Institute 4982,Karnataka,Mangalore,300140,424,"Gastroenterology,Cardiology",264 Mangalore Medical Road,21.136421,85.672205,no,2025-09-30
+H200141,Cuttack Health Institute 5148,Odisha,Cuttack,300141,665,"Pediatrics,Nephrology,Orthopedics",4 Cuttack Medical Road,24.956483,77.051459,no,2025-09-30
+H200142,Tiruchirappalli Health Institute 2831,Tamil Nadu,Tiruchirappalli,300142,642,"ENT,Cardiology,Neurology",299 Tiruchirappalli Medical Road,27.139408,83.31195,yes,2025-09-30
+H200143,Vadodara Health Institute 8147,Gujarat,Vadodara,300143,587,"Cardiology,Oncology,Neurology,Pediatrics",102 Vadodara Medical Road,8.014565,86.805839,yes,2025-09-30
+H200144,New Delhi Health Institute 9454,Delhi,New Delhi,300144,972,"Gastroenterology,Cardiology,Nephrology,Orthopedics",215 New Delhi Medical Road,16.793295,78.642471,no,2025-09-30
+H200145,Mysuru Health Institute 5403,Karnataka,Mysuru,300145,306,"Cardiology,General Medicine",128 Mysuru Medical Road,27.53535,73.928191,yes,2025-09-30
+H200146,New Delhi Health Institute 3998,Delhi,New Delhi,300146,401,"Cardiology,Nephrology,ENT,Oncology,Pediatrics",253 New Delhi Medical Road,19.8942,80.578462,no,2025-09-30
+H200147,Mysuru Health Institute 8655,Karnataka,Mysuru,300147,414,"Orthopedics,Gastroenterology,ENT,Neurology,Cardiology",86 Mysuru Medical Road,29.856229,73.873368,yes,2025-09-30
+H200148,Patna Health Institute 572,Bihar,Patna,300148,692,"Oncology,General Medicine,Orthopedics,ENT,Gastroenterology",150 Patna Medical Road,31.362647,84.113636,no,2025-09-30
+H200149,Chandigarh Health Institute 578,Punjab,Chandigarh,300149,972,"Nephrology,Neurology,Pediatrics,Gastroenterology",266 Chandigarh Medical Road,31.779907,84.009825,no,2025-09-30
+H200150,Bengaluru Health Institute 9151,Karnataka,Bengaluru,300150,548,"Neurology,General Medicine,Orthopedics,Oncology",266 Bengaluru Medical Road,25.883589,68.733972,no,2025-09-30
+H200151,Raipur Health Institute 6742,Chhattisgarh,Raipur,300151,201,"Pediatrics,Neurology,Gastroenterology",291 Raipur Medical Road,11.356535,71.002495,yes,2025-09-30
+H200152,Hubli Health Institute 1942,Karnataka,Hubli,300152,161,"General Medicine,Nephrology,ENT,Gastroenterology",244 Hubli Medical Road,12.721486,83.532594,no,2025-09-30
+H200153,Vadodara Health Institute 7848,Gujarat,Vadodara,300153,376,"Gastroenterology,Oncology,ENT,Orthopedics,Pediatrics",151 Vadodara Medical Road,12.652087,75.91184,no,2025-09-30
+H200154,New Delhi Health Institute 9362,Delhi,New Delhi,300154,951,"Neurology,Gastroenterology,Oncology,Nephrology,Pediatrics",167 New Delhi Medical Road,25.394294,78.088513,no,2025-09-30
+H200155,Mumbai Health Institute 8253,Maharashtra,Mumbai,300155,970,"Orthopedics,Pediatrics",256 Mumbai Medical Road,23.687026,81.948366,no,2025-09-30
+H200156,Gurgaon Health Institute 9370,Haryana,Gurgaon,300156,513,"Nephrology,Orthopedics,Oncology",58 Gurgaon Medical Road,12.886908,73.564383,yes,2025-09-30
+H200157,Faridabad Health Institute 5794,Haryana,Faridabad,300157,309,"Gastroenterology,Neurology,Oncology,ENT,Cardiology",264 Faridabad Medical Road,13.521513,76.578739,no,2025-09-30
+H200158,Raipur Health Institute 9347,Chhattisgarh,Raipur,300158,152,"Neurology,Cardiology",22 Raipur Medical Road,29.692864,74.844753,no,2025-09-30
+H200159,Ranchi Health Institute 2571,Jharkhand,Ranchi,300159,329,"Gastroenterology,Orthopedics,ENT",27 Ranchi Medical Road,20.577935,87.755797,no,2025-09-30
+H200160,Kochi Health Institute 9133,Kerala,Kochi,300160,884,"Neurology,Cardiology",9 Kochi Medical Road,28.272156,74.534301,yes,2025-09-30
+H200161,Vadodara Health Institute 7009,Gujarat,Vadodara,300161,1030,"Pediatrics,ENT",243 Vadodara Medical Road,23.223356,79.724098,no,2025-09-30
+H200162,Tiruchirappalli Health Institute 3844,Tamil Nadu,Tiruchirappalli,300162,1025,"General Medicine,Nephrology,Pediatrics,Gastroenterology",25 Tiruchirappalli Medical Road,8.07026,85.612759,no,2025-09-30
+H200163,Guwahati Health Institute 3237,Assam,Guwahati,300163,970,"Oncology,General Medicine,Nephrology,ENT,Cardiology",273 Guwahati Medical Road,27.45258,72.263052,no,2025-09-30
+H200164,Lucknow Health Institute 8080,Uttar Pradesh,Lucknow,300164,787,"Gastroenterology,Nephrology",256 Lucknow Medical Road,22.551959,72.925125,no,2025-09-30
+H200165,Warangal Health Institute 9047,Telangana,Warangal,300165,944,"Cardiology,ENT,General Medicine,Gastroenterology",240 Warangal Medical Road,16.114984,86.534841,no,2025-09-30
+H200166,Tiruchirappalli Health Institute 9971,Tamil Nadu,Tiruchirappalli,300166,552,"Oncology,General Medicine,Pediatrics,Cardiology",33 Tiruchirappalli Medical Road,17.209215,77.492979,no,2025-09-30
+H200167,Mangalore Health Institute 687,Karnataka,Mangalore,300167,750,"Pediatrics,Neurology",12 Mangalore Medical Road,20.899005,83.04536,yes,2025-09-30
+H200168,Raipur Health Institute 9949,Chhattisgarh,Raipur,300168,1192,"Orthopedics,Neurology",300 Raipur Medical Road,29.723495,81.273875,no,2025-09-30
+H200169,Patna Health Institute 2530,Bihar,Patna,300169,942,"Nephrology,Orthopedics,Pediatrics,General Medicine,Gastroenterology",141 Patna Medical Road,16.251495,70.411214,no,2025-09-30
+H200170,Agra Health Institute 4235,Uttar Pradesh,Agra,300170,939,"Cardiology,General Medicine,ENT,Orthopedics",163 Agra Medical Road,21.183006,87.532843,no,2025-09-30
+H200171,Kanpur Health Institute 7063,Uttar Pradesh,Kanpur,300171,1155,"ENT,Nephrology,Oncology,Cardiology",58 Kanpur Medical Road,31.821767,75.03319,no,2025-09-30
+H200172,Tiruchirappalli Health Institute 1184,Tamil Nadu,Tiruchirappalli,300172,379,"Oncology,Orthopedics,Neurology,Gastroenterology",69 Tiruchirappalli Medical Road,9.002941,73.661692,no,2025-09-30
+H200173,Chennai Health Institute 4487,Tamil Nadu,Chennai,300173,29,"Oncology,Gastroenterology,Neurology,Pediatrics,Cardiology",52 Chennai Medical Road,25.83505,71.135849,no,2025-09-30
+H200174,North Delhi Health Institute 4817,Delhi,North Delhi,300174,698,"ENT,Neurology",48 North Delhi Medical Road,31.920986,72.114009,no,2025-09-30
+H200175,Surat Health Institute 6847,Gujarat,Surat,300175,398,"Gastroenterology,ENT,Nephrology,General Medicine",84 Surat Medical Road,14.325152,72.204903,no,2025-09-30
+H200176,Lucknow Health Institute 5083,Uttar Pradesh,Lucknow,300176,248,"Oncology,General Medicine,Neurology,Orthopedics,ENT",3 Lucknow Medical Road,32.342707,83.420357,no,2025-09-30
+H200177,Guwahati Health Institute 417,Assam,Guwahati,300177,220,"ENT,Nephrology,Pediatrics,Cardiology",50 Guwahati Medical Road,30.497991,82.762294,no,2025-09-30
+H200178,Cuttack Health Institute 2642,Odisha,Cuttack,300178,24,"Neurology,Orthopedics,Nephrology,Pediatrics",187 Cuttack Medical Road,12.307147,74.348458,yes,2025-09-30
+H200179,Hyderabad Health Institute 990,Telangana,Hyderabad,300179,70,"Nephrology,General Medicine",240 Hyderabad Medical Road,11.649754,71.42817,no,2025-09-30
+H200180,Siliguri Health Institute 8894,West Bengal,Siliguri,300180,1098,"ENT,Gastroenterology,Oncology,General Medicine",194 Siliguri Medical Road,10.398187,79.836703,no,2025-09-30
+H200181,Bhubaneswar Health Institute 9756,Odisha,Bhubaneswar,300181,799,"Pediatrics,Oncology",154 Bhubaneswar Medical Road,24.709283,84.840786,no,2025-09-30
+H200182,Guwahati Health Institute 1365,Assam,Guwahati,300182,439,"Neurology,Oncology",172 Guwahati Medical Road,18.259456,86.467049,no,2025-09-30
+H200183,Guwahati Health Institute 3062,Assam,Guwahati,300183,887,"Cardiology,Gastroenterology,Nephrology",254 Guwahati Medical Road,17.109895,76.544902,no,2025-09-30
+H200184,Gurgaon Health Institute 2861,Haryana,Gurgaon,300184,89,"ENT,General Medicine",190 Gurgaon Medical Road,15.041286,73.529515,no,2025-09-30
+H200185,Mangalore Health Institute 9758,Karnataka,Mangalore,300185,614,"Oncology,Cardiology,Orthopedics",150 Mangalore Medical Road,21.451642,80.421355,no,2025-09-30
+H200186,Jodhpur Health Institute 2841,Rajasthan,Jodhpur,300186,839,"Neurology,Cardiology,Nephrology,Gastroenterology",52 Jodhpur Medical Road,30.361774,71.205645,no,2025-09-30
+H200187,Chandigarh Health Institute 6121,Punjab,Chandigarh,300187,409,"Cardiology,General Medicine",104 Chandigarh Medical Road,26.521986,79.318199,no,2025-09-30
+H200188,Guwahati Health Institute 9239,Assam,Guwahati,300188,422,"Nephrology,General Medicine",287 Guwahati Medical Road,24.87178,69.794837,no,2025-09-30
+H200189,Siliguri Health Institute 4747,West Bengal,Siliguri,300189,692,"Pediatrics,Oncology,General Medicine,Gastroenterology,Neurology",145 Siliguri Medical Road,12.10758,83.599647,no,2025-09-30
+H200190,Ranchi Health Institute 705,Jharkhand,Ranchi,300190,671,"General Medicine,Neurology,Gastroenterology,Pediatrics,ENT",200 Ranchi Medical Road,28.318606,82.702112,yes,2025-09-30
+H200191,Amritsar Health Institute 4181,Punjab,Amritsar,300191,238,"Pediatrics,Nephrology,Gastroenterology,Neurology",257 Amritsar Medical Road,14.157048,71.274249,no,2025-09-30
+H200192,Surat Health Institute 1023,Gujarat,Surat,300192,689,"Cardiology,General Medicine,Gastroenterology,Pediatrics",68 Surat Medical Road,29.044474,87.192841,no,2025-09-30
+H200193,Gaya Health Institute 6659,Bihar,Gaya,300193,372,"General Medicine,Gastroenterology,Oncology,ENT",134 Gaya Medical Road,8.736764,87.127903,no,2025-09-30
+H200194,Guwahati Health Institute 2657,Assam,Guwahati,300194,1108,"ENT,Cardiology,General Medicine,Pediatrics",5 Guwahati Medical Road,14.233383,72.057425,no,2025-09-30
+H200195,Amritsar Health Institute 952,Punjab,Amritsar,300195,1052,"Gastroenterology,Nephrology,Cardiology",89 Amritsar Medical Road,22.784836,75.030245,no,2025-09-30
+H200196,Gurgaon Health Institute 4324,Haryana,Gurgaon,300196,740,"ENT,Orthopedics,Oncology",245 Gurgaon Medical Road,9.619748,82.232465,no,2025-09-30
+H200197,North Delhi Health Institute 1664,Delhi,North Delhi,300197,430,"Cardiology,Pediatrics",12 North Delhi Medical Road,22.252192,80.398909,no,2025-09-30
+H200198,Kanpur Health Institute 1235,Uttar Pradesh,Kanpur,300198,1051,"ENT,Cardiology,Orthopedics,Oncology",219 Kanpur Medical Road,14.703703,76.398645,no,2025-09-30
+H200199,Noida Health Institute 5836,Uttar Pradesh,Noida,300199,846,"Nephrology,Oncology,General Medicine,Neurology",121 Noida Medical Road,32.388194,83.229331,no,2025-09-30
+H200200,Ranchi Health Institute 2630,Jharkhand,Ranchi,300200,824,"Nephrology,Orthopedics,ENT",68 Ranchi Medical Road,12.278786,68.613596,no,2025-09-30
+H200201,Gaya Health Institute 5405,Bihar,Gaya,300201,393,"Gastroenterology,General Medicine,Pediatrics",135 Gaya Medical Road,9.268359,68.93195,no,2025-09-30
+H200202,Ludhiana Health Institute 5783,Punjab,Ludhiana,300202,273,"Cardiology,Neurology,Pediatrics,Oncology",75 Ludhiana Medical Road,10.338523,85.172482,no,2025-09-30
+H200203,Udaipur Health Institute 35,Rajasthan,Udaipur,300203,611,"General Medicine,Pediatrics",112 Udaipur Medical Road,11.292626,75.67458,no,2025-09-30
+H200204,Guwahati Health Institute 6664,Assam,Guwahati,300204,1000,"Oncology,Cardiology,Gastroenterology,ENT",75 Guwahati Medical Road,14.827181,74.280821,no,2025-09-30
+H200205,Mangalore Health Institute 9153,Karnataka,Mangalore,300205,154,"Oncology,Pediatrics,Orthopedics",37 Mangalore Medical Road,20.83816,75.661292,no,2025-09-30
+H200206,Madurai Health Institute 5129,Tamil Nadu,Madurai,300206,463,"Gastroenterology,General Medicine",11 Madurai Medical Road,29.018906,77.645051,no,2025-09-30
+H200207,Kozhikode Health Institute 2248,Kerala,Kozhikode,300207,609,"Cardiology,Orthopedics,Nephrology,Gastroenterology",269 Kozhikode Medical Road,23.426834,82.530083,yes,2025-09-30
+H200208,Thiruvananthapuram Health Institute 8876,Kerala,Thiruvananthapuram,300208,525,"Neurology,ENT,Orthopedics,Cardiology",9 Thiruvananthapuram Medical Road,13.266775,73.587187,no,2025-09-30
+H200209,Cuttack Health Institute 6459,Odisha,Cuttack,300209,525,"Nephrology,ENT,Oncology,Gastroenterology",210 Cuttack Medical Road,28.985502,71.24874,no,2025-09-30
+H200210,South Delhi Health Institute 4571,Delhi,South Delhi,300210,1077,"Neurology,Gastroenterology,ENT",83 South Delhi Medical Road,15.985499,80.972255,yes,2025-09-30
+H200211,Kozhikode Health Institute 3794,Kerala,Kozhikode,300211,815,"ENT,Cardiology,General Medicine,Gastroenterology",20 Kozhikode Medical Road,18.714763,76.492822,no,2025-09-30
+H200212,Mumbai Health Institute 2928,Maharashtra,Mumbai,300212,601,"Gastroenterology,Oncology,Orthopedics",75 Mumbai Medical Road,26.932173,81.006521,no,2025-09-30
+H200213,South Delhi Health Institute 9699,Delhi,South Delhi,300213,43,"Cardiology,Nephrology,Gastroenterology,ENT",30 South Delhi Medical Road,17.56151,87.7216,yes,2025-09-30
+H200214,Guwahati Health Institute 5173,Assam,Guwahati,300214,121,"Pediatrics,Oncology,ENT",136 Guwahati Medical Road,21.986539,78.723517,no,2025-09-30
+H200215,Amritsar Health Institute 3994,Punjab,Amritsar,300215,396,"General Medicine,Nephrology,Oncology,Cardiology,Neurology",274 Amritsar Medical Road,17.453703,77.468696,no,2025-09-30
+H200216,Guwahati Health Institute 9715,Assam,Guwahati,300216,676,"Nephrology,General Medicine,ENT,Cardiology",237 Guwahati Medical Road,15.810455,72.566168,no,2025-09-30
+H200217,Guwahati Health Institute 2647,Assam,Guwahati,300217,320,"Oncology,Orthopedics,Cardiology",98 Guwahati Medical Road,24.945379,78.080912,yes,2025-09-30
+H200218,Vadodara Health Institute 4282,Gujarat,Vadodara,300218,233,"Oncology,Gastroenterology",129 Vadodara Medical Road,30.578967,81.055472,no,2025-09-30
+H200219,Raipur Health Institute 7624,Chhattisgarh,Raipur,300219,373,"Gastroenterology,ENT,Neurology",23 Raipur Medical Road,21.992155,70.068374,no,2025-09-30
+H200220,Mangalore Health Institute 7746,Karnataka,Mangalore,300220,868,"Nephrology,Gastroenterology,Pediatrics,Orthopedics",220 Mangalore Medical Road,9.777907,85.171993,no,2025-09-30
+H200221,Warangal Health Institute 725,Telangana,Warangal,300221,60,"Oncology,Cardiology,Neurology",175 Warangal Medical Road,30.851455,68.92484,no,2025-09-30
+H200222,Jaipur Health Institute 5366,Rajasthan,Jaipur,300222,876,"Neurology,Cardiology,General Medicine,Gastroenterology,Nephrology",267 Jaipur Medical Road,24.261006,82.50541,no,2025-09-30
+H200223,Vadodara Health Institute 8686,Gujarat,Vadodara,300223,347,"General Medicine,Orthopedics,Nephrology,Oncology,Pediatrics",251 Vadodara Medical Road,29.858914,80.406767,no,2025-09-30
+H200224,Guwahati Health Institute 1695,Assam,Guwahati,300224,501,"General Medicine,Nephrology,Oncology,Cardiology,Neurology",181 Guwahati Medical Road,31.042042,72.380635,no,2025-09-30
+H200225,Ahmedabad Health Institute 5846,Gujarat,Ahmedabad,300225,839,"Orthopedics,Pediatrics,Oncology,ENT,General Medicine",189 Ahmedabad Medical Road,15.903553,81.092981,no,2025-09-30
+H200226,Agra Health Institute 3972,Uttar Pradesh,Agra,300226,454,"Gastroenterology,Pediatrics,Nephrology,General Medicine",234 Agra Medical Road,9.357699,83.774499,no,2025-09-30
+H200227,South Delhi Health Institute 1874,Delhi,South Delhi,300227,60,"Neurology,Oncology",106 South Delhi Medical Road,26.228169,69.672702,yes,2025-09-30
+H200228,Chennai Health Institute 2139,Tamil Nadu,Chennai,300228,909,"Nephrology,ENT,Gastroenterology,Neurology",143 Chennai Medical Road,31.279589,86.745383,no,2025-09-30
+H200229,Coimbatore Health Institute 8828,Tamil Nadu,Coimbatore,300229,526,"ENT,General Medicine,Orthopedics",194 Coimbatore Medical Road,11.190499,82.023486,no,2025-09-30
+H200230,Hyderabad Health Institute 1112,Telangana,Hyderabad,300230,710,"Nephrology,Pediatrics",283 Hyderabad Medical Road,8.000295,72.290297,no,2025-09-30
+H200231,New Delhi Health Institute 7792,Delhi,New Delhi,300231,585,"Neurology,Pediatrics,General Medicine",108 New Delhi Medical Road,18.357037,87.723842,no,2025-09-30
+H200232,Nashik Health Institute 7247,Maharashtra,Nashik,300232,760,"Pediatrics,ENT,General Medicine",286 Nashik Medical Road,15.680796,78.386396,no,2025-09-30
+H200233,Patna Health Institute 5626,Bihar,Patna,300233,573,"Neurology,Orthopedics,Oncology,ENT,Gastroenterology",199 Patna Medical Road,22.833037,70.245406,yes,2025-09-30
+H200234,Ahmedabad Health Institute 3878,Gujarat,Ahmedabad,300234,628,"Cardiology,ENT",57 Ahmedabad Medical Road,19.327377,76.119936,yes,2025-09-30
+H200235,Faridabad Health Institute 4040,Haryana,Faridabad,300235,1117,"General Medicine,Orthopedics,Gastroenterology,Cardiology",192 Faridabad Medical Road,29.717654,81.981746,no,2025-09-30
+H200236,Aurangabad Health Institute 2324,Maharashtra,Aurangabad,300236,947,"Gastroenterology,Pediatrics,Oncology",246 Aurangabad Medical Road,14.351288,85.240641,no,2025-09-30
+H200237,Kolkata Health Institute 7721,West Bengal,Kolkata,300237,866,"ENT,Nephrology,Pediatrics,General Medicine",200 Kolkata Medical Road,30.615137,70.49126,yes,2025-09-30
+H200238,Pune Health Institute 9087,Maharashtra,Pune,300238,682,"Neurology,Cardiology,Orthopedics",168 Pune Medical Road,18.788099,80.26941,no,2025-09-30
+H200239,Gaya Health Institute 8911,Bihar,Gaya,300239,796,"Orthopedics,General Medicine,Pediatrics,Cardiology,ENT",106 Gaya Medical Road,24.533714,84.361414,yes,2025-09-30
+H200240,Madurai Health Institute 4832,Tamil Nadu,Madurai,300240,366,"Nephrology,Pediatrics,General Medicine,Orthopedics,Neurology",119 Madurai Medical Road,23.470211,76.956584,no,2025-09-30
+H200241,Asansol Health Institute 1055,West Bengal,Asansol,300241,331,"Gastroenterology,ENT,Oncology,Orthopedics,General Medicine",52 Asansol Medical Road,17.192262,70.014604,yes,2025-09-30
+H200242,Ranchi Health Institute 8876,Jharkhand,Ranchi,300242,855,"Neurology,Gastroenterology,Orthopedics,Nephrology,Pediatrics",202 Ranchi Medical Road,30.770861,76.144073,no,2025-09-30
+H200243,Vadodara Health Institute 3505,Gujarat,Vadodara,300243,765,"Oncology,ENT,Pediatrics,Nephrology",206 Vadodara Medical Road,20.050364,81.492385,yes,2025-09-30
+H200244,Guwahati Health Institute 1227,Assam,Guwahati,300244,234,"Gastroenterology,Cardiology,Nephrology,General Medicine",267 Guwahati Medical Road,25.983828,81.592061,no,2025-09-30
+H200245,Thiruvananthapuram Health Institute 8064,Kerala,Thiruvananthapuram,300245,240,"Oncology,General Medicine,Pediatrics",146 Thiruvananthapuram Medical Road,25.842004,83.168622,no,2025-09-30
+H200246,Gaya Health Institute 6366,Bihar,Gaya,300246,54,"General Medicine,ENT,Gastroenterology,Neurology",286 Gaya Medical Road,9.283953,81.242575,no,2025-09-30
+H200247,Guwahati Health Institute 7337,Assam,Guwahati,300247,837,"Nephrology,Oncology,Orthopedics",95 Guwahati Medical Road,8.079481,78.573584,no,2025-09-30
+H200248,Vadodara Health Institute 6280,Gujarat,Vadodara,300248,851,"Pediatrics,Orthopedics,Neurology,Gastroenterology",195 Vadodara Medical Road,16.101847,77.251168,no,2025-09-30
+H200249,Patna Health Institute 9194,Bihar,Patna,300249,349,"Nephrology,Gastroenterology,General Medicine",71 Patna Medical Road,30.767812,73.473885,no,2025-09-30
+H200250,Mysuru Health Institute 3718,Karnataka,Mysuru,300250,168,"General Medicine,Oncology,Gastroenterology,Neurology",209 Mysuru Medical Road,30.182611,81.169512,no,2025-09-30
+H200251,Tiruchirappalli Health Institute 5640,Tamil Nadu,Tiruchirappalli,300251,1116,"ENT,Neurology,Pediatrics",132 Tiruchirappalli Medical Road,20.959538,85.838488,no,2025-09-30
+H200252,Jodhpur Health Institute 4568,Rajasthan,Jodhpur,300252,1084,"ENT,Pediatrics,Nephrology",170 Jodhpur Medical Road,31.696813,71.707404,yes,2025-09-30
+H200253,Agra Health Institute 6825,Uttar Pradesh,Agra,300253,94,"Orthopedics,Oncology,Neurology,ENT",165 Agra Medical Road,22.457397,84.658149,no,2025-09-30
+H200254,Thiruvananthapuram Health Institute 5099,Kerala,Thiruvananthapuram,300254,922,"Gastroenterology,General Medicine,Oncology,Nephrology,Pediatrics",212 Thiruvananthapuram Medical Road,13.728251,84.94991,yes,2025-09-30
+H200255,Ranchi Health Institute 9040,Jharkhand,Ranchi,300255,1178,"ENT,Gastroenterology,Cardiology,Neurology",212 Ranchi Medical Road,12.335595,74.150305,no,2025-09-30
+H200256,Amritsar Health Institute 1567,Punjab,Amritsar,300256,371,"Gastroenterology,Pediatrics",157 Amritsar Medical Road,16.286389,82.466787,yes,2025-09-30
+H200257,Chandigarh Health Institute 2485,Punjab,Chandigarh,300257,143,"Orthopedics,Gastroenterology,Neurology,Cardiology",250 Chandigarh Medical Road,20.897347,86.275763,no,2025-09-30
+H200258,Patna Health Institute 9632,Bihar,Patna,300258,951,"Cardiology,Nephrology,Oncology,ENT,General Medicine",131 Patna Medical Road,8.3479,87.888487,no,2025-09-30
+H200259,Raipur Health Institute 3393,Chhattisgarh,Raipur,300259,942,"Cardiology,Orthopedics,Oncology",1 Raipur Medical Road,17.052364,70.996426,no,2025-09-30
+H200260,Jodhpur Health Institute 4417,Rajasthan,Jodhpur,300260,1137,"Nephrology,ENT",289 Jodhpur Medical Road,17.153422,76.853325,no,2025-09-30
+H200261,Gaya Health Institute 8225,Bihar,Gaya,300261,497,"Pediatrics,Orthopedics,General Medicine,ENT,Cardiology",271 Gaya Medical Road,19.033262,71.45546,yes,2025-09-30
+H200262,Nagpur Health Institute 7046,Maharashtra,Nagpur,300262,170,"Neurology,Cardiology,Nephrology",23 Nagpur Medical Road,22.646648,68.407144,no,2025-09-30
+H200263,Guwahati Health Institute 9673,Assam,Guwahati,300263,840,"Oncology,ENT,Orthopedics,Cardiology",144 Guwahati Medical Road,15.135743,68.412864,no,2025-09-30
+H200264,New Delhi Health Institute 7814,Delhi,New Delhi,300264,472,"Nephrology,General Medicine,Neurology",202 New Delhi Medical Road,24.117177,68.818182,no,2025-09-30
+H200265,Patna Health Institute 5787,Bihar,Patna,300265,930,"Oncology,Orthopedics,Neurology,ENT,Gastroenterology",89 Patna Medical Road,31.830255,68.926582,no,2025-09-30
+H200266,Kanpur Health Institute 5386,Uttar Pradesh,Kanpur,300266,353,"Oncology,Pediatrics,Gastroenterology,Nephrology",158 Kanpur Medical Road,25.899065,71.088184,no,2025-09-30
+H200267,Raipur Health Institute 4158,Chhattisgarh,Raipur,300267,669,"Nephrology,Oncology,General Medicine",22 Raipur Medical Road,14.447454,72.757808,yes,2025-09-30
+H200268,Cuttack Health Institute 1437,Odisha,Cuttack,300268,661,"Nephrology,General Medicine,Orthopedics,Oncology",52 Cuttack Medical Road,32.183862,73.732337,no,2025-09-30
+H200269,Hyderabad Health Institute 3480,Telangana,Hyderabad,300269,1180,"Orthopedics,Pediatrics,Gastroenterology,Neurology",21 Hyderabad Medical Road,28.812957,74.163919,no,2025-09-30
+H200270,Udaipur Health Institute 5079,Rajasthan,Udaipur,300270,376,"General Medicine,ENT,Neurology,Cardiology",242 Udaipur Medical Road,32.353453,71.125681,no,2025-09-30
+H200271,Bhubaneswar Health Institute 2900,Odisha,Bhubaneswar,300271,667,"Gastroenterology,ENT,Pediatrics,Nephrology,Oncology",209 Bhubaneswar Medical Road,17.993692,70.065438,no,2025-09-30
+H200272,Kochi Health Institute 2587,Kerala,Kochi,300272,126,"Orthopedics,Nephrology,Gastroenterology,Neurology",112 Kochi Medical Road,19.350523,73.354966,no,2025-09-30
+H200273,Raipur Health Institute 184,Chhattisgarh,Raipur,300273,549,"General Medicine,Pediatrics,ENT",78 Raipur Medical Road,13.138014,84.075827,no,2025-09-30
+H200274,Amritsar Health Institute 2255,Punjab,Amritsar,300274,649,"Oncology,Pediatrics",209 Amritsar Medical Road,12.678603,84.652137,no,2025-09-30
+H200275,Raipur Health Institute 3460,Chhattisgarh,Raipur,300275,62,"Gastroenterology,General Medicine,Pediatrics,Cardiology",66 Raipur Medical Road,15.780849,83.239559,no,2025-09-30
+H200276,Faridabad Health Institute 5048,Haryana,Faridabad,300276,898,"Nephrology,Neurology,General Medicine,Gastroenterology",92 Faridabad Medical Road,12.602717,81.209575,no,2025-09-30
+H200277,Lucknow Health Institute 1161,Uttar Pradesh,Lucknow,300277,581,"General Medicine,ENT",164 Lucknow Medical Road,22.884404,73.11368,no,2025-09-30
+H200278,Jaipur Health Institute 6446,Rajasthan,Jaipur,300278,530,"Cardiology,ENT,Pediatrics,Neurology",32 Jaipur Medical Road,14.176267,87.004163,no,2025-09-30
+H200279,Tiruchirappalli Health Institute 5509,Tamil Nadu,Tiruchirappalli,300279,66,"ENT,Orthopedics,Nephrology",69 Tiruchirappalli Medical Road,18.720276,87.123026,no,2025-09-30
+H200280,Chennai Health Institute 9255,Tamil Nadu,Chennai,300280,356,"Neurology,Cardiology,Gastroenterology",143 Chennai Medical Road,26.145714,70.482012,no,2025-09-30
+H200281,Ranchi Health Institute 2816,Jharkhand,Ranchi,300281,641,"Neurology,Oncology,Nephrology,General Medicine,Gastroenterology",73 Ranchi Medical Road,10.737459,79.314148,no,2025-09-30
+H200282,Nagpur Health Institute 3053,Maharashtra,Nagpur,300282,143,"Gastroenterology,Oncology,Orthopedics,Pediatrics,Nephrology",219 Nagpur Medical Road,17.858032,69.02371,no,2025-09-30
+H200283,Patna Health Institute 7622,Bihar,Patna,300283,754,"Nephrology,Pediatrics,ENT,Orthopedics",33 Patna Medical Road,19.285,87.479042,no,2025-09-30
+H200284,Hubli Health Institute 5485,Karnataka,Hubli,300284,315,"Oncology,ENT,Gastroenterology,Orthopedics",176 Hubli Medical Road,19.654965,78.543942,yes,2025-09-30
+H200285,Mysuru Health Institute 968,Karnataka,Mysuru,300285,321,"Neurology,Orthopedics,Nephrology",115 Mysuru Medical Road,12.384295,74.745298,no,2025-09-30
+H200286,Vadodara Health Institute 2740,Gujarat,Vadodara,300286,649,"Neurology,Gastroenterology,Oncology,Pediatrics",105 Vadodara Medical Road,28.117759,80.107705,no,2025-09-30
+H200287,Hyderabad Health Institute 1145,Telangana,Hyderabad,300287,771,"Neurology,Gastroenterology,ENT,Pediatrics",55 Hyderabad Medical Road,31.981175,82.261647,no,2025-09-30
+H200288,Bhubaneswar Health Institute 684,Odisha,Bhubaneswar,300288,650,"Orthopedics,ENT,General Medicine,Cardiology",195 Bhubaneswar Medical Road,31.09035,70.445399,no,2025-09-30
+H200289,Udaipur Health Institute 9662,Rajasthan,Udaipur,300289,406,"ENT,Oncology",253 Udaipur Medical Road,21.762292,85.385247,no,2025-09-30
+H200290,Madurai Health Institute 8707,Tamil Nadu,Madurai,300290,333,"ENT,Nephrology",137 Madurai Medical Road,30.05338,78.288245,no,2025-09-30
+H200291,Hyderabad Health Institute 281,Telangana,Hyderabad,300291,160,"Gastroenterology,Nephrology,ENT,Pediatrics",8 Hyderabad Medical Road,12.999375,79.781563,no,2025-09-30
+H200292,Bhubaneswar Health Institute 3730,Odisha,Bhubaneswar,300292,803,"Gastroenterology,ENT",71 Bhubaneswar Medical Road,10.645306,84.840079,no,2025-09-30
+H200293,Nashik Health Institute 513,Maharashtra,Nashik,300293,349,"Pediatrics,Oncology,Nephrology,ENT,Gastroenterology",155 Nashik Medical Road,17.515518,84.683563,no,2025-09-30
+H200294,Nashik Health Institute 7157,Maharashtra,Nashik,300294,1055,"General Medicine,Orthopedics,Pediatrics,Gastroenterology",148 Nashik Medical Road,32.303733,75.785481,no,2025-09-30
+H200295,Ahmedabad Health Institute 5740,Gujarat,Ahmedabad,300295,833,"Neurology,Gastroenterology,Nephrology,ENT",187 Ahmedabad Medical Road,29.313606,69.407412,no,2025-09-30
+H200296,Udaipur Health Institute 5044,Rajasthan,Udaipur,300296,276,"ENT,Pediatrics,Nephrology,Gastroenterology,Orthopedics",122 Udaipur Medical Road,28.272812,69.537707,no,2025-09-30
+H200297,Pune Health Institute 5292,Maharashtra,Pune,300297,862,"Nephrology,Oncology,Pediatrics,Gastroenterology",132 Pune Medical Road,9.089084,78.477788,no,2025-09-30
+H200298,Faridabad Health Institute 3361,Haryana,Faridabad,300298,887,"Nephrology,ENT,General Medicine,Cardiology",105 Faridabad Medical Road,23.521919,69.831099,yes,2025-09-30
+H200299,Ranchi Health Institute 1947,Jharkhand,Ranchi,300299,864,"General Medicine,Pediatrics,ENT,Orthopedics",43 Ranchi Medical Road,25.700856,74.944397,no,2025-09-30
+H200300,Raipur Health Institute 9400,Chhattisgarh,Raipur,300300,1192,"Neurology,Oncology,General Medicine,Gastroenterology",188 Raipur Medical Road,15.926426,74.322055,no,2025-09-30
+H200301,Bengaluru Health Institute 1686,Karnataka,Bengaluru,300301,654,"General Medicine,Pediatrics,Gastroenterology,Nephrology,ENT",177 Bengaluru Medical Road,22.676146,85.542861,no,2025-09-30
+H200302,Vadodara Health Institute 7944,Gujarat,Vadodara,300302,500,"Orthopedics,Oncology,Gastroenterology,Neurology",38 Vadodara Medical Road,32.07489,75.256024,no,2025-09-30
+H200303,Madurai Health Institute 449,Tamil Nadu,Madurai,300303,844,"General Medicine,Pediatrics,ENT,Orthopedics",251 Madurai Medical Road,20.532161,84.796576,no,2025-09-30
+H200304,Siliguri Health Institute 5239,West Bengal,Siliguri,300304,1143,"ENT,Oncology,Cardiology,General Medicine",203 Siliguri Medical Road,26.149768,78.023958,no,2025-09-30
+H200305,Kozhikode Health Institute 9141,Kerala,Kozhikode,300305,107,"General Medicine,Neurology,Cardiology,Orthopedics",105 Kozhikode Medical Road,31.666842,75.594246,yes,2025-09-30
+H200306,Aurangabad Health Institute 4922,Maharashtra,Aurangabad,300306,1147,"Gastroenterology,Orthopedics,Nephrology,Neurology,General Medicine",2 Aurangabad Medical Road,23.633656,79.035879,no,2025-09-30
+H200307,New Delhi Health Institute 6168,Delhi,New Delhi,300307,198,"Orthopedics,Cardiology,Nephrology",21 New Delhi Medical Road,17.144319,82.948755,no,2025-09-30
+H200308,Patna Health Institute 4543,Bihar,Patna,300308,946,"Neurology,Oncology",286 Patna Medical Road,21.098468,86.66807,no,2025-09-30
+H200309,Kozhikode Health Institute 188,Kerala,Kozhikode,300309,106,"ENT,Nephrology,General Medicine,Oncology",92 Kozhikode Medical Road,10.672978,76.243632,yes,2025-09-30
+H200310,Surat Health Institute 5850,Gujarat,Surat,300310,1151,"ENT,Nephrology",206 Surat Medical Road,27.33071,86.573045,yes,2025-09-30
+H200311,Ranchi Health Institute 8200,Jharkhand,Ranchi,300311,140,"Neurology,Pediatrics,ENT",229 Ranchi Medical Road,19.068881,85.041513,no,2025-09-30
+H200312,Nagpur Health Institute 9243,Maharashtra,Nagpur,300312,539,"Nephrology,Neurology,Pediatrics,General Medicine,ENT",261 Nagpur Medical Road,8.774547,70.199496,no,2025-09-30
+H200313,Ranchi Health Institute 9742,Jharkhand,Ranchi,300313,929,"Orthopedics,Oncology,Pediatrics,ENT,Gastroenterology",119 Ranchi Medical Road,20.575001,84.52271,no,2025-09-30
+H200314,Raipur Health Institute 5933,Chhattisgarh,Raipur,300314,1062,"Nephrology,Pediatrics,General Medicine,Neurology,Oncology",51 Raipur Medical Road,24.173114,86.29246,no,2025-09-30
+H200315,Siliguri Health Institute 1549,West Bengal,Siliguri,300315,683,"Pediatrics,ENT,General Medicine,Gastroenterology,Neurology",87 Siliguri Medical Road,25.264986,85.337513,no,2025-09-30
+H200316,Madurai Health Institute 7965,Tamil Nadu,Madurai,300316,919,"Neurology,General Medicine,Orthopedics,Gastroenterology,Oncology",28 Madurai Medical Road,31.681409,80.149283,no,2025-09-30
+H200317,Patna Health Institute 1094,Bihar,Patna,300317,705,"General Medicine,Orthopedics,Gastroenterology,Pediatrics,Cardiology",251 Patna Medical Road,13.165853,70.445974,no,2025-09-30
+H200318,Surat Health Institute 3321,Gujarat,Surat,300318,343,"Cardiology,Gastroenterology,Nephrology,ENT",162 Surat Medical Road,25.842161,75.564552,yes,2025-09-30
+H200319,Chandigarh Health Institute 3100,Punjab,Chandigarh,300319,170,"Pediatrics,ENT,General Medicine",147 Chandigarh Medical Road,32.225292,73.270033,no,2025-09-30
+H200320,Jaipur Health Institute 8782,Rajasthan,Jaipur,300320,1176,"Orthopedics,Cardiology,Neurology,Pediatrics",201 Jaipur Medical Road,10.149208,70.676511,yes,2025-09-30
+H200321,Thiruvananthapuram Health Institute 2738,Kerala,Thiruvananthapuram,300321,278,"Orthopedics,Gastroenterology,Neurology,Pediatrics,ENT",276 Thiruvananthapuram Medical Road,22.393551,86.713887,no,2025-09-30
+H200322,Bhubaneswar Health Institute 3122,Odisha,Bhubaneswar,300322,1076,"Nephrology,Orthopedics",1 Bhubaneswar Medical Road,27.028206,85.777182,yes,2025-09-30
+H200323,Amritsar Health Institute 1731,Punjab,Amritsar,300323,392,"General Medicine,Nephrology,Orthopedics",270 Amritsar Medical Road,23.081886,83.671509,yes,2025-09-30
+H200324,Bengaluru Health Institute 7887,Karnataka,Bengaluru,300324,238,"Cardiology,Oncology,Gastroenterology,Neurology",70 Bengaluru Medical Road,18.519027,77.234851,no,2025-09-30
+H200325,South Delhi Health Institute 3493,Delhi,South Delhi,300325,421,"Pediatrics,Neurology,Gastroenterology,Oncology,Orthopedics",217 South Delhi Medical Road,24.059867,72.193813,no,2025-09-30
+H200326,Amritsar Health Institute 5796,Punjab,Amritsar,300326,1102,"Nephrology,General Medicine,Neurology,ENT",243 Amritsar Medical Road,9.701587,76.509179,no,2025-09-30
+H200327,Ranchi Health Institute 1206,Jharkhand,Ranchi,300327,186,"Nephrology,ENT,Orthopedics,Gastroenterology",239 Ranchi Medical Road,18.909133,85.983597,no,2025-09-30
+H200328,Vadodara Health Institute 4844,Gujarat,Vadodara,300328,236,"Oncology,Gastroenterology,General Medicine,Neurology",139 Vadodara Medical Road,29.169416,79.439476,no,2025-09-30
+H200329,North Delhi Health Institute 1997,Delhi,North Delhi,300329,656,"Cardiology,Orthopedics,ENT",55 North Delhi Medical Road,8.568328,77.727372,yes,2025-09-30
+H200330,Guwahati Health Institute 5956,Assam,Guwahati,300330,471,"Gastroenterology,General Medicine",298 Guwahati Medical Road,9.947723,77.560831,no,2025-09-30
+H200331,Patna Health Institute 17,Bihar,Patna,300331,467,"Neurology,Pediatrics,ENT",77 Patna Medical Road,22.682523,85.56158,no,2025-09-30
+H200332,Mumbai Health Institute 9326,Maharashtra,Mumbai,300332,363,"Nephrology,Cardiology",121 Mumbai Medical Road,25.19407,73.063014,no,2025-09-30
+H200333,Guwahati Health Institute 5911,Assam,Guwahati,300333,216,"Neurology,Pediatrics,ENT,Oncology",61 Guwahati Medical Road,13.087956,69.791605,no,2025-09-30
+H200334,Guwahati Health Institute 6833,Assam,Guwahati,300334,61,"Nephrology,Oncology,Neurology,General Medicine",123 Guwahati Medical Road,16.546645,85.704284,no,2025-09-30
+H200335,South Delhi Health Institute 5233,Delhi,South Delhi,300335,818,"Gastroenterology,Oncology,Cardiology,General Medicine,Nephrology",74 South Delhi Medical Road,16.910101,79.607572,no,2025-09-30
+H200336,Hyderabad Health Institute 8566,Telangana,Hyderabad,300336,607,"General Medicine,ENT,Pediatrics,Orthopedics",120 Hyderabad Medical Road,29.424835,84.391788,no,2025-09-30
+H200337,Ranchi Health Institute 8792,Jharkhand,Ranchi,300337,107,"Pediatrics,Nephrology",48 Ranchi Medical Road,24.182953,76.564076,no,2025-09-30
+H200338,Warangal Health Institute 4108,Telangana,Warangal,300338,830,"Neurology,Cardiology",159 Warangal Medical Road,19.132886,83.558299,no,2025-09-30
+H200339,Guwahati Health Institute 5721,Assam,Guwahati,300339,1109,"Cardiology,Pediatrics,Neurology,Orthopedics",227 Guwahati Medical Road,27.163831,82.835474,no,2025-09-30
+H200340,Guwahati Health Institute 778,Assam,Guwahati,300340,456,"Oncology,Nephrology,ENT,Pediatrics,Neurology",193 Guwahati Medical Road,12.419628,70.850718,no,2025-09-30
+H200341,Siliguri Health Institute 1101,West Bengal,Siliguri,300341,372,"Nephrology,Orthopedics,Pediatrics,ENT,Oncology",128 Siliguri Medical Road,14.88308,76.888512,no,2025-09-30
+H200342,Patna Health Institute 3652,Bihar,Patna,300342,119,"Cardiology,ENT,Orthopedics,Gastroenterology,Nephrology",148 Patna Medical Road,32.148737,78.621521,no,2025-09-30
+H200343,Kolkata Health Institute 2479,West Bengal,Kolkata,300343,220,"General Medicine,ENT,Nephrology,Orthopedics",79 Kolkata Medical Road,22.592974,87.848378,no,2025-09-30
+H200344,Faridabad Health Institute 1966,Haryana,Faridabad,300344,953,"Neurology,Cardiology,Gastroenterology,Nephrology",299 Faridabad Medical Road,9.502846,75.228088,no,2025-09-30
+H200345,Amritsar Health Institute 2319,Punjab,Amritsar,300345,638,"Pediatrics,Gastroenterology,Neurology,Cardiology",40 Amritsar Medical Road,16.223594,74.452799,no,2025-09-30
+H200346,Vadodara Health Institute 9924,Gujarat,Vadodara,300346,123,"General Medicine,Pediatrics,Orthopedics,Cardiology",17 Vadodara Medical Road,12.710135,68.966647,no,2025-09-30
+H200347,Hyderabad Health Institute 9070,Telangana,Hyderabad,300347,80,"Gastroenterology,Cardiology,Pediatrics,Neurology,ENT",263 Hyderabad Medical Road,21.763979,72.362645,no,2025-09-30
+H200348,Kanpur Health Institute 1313,Uttar Pradesh,Kanpur,300348,1193,"ENT,Neurology",20 Kanpur Medical Road,21.06305,81.993027,yes,2025-09-30
+H200349,Tiruchirappalli Health Institute 258,Tamil Nadu,Tiruchirappalli,300349,326,"ENT,Gastroenterology,Pediatrics",251 Tiruchirappalli Medical Road,23.212322,68.095035,no,2025-09-30
+H200350,Mysuru Health Institute 9555,Karnataka,Mysuru,300350,27,"Oncology,Orthopedics,Neurology,Pediatrics",60 Mysuru Medical Road,32.919123,87.930639,no,2025-09-30
+H200351,Jodhpur Health Institute 3250,Rajasthan,Jodhpur,300351,131,"Neurology,Nephrology,Oncology,General Medicine,Cardiology",242 Jodhpur Medical Road,32.948494,75.865835,no,2025-09-30
+H200352,Hyderabad Health Institute 4534,Telangana,Hyderabad,300352,94,"Cardiology,ENT,Oncology,Pediatrics,Gastroenterology",200 Hyderabad Medical Road,31.922146,72.165745,no,2025-09-30
+H200353,Jaipur Health Institute 2833,Rajasthan,Jaipur,300353,1198,"Orthopedics,Gastroenterology,Neurology",227 Jaipur Medical Road,32.635742,75.341321,no,2025-09-30
+H200354,Jaipur Health Institute 8518,Rajasthan,Jaipur,300354,639,"Cardiology,Neurology,Nephrology,Orthopedics",286 Jaipur Medical Road,23.446607,72.773397,no,2025-09-30
+H200355,Asansol Health Institute 9397,West Bengal,Asansol,300355,537,"ENT,Nephrology,Pediatrics,Oncology,Neurology",93 Asansol Medical Road,9.821396,81.217973,no,2025-09-30
+H200356,Kanpur Health Institute 8660,Uttar Pradesh,Kanpur,300356,285,"Orthopedics,Nephrology,Oncology,Neurology",222 Kanpur Medical Road,19.782499,69.705777,no,2025-09-30
+H200357,Amritsar Health Institute 4633,Punjab,Amritsar,300357,456,"Neurology,Gastroenterology,Cardiology,Orthopedics",296 Amritsar Medical Road,17.68409,70.402261,no,2025-09-30
+H200358,Ranchi Health Institute 8925,Jharkhand,Ranchi,300358,443,"General Medicine,Oncology,Cardiology",26 Ranchi Medical Road,27.808845,73.465557,no,2025-09-30
+H200359,Gaya Health Institute 9836,Bihar,Gaya,300359,1171,"General Medicine,Cardiology",280 Gaya Medical Road,29.232152,85.80516,no,2025-09-30
+H200360,Vadodara Health Institute 8595,Gujarat,Vadodara,300360,842,"Pediatrics,Oncology,Neurology",152 Vadodara Medical Road,26.824079,77.607815,no,2025-09-30
+H200361,Faridabad Health Institute 8861,Haryana,Faridabad,300361,1083,"General Medicine,Nephrology,Neurology,Cardiology",29 Faridabad Medical Road,14.276981,85.485594,yes,2025-09-30
+H200362,Ranchi Health Institute 1824,Jharkhand,Ranchi,300362,382,"Neurology,Nephrology,Cardiology",199 Ranchi Medical Road,25.333008,71.277385,no,2025-09-30
+H200363,Cuttack Health Institute 5554,Odisha,Cuttack,300363,604,"Orthopedics,Pediatrics,General Medicine,Nephrology",171 Cuttack Medical Road,14.276641,70.614254,no,2025-09-30
+H200364,Gurgaon Health Institute 7294,Haryana,Gurgaon,300364,881,"Orthopedics,Oncology,Cardiology",174 Gurgaon Medical Road,9.039471,84.315706,no,2025-09-30
+H200365,Surat Health Institute 8877,Gujarat,Surat,300365,177,"Pediatrics,General Medicine,Cardiology,ENT,Nephrology",94 Surat Medical Road,20.695448,71.956766,no,2025-09-30
+H200366,Ranchi Health Institute 1430,Jharkhand,Ranchi,300366,1103,"General Medicine,Cardiology,ENT,Pediatrics,Gastroenterology",244 Ranchi Medical Road,11.818837,83.790582,no,2025-09-30
+H200367,Gurgaon Health Institute 319,Haryana,Gurgaon,300367,282,"Oncology,Nephrology,Neurology,Gastroenterology,General Medicine",300 Gurgaon Medical Road,28.772226,81.269754,no,2025-09-30
+H200368,New Delhi Health Institute 3952,Delhi,New Delhi,300368,898,"Cardiology,Oncology,Nephrology",193 New Delhi Medical Road,21.318152,72.062403,no,2025-09-30
+H200369,Gaya Health Institute 5303,Bihar,Gaya,300369,137,"Pediatrics,Orthopedics,Gastroenterology,General Medicine,Cardiology",117 Gaya Medical Road,32.011647,81.482482,no,2025-09-30
+H200370,Bengaluru Health Institute 6082,Karnataka,Bengaluru,300370,290,"Nephrology,Oncology,Neurology",212 Bengaluru Medical Road,23.48228,75.821848,no,2025-09-30
+H200371,Faridabad Health Institute 1856,Haryana,Faridabad,300371,88,"ENT,Cardiology,Orthopedics",144 Faridabad Medical Road,27.373437,81.843545,no,2025-09-30
+H200372,Ranchi Health Institute 9507,Jharkhand,Ranchi,300372,971,"Nephrology,Pediatrics,Neurology,Cardiology,Gastroenterology",275 Ranchi Medical Road,16.565641,78.884273,no,2025-09-30
+H200373,Bengaluru Health Institute 3389,Karnataka,Bengaluru,300373,619,"General Medicine,Nephrology,Cardiology,Gastroenterology",4 Bengaluru Medical Road,20.054785,80.101726,no,2025-09-30
+H200374,Tiruchirappalli Health Institute 9670,Tamil Nadu,Tiruchirappalli,300374,1036,"Oncology,General Medicine,Gastroenterology",119 Tiruchirappalli Medical Road,27.013176,82.191299,no,2025-09-30
+H200375,Kochi Health Institute 6206,Kerala,Kochi,300375,419,"Nephrology,ENT,Gastroenterology,General Medicine,Cardiology",219 Kochi Medical Road,24.055731,74.186058,no,2025-09-30
+H200376,Mysuru Health Institute 5133,Karnataka,Mysuru,300376,302,"General Medicine,Pediatrics,Cardiology",241 Mysuru Medical Road,9.586224,76.911943,no,2025-09-30
+H200377,Ahmedabad Health Institute 7634,Gujarat,Ahmedabad,300377,1187,"Nephrology,Cardiology,Oncology",178 Ahmedabad Medical Road,11.340521,74.509437,no,2025-09-30
+H200378,Raipur Health Institute 270,Chhattisgarh,Raipur,300378,622,"General Medicine,Nephrology,ENT,Pediatrics",299 Raipur Medical Road,10.268786,72.105431,no,2025-09-30
+H200379,Mysuru Health Institute 7607,Karnataka,Mysuru,300379,579,"Oncology,Nephrology,Gastroenterology",132 Mysuru Medical Road,27.643076,83.689541,no,2025-09-30
+H200380,Cuttack Health Institute 3925,Odisha,Cuttack,300380,271,"ENT,Neurology,Cardiology,Gastroenterology,Oncology",94 Cuttack Medical Road,14.254738,79.452897,yes,2025-09-30
+H200381,Ranchi Health Institute 7487,Jharkhand,Ranchi,300381,950,"Nephrology,Pediatrics,General Medicine",279 Ranchi Medical Road,28.95342,81.208319,yes,2025-09-30
+H200382,Cuttack Health Institute 668,Odisha,Cuttack,300382,536,"Nephrology,ENT",251 Cuttack Medical Road,8.752584,69.944364,yes,2025-09-30
+H200383,Gurgaon Health Institute 2678,Haryana,Gurgaon,300383,229,"Neurology,Orthopedics,ENT,Oncology",207 Gurgaon Medical Road,16.115471,73.261963,no,2025-09-30
+H200384,Vadodara Health Institute 717,Gujarat,Vadodara,300384,745,"Orthopedics,Oncology,Pediatrics,General Medicine,ENT",223 Vadodara Medical Road,22.184007,75.01773,no,2025-09-30
+H200385,Cuttack Health Institute 2539,Odisha,Cuttack,300385,1036,"Orthopedics,General Medicine",64 Cuttack Medical Road,13.442991,73.628679,no,2025-09-30
+H200386,Ranchi Health Institute 8242,Jharkhand,Ranchi,300386,622,"Gastroenterology,Pediatrics",178 Ranchi Medical Road,13.300355,73.118479,no,2025-09-30
+H200387,Mumbai Health Institute 82,Maharashtra,Mumbai,300387,1023,"Orthopedics,Neurology,Nephrology",176 Mumbai Medical Road,30.799378,79.56305,no,2025-09-30
+H200388,Thiruvananthapuram Health Institute 9001,Kerala,Thiruvananthapuram,300388,1151,"Oncology,Cardiology,Nephrology,General Medicine,Gastroenterology",253 Thiruvananthapuram Medical Road,29.360302,81.62071,no,2025-09-30
+H200389,Gurgaon Health Institute 8226,Haryana,Gurgaon,300389,892,"ENT,Gastroenterology,Oncology",30 Gurgaon Medical Road,16.618216,75.750503,no,2025-09-30
+H200390,Asansol Health Institute 3390,West Bengal,Asansol,300390,1191,"General Medicine,Orthopedics",202 Asansol Medical Road,23.371758,72.757756,no,2025-09-30
+H200391,Agra Health Institute 9136,Uttar Pradesh,Agra,300391,1156,"Nephrology,Pediatrics,Orthopedics,General Medicine",148 Agra Medical Road,27.984663,68.04857,no,2025-09-30
+H200392,New Delhi Health Institute 830,Delhi,New Delhi,300392,538,"Orthopedics,Gastroenterology,Neurology,General Medicine",33 New Delhi Medical Road,21.630491,68.570383,no,2025-09-30
+H200393,Udaipur Health Institute 1440,Rajasthan,Udaipur,300393,1134,"General Medicine,Orthopedics",264 Udaipur Medical Road,32.437687,71.24622,no,2025-09-30
+H200394,Vadodara Health Institute 209,Gujarat,Vadodara,300394,192,"General Medicine,Orthopedics",163 Vadodara Medical Road,25.202229,69.333308,no,2025-09-30
+H200395,Nagpur Health Institute 3225,Maharashtra,Nagpur,300395,740,"ENT,Cardiology",163 Nagpur Medical Road,11.601129,69.553089,no,2025-09-30
+H200396,Coimbatore Health Institute 6951,Tamil Nadu,Coimbatore,300396,609,"Oncology,Orthopedics,Nephrology,Cardiology",269 Coimbatore Medical Road,13.586614,82.347228,no,2025-09-30
+H200397,Amritsar Health Institute 8165,Punjab,Amritsar,300397,391,"Neurology,Cardiology,Pediatrics,Gastroenterology",6 Amritsar Medical Road,28.239211,84.749745,no,2025-09-30
+H200398,Asansol Health Institute 1815,West Bengal,Asansol,300398,1119,"General Medicine,Orthopedics",89 Asansol Medical Road,31.587387,73.869692,no,2025-09-30
+H200399,Gaya Health Institute 4361,Bihar,Gaya,300399,1029,"Gastroenterology,Pediatrics,Nephrology",262 Gaya Medical Road,24.807409,73.468264,no,2025-09-30
+H200400,Guwahati Health Institute 6733,Assam,Guwahati,300400,1075,"Orthopedics,Oncology",158 Guwahati Medical Road,22.05142,73.292541,no,2025-09-30
+H200401,Faridabad Health Institute 4127,Haryana,Faridabad,300401,379,"Nephrology,Cardiology,Oncology,Pediatrics,Orthopedics",214 Faridabad Medical Road,21.730104,70.322657,no,2025-09-30
+H200402,Bhubaneswar Health Institute 268,Odisha,Bhubaneswar,300402,316,"Cardiology,Neurology,Orthopedics",211 Bhubaneswar Medical Road,17.106175,84.676301,no,2025-09-30
+H200403,Raipur Health Institute 9992,Chhattisgarh,Raipur,300403,1151,"General Medicine,Cardiology",112 Raipur Medical Road,27.132114,84.614159,no,2025-09-30
+H200404,Thiruvananthapuram Health Institute 3736,Kerala,Thiruvananthapuram,300404,454,"Pediatrics,Orthopedics,Nephrology",34 Thiruvananthapuram Medical Road,29.442656,72.391463,no,2025-09-30
+H200405,Pune Health Institute 1916,Maharashtra,Pune,300405,941,"Orthopedics,Neurology,Gastroenterology,Cardiology,Oncology",18 Pune Medical Road,20.283052,79.775657,no,2025-09-30
+H200406,Madurai Health Institute 2717,Tamil Nadu,Madurai,300406,673,"ENT,Pediatrics,Cardiology,Orthopedics",21 Madurai Medical Road,16.118267,75.015039,yes,2025-09-30
+H200407,Bengaluru Health Institute 3509,Karnataka,Bengaluru,300407,740,"General Medicine,Pediatrics,Neurology,Oncology",98 Bengaluru Medical Road,16.658957,80.477157,no,2025-09-30
+H200408,Chandigarh Health Institute 5702,Punjab,Chandigarh,300408,605,"General Medicine,Orthopedics,ENT,Oncology",43 Chandigarh Medical Road,10.670356,76.39385,no,2025-09-30
+H200409,Ranchi Health Institute 3756,Jharkhand,Ranchi,300409,404,"General Medicine,ENT",195 Ranchi Medical Road,15.384602,74.147368,no,2025-09-30
+H200410,Thiruvananthapuram Health Institute 8590,Kerala,Thiruvananthapuram,300410,332,"General Medicine,Gastroenterology,Neurology",260 Thiruvananthapuram Medical Road,11.743557,83.774967,yes,2025-09-30
+H200411,Amritsar Health Institute 6315,Punjab,Amritsar,300411,1123,"Oncology,Pediatrics,Orthopedics",58 Amritsar Medical Road,25.419477,87.587361,yes,2025-09-30
+H200412,North Delhi Health Institute 6790,Delhi,North Delhi,300412,384,"Nephrology,General Medicine,Cardiology",172 North Delhi Medical Road,17.181457,81.568986,yes,2025-09-30
+H200413,Surat Health Institute 21,Gujarat,Surat,300413,548,"Pediatrics,General Medicine,Orthopedics,Gastroenterology",58 Surat Medical Road,15.784135,74.693413,no,2025-09-30
+H200414,Ranchi Health Institute 8197,Jharkhand,Ranchi,300414,729,"Gastroenterology,General Medicine,Neurology,Nephrology,Orthopedics",96 Ranchi Medical Road,20.56288,79.941138,no,2025-09-30
+H200415,Guwahati Health Institute 7301,Assam,Guwahati,300415,924,"Pediatrics,Nephrology",27 Guwahati Medical Road,32.293344,74.701703,no,2025-09-30
+H200416,Agra Health Institute 723,Uttar Pradesh,Agra,300416,315,"Nephrology,Neurology",62 Agra Medical Road,9.762495,82.8899,no,2025-09-30
+H200417,Coimbatore Health Institute 6507,Tamil Nadu,Coimbatore,300417,751,"Neurology,Cardiology,Oncology,ENT",218 Coimbatore Medical Road,15.760188,70.515357,no,2025-09-30
+H200418,Surat Health Institute 5862,Gujarat,Surat,300418,1080,"Gastroenterology,Nephrology,Pediatrics",168 Surat Medical Road,29.917261,70.371219,no,2025-09-30
+H200419,Nashik Health Institute 554,Maharashtra,Nashik,300419,799,"Orthopedics,Cardiology,Gastroenterology,Oncology",142 Nashik Medical Road,28.395908,80.07798,yes,2025-09-30
+H200420,Ranchi Health Institute 9605,Jharkhand,Ranchi,300420,539,"Pediatrics,Nephrology",295 Ranchi Medical Road,29.409038,80.386861,no,2025-09-30
+H200421,Pune Health Institute 6455,Maharashtra,Pune,300421,302,"Orthopedics,Neurology,ENT",244 Pune Medical Road,24.042419,81.51251,no,2025-09-30
+H200422,Bhubaneswar Health Institute 8470,Odisha,Bhubaneswar,300422,558,"Gastroenterology,Oncology",34 Bhubaneswar Medical Road,10.023388,78.3405,no,2025-09-30
+H200423,Madurai Health Institute 467,Tamil Nadu,Madurai,300423,512,"Nephrology,ENT,Orthopedics",15 Madurai Medical Road,25.014311,75.681553,no,2025-09-30
+H200424,Ahmedabad Health Institute 3174,Gujarat,Ahmedabad,300424,593,"Pediatrics,Neurology,Oncology,Orthopedics",125 Ahmedabad Medical Road,27.973775,79.231327,no,2025-09-30
+H200425,Nagpur Health Institute 668,Maharashtra,Nagpur,300425,1120,"Cardiology,Pediatrics,Nephrology,Orthopedics",215 Nagpur Medical Road,18.362388,84.655889,no,2025-09-30
+H200426,Lucknow Health Institute 3394,Uttar Pradesh,Lucknow,300426,857,"Neurology,General Medicine,Orthopedics,Pediatrics",186 Lucknow Medical Road,27.980183,68.007059,no,2025-09-30
+H200427,Hyderabad Health Institute 2003,Telangana,Hyderabad,300427,174,"ENT,Pediatrics",143 Hyderabad Medical Road,29.4916,72.015537,no,2025-09-30
+H200428,Pune Health Institute 4749,Maharashtra,Pune,300428,1183,"Cardiology,Neurology",165 Pune Medical Road,20.492744,74.085056,no,2025-09-30
+H200429,Agra Health Institute 3024,Uttar Pradesh,Agra,300429,628,"Orthopedics,Pediatrics",222 Agra Medical Road,27.654475,73.974381,yes,2025-09-30
+H200430,Aurangabad Health Institute 3042,Maharashtra,Aurangabad,300430,421,"Oncology,Neurology",50 Aurangabad Medical Road,14.650228,83.693885,no,2025-09-30
+H200431,Noida Health Institute 4752,Uttar Pradesh,Noida,300431,784,"Gastroenterology,Cardiology",148 Noida Medical Road,21.802004,71.312197,no,2025-09-30
+H200432,Udaipur Health Institute 8736,Rajasthan,Udaipur,300432,384,"Pediatrics,Oncology,Orthopedics,Cardiology",66 Udaipur Medical Road,20.147502,85.22073,no,2025-09-30
+H200433,Kanpur Health Institute 5941,Uttar Pradesh,Kanpur,300433,293,"Nephrology,ENT,General Medicine",193 Kanpur Medical Road,14.246434,80.884361,no,2025-09-30
+H200434,Bengaluru Health Institute 124,Karnataka,Bengaluru,300434,124,"Nephrology,Pediatrics,Orthopedics,Gastroenterology",12 Bengaluru Medical Road,23.142285,85.152654,no,2025-09-30
+H200435,Mumbai Health Institute 4856,Maharashtra,Mumbai,300435,532,"Neurology,Orthopedics,Cardiology",157 Mumbai Medical Road,12.195651,69.501555,yes,2025-09-30
+H200436,Guwahati Health Institute 6242,Assam,Guwahati,300436,45,"ENT,Nephrology,General Medicine,Orthopedics,Pediatrics",189 Guwahati Medical Road,22.230241,73.001434,no,2025-09-30
+H200437,Ranchi Health Institute 847,Jharkhand,Ranchi,300437,63,"Oncology,General Medicine",157 Ranchi Medical Road,17.093247,79.825973,no,2025-09-30
+H200438,Pune Health Institute 8769,Maharashtra,Pune,300438,797,"Neurology,Nephrology,Gastroenterology,ENT",212 Pune Medical Road,20.789678,74.528324,no,2025-09-30
+H200439,Jaipur Health Institute 4849,Rajasthan,Jaipur,300439,1029,"General Medicine,Pediatrics,Nephrology,Cardiology,ENT",227 Jaipur Medical Road,14.697346,84.601572,no,2025-09-30
+H200440,Thiruvananthapuram Health Institute 7046,Kerala,Thiruvananthapuram,300440,929,"Orthopedics,Pediatrics",36 Thiruvananthapuram Medical Road,14.495431,82.88214,no,2025-09-30
+H200441,Chandigarh Health Institute 4870,Punjab,Chandigarh,300441,127,"ENT,Oncology",120 Chandigarh Medical Road,15.85699,74.883098,yes,2025-09-30
+H200442,Gurgaon Health Institute 2027,Haryana,Gurgaon,300442,34,"Nephrology,ENT,Cardiology,Orthopedics,Gastroenterology",137 Gurgaon Medical Road,24.814658,86.525271,no,2025-09-30
+H200443,Gurgaon Health Institute 1223,Haryana,Gurgaon,300443,340,"Neurology,Gastroenterology",137 Gurgaon Medical Road,23.565217,71.10751,no,2025-09-30
+H200444,Ludhiana Health Institute 6323,Punjab,Ludhiana,300444,98,"Neurology,Oncology,Cardiology,Pediatrics,Gastroenterology",298 Ludhiana Medical Road,13.563012,86.433651,no,2025-09-30
+H200445,Patna Health Institute 2795,Bihar,Patna,300445,891,"Oncology,Cardiology,ENT,Orthopedics",113 Patna Medical Road,12.60667,82.844355,no,2025-09-30
+H200446,Kolkata Health Institute 3019,West Bengal,Kolkata,300446,380,"Oncology,Cardiology,General Medicine,Pediatrics,Orthopedics",8 Kolkata Medical Road,8.811886,75.149419,no,2025-09-30
+H200447,Faridabad Health Institute 4794,Haryana,Faridabad,300447,135,"Nephrology,Orthopedics",238 Faridabad Medical Road,24.393006,83.727677,no,2025-09-30
+H200448,Vadodara Health Institute 8801,Gujarat,Vadodara,300448,564,"Pediatrics,Nephrology,Oncology",151 Vadodara Medical Road,12.020242,70.56976,yes,2025-09-30
+H200449,Kolkata Health Institute 6953,West Bengal,Kolkata,300449,925,"Nephrology,ENT,Oncology,General Medicine,Cardiology",140 Kolkata Medical Road,8.272233,82.223835,no,2025-09-30
+H200450,Kochi Health Institute 5258,Kerala,Kochi,300450,122,"Gastroenterology,Neurology,ENT,Pediatrics",285 Kochi Medical Road,14.456621,79.052501,no,2025-09-30
+H200451,Tiruchirappalli Health Institute 1859,Tamil Nadu,Tiruchirappalli,300451,1119,"Gastroenterology,Oncology,General Medicine,ENT",51 Tiruchirappalli Medical Road,18.630041,73.295299,no,2025-09-30
+H200452,Hyderabad Health Institute 541,Telangana,Hyderabad,300452,724,"Cardiology,Oncology,General Medicine,Pediatrics",87 Hyderabad Medical Road,24.856175,70.640188,yes,2025-09-30
+H200453,South Delhi Health Institute 183,Delhi,South Delhi,300453,891,"Oncology,Neurology,ENT,Gastroenterology,Cardiology",2 South Delhi Medical Road,18.930733,82.582742,no,2025-09-30
+H200454,Lucknow Health Institute 7831,Uttar Pradesh,Lucknow,300454,907,"Oncology,Gastroenterology,General Medicine",243 Lucknow Medical Road,17.961947,73.546734,no,2025-09-30
+H200455,Faridabad Health Institute 2607,Haryana,Faridabad,300455,588,"General Medicine,ENT,Gastroenterology",106 Faridabad Medical Road,21.160746,81.762661,no,2025-09-30
+H200456,Kolkata Health Institute 9186,West Bengal,Kolkata,300456,723,"Oncology,ENT",80 Kolkata Medical Road,19.774479,69.158915,no,2025-09-30
+H200457,Faridabad Health Institute 4696,Haryana,Faridabad,300457,755,"General Medicine,Nephrology,Oncology,Cardiology",258 Faridabad Medical Road,17.170828,73.27109,no,2025-09-30
+H200458,Kanpur Health Institute 6059,Uttar Pradesh,Kanpur,300458,239,"Gastroenterology,Cardiology,General Medicine,Neurology",156 Kanpur Medical Road,25.354955,78.035554,no,2025-09-30
+H200459,Cuttack Health Institute 2381,Odisha,Cuttack,300459,265,"Nephrology,Neurology,Gastroenterology,Oncology,Pediatrics",79 Cuttack Medical Road,24.078067,68.210526,no,2025-09-30
+H200460,Aurangabad Health Institute 9604,Maharashtra,Aurangabad,300460,979,"Gastroenterology,Nephrology,Neurology",159 Aurangabad Medical Road,8.329253,76.574049,no,2025-09-30
+H200461,Amritsar Health Institute 1367,Punjab,Amritsar,300461,1164,"Neurology,General Medicine,Cardiology,Nephrology",103 Amritsar Medical Road,12.005544,74.248796,no,2025-09-30
+H200462,South Delhi Health Institute 340,Delhi,South Delhi,300462,158,"Nephrology,Pediatrics,Orthopedics,ENT",125 South Delhi Medical Road,20.183142,71.989838,no,2025-09-30
+H200463,Raipur Health Institute 8289,Chhattisgarh,Raipur,300463,1137,"Nephrology,General Medicine,Neurology",186 Raipur Medical Road,23.298764,73.265276,no,2025-09-30
+H200464,Warangal Health Institute 2312,Telangana,Warangal,300464,578,"Pediatrics,Oncology,Gastroenterology,Nephrology",169 Warangal Medical Road,20.837288,69.609896,no,2025-09-30
+H200465,New Delhi Health Institute 6008,Delhi,New Delhi,300465,148,"Orthopedics,ENT,General Medicine",209 New Delhi Medical Road,9.260486,68.748907,no,2025-09-30
+H200466,Mangalore Health Institute 4561,Karnataka,Mangalore,300466,313,"Gastroenterology,Cardiology",75 Mangalore Medical Road,26.924975,80.367266,no,2025-09-30
+H200467,Kochi Health Institute 6683,Kerala,Kochi,300467,528,"Orthopedics,Gastroenterology,Cardiology,Pediatrics,Nephrology",289 Kochi Medical Road,30.873901,80.474708,no,2025-09-30
+H200468,Hubli Health Institute 6494,Karnataka,Hubli,300468,127,"ENT,General Medicine,Orthopedics,Nephrology",79 Hubli Medical Road,21.677603,75.067591,no,2025-09-30
+H200469,Tiruchirappalli Health Institute 8342,Tamil Nadu,Tiruchirappalli,300469,204,"Neurology,Pediatrics",279 Tiruchirappalli Medical Road,14.284648,72.597413,no,2025-09-30
+H200470,Aurangabad Health Institute 8093,Maharashtra,Aurangabad,300470,393,"Cardiology,Nephrology,Pediatrics",146 Aurangabad Medical Road,28.463864,69.512878,no,2025-09-30
+H200471,Amritsar Health Institute 7882,Punjab,Amritsar,300471,296,"Cardiology,Neurology,Nephrology,Oncology",209 Amritsar Medical Road,8.436326,74.001327,yes,2025-09-30
+H200472,Gaya Health Institute 1358,Bihar,Gaya,300472,738,"Neurology,Oncology,Pediatrics,Nephrology",223 Gaya Medical Road,17.525219,70.275037,yes,2025-09-30
+H200473,Kolkata Health Institute 1599,West Bengal,Kolkata,300473,749,"Orthopedics,General Medicine",19 Kolkata Medical Road,9.189129,73.064117,no,2025-09-30
+H200474,Guwahati Health Institute 4788,Assam,Guwahati,300474,590,"ENT,Nephrology",27 Guwahati Medical Road,28.102433,74.278663,no,2025-09-30
+H200475,Warangal Health Institute 3181,Telangana,Warangal,300475,837,"Oncology,Pediatrics",139 Warangal Medical Road,11.274726,85.93982,no,2025-09-30
+H200476,Udaipur Health Institute 7142,Rajasthan,Udaipur,300476,318,"Cardiology,ENT,Neurology,Gastroenterology",251 Udaipur Medical Road,12.468231,70.809379,no,2025-09-30
+H200477,Asansol Health Institute 7264,West Bengal,Asansol,300477,649,"Pediatrics,Gastroenterology,ENT,Orthopedics,Nephrology",276 Asansol Medical Road,11.864564,83.807533,yes,2025-09-30
+H200478,Ludhiana Health Institute 4097,Punjab,Ludhiana,300478,430,"Cardiology,Neurology,Pediatrics,Oncology,General Medicine",278 Ludhiana Medical Road,21.720315,83.665087,no,2025-09-30
+H200479,Mangalore Health Institute 8469,Karnataka,Mangalore,300479,247,"Oncology,Nephrology,Pediatrics",275 Mangalore Medical Road,19.092162,71.942186,no,2025-09-30
+H200480,Nashik Health Institute 9125,Maharashtra,Nashik,300480,59,"Cardiology,ENT,Neurology,Pediatrics,Oncology",182 Nashik Medical Road,25.920272,83.516697,no,2025-09-30
+H200481,Ranchi Health Institute 3583,Jharkhand,Ranchi,300481,606,"Pediatrics,Cardiology,Oncology,Orthopedics,Nephrology",157 Ranchi Medical Road,22.549893,69.843084,no,2025-09-30
+H200482,Noida Health Institute 3051,Uttar Pradesh,Noida,300482,640,"ENT,Nephrology",2 Noida Medical Road,11.634838,81.036468,no,2025-09-30
+H200483,Gurgaon Health Institute 7167,Haryana,Gurgaon,300483,1009,"Oncology,Neurology,Pediatrics",286 Gurgaon Medical Road,23.323766,69.277772,yes,2025-09-30
+H200484,Kanpur Health Institute 9681,Uttar Pradesh,Kanpur,300484,518,"Nephrology,Oncology,Neurology",11 Kanpur Medical Road,9.234754,84.38417,no,2025-09-30
+H200485,Nashik Health Institute 4582,Maharashtra,Nashik,300485,315,"Oncology,Cardiology,Gastroenterology,ENT",287 Nashik Medical Road,17.190604,72.966876,no,2025-09-30
+H200486,Mysuru Health Institute 4607,Karnataka,Mysuru,300486,1084,"Orthopedics,General Medicine,Gastroenterology,Oncology,Pediatrics",274 Mysuru Medical Road,18.781762,87.916099,no,2025-09-30
+H200487,Pune Health Institute 5519,Maharashtra,Pune,300487,229,"Gastroenterology,Orthopedics,ENT,General Medicine",300 Pune Medical Road,11.872448,81.498477,no,2025-09-30
+H200488,Jaipur Health Institute 2968,Rajasthan,Jaipur,300488,882,"Oncology,Nephrology,ENT",255 Jaipur Medical Road,28.69163,81.929611,no,2025-09-30
+H200489,Warangal Health Institute 9457,Telangana,Warangal,300489,124,"General Medicine,Gastroenterology,Cardiology",208 Warangal Medical Road,17.817583,68.666719,yes,2025-09-30
+H200490,South Delhi Health Institute 3606,Delhi,South Delhi,300490,324,"Gastroenterology,ENT,Nephrology,Cardiology,Oncology",226 South Delhi Medical Road,11.287304,81.727274,no,2025-09-30
+H200491,Siliguri Health Institute 3541,West Bengal,Siliguri,300491,228,"Nephrology,Cardiology,General Medicine",107 Siliguri Medical Road,13.15313,75.771636,no,2025-09-30
+H200492,Kanpur Health Institute 3360,Uttar Pradesh,Kanpur,300492,313,"General Medicine,Oncology",201 Kanpur Medical Road,28.941484,77.902057,no,2025-09-30
+H200493,Ahmedabad Health Institute 5566,Gujarat,Ahmedabad,300493,870,"Orthopedics,Cardiology",15 Ahmedabad Medical Road,31.053848,71.441627,no,2025-09-30
+H200494,Bhubaneswar Health Institute 5530,Odisha,Bhubaneswar,300494,1103,"Oncology,Cardiology,Gastroenterology",172 Bhubaneswar Medical Road,24.370659,69.990595,no,2025-09-30
+H200495,Guwahati Health Institute 9194,Assam,Guwahati,300495,144,"Pediatrics,Cardiology,General Medicine",171 Guwahati Medical Road,17.409568,76.58994,no,2025-09-30
+H200496,Vadodara Health Institute 4707,Gujarat,Vadodara,300496,666,"Neurology,ENT,Oncology,Cardiology,General Medicine",154 Vadodara Medical Road,24.355365,77.207867,no,2025-09-30
+H200497,Thiruvananthapuram Health Institute 6374,Kerala,Thiruvananthapuram,300497,726,"Pediatrics,Gastroenterology,Cardiology",257 Thiruvananthapuram Medical Road,13.882045,87.690687,no,2025-09-30
+H200498,South Delhi Health Institute 5946,Delhi,South Delhi,300498,239,"Orthopedics,Neurology,ENT,Pediatrics,General Medicine",20 South Delhi Medical Road,15.160056,75.763506,no,2025-09-30
+H200499,Jodhpur Health Institute 491,Rajasthan,Jodhpur,300499,280,"Gastroenterology,Nephrology",40 Jodhpur Medical Road,13.423758,84.024709,yes,2025-09-30
+H200500,Raipur Health Institute 6147,Chhattisgarh,Raipur,300500,664,"Gastroenterology,Nephrology,ENT,General Medicine,Neurology",41 Raipur Medical Road,12.658288,81.373862,no,2025-09-30
+H200501,Hubli Health Institute 268,Karnataka,Hubli,300501,79,"Pediatrics,Oncology,Neurology,Orthopedics",79 Hubli Medical Road,23.303244,71.359027,no,2025-09-30
+H200502,Bengaluru Health Institute 5295,Karnataka,Bengaluru,300502,1155,"Gastroenterology,Oncology,Neurology,Cardiology,Nephrology",196 Bengaluru Medical Road,12.942887,80.614676,no,2025-09-30
+H200503,Kanpur Health Institute 9138,Uttar Pradesh,Kanpur,300503,1155,"ENT,Gastroenterology,Cardiology",251 Kanpur Medical Road,24.646383,73.995492,no,2025-09-30
+H200504,Kolkata Health Institute 5112,West Bengal,Kolkata,300504,838,"Pediatrics,Nephrology",215 Kolkata Medical Road,13.166995,69.859119,no,2025-09-30
+H200505,Gurgaon Health Institute 4299,Haryana,Gurgaon,300505,366,"Orthopedics,Pediatrics",23 Gurgaon Medical Road,27.516582,71.744051,no,2025-09-30
+H200506,Aurangabad Health Institute 1110,Maharashtra,Aurangabad,300506,960,"Nephrology,ENT,Gastroenterology",158 Aurangabad Medical Road,27.60681,73.368676,no,2025-09-30
+H200507,Raipur Health Institute 4577,Chhattisgarh,Raipur,300507,915,"Neurology,General Medicine,ENT",12 Raipur Medical Road,10.692237,84.808319,no,2025-09-30
+H200508,Bengaluru Health Institute 5975,Karnataka,Bengaluru,300508,596,"Nephrology,Neurology,Pediatrics",95 Bengaluru Medical Road,11.916388,73.824442,no,2025-09-30
+H200509,Guwahati Health Institute 3140,Assam,Guwahati,300509,1065,"Pediatrics,Neurology",261 Guwahati Medical Road,18.555372,68.521739,no,2025-09-30
+H200510,Gaya Health Institute 7221,Bihar,Gaya,300510,1003,"Nephrology,General Medicine,Cardiology,Neurology",134 Gaya Medical Road,24.397387,71.475904,no,2025-09-30
+H200511,Madurai Health Institute 6292,Tamil Nadu,Madurai,300511,713,"Nephrology,General Medicine,Oncology",211 Madurai Medical Road,16.718746,69.846674,no,2025-09-30
+H200512,Asansol Health Institute 3975,West Bengal,Asansol,300512,530,"General Medicine,Gastroenterology,Nephrology",184 Asansol Medical Road,28.828308,73.83577,no,2025-09-30
+H200513,Ludhiana Health Institute 3216,Punjab,Ludhiana,300513,871,"General Medicine,Gastroenterology,Pediatrics",152 Ludhiana Medical Road,11.591833,86.195575,no,2025-09-30
+H200514,Asansol Health Institute 377,West Bengal,Asansol,300514,838,"Pediatrics,Gastroenterology",290 Asansol Medical Road,19.228218,82.836832,no,2025-09-30
+H200515,Kanpur Health Institute 6655,Uttar Pradesh,Kanpur,300515,379,"General Medicine,Nephrology,Oncology",77 Kanpur Medical Road,27.659002,74.06565,no,2025-09-30
+H200516,Nagpur Health Institute 3614,Maharashtra,Nagpur,300516,322,"General Medicine,Cardiology,Orthopedics,Neurology,Oncology",45 Nagpur Medical Road,32.824045,82.774246,no,2025-09-30
+H200517,Bengaluru Health Institute 9261,Karnataka,Bengaluru,300517,349,"Oncology,ENT,Orthopedics,General Medicine",104 Bengaluru Medical Road,24.430387,72.182263,no,2025-09-30
+H200518,Aurangabad Health Institute 2396,Maharashtra,Aurangabad,300518,397,"Nephrology,ENT",48 Aurangabad Medical Road,18.4411,69.666479,no,2025-09-30
+H200519,Gurgaon Health Institute 8733,Haryana,Gurgaon,300519,207,"General Medicine,Pediatrics,Orthopedics,Cardiology,Nephrology",232 Gurgaon Medical Road,26.387015,87.145901,no,2025-09-30
+H200520,Kochi Health Institute 9821,Kerala,Kochi,300520,40,"Pediatrics,Orthopedics,Cardiology",8 Kochi Medical Road,15.01654,68.95192,yes,2025-09-30
+H200521,New Delhi Health Institute 4416,Delhi,New Delhi,300521,265,"Nephrology,Cardiology,General Medicine",285 New Delhi Medical Road,12.630116,70.131268,no,2025-09-30
+H200522,Guwahati Health Institute 3471,Assam,Guwahati,300522,1110,"Cardiology,Nephrology,Pediatrics",19 Guwahati Medical Road,23.915156,74.594596,yes,2025-09-30
+H200523,Kozhikode Health Institute 8334,Kerala,Kozhikode,300523,167,"Cardiology,Nephrology",21 Kozhikode Medical Road,16.411824,83.281149,yes,2025-09-30
+H200524,Gaya Health Institute 8826,Bihar,Gaya,300524,1154,"Gastroenterology,Pediatrics,General Medicine,Orthopedics,Cardiology",16 Gaya Medical Road,19.323589,83.143311,no,2025-09-30
+H200525,Jaipur Health Institute 3251,Rajasthan,Jaipur,300525,1198,"ENT,Cardiology,General Medicine,Neurology",35 Jaipur Medical Road,10.289815,81.393874,yes,2025-09-30
+H200526,Kanpur Health Institute 5791,Uttar Pradesh,Kanpur,300526,954,"Gastroenterology,ENT",44 Kanpur Medical Road,14.897179,71.126817,no,2025-09-30
+H200527,Warangal Health Institute 897,Telangana,Warangal,300527,932,"Pediatrics,ENT,General Medicine,Cardiology",230 Warangal Medical Road,25.289724,86.252288,no,2025-09-30
+H200528,Hyderabad Health Institute 5573,Telangana,Hyderabad,300528,1192,"Gastroenterology,Oncology,Cardiology,ENT,Orthopedics",286 Hyderabad Medical Road,17.308206,80.210974,no,2025-09-30
+H200529,Jaipur Health Institute 2993,Rajasthan,Jaipur,300529,915,"General Medicine,Pediatrics,Oncology",44 Jaipur Medical Road,28.161968,81.128141,no,2025-09-30
+H200530,Udaipur Health Institute 424,Rajasthan,Udaipur,300530,836,"Pediatrics,Nephrology,Neurology,General Medicine,ENT",58 Udaipur Medical Road,13.148975,85.033905,no,2025-09-30
+H200531,Ahmedabad Health Institute 7994,Gujarat,Ahmedabad,300531,161,"Orthopedics,Cardiology",23 Ahmedabad Medical Road,30.402899,84.803216,no,2025-09-30
+H200532,Jaipur Health Institute 9584,Rajasthan,Jaipur,300532,409,"Neurology,Gastroenterology,Orthopedics,Cardiology,Oncology",70 Jaipur Medical Road,14.600043,74.272244,no,2025-09-30
+H200533,Agra Health Institute 4268,Uttar Pradesh,Agra,300533,1075,"Oncology,Nephrology,Neurology",14 Agra Medical Road,20.298738,84.894106,yes,2025-09-30
+H200534,Chennai Health Institute 5967,Tamil Nadu,Chennai,300534,557,"Oncology,Pediatrics,Orthopedics",282 Chennai Medical Road,22.259088,71.330864,no,2025-09-30
+H200535,Gaya Health Institute 9167,Bihar,Gaya,300535,763,"Gastroenterology,ENT,Nephrology,General Medicine,Pediatrics",179 Gaya Medical Road,11.180386,86.838002,no,2025-09-30
+H200536,Ranchi Health Institute 444,Jharkhand,Ranchi,300536,638,"Orthopedics,ENT",76 Ranchi Medical Road,9.659162,82.195283,no,2025-09-30
+H200537,Cuttack Health Institute 9815,Odisha,Cuttack,300537,643,"Pediatrics,General Medicine,Gastroenterology",282 Cuttack Medical Road,26.231692,75.190693,no,2025-09-30
+H200538,South Delhi Health Institute 5731,Delhi,South Delhi,300538,444,"ENT,Neurology",36 South Delhi Medical Road,12.274541,86.956146,yes,2025-09-30
+H200539,Cuttack Health Institute 5917,Odisha,Cuttack,300539,841,"ENT,Pediatrics,Orthopedics,Cardiology,Neurology",292 Cuttack Medical Road,14.840713,79.093994,no,2025-09-30
+H200540,Aurangabad Health Institute 8008,Maharashtra,Aurangabad,300540,787,"Gastroenterology,Cardiology,General Medicine,ENT,Pediatrics",67 Aurangabad Medical Road,29.245553,73.523547,no,2025-09-30
+H200541,Chandigarh Health Institute 68,Punjab,Chandigarh,300541,50,"Orthopedics,Gastroenterology,Oncology,General Medicine,Cardiology",203 Chandigarh Medical Road,16.723681,70.852743,no,2025-09-30
+H200542,Coimbatore Health Institute 2701,Tamil Nadu,Coimbatore,300542,386,"Oncology,Pediatrics,General Medicine",7 Coimbatore Medical Road,30.734398,70.116115,no,2025-09-30
+H200543,Jaipur Health Institute 8044,Rajasthan,Jaipur,300543,850,"Pediatrics,Oncology,Neurology,Orthopedics,ENT",156 Jaipur Medical Road,26.074229,85.229328,no,2025-09-30
+H200544,Lucknow Health Institute 4207,Uttar Pradesh,Lucknow,300544,727,"Orthopedics,ENT",241 Lucknow Medical Road,14.079688,83.556001,no,2025-09-30
+H200545,Jodhpur Health Institute 9868,Rajasthan,Jodhpur,300545,171,"Nephrology,General Medicine,ENT,Oncology",136 Jodhpur Medical Road,21.26942,73.562235,no,2025-09-30
+H200546,Warangal Health Institute 1658,Telangana,Warangal,300546,598,"Neurology,General Medicine",296 Warangal Medical Road,15.226205,82.510615,no,2025-09-30
+H200547,Vadodara Health Institute 3671,Gujarat,Vadodara,300547,518,"Nephrology,Neurology,Cardiology,Oncology",136 Vadodara Medical Road,19.379709,86.093199,no,2025-09-30
+H200548,Bhubaneswar Health Institute 4070,Odisha,Bhubaneswar,300548,176,"ENT,General Medicine,Neurology,Pediatrics,Nephrology",165 Bhubaneswar Medical Road,25.637917,73.800328,no,2025-09-30
+H200549,Ahmedabad Health Institute 9268,Gujarat,Ahmedabad,300549,956,"Cardiology,Gastroenterology",227 Ahmedabad Medical Road,17.17086,70.674818,no,2025-09-30
+H200550,Jaipur Health Institute 9296,Rajasthan,Jaipur,300550,145,"ENT,Orthopedics,General Medicine,Oncology,Pediatrics",245 Jaipur Medical Road,24.900385,68.193334,no,2025-09-30
+H200551,Raipur Health Institute 951,Chhattisgarh,Raipur,300551,93,"Neurology,Oncology",188 Raipur Medical Road,11.193588,81.399417,no,2025-09-30
+H200552,Ahmedabad Health Institute 9712,Gujarat,Ahmedabad,300552,507,"Oncology,ENT",276 Ahmedabad Medical Road,15.641094,85.771927,no,2025-09-30
+H200553,Noida Health Institute 2321,Uttar Pradesh,Noida,300553,428,"Orthopedics,Nephrology,Neurology,General Medicine,Pediatrics",60 Noida Medical Road,25.965342,83.857022,yes,2025-09-30
+H200554,Patna Health Institute 685,Bihar,Patna,300554,198,"Neurology,Orthopedics,Pediatrics,Oncology,Cardiology",253 Patna Medical Road,27.670457,84.78698,no,2025-09-30
+H200555,Ranchi Health Institute 1853,Jharkhand,Ranchi,300555,966,"Oncology,Nephrology,Gastroenterology,ENT,General Medicine",201 Ranchi Medical Road,13.877625,74.382233,no,2025-09-30
+H200556,Lucknow Health Institute 7495,Uttar Pradesh,Lucknow,300556,1176,"General Medicine,Pediatrics,ENT,Neurology,Nephrology",67 Lucknow Medical Road,17.535145,85.545652,no,2025-09-30
+H200557,Ranchi Health Institute 8623,Jharkhand,Ranchi,300557,935,"Neurology,ENT",83 Ranchi Medical Road,12.007192,82.26612,no,2025-09-30
+H200558,Madurai Health Institute 7115,Tamil Nadu,Madurai,300558,684,"Cardiology,Neurology,ENT,Orthopedics",121 Madurai Medical Road,28.010225,84.964708,yes,2025-09-30
+H200559,Amritsar Health Institute 3440,Punjab,Amritsar,300559,807,"General Medicine,ENT,Pediatrics,Cardiology,Nephrology",20 Amritsar Medical Road,22.630165,84.205748,no,2025-09-30
+H200560,Kozhikode Health Institute 1960,Kerala,Kozhikode,300560,1174,"Nephrology,ENT",53 Kozhikode Medical Road,26.360136,68.931534,no,2025-09-30
+H200561,Ranchi Health Institute 2430,Jharkhand,Ranchi,300561,899,"Neurology,Cardiology,Orthopedics,General Medicine,Pediatrics",54 Ranchi Medical Road,24.817096,70.493919,no,2025-09-30
+H200562,Jaipur Health Institute 1308,Rajasthan,Jaipur,300562,494,"Oncology,Orthopedics,Gastroenterology,ENT",66 Jaipur Medical Road,26.434291,73.916962,yes,2025-09-30
+H200563,Warangal Health Institute 8847,Telangana,Warangal,300563,30,"Cardiology,General Medicine,Orthopedics,Pediatrics,Gastroenterology",258 Warangal Medical Road,24.430254,87.054395,yes,2025-09-30
+H200564,Hyderabad Health Institute 1129,Telangana,Hyderabad,300564,702,"Nephrology,General Medicine,Neurology,ENT",224 Hyderabad Medical Road,20.844306,83.371933,yes,2025-09-30
+H200565,Tiruchirappalli Health Institute 3758,Tamil Nadu,Tiruchirappalli,300565,926,"Gastroenterology,Cardiology",24 Tiruchirappalli Medical Road,14.259909,87.320704,no,2025-09-30
+H200566,Gurgaon Health Institute 2239,Haryana,Gurgaon,300566,949,"Cardiology,ENT,General Medicine,Pediatrics",32 Gurgaon Medical Road,9.062829,84.650549,no,2025-09-30
+H200567,Kozhikode Health Institute 2,Kerala,Kozhikode,300567,651,"ENT,Neurology,General Medicine,Cardiology",214 Kozhikode Medical Road,8.263198,77.862899,yes,2025-09-30
+H200568,Kolkata Health Institute 1585,West Bengal,Kolkata,300568,936,"Pediatrics,Nephrology,Gastroenterology,ENT",51 Kolkata Medical Road,14.729922,74.011188,no,2025-09-30
+H200569,Jodhpur Health Institute 8468,Rajasthan,Jodhpur,300569,335,"Oncology,Nephrology,Neurology,Orthopedics,Pediatrics",95 Jodhpur Medical Road,18.647592,81.009452,no,2025-09-30
+H200570,Mysuru Health Institute 1432,Karnataka,Mysuru,300570,649,"Pediatrics,ENT,Nephrology,Oncology,Orthopedics",131 Mysuru Medical Road,26.523782,78.161543,no,2025-09-30
+H200571,Gaya Health Institute 6464,Bihar,Gaya,300571,1063,"ENT,Orthopedics,Neurology,Pediatrics,General Medicine",210 Gaya Medical Road,26.265401,86.789294,no,2025-09-30
+H200572,Raipur Health Institute 3612,Chhattisgarh,Raipur,300572,844,"General Medicine,Oncology,Neurology",151 Raipur Medical Road,32.47401,71.341056,no,2025-09-30
+H200573,North Delhi Health Institute 6250,Delhi,North Delhi,300573,603,"General Medicine,Orthopedics",10 North Delhi Medical Road,22.914567,76.522485,no,2025-09-30
+H200574,Ranchi Health Institute 4296,Jharkhand,Ranchi,300574,928,"Pediatrics,Gastroenterology,Neurology,Nephrology",160 Ranchi Medical Road,31.276292,76.87727,no,2025-09-30
+H200575,Udaipur Health Institute 2678,Rajasthan,Udaipur,300575,59,"General Medicine,Gastroenterology,Nephrology,Oncology",64 Udaipur Medical Road,12.336749,72.286025,no,2025-09-30
+H200576,Guwahati Health Institute 4746,Assam,Guwahati,300576,932,"Neurology,Cardiology,Gastroenterology,Nephrology",162 Guwahati Medical Road,10.354563,73.583311,no,2025-09-30
+H200577,Patna Health Institute 9978,Bihar,Patna,300577,748,"ENT,Oncology,Orthopedics,Nephrology,General Medicine",65 Patna Medical Road,14.882992,80.274189,no,2025-09-30
+H200578,Jaipur Health Institute 302,Rajasthan,Jaipur,300578,1032,"Neurology,General Medicine,Nephrology",268 Jaipur Medical Road,20.78852,70.939915,no,2025-09-30
+H200579,Kozhikode Health Institute 2303,Kerala,Kozhikode,300579,715,"Cardiology,Orthopedics,Oncology,Gastroenterology",51 Kozhikode Medical Road,28.305614,71.899459,no,2025-09-30
+H200580,Jodhpur Health Institute 2200,Rajasthan,Jodhpur,300580,532,"Orthopedics,Oncology",230 Jodhpur Medical Road,14.694217,71.475337,yes,2025-09-30
+H200581,Surat Health Institute 7716,Gujarat,Surat,300581,57,"ENT,Oncology",216 Surat Medical Road,16.60812,85.784947,no,2025-09-30
+H200582,Bhubaneswar Health Institute 9617,Odisha,Bhubaneswar,300582,47,"Oncology,Cardiology,Gastroenterology",5 Bhubaneswar Medical Road,16.790575,77.430826,no,2025-09-30
+H200583,Pune Health Institute 3383,Maharashtra,Pune,300583,523,"Orthopedics,ENT,Nephrology,Cardiology,Gastroenterology",70 Pune Medical Road,31.282307,81.249941,no,2025-09-30
+H200584,Mumbai Health Institute 1928,Maharashtra,Mumbai,300584,438,"General Medicine,Pediatrics,Gastroenterology",80 Mumbai Medical Road,15.546215,69.987862,no,2025-09-30
+H200585,Ranchi Health Institute 8158,Jharkhand,Ranchi,300585,418,"Cardiology,Nephrology",184 Ranchi Medical Road,16.797278,86.280699,yes,2025-09-30
+H200586,Kolkata Health Institute 2738,West Bengal,Kolkata,300586,396,"Neurology,Orthopedics,General Medicine,Pediatrics",79 Kolkata Medical Road,27.116143,74.840267,no,2025-09-30
+H200587,Bengaluru Health Institute 2380,Karnataka,Bengaluru,300587,1018,"Oncology,Gastroenterology,Neurology,General Medicine,Nephrology",2 Bengaluru Medical Road,25.777633,83.945681,no,2025-09-30
+H200588,Jodhpur Health Institute 3432,Rajasthan,Jodhpur,300588,1002,"Oncology,Orthopedics",26 Jodhpur Medical Road,20.664161,71.074706,no,2025-09-30
+H200589,Patna Health Institute 4947,Bihar,Patna,300589,196,"Pediatrics,Nephrology,Oncology",64 Patna Medical Road,19.746447,77.731642,no,2025-09-30
+H200590,Guwahati Health Institute 4674,Assam,Guwahati,300590,696,"ENT,Orthopedics,Nephrology,Oncology",273 Guwahati Medical Road,15.520631,68.347364,no,2025-09-30
+H200591,Madurai Health Institute 9170,Tamil Nadu,Madurai,300591,289,"Gastroenterology,Oncology,ENT,Cardiology",36 Madurai Medical Road,29.54439,82.129789,no,2025-09-30
+H200592,Mangalore Health Institute 616,Karnataka,Mangalore,300592,749,"Gastroenterology,Nephrology,Cardiology,Pediatrics,Neurology",3 Mangalore Medical Road,23.298768,68.205093,no,2025-09-30
+H200593,Raipur Health Institute 9697,Chhattisgarh,Raipur,300593,292,"Oncology,ENT,Nephrology",103 Raipur Medical Road,11.161411,75.966101,no,2025-09-30
+H200594,Ahmedabad Health Institute 802,Gujarat,Ahmedabad,300594,393,"Nephrology,General Medicine,Gastroenterology,Oncology",153 Ahmedabad Medical Road,25.553437,69.834202,no,2025-09-30
+H200595,Aurangabad Health Institute 9989,Maharashtra,Aurangabad,300595,329,"General Medicine,Oncology,Neurology",167 Aurangabad Medical Road,16.490795,83.239242,yes,2025-09-30
+H200596,Chandigarh Health Institute 5731,Punjab,Chandigarh,300596,224,"Oncology,ENT",120 Chandigarh Medical Road,13.244036,72.526804,no,2025-09-30
+H200597,Bhubaneswar Health Institute 1439,Odisha,Bhubaneswar,300597,247,"Oncology,ENT,Nephrology",286 Bhubaneswar Medical Road,11.244789,85.503459,no,2025-09-30
+H200598,Mangalore Health Institute 866,Karnataka,Mangalore,300598,584,"Orthopedics,ENT,Gastroenterology",178 Mangalore Medical Road,14.328661,70.948,no,2025-09-30
+H200599,Kolkata Health Institute 1612,West Bengal,Kolkata,300599,129,"Gastroenterology,Pediatrics",32 Kolkata Medical Road,30.300114,71.271999,no,2025-09-30
+H200600,Raipur Health Institute 5816,Chhattisgarh,Raipur,300600,1028,"Cardiology,Nephrology,Orthopedics,Pediatrics",43 Raipur Medical Road,23.721808,80.389851,no,2025-09-30
+H200601,Faridabad Health Institute 3944,Haryana,Faridabad,300601,1154,"Oncology,ENT,Nephrology,Orthopedics,Gastroenterology",226 Faridabad Medical Road,9.850205,76.809257,no,2025-09-30
+H200602,Thiruvananthapuram Health Institute 3926,Kerala,Thiruvananthapuram,300602,832,"General Medicine,Orthopedics",111 Thiruvananthapuram Medical Road,9.172582,85.875254,no,2025-09-30
+H200603,New Delhi Health Institute 1084,Delhi,New Delhi,300603,942,"Neurology,ENT",223 New Delhi Medical Road,19.590424,73.882799,no,2025-09-30
+H200604,Ludhiana Health Institute 7197,Punjab,Ludhiana,300604,1030,"Pediatrics,Nephrology,Neurology,General Medicine,Orthopedics",23 Ludhiana Medical Road,20.331311,82.452467,no,2025-09-30
+H200605,Guwahati Health Institute 7874,Assam,Guwahati,300605,716,"Pediatrics,Gastroenterology",291 Guwahati Medical Road,18.697227,80.565196,no,2025-09-30
+H200606,Lucknow Health Institute 2201,Uttar Pradesh,Lucknow,300606,74,"Nephrology,ENT,Pediatrics,Oncology",163 Lucknow Medical Road,20.278828,71.831294,no,2025-09-30
+H200607,Udaipur Health Institute 1625,Rajasthan,Udaipur,300607,75,"Nephrology,Neurology,ENT,General Medicine",10 Udaipur Medical Road,24.643514,85.995908,no,2025-09-30
+H200608,Gurgaon Health Institute 4171,Haryana,Gurgaon,300608,108,"Pediatrics,Nephrology,General Medicine",213 Gurgaon Medical Road,18.196161,76.117436,no,2025-09-30
+H200609,Vadodara Health Institute 5772,Gujarat,Vadodara,300609,417,"Neurology,Gastroenterology,Nephrology",275 Vadodara Medical Road,30.349873,83.92147,no,2025-09-30
+H200610,Bengaluru Health Institute 6125,Karnataka,Bengaluru,300610,597,"ENT,Pediatrics",243 Bengaluru Medical Road,12.142293,78.189306,no,2025-09-30
+H200611,Aurangabad Health Institute 1552,Maharashtra,Aurangabad,300611,723,"General Medicine,ENT,Cardiology,Pediatrics",156 Aurangabad Medical Road,31.291336,78.294845,no,2025-09-30
+H200612,Chennai Health Institute 4765,Tamil Nadu,Chennai,300612,457,"Pediatrics,Nephrology",40 Chennai Medical Road,27.522139,80.801485,no,2025-09-30
+H200613,Madurai Health Institute 6178,Tamil Nadu,Madurai,300613,833,"Pediatrics,General Medicine,Gastroenterology",126 Madurai Medical Road,20.451541,68.433095,no,2025-09-30
+H200614,Surat Health Institute 6842,Gujarat,Surat,300614,395,"Oncology,Pediatrics,Cardiology,ENT,Gastroenterology",134 Surat Medical Road,14.897156,85.353221,yes,2025-09-30
+H200615,Kochi Health Institute 2300,Kerala,Kochi,300615,518,"Neurology,Cardiology,ENT,Nephrology,Oncology",66 Kochi Medical Road,16.488716,84.766431,no,2025-09-30
+H200616,Coimbatore Health Institute 4637,Tamil Nadu,Coimbatore,300616,32,"Orthopedics,General Medicine,Neurology",287 Coimbatore Medical Road,9.549236,87.552998,no,2025-09-30
+H200617,Siliguri Health Institute 1122,West Bengal,Siliguri,300617,364,"Orthopedics,Neurology",147 Siliguri Medical Road,21.725866,86.261216,no,2025-09-30
+H200618,Guwahati Health Institute 6407,Assam,Guwahati,300618,623,"Orthopedics,Gastroenterology",48 Guwahati Medical Road,21.157351,73.197566,no,2025-09-30
+H200619,Nagpur Health Institute 4131,Maharashtra,Nagpur,300619,1132,"Neurology,ENT,Oncology",258 Nagpur Medical Road,21.446899,78.156321,yes,2025-09-30
+H200620,Coimbatore Health Institute 6032,Tamil Nadu,Coimbatore,300620,190,"General Medicine,Neurology,ENT,Orthopedics",174 Coimbatore Medical Road,24.19819,68.431326,yes,2025-09-30
+H200621,Coimbatore Health Institute 8052,Tamil Nadu,Coimbatore,300621,930,"Oncology,Neurology,Pediatrics,General Medicine,Cardiology",300 Coimbatore Medical Road,21.223179,74.188945,no,2025-09-30
+H200622,Siliguri Health Institute 2600,West Bengal,Siliguri,300622,290,"Neurology,Pediatrics",37 Siliguri Medical Road,27.396671,84.632637,no,2025-09-30
+H200623,Guwahati Health Institute 7200,Assam,Guwahati,300623,920,"Nephrology,ENT,Cardiology,Neurology,Gastroenterology",54 Guwahati Medical Road,9.528905,77.227044,no,2025-09-30
+H200624,Agra Health Institute 5639,Uttar Pradesh,Agra,300624,947,"Cardiology,Neurology",14 Agra Medical Road,26.985907,68.817429,no,2025-09-30
+H200625,Pune Health Institute 6993,Maharashtra,Pune,300625,912,"Gastroenterology,ENT,Oncology,Nephrology,Orthopedics",147 Pune Medical Road,29.399726,71.305408,yes,2025-09-30
+H200626,Tiruchirappalli Health Institute 6373,Tamil Nadu,Tiruchirappalli,300626,377,"Cardiology,ENT",64 Tiruchirappalli Medical Road,24.164379,73.576917,no,2025-09-30
+H200627,Guwahati Health Institute 208,Assam,Guwahati,300627,498,"Gastroenterology,Orthopedics,ENT,General Medicine,Oncology",185 Guwahati Medical Road,25.833459,83.56837,no,2025-09-30
+H200628,Chandigarh Health Institute 9715,Punjab,Chandigarh,300628,850,"Orthopedics,Pediatrics",67 Chandigarh Medical Road,22.532564,87.625414,no,2025-09-30
+H200629,South Delhi Health Institute 2438,Delhi,South Delhi,300629,514,"ENT,Cardiology,Gastroenterology",103 South Delhi Medical Road,9.626658,75.349678,no,2025-09-30
+H200630,Asansol Health Institute 9868,West Bengal,Asansol,300630,1190,"ENT,Oncology",184 Asansol Medical Road,19.840461,71.488233,no,2025-09-30
+H200631,Thiruvananthapuram Health Institute 140,Kerala,Thiruvananthapuram,300631,29,"Nephrology,Gastroenterology,Orthopedics",296 Thiruvananthapuram Medical Road,25.919809,76.199478,no,2025-09-30
+H200632,Gaya Health Institute 447,Bihar,Gaya,300632,64,"Pediatrics,Nephrology,Gastroenterology,Orthopedics,Oncology",3 Gaya Medical Road,25.879068,71.214365,no,2025-09-30
+H200633,Kochi Health Institute 6770,Kerala,Kochi,300633,899,"Cardiology,ENT,Neurology,Pediatrics,Orthopedics",108 Kochi Medical Road,10.46235,85.802124,no,2025-09-30
+H200634,Asansol Health Institute 8447,West Bengal,Asansol,300634,829,"Neurology,ENT",201 Asansol Medical Road,8.461733,76.265334,no,2025-09-30
+H200635,Guwahati Health Institute 5787,Assam,Guwahati,300635,564,"Nephrology,Oncology,Pediatrics,General Medicine",272 Guwahati Medical Road,14.523687,81.188586,no,2025-09-30
+H200636,Agra Health Institute 4597,Uttar Pradesh,Agra,300636,363,"Neurology,Oncology,ENT,Cardiology",60 Agra Medical Road,21.121581,77.565107,no,2025-09-30
+H200637,Hyderabad Health Institute 5708,Telangana,Hyderabad,300637,562,"Gastroenterology,Cardiology",178 Hyderabad Medical Road,16.25881,78.717138,no,2025-09-30
+H200638,Jodhpur Health Institute 4605,Rajasthan,Jodhpur,300638,266,"Oncology,Pediatrics,Nephrology,ENT,Gastroenterology",278 Jodhpur Medical Road,19.380806,81.266395,yes,2025-09-30
+H200639,Hubli Health Institute 6251,Karnataka,Hubli,300639,994,"Pediatrics,Gastroenterology",273 Hubli Medical Road,11.581945,74.858491,no,2025-09-30
+H200640,Kochi Health Institute 7722,Kerala,Kochi,300640,529,"Gastroenterology,Cardiology,Neurology,Orthopedics",31 Kochi Medical Road,27.293477,87.181146,no,2025-09-30
+H200641,Kochi Health Institute 8430,Kerala,Kochi,300641,370,"Neurology,Orthopedics,General Medicine,Cardiology,Nephrology",186 Kochi Medical Road,29.012662,68.317169,no,2025-09-30
+H200642,Ranchi Health Institute 4665,Jharkhand,Ranchi,300642,470,"Pediatrics,ENT",49 Ranchi Medical Road,31.748647,75.411545,no,2025-09-30
+H200643,New Delhi Health Institute 824,Delhi,New Delhi,300643,828,"Pediatrics,Oncology,Cardiology",209 New Delhi Medical Road,10.147991,80.485947,no,2025-09-30
+H200644,Asansol Health Institute 451,West Bengal,Asansol,300644,1003,"General Medicine,Oncology,Neurology,Nephrology,Gastroenterology",270 Asansol Medical Road,31.307093,86.673616,no,2025-09-30
+H200645,Mumbai Health Institute 6771,Maharashtra,Mumbai,300645,365,"Oncology,Gastroenterology,General Medicine,Pediatrics",53 Mumbai Medical Road,29.988306,82.149685,yes,2025-09-30
+H200646,Agra Health Institute 1844,Uttar Pradesh,Agra,300646,740,"Pediatrics,General Medicine,Orthopedics",112 Agra Medical Road,12.451224,77.431371,no,2025-09-30
+H200647,Mangalore Health Institute 9045,Karnataka,Mangalore,300647,862,"Neurology,General Medicine",220 Mangalore Medical Road,9.054964,76.985474,no,2025-09-30
+H200648,Guwahati Health Institute 9622,Assam,Guwahati,300648,242,"Gastroenterology,Neurology,Nephrology",91 Guwahati Medical Road,23.738353,85.170885,no,2025-09-30
+H200649,Guwahati Health Institute 4772,Assam,Guwahati,300649,733,"Orthopedics,General Medicine,Oncology,Gastroenterology,Nephrology",73 Guwahati Medical Road,9.803521,84.474584,no,2025-09-30
+H200650,Bhubaneswar Health Institute 6602,Odisha,Bhubaneswar,300650,1106,"General Medicine,ENT",280 Bhubaneswar Medical Road,22.11112,69.525177,no,2025-09-30
+H200651,Ranchi Health Institute 590,Jharkhand,Ranchi,300651,130,"General Medicine,Orthopedics",115 Ranchi Medical Road,20.771974,69.034513,no,2025-09-30
+H200652,Guwahati Health Institute 9319,Assam,Guwahati,300652,683,"Neurology,Gastroenterology,Oncology,Cardiology",272 Guwahati Medical Road,27.522971,85.896279,yes,2025-09-30
+H200653,Aurangabad Health Institute 3349,Maharashtra,Aurangabad,300653,501,"Orthopedics,Cardiology,ENT",289 Aurangabad Medical Road,11.088093,85.665142,no,2025-09-30
+H200654,New Delhi Health Institute 6962,Delhi,New Delhi,300654,917,"Orthopedics,Gastroenterology",292 New Delhi Medical Road,9.528071,87.328685,no,2025-09-30
+H200655,Cuttack Health Institute 597,Odisha,Cuttack,300655,208,"Orthopedics,Pediatrics,General Medicine,Cardiology,ENT",54 Cuttack Medical Road,26.508398,87.350742,no,2025-09-30
+H200656,New Delhi Health Institute 1031,Delhi,New Delhi,300656,869,"ENT,Neurology,General Medicine",286 New Delhi Medical Road,17.261737,81.358636,no,2025-09-30
+H200657,Patna Health Institute 2349,Bihar,Patna,300657,311,"Pediatrics,Gastroenterology",225 Patna Medical Road,30.727272,79.627592,yes,2025-09-30
+H200658,Kochi Health Institute 7501,Kerala,Kochi,300658,139,"General Medicine,Neurology,Oncology,Pediatrics,Cardiology",27 Kochi Medical Road,11.666233,82.008679,no,2025-09-30
+H200659,New Delhi Health Institute 3794,Delhi,New Delhi,300659,302,"Oncology,Orthopedics",105 New Delhi Medical Road,26.099845,81.380565,no,2025-09-30
+H200660,Asansol Health Institute 3419,West Bengal,Asansol,300660,48,"Pediatrics,Orthopedics,Nephrology,Oncology,Gastroenterology",285 Asansol Medical Road,8.689996,87.028138,no,2025-09-30
+H200661,Tiruchirappalli Health Institute 5457,Tamil Nadu,Tiruchirappalli,300661,398,"Pediatrics,ENT,General Medicine",115 Tiruchirappalli Medical Road,9.908697,75.376295,no,2025-09-30
+H200662,Thiruvananthapuram Health Institute 3492,Kerala,Thiruvananthapuram,300662,392,"ENT,Oncology,Cardiology,Nephrology",125 Thiruvananthapuram Medical Road,20.389775,76.662127,no,2025-09-30
+H200663,Hubli Health Institute 9100,Karnataka,Hubli,300663,749,"Gastroenterology,Orthopedics",247 Hubli Medical Road,8.945352,80.131335,no,2025-09-30
+H200664,Hyderabad Health Institute 3525,Telangana,Hyderabad,300664,408,"Orthopedics,General Medicine",246 Hyderabad Medical Road,16.507646,83.242946,no,2025-09-30
+H200665,Ranchi Health Institute 2359,Jharkhand,Ranchi,300665,623,"Nephrology,ENT,Cardiology,Gastroenterology,Oncology",277 Ranchi Medical Road,25.039759,82.902821,no,2025-09-30
+H200666,Kolkata Health Institute 2372,West Bengal,Kolkata,300666,73,"Pediatrics,ENT,Cardiology,Gastroenterology,Neurology",184 Kolkata Medical Road,9.733215,75.27073,no,2025-09-30
+H200667,Nagpur Health Institute 287,Maharashtra,Nagpur,300667,683,"Nephrology,Oncology",280 Nagpur Medical Road,11.451063,86.597119,no,2025-09-30
+H200668,Chandigarh Health Institute 1884,Punjab,Chandigarh,300668,709,"Cardiology,ENT,Nephrology,Neurology,General Medicine",244 Chandigarh Medical Road,18.96521,86.383773,no,2025-09-30
+H200669,Hyderabad Health Institute 818,Telangana,Hyderabad,300669,368,"General Medicine,Cardiology,ENT,Gastroenterology,Nephrology",214 Hyderabad Medical Road,28.261507,81.987859,no,2025-09-30
+H200670,Gaya Health Institute 3468,Bihar,Gaya,300670,970,"Gastroenterology,ENT,Cardiology,Neurology",140 Gaya Medical Road,28.164876,87.044115,no,2025-09-30
+H200671,Kozhikode Health Institute 6273,Kerala,Kozhikode,300671,1055,"Pediatrics,Orthopedics,Oncology,Nephrology,Gastroenterology",205 Kozhikode Medical Road,9.491624,72.006614,no,2025-09-30
+H200672,Aurangabad Health Institute 5112,Maharashtra,Aurangabad,300672,522,"Orthopedics,Neurology,General Medicine,Gastroenterology,Oncology",149 Aurangabad Medical Road,23.399399,74.169479,no,2025-09-30
+H200673,South Delhi Health Institute 8988,Delhi,South Delhi,300673,1083,"Pediatrics,Orthopedics,ENT,General Medicine,Nephrology",223 South Delhi Medical Road,8.765643,71.589327,no,2025-09-30
+H200674,Amritsar Health Institute 9224,Punjab,Amritsar,300674,462,"General Medicine,Neurology,Gastroenterology",242 Amritsar Medical Road,15.556403,81.61551,no,2025-09-30
+H200675,Nashik Health Institute 132,Maharashtra,Nashik,300675,614,"General Medicine,Oncology",172 Nashik Medical Road,31.892522,76.656385,yes,2025-09-30
+H200676,Mumbai Health Institute 3425,Maharashtra,Mumbai,300676,1175,"General Medicine,Gastroenterology,Oncology,Orthopedics,Neurology",198 Mumbai Medical Road,15.677274,74.152851,no,2025-09-30
+H200677,Lucknow Health Institute 1583,Uttar Pradesh,Lucknow,300677,608,"ENT,Gastroenterology,Cardiology",271 Lucknow Medical Road,28.900318,79.532331,no,2025-09-30
+H200678,Patna Health Institute 8508,Bihar,Patna,300678,423,"General Medicine,Cardiology",280 Patna Medical Road,26.213345,68.997222,no,2025-09-30
+H200679,Jodhpur Health Institute 1809,Rajasthan,Jodhpur,300679,120,"Oncology,Pediatrics,Neurology",86 Jodhpur Medical Road,10.371544,79.818952,no,2025-09-30
+H200680,Patna Health Institute 8051,Bihar,Patna,300680,223,"Cardiology,Nephrology,Oncology,Neurology,ENT",285 Patna Medical Road,30.04413,78.882884,no,2025-09-30
+H200681,Asansol Health Institute 5600,West Bengal,Asansol,300681,394,"Gastroenterology,Oncology,Orthopedics",155 Asansol Medical Road,26.151064,73.338376,no,2025-09-30
+H200682,Cuttack Health Institute 1367,Odisha,Cuttack,300682,500,"ENT,Cardiology",197 Cuttack Medical Road,30.443369,74.710855,no,2025-09-30
+H200683,Patna Health Institute 2036,Bihar,Patna,300683,1049,"Neurology,Cardiology",162 Patna Medical Road,16.852926,69.861592,no,2025-09-30
+H200684,Jodhpur Health Institute 3369,Rajasthan,Jodhpur,300684,510,"Oncology,Neurology,General Medicine,Nephrology",294 Jodhpur Medical Road,16.581076,72.558022,yes,2025-09-30
+H200685,Vadodara Health Institute 3524,Gujarat,Vadodara,300685,399,"Gastroenterology,Oncology,Nephrology,ENT",185 Vadodara Medical Road,24.956504,82.126716,no,2025-09-30
+H200686,Asansol Health Institute 7331,West Bengal,Asansol,300686,903,"Pediatrics,Oncology,ENT,Orthopedics",26 Asansol Medical Road,25.354618,74.927108,yes,2025-09-30
+H200687,Warangal Health Institute 9296,Telangana,Warangal,300687,878,"Pediatrics,Neurology",264 Warangal Medical Road,21.899824,81.802232,no,2025-09-30
+H200688,Ludhiana Health Institute 4321,Punjab,Ludhiana,300688,455,"Nephrology,Pediatrics",161 Ludhiana Medical Road,14.359835,73.807828,no,2025-09-30
+H200689,Amritsar Health Institute 8615,Punjab,Amritsar,300689,894,"Pediatrics,Cardiology,Nephrology,ENT,Neurology",19 Amritsar Medical Road,27.60057,72.320364,no,2025-09-30
+H200690,Ranchi Health Institute 2110,Jharkhand,Ranchi,300690,406,"ENT,Cardiology,Gastroenterology,Oncology,Pediatrics",107 Ranchi Medical Road,27.217808,73.730729,no,2025-09-30
+H200691,New Delhi Health Institute 8457,Delhi,New Delhi,300691,357,"General Medicine,Oncology,Neurology,Gastroenterology,ENT",207 New Delhi Medical Road,30.065691,85.724825,no,2025-09-30
+H200692,Hyderabad Health Institute 9223,Telangana,Hyderabad,300692,298,"Oncology,Cardiology",90 Hyderabad Medical Road,17.68732,81.26262,no,2025-09-30
+H200693,Thiruvananthapuram Health Institute 9883,Kerala,Thiruvananthapuram,300693,1047,"Oncology,Gastroenterology",242 Thiruvananthapuram Medical Road,31.983151,72.705388,no,2025-09-30
+H200694,Lucknow Health Institute 9843,Uttar Pradesh,Lucknow,300694,1176,"Nephrology,Orthopedics,Cardiology,ENT",246 Lucknow Medical Road,15.36921,73.196895,no,2025-09-30
+H200695,Faridabad Health Institute 5277,Haryana,Faridabad,300695,181,"Orthopedics,Nephrology",218 Faridabad Medical Road,20.514267,68.832732,no,2025-09-30
+H200696,Kozhikode Health Institute 1621,Kerala,Kozhikode,300696,848,"Pediatrics,Gastroenterology,Neurology",57 Kozhikode Medical Road,15.849144,80.399582,no,2025-09-30
+H200697,Agra Health Institute 6591,Uttar Pradesh,Agra,300697,1129,"Nephrology,Oncology,General Medicine,Neurology",116 Agra Medical Road,15.837469,71.05562,no,2025-09-30
+H200698,Ludhiana Health Institute 2876,Punjab,Ludhiana,300698,1012,"Neurology,ENT,Gastroenterology,Cardiology",119 Ludhiana Medical Road,13.175646,69.121781,no,2025-09-30
+H200699,Nagpur Health Institute 2157,Maharashtra,Nagpur,300699,673,"Gastroenterology,General Medicine,Neurology,Orthopedics",179 Nagpur Medical Road,31.976809,79.638623,no,2025-09-30
+H200700,South Delhi Health Institute 7364,Delhi,South Delhi,300700,608,"General Medicine,Nephrology,ENT,Gastroenterology",126 South Delhi Medical Road,9.870203,73.831441,no,2025-09-30
+H200701,Noida Health Institute 6304,Uttar Pradesh,Noida,300701,181,"Neurology,Pediatrics,General Medicine,Nephrology,Orthopedics",281 Noida Medical Road,26.351505,71.620851,no,2025-09-30
+H200702,Chandigarh Health Institute 999,Punjab,Chandigarh,300702,914,"Cardiology,Gastroenterology,Nephrology,ENT",267 Chandigarh Medical Road,27.355923,86.63209,no,2025-09-30
+H200703,Raipur Health Institute 3705,Chhattisgarh,Raipur,300703,1032,"Nephrology,Neurology,Orthopedics",259 Raipur Medical Road,17.887849,87.083306,no,2025-09-30
+H200704,Mumbai Health Institute 2674,Maharashtra,Mumbai,300704,940,"General Medicine,ENT,Gastroenterology,Nephrology",65 Mumbai Medical Road,20.141049,74.193679,no,2025-09-30
+H200705,Vadodara Health Institute 2021,Gujarat,Vadodara,300705,208,"Neurology,Nephrology,Gastroenterology,Cardiology",26 Vadodara Medical Road,8.14918,80.218675,no,2025-09-30
+H200706,Raipur Health Institute 339,Chhattisgarh,Raipur,300706,790,"Cardiology,Orthopedics,ENT",131 Raipur Medical Road,10.328145,82.13547,no,2025-09-30
+H200707,Ludhiana Health Institute 6010,Punjab,Ludhiana,300707,978,"Oncology,Cardiology,Gastroenterology,Orthopedics,Neurology",44 Ludhiana Medical Road,15.381241,83.420587,no,2025-09-30
+H200708,Raipur Health Institute 6754,Chhattisgarh,Raipur,300708,1008,"Orthopedics,Neurology",5 Raipur Medical Road,26.792054,85.705233,no,2025-09-30
+H200709,Mangalore Health Institute 3105,Karnataka,Mangalore,300709,71,"Gastroenterology,General Medicine,Pediatrics,ENT,Orthopedics",264 Mangalore Medical Road,26.763708,77.685171,no,2025-09-30
+H200710,Jodhpur Health Institute 2931,Rajasthan,Jodhpur,300710,77,"Gastroenterology,Pediatrics,Cardiology",222 Jodhpur Medical Road,12.171402,74.35639,no,2025-09-30
+H200711,Madurai Health Institute 4360,Tamil Nadu,Madurai,300711,644,"General Medicine,Cardiology,Neurology",174 Madurai Medical Road,19.69827,80.511834,no,2025-09-30
+H200712,Kozhikode Health Institute 6542,Kerala,Kozhikode,300712,612,"ENT,Orthopedics,Oncology,Nephrology",117 Kozhikode Medical Road,30.519162,78.69116,no,2025-09-30
+H200713,Ahmedabad Health Institute 528,Gujarat,Ahmedabad,300713,829,"Cardiology,Nephrology",233 Ahmedabad Medical Road,22.04074,83.003967,no,2025-09-30
+H200714,Thiruvananthapuram Health Institute 6904,Kerala,Thiruvananthapuram,300714,1019,"Cardiology,Oncology,Orthopedics",267 Thiruvananthapuram Medical Road,31.051924,74.465806,no,2025-09-30
+H200715,Gurgaon Health Institute 4680,Haryana,Gurgaon,300715,1008,"General Medicine,Oncology",9 Gurgaon Medical Road,29.646762,80.068973,no,2025-09-30
+H200716,Ludhiana Health Institute 6332,Punjab,Ludhiana,300716,626,"Gastroenterology,Orthopedics,ENT,Cardiology,Pediatrics",94 Ludhiana Medical Road,30.30917,77.032033,no,2025-09-30
+H200717,Warangal Health Institute 6296,Telangana,Warangal,300717,1059,"Cardiology,Gastroenterology,Orthopedics,Nephrology,General Medicine",105 Warangal Medical Road,30.160783,68.920413,no,2025-09-30
+H200718,Ranchi Health Institute 7927,Jharkhand,Ranchi,300718,820,"Cardiology,Orthopedics,Oncology,ENT",54 Ranchi Medical Road,22.186288,76.006749,no,2025-09-30
+H200719,Guwahati Health Institute 8039,Assam,Guwahati,300719,758,"Neurology,Pediatrics",53 Guwahati Medical Road,14.903294,85.547283,no,2025-09-30
+H200720,Ranchi Health Institute 435,Jharkhand,Ranchi,300720,533,"Orthopedics,Neurology,General Medicine",55 Ranchi Medical Road,30.482127,73.698772,no,2025-09-30
+H200721,South Delhi Health Institute 6430,Delhi,South Delhi,300721,762,"Gastroenterology,Oncology,General Medicine,Orthopedics,Pediatrics",258 South Delhi Medical Road,26.675717,70.438588,no,2025-09-30
+H200722,Kolkata Health Institute 4328,West Bengal,Kolkata,300722,873,"Pediatrics,ENT,Orthopedics,Cardiology",120 Kolkata Medical Road,9.417654,86.623534,no,2025-09-30
+H200723,Guwahati Health Institute 2913,Assam,Guwahati,300723,249,"Orthopedics,Gastroenterology,ENT,General Medicine",215 Guwahati Medical Road,22.147324,76.311527,no,2025-09-30
+H200724,Kochi Health Institute 3633,Kerala,Kochi,300724,1169,"Neurology,Pediatrics,Cardiology,ENT",44 Kochi Medical Road,12.856212,71.73512,no,2025-09-30
+H200725,South Delhi Health Institute 2169,Delhi,South Delhi,300725,42,"ENT,Neurology",216 South Delhi Medical Road,17.548403,74.139018,no,2025-09-30
+H200726,Ranchi Health Institute 1388,Jharkhand,Ranchi,300726,255,"Pediatrics,Nephrology,Orthopedics,Gastroenterology",248 Ranchi Medical Road,24.198955,87.965861,no,2025-09-30
+H200727,Nagpur Health Institute 4823,Maharashtra,Nagpur,300727,176,"Neurology,General Medicine",246 Nagpur Medical Road,10.64189,83.980569,no,2025-09-30
+H200728,Guwahati Health Institute 5234,Assam,Guwahati,300728,1182,"ENT,Orthopedics,Nephrology,Cardiology,General Medicine",220 Guwahati Medical Road,9.654008,79.194046,no,2025-09-30
+H200729,Tiruchirappalli Health Institute 4013,Tamil Nadu,Tiruchirappalli,300729,96,"Neurology,Gastroenterology,Cardiology",115 Tiruchirappalli Medical Road,13.348509,73.367175,no,2025-09-30
+H200730,Gaya Health Institute 3994,Bihar,Gaya,300730,791,"Oncology,Pediatrics",167 Gaya Medical Road,18.372461,68.353984,no,2025-09-30
+H200731,Mumbai Health Institute 7754,Maharashtra,Mumbai,300731,165,"Cardiology,Pediatrics,ENT,Oncology",225 Mumbai Medical Road,12.862718,80.294162,no,2025-09-30
+H200732,Kolkata Health Institute 4098,West Bengal,Kolkata,300732,1114,"Gastroenterology,Pediatrics,Nephrology,Neurology,General Medicine",138 Kolkata Medical Road,32.261498,78.059184,no,2025-09-30
+H200733,Kozhikode Health Institute 6939,Kerala,Kozhikode,300733,915,"Pediatrics,Orthopedics,ENT,Cardiology",21 Kozhikode Medical Road,28.459614,73.826058,no,2025-09-30
+H200734,Faridabad Health Institute 7726,Haryana,Faridabad,300734,195,"General Medicine,Nephrology",138 Faridabad Medical Road,8.704209,75.545918,no,2025-09-30
+H200735,Raipur Health Institute 4171,Chhattisgarh,Raipur,300735,68,"General Medicine,Orthopedics",77 Raipur Medical Road,23.402434,68.114744,no,2025-09-30
+H200736,Chennai Health Institute 9811,Tamil Nadu,Chennai,300736,783,"Oncology,ENT",38 Chennai Medical Road,12.756222,79.079124,no,2025-09-30
+H200737,Agra Health Institute 2170,Uttar Pradesh,Agra,300737,261,"Pediatrics,General Medicine,Orthopedics",143 Agra Medical Road,31.528377,69.512785,no,2025-09-30
+H200738,Kanpur Health Institute 1471,Uttar Pradesh,Kanpur,300738,287,"Pediatrics,Gastroenterology,Neurology,General Medicine,ENT",182 Kanpur Medical Road,31.617597,69.012627,no,2025-09-30
+H200739,Mysuru Health Institute 5890,Karnataka,Mysuru,300739,806,"Pediatrics,Cardiology,Orthopedics,Gastroenterology",58 Mysuru Medical Road,18.698066,79.556272,no,2025-09-30
+H200740,Guwahati Health Institute 3428,Assam,Guwahati,300740,155,"General Medicine,Gastroenterology,Cardiology,Nephrology,Neurology",7 Guwahati Medical Road,19.733041,74.398255,no,2025-09-30
+H200741,Kolkata Health Institute 433,West Bengal,Kolkata,300741,144,"Neurology,Oncology,Nephrology",259 Kolkata Medical Road,19.47785,70.252968,no,2025-09-30
+H200742,Warangal Health Institute 833,Telangana,Warangal,300742,274,"General Medicine,Pediatrics,Orthopedics,ENT,Nephrology",118 Warangal Medical Road,25.382028,81.319816,no,2025-09-30
+H200743,Warangal Health Institute 1776,Telangana,Warangal,300743,895,"Neurology,Cardiology,Pediatrics",186 Warangal Medical Road,17.199892,72.866625,no,2025-09-30
+H200744,Tiruchirappalli Health Institute 6110,Tamil Nadu,Tiruchirappalli,300744,151,"Pediatrics,ENT,Cardiology,Orthopedics,Nephrology",191 Tiruchirappalli Medical Road,32.399742,86.843236,no,2025-09-30
+H200745,Hyderabad Health Institute 6939,Telangana,Hyderabad,300745,263,"General Medicine,Cardiology,Gastroenterology,Orthopedics",43 Hyderabad Medical Road,14.737121,73.487809,no,2025-09-30
+H200746,Hyderabad Health Institute 5871,Telangana,Hyderabad,300746,854,"Gastroenterology,Cardiology",7 Hyderabad Medical Road,10.929108,72.825067,no,2025-09-30
+H200747,Mysuru Health Institute 6010,Karnataka,Mysuru,300747,651,"ENT,General Medicine,Gastroenterology,Neurology,Nephrology",130 Mysuru Medical Road,14.568014,80.465024,no,2025-09-30
+H200748,Bengaluru Health Institute 8077,Karnataka,Bengaluru,300748,865,"General Medicine,Neurology",250 Bengaluru Medical Road,13.88577,86.09594,no,2025-09-30
+H200749,Gaya Health Institute 5261,Bihar,Gaya,300749,42,"Cardiology,Nephrology",254 Gaya Medical Road,25.312869,74.006618,no,2025-09-30
+H200750,Coimbatore Health Institute 6172,Tamil Nadu,Coimbatore,300750,927,"Oncology,ENT",209 Coimbatore Medical Road,9.937814,71.804015,no,2025-09-30
+H200751,Gurgaon Health Institute 8184,Haryana,Gurgaon,300751,726,"Neurology,Gastroenterology,ENT,Orthopedics,General Medicine",115 Gurgaon Medical Road,21.880883,85.238781,no,2025-09-30
+H200752,Surat Health Institute 6714,Gujarat,Surat,300752,495,"Gastroenterology,Neurology,Pediatrics",234 Surat Medical Road,15.892742,82.82689,yes,2025-09-30
+H200753,Aurangabad Health Institute 2969,Maharashtra,Aurangabad,300753,1018,"Cardiology,Nephrology",157 Aurangabad Medical Road,9.644056,87.102658,no,2025-09-30
+H200754,Chandigarh Health Institute 1949,Punjab,Chandigarh,300754,185,"Oncology,Cardiology",147 Chandigarh Medical Road,18.517394,71.48741,no,2025-09-30
+H200755,Surat Health Institute 4719,Gujarat,Surat,300755,257,"Gastroenterology,Oncology",261 Surat Medical Road,8.252808,82.92079,no,2025-09-30
+H200756,Guwahati Health Institute 9827,Assam,Guwahati,300756,384,"Cardiology,General Medicine,Orthopedics,Oncology,Gastroenterology",98 Guwahati Medical Road,25.816078,81.304694,no,2025-09-30
+H200757,Ranchi Health Institute 8744,Jharkhand,Ranchi,300757,758,"Neurology,Pediatrics,ENT",114 Ranchi Medical Road,32.078754,77.532983,no,2025-09-30
+H200758,Raipur Health Institute 2502,Chhattisgarh,Raipur,300758,820,"Pediatrics,Cardiology,Gastroenterology,General Medicine",40 Raipur Medical Road,25.811935,69.302394,no,2025-09-30
+H200759,Kochi Health Institute 7524,Kerala,Kochi,300759,1059,"Neurology,Gastroenterology,Nephrology,Oncology,ENT",161 Kochi Medical Road,10.775122,68.049325,no,2025-09-30
+H200760,Thiruvananthapuram Health Institute 2922,Kerala,Thiruvananthapuram,300760,740,"Oncology,General Medicine,Neurology",72 Thiruvananthapuram Medical Road,27.024486,68.527016,no,2025-09-30
+H200761,Gurgaon Health Institute 7324,Haryana,Gurgaon,300761,1035,"Oncology,Neurology,Pediatrics",6 Gurgaon Medical Road,32.259359,80.408945,no,2025-09-30
+H200762,Udaipur Health Institute 4986,Rajasthan,Udaipur,300762,158,"Nephrology,ENT,Pediatrics,General Medicine",264 Udaipur Medical Road,17.44751,68.29617,no,2025-09-30
+H200763,Raipur Health Institute 2609,Chhattisgarh,Raipur,300763,165,"ENT,Nephrology,Cardiology,Orthopedics,Neurology",185 Raipur Medical Road,20.441792,72.487887,no,2025-09-30
+H200764,South Delhi Health Institute 1495,Delhi,South Delhi,300764,1107,"Pediatrics,Nephrology,Orthopedics,Oncology,Gastroenterology",80 South Delhi Medical Road,15.742616,78.378566,no,2025-09-30
+H200765,Ranchi Health Institute 3921,Jharkhand,Ranchi,300765,950,"Neurology,General Medicine,Cardiology,Gastroenterology,Pediatrics",300 Ranchi Medical Road,29.519571,84.654791,no,2025-09-30
+H200766,Gurgaon Health Institute 7490,Haryana,Gurgaon,300766,180,"Nephrology,ENT,Gastroenterology",214 Gurgaon Medical Road,28.749183,87.507247,no,2025-09-30
+H200767,Madurai Health Institute 5198,Tamil Nadu,Madurai,300767,746,"Gastroenterology,Oncology,Pediatrics,Neurology,Cardiology",15 Madurai Medical Road,25.635541,77.51224,no,2025-09-30
+H200768,Mumbai Health Institute 6830,Maharashtra,Mumbai,300768,1005,"Oncology,Gastroenterology,ENT",164 Mumbai Medical Road,22.685606,82.145448,no,2025-09-30
+H200769,Mumbai Health Institute 7327,Maharashtra,Mumbai,300769,725,"General Medicine,Nephrology,Oncology,ENT",236 Mumbai Medical Road,20.905584,76.324164,no,2025-09-30
+H200770,Kanpur Health Institute 948,Uttar Pradesh,Kanpur,300770,60,"Pediatrics,General Medicine",216 Kanpur Medical Road,26.572624,80.599483,no,2025-09-30
+H200771,Ranchi Health Institute 5145,Jharkhand,Ranchi,300771,641,"Nephrology,Oncology,Cardiology,Neurology",8 Ranchi Medical Road,24.852946,86.537767,no,2025-09-30
+H200772,New Delhi Health Institute 8570,Delhi,New Delhi,300772,520,"ENT,Neurology",130 New Delhi Medical Road,25.010736,70.468475,yes,2025-09-30
+H200773,Kozhikode Health Institute 9349,Kerala,Kozhikode,300773,829,"Oncology,Neurology,Gastroenterology,ENT,Cardiology",105 Kozhikode Medical Road,26.468133,75.758753,no,2025-09-30
+H200774,Surat Health Institute 513,Gujarat,Surat,300774,665,"Oncology,ENT,Nephrology,General Medicine",289 Surat Medical Road,27.560721,78.987931,no,2025-09-30
+H200775,Kozhikode Health Institute 2891,Kerala,Kozhikode,300775,610,"ENT,Cardiology,Gastroenterology,General Medicine,Orthopedics",201 Kozhikode Medical Road,29.360639,83.302018,no,2025-09-30
+H200776,Raipur Health Institute 1072,Chhattisgarh,Raipur,300776,259,"Gastroenterology,Oncology,Nephrology,Cardiology,Neurology",183 Raipur Medical Road,11.227149,71.698689,no,2025-09-30
+H200777,Ludhiana Health Institute 4617,Punjab,Ludhiana,300777,1168,"Nephrology,General Medicine,Pediatrics,Neurology,Gastroenterology",258 Ludhiana Medical Road,9.298075,76.090545,no,2025-09-30
+H200778,Warangal Health Institute 1774,Telangana,Warangal,300778,862,"Oncology,Orthopedics,Gastroenterology,General Medicine,Neurology",130 Warangal Medical Road,32.499936,86.169112,no,2025-09-30
+H200779,Noida Health Institute 9233,Uttar Pradesh,Noida,300779,376,"General Medicine,Orthopedics,ENT,Oncology,Cardiology",258 Noida Medical Road,27.662712,84.899686,no,2025-09-30
+H200780,Ludhiana Health Institute 2714,Punjab,Ludhiana,300780,184,"ENT,General Medicine,Neurology",167 Ludhiana Medical Road,32.434174,75.076392,no,2025-09-30
+H200781,Warangal Health Institute 8000,Telangana,Warangal,300781,292,"Orthopedics,Pediatrics",183 Warangal Medical Road,32.640666,68.658938,no,2025-09-30
+H200782,Madurai Health Institute 866,Tamil Nadu,Madurai,300782,196,"General Medicine,Nephrology",38 Madurai Medical Road,15.098627,71.522566,no,2025-09-30
+H200783,Faridabad Health Institute 7647,Haryana,Faridabad,300783,1085,"Cardiology,Orthopedics,Gastroenterology,ENT",141 Faridabad Medical Road,22.414831,74.522077,no,2025-09-30
+H200784,Tiruchirappalli Health Institute 615,Tamil Nadu,Tiruchirappalli,300784,456,"Nephrology,Gastroenterology,ENT,Pediatrics,Orthopedics",8 Tiruchirappalli Medical Road,30.019937,79.696765,no,2025-09-30
+H200785,Gaya Health Institute 3255,Bihar,Gaya,300785,41,"Orthopedics,General Medicine",89 Gaya Medical Road,27.577992,86.907918,no,2025-09-30
+H200786,Pune Health Institute 2741,Maharashtra,Pune,300786,1028,"Orthopedics,Cardiology,Gastroenterology",178 Pune Medical Road,20.876693,68.133497,no,2025-09-30
+H200787,Amritsar Health Institute 8122,Punjab,Amritsar,300787,310,"Orthopedics,Gastroenterology,Oncology",153 Amritsar Medical Road,25.948184,86.150065,no,2025-09-30
+H200788,Faridabad Health Institute 680,Haryana,Faridabad,300788,858,"Oncology,Nephrology",51 Faridabad Medical Road,25.806774,80.493171,no,2025-09-30
+H200789,Hyderabad Health Institute 1153,Telangana,Hyderabad,300789,1183,"Oncology,Gastroenterology",152 Hyderabad Medical Road,16.737038,84.100839,yes,2025-09-30
+H200790,Ranchi Health Institute 153,Jharkhand,Ranchi,300790,257,"General Medicine,ENT",49 Ranchi Medical Road,11.282915,73.180795,no,2025-09-30
+H200791,Thiruvananthapuram Health Institute 9187,Kerala,Thiruvananthapuram,300791,347,"ENT,Oncology,Gastroenterology",24 Thiruvananthapuram Medical Road,24.621486,83.470784,yes,2025-09-30
+H200792,Cuttack Health Institute 7915,Odisha,Cuttack,300792,126,"Gastroenterology,Pediatrics,ENT,Cardiology,General Medicine",232 Cuttack Medical Road,20.753757,73.940834,no,2025-09-30
+H200793,Kochi Health Institute 2909,Kerala,Kochi,300793,279,"Gastroenterology,ENT,Nephrology,Neurology",223 Kochi Medical Road,22.022142,78.663574,no,2025-09-30
+H200794,Hyderabad Health Institute 3204,Telangana,Hyderabad,300794,364,"Cardiology,Pediatrics",67 Hyderabad Medical Road,10.385891,83.487793,no,2025-09-30
+H200795,Ranchi Health Institute 3909,Jharkhand,Ranchi,300795,1092,"Cardiology,Neurology,Gastroenterology,Orthopedics",131 Ranchi Medical Road,18.017248,87.680593,no,2025-09-30
+H200796,Kolkata Health Institute 7913,West Bengal,Kolkata,300796,135,"General Medicine,Oncology,Nephrology,Cardiology",259 Kolkata Medical Road,19.203652,81.647875,no,2025-09-30
+H200797,Gaya Health Institute 137,Bihar,Gaya,300797,223,"Pediatrics,General Medicine",226 Gaya Medical Road,18.98235,68.985965,no,2025-09-30
+H200798,Kochi Health Institute 4487,Kerala,Kochi,300798,273,"ENT,Nephrology,Cardiology",70 Kochi Medical Road,15.041354,86.785347,no,2025-09-30
+H200799,Gurgaon Health Institute 365,Haryana,Gurgaon,300799,1103,"Oncology,Pediatrics,Orthopedics,Neurology,ENT",131 Gurgaon Medical Road,18.515024,76.21686,no,2025-09-30
+H200800,Udaipur Health Institute 9655,Rajasthan,Udaipur,300800,650,"Oncology,General Medicine",144 Udaipur Medical Road,14.908905,85.347787,no,2025-09-30
+H200801,Patna Health Institute 5900,Bihar,Patna,300801,82,"Neurology,Nephrology,Pediatrics",90 Patna Medical Road,14.356144,77.340447,no,2025-09-30
+H200802,Nagpur Health Institute 7678,Maharashtra,Nagpur,300802,1075,"Pediatrics,Oncology,General Medicine,Cardiology,Gastroenterology",299 Nagpur Medical Road,30.53378,71.35338,yes,2025-09-30
+H200803,Ranchi Health Institute 9326,Jharkhand,Ranchi,300803,613,"Neurology,Orthopedics,Cardiology,ENT,Oncology",263 Ranchi Medical Road,27.571565,76.848364,no,2025-09-30
+H200804,Patna Health Institute 1939,Bihar,Patna,300804,1159,"Cardiology,Nephrology,Pediatrics,Orthopedics",191 Patna Medical Road,28.508138,70.342874,no,2025-09-30
+H200805,Kanpur Health Institute 87,Uttar Pradesh,Kanpur,300805,457,"ENT,Orthopedics",129 Kanpur Medical Road,25.652581,78.220737,no,2025-09-30
+H200806,Raipur Health Institute 4298,Chhattisgarh,Raipur,300806,1030,"Oncology,Cardiology,Neurology",68 Raipur Medical Road,16.122165,79.632515,yes,2025-09-30
+H200807,Guwahati Health Institute 5764,Assam,Guwahati,300807,347,"Neurology,Oncology,Nephrology,Orthopedics",162 Guwahati Medical Road,13.390608,85.121249,no,2025-09-30
+H200808,Mysuru Health Institute 7419,Karnataka,Mysuru,300808,370,"Nephrology,General Medicine",277 Mysuru Medical Road,10.49304,84.800206,no,2025-09-30
+H200809,Ahmedabad Health Institute 574,Gujarat,Ahmedabad,300809,1051,"Pediatrics,Oncology,Neurology,Nephrology",212 Ahmedabad Medical Road,23.161156,80.59269,no,2025-09-30
+H200810,South Delhi Health Institute 3896,Delhi,South Delhi,300810,636,"Cardiology,Nephrology,Neurology",33 South Delhi Medical Road,21.543697,75.504946,no,2025-09-30
+H200811,Cuttack Health Institute 6542,Odisha,Cuttack,300811,1102,"ENT,Orthopedics,Gastroenterology",204 Cuttack Medical Road,21.456229,87.421111,no,2025-09-30
+H200812,Faridabad Health Institute 1407,Haryana,Faridabad,300812,293,"Orthopedics,Oncology,Cardiology,Pediatrics,ENT",113 Faridabad Medical Road,26.543383,80.608064,no,2025-09-30
+H200813,Ludhiana Health Institute 4171,Punjab,Ludhiana,300813,520,"Orthopedics,Gastroenterology,General Medicine,Pediatrics",15 Ludhiana Medical Road,13.366703,84.930978,no,2025-09-30
+H200814,Lucknow Health Institute 9143,Uttar Pradesh,Lucknow,300814,1193,"Cardiology,ENT,Nephrology,General Medicine,Orthopedics",62 Lucknow Medical Road,27.021067,80.975445,no,2025-09-30
+H200815,Guwahati Health Institute 7556,Assam,Guwahati,300815,784,"Pediatrics,Gastroenterology,General Medicine,Cardiology",9 Guwahati Medical Road,16.987055,74.707363,no,2025-09-30
+H200816,South Delhi Health Institute 8256,Delhi,South Delhi,300816,1073,"Gastroenterology,Pediatrics,Orthopedics",156 South Delhi Medical Road,14.980902,68.365354,yes,2025-09-30
+H200817,Kolkata Health Institute 743,West Bengal,Kolkata,300817,1069,"Cardiology,Gastroenterology,Orthopedics,Oncology",233 Kolkata Medical Road,30.030043,74.095744,no,2025-09-30
+H200818,New Delhi Health Institute 7641,Delhi,New Delhi,300818,746,"Gastroenterology,Neurology,Pediatrics,Cardiology,Orthopedics",264 New Delhi Medical Road,13.536256,68.763904,no,2025-09-30
+H200819,Vadodara Health Institute 6794,Gujarat,Vadodara,300819,930,"Nephrology,Pediatrics,Orthopedics,ENT,Cardiology",128 Vadodara Medical Road,8.944972,71.429124,no,2025-09-30
+H200820,Coimbatore Health Institute 7987,Tamil Nadu,Coimbatore,300820,799,"Pediatrics,Neurology",260 Coimbatore Medical Road,31.268253,80.841422,no,2025-09-30
+H200821,Patna Health Institute 2987,Bihar,Patna,300821,607,"ENT,Nephrology,Orthopedics",210 Patna Medical Road,13.217528,78.989936,yes,2025-09-30
+H200822,Jaipur Health Institute 2991,Rajasthan,Jaipur,300822,696,"General Medicine,Oncology,Pediatrics",140 Jaipur Medical Road,23.595031,74.97297,no,2025-09-30
+H200823,Kozhikode Health Institute 9476,Kerala,Kozhikode,300823,573,"Cardiology,Pediatrics,General Medicine,ENT",120 Kozhikode Medical Road,15.015285,69.77087,no,2025-09-30
+H200824,Tiruchirappalli Health Institute 4831,Tamil Nadu,Tiruchirappalli,300824,302,"Oncology,Cardiology,Orthopedics,Gastroenterology,Neurology",184 Tiruchirappalli Medical Road,16.280364,68.005579,no,2025-09-30
+H200825,Ranchi Health Institute 6535,Jharkhand,Ranchi,300825,1054,"Oncology,ENT,Neurology,Gastroenterology",198 Ranchi Medical Road,11.643686,75.292857,yes,2025-09-30
+H200826,Pune Health Institute 4511,Maharashtra,Pune,300826,1053,"ENT,Cardiology",253 Pune Medical Road,15.407087,70.194411,no,2025-09-30
+H200827,Ranchi Health Institute 6073,Jharkhand,Ranchi,300827,361,"Gastroenterology,Pediatrics,Orthopedics",69 Ranchi Medical Road,14.947527,77.545035,no,2025-09-30
+H200828,Asansol Health Institute 903,West Bengal,Asansol,300828,477,"ENT,Cardiology,Gastroenterology,Orthopedics,Neurology",191 Asansol Medical Road,17.102131,87.862415,no,2025-09-30
+H200829,Bengaluru Health Institute 1262,Karnataka,Bengaluru,300829,71,"Neurology,General Medicine,Orthopedics,Gastroenterology,Oncology",188 Bengaluru Medical Road,18.644317,84.896085,no,2025-09-30
+H200830,Vadodara Health Institute 5489,Gujarat,Vadodara,300830,67,"Orthopedics,Neurology,General Medicine,Gastroenterology,Cardiology",243 Vadodara Medical Road,10.534908,78.542634,no,2025-09-30
+H200831,Aurangabad Health Institute 7665,Maharashtra,Aurangabad,300831,884,"Orthopedics,ENT,Gastroenterology",20 Aurangabad Medical Road,10.980383,76.412994,yes,2025-09-30
+H200832,New Delhi Health Institute 1030,Delhi,New Delhi,300832,346,"ENT,Nephrology,Orthopedics,General Medicine",92 New Delhi Medical Road,20.176343,68.869802,no,2025-09-30
+H200833,Cuttack Health Institute 5644,Odisha,Cuttack,300833,129,"Pediatrics,ENT",136 Cuttack Medical Road,21.538601,87.127496,no,2025-09-30
+H200834,Kozhikode Health Institute 8556,Kerala,Kozhikode,300834,539,"ENT,Oncology,Pediatrics,Neurology",149 Kozhikode Medical Road,28.215417,69.170854,no,2025-09-30
+H200835,Ranchi Health Institute 8701,Jharkhand,Ranchi,300835,80,"Gastroenterology,Nephrology",150 Ranchi Medical Road,10.195436,78.654774,no,2025-09-30
+H200836,New Delhi Health Institute 7842,Delhi,New Delhi,300836,828,"Neurology,Gastroenterology,General Medicine,Nephrology",180 New Delhi Medical Road,18.671795,72.724119,no,2025-09-30
+H200837,Kochi Health Institute 9965,Kerala,Kochi,300837,681,"Nephrology,Pediatrics,ENT,Gastroenterology,General Medicine",145 Kochi Medical Road,20.417984,75.203985,no,2025-09-30
+H200838,Aurangabad Health Institute 1436,Maharashtra,Aurangabad,300838,1110,"Neurology,Nephrology",162 Aurangabad Medical Road,24.115283,71.145031,no,2025-09-30
+H200839,Siliguri Health Institute 9670,West Bengal,Siliguri,300839,281,"Orthopedics,ENT,Neurology",245 Siliguri Medical Road,25.700476,80.075206,yes,2025-09-30
+H200840,Coimbatore Health Institute 2922,Tamil Nadu,Coimbatore,300840,48,"Gastroenterology,Neurology",129 Coimbatore Medical Road,26.181911,72.881821,no,2025-09-30
+H200841,Siliguri Health Institute 7510,West Bengal,Siliguri,300841,126,"Pediatrics,Gastroenterology,Oncology,Orthopedics,General Medicine",176 Siliguri Medical Road,21.402591,79.735777,no,2025-09-30
+H200842,Patna Health Institute 8368,Bihar,Patna,300842,889,"Gastroenterology,Oncology",100 Patna Medical Road,31.043607,77.742943,no,2025-09-30
+H200843,Gaya Health Institute 5268,Bihar,Gaya,300843,941,"ENT,Pediatrics",25 Gaya Medical Road,10.169267,84.718811,no,2025-09-30
+H200844,Ahmedabad Health Institute 311,Gujarat,Ahmedabad,300844,426,"Neurology,Cardiology,Pediatrics",252 Ahmedabad Medical Road,21.986794,73.721415,yes,2025-09-30
+H200845,Ludhiana Health Institute 2117,Punjab,Ludhiana,300845,26,"Neurology,Pediatrics,Orthopedics,Oncology",47 Ludhiana Medical Road,15.87726,78.017371,no,2025-09-30
+H200846,Kanpur Health Institute 8384,Uttar Pradesh,Kanpur,300846,1041,"ENT,Pediatrics,Gastroenterology",282 Kanpur Medical Road,25.327507,74.677083,no,2025-09-30
+H200847,Udaipur Health Institute 5518,Rajasthan,Udaipur,300847,611,"Gastroenterology,Cardiology,Pediatrics,Neurology",206 Udaipur Medical Road,18.755256,79.496079,no,2025-09-30
+H200848,Kanpur Health Institute 2944,Uttar Pradesh,Kanpur,300848,719,"Orthopedics,Nephrology",91 Kanpur Medical Road,18.779414,78.325065,no,2025-09-30
+H200849,Raipur Health Institute 3723,Chhattisgarh,Raipur,300849,237,"ENT,Gastroenterology,Orthopedics,Oncology,Cardiology",172 Raipur Medical Road,22.354448,79.125472,no,2025-09-30
+H200850,Ranchi Health Institute 1102,Jharkhand,Ranchi,300850,933,"Gastroenterology,Nephrology,Oncology,General Medicine,Neurology",150 Ranchi Medical Road,25.888559,80.947778,no,2025-09-30
+H200851,Gaya Health Institute 3848,Bihar,Gaya,300851,547,"Nephrology,Pediatrics,Oncology",49 Gaya Medical Road,26.003402,77.616226,no,2025-09-30
+H200852,Ranchi Health Institute 1657,Jharkhand,Ranchi,300852,378,"Cardiology,Neurology",271 Ranchi Medical Road,13.633491,77.224554,yes,2025-09-30
+H200853,Siliguri Health Institute 7436,West Bengal,Siliguri,300853,817,"Orthopedics,Cardiology,Nephrology,Oncology",243 Siliguri Medical Road,29.621158,75.825177,no,2025-09-30
+H200854,South Delhi Health Institute 7389,Delhi,South Delhi,300854,405,"Oncology,Orthopedics,Pediatrics",110 South Delhi Medical Road,27.79452,81.50788,no,2025-09-30
+H200855,Gaya Health Institute 3875,Bihar,Gaya,300855,927,"Neurology,Gastroenterology,Pediatrics",22 Gaya Medical Road,22.158984,74.136637,no,2025-09-30
+H200856,Tiruchirappalli Health Institute 29,Tamil Nadu,Tiruchirappalli,300856,749,"General Medicine,Pediatrics",135 Tiruchirappalli Medical Road,21.619823,83.787844,no,2025-09-30
+H200857,Ranchi Health Institute 9735,Jharkhand,Ranchi,300857,112,"Pediatrics,ENT,Neurology",39 Ranchi Medical Road,20.614705,68.883129,no,2025-09-30
+H200858,Vadodara Health Institute 774,Gujarat,Vadodara,300858,703,"Nephrology,General Medicine",132 Vadodara Medical Road,25.844398,82.451998,no,2025-09-30
+H200859,Aurangabad Health Institute 2637,Maharashtra,Aurangabad,300859,819,"Pediatrics,Oncology,ENT,General Medicine,Neurology",35 Aurangabad Medical Road,11.924364,79.907053,no,2025-09-30
+H200860,Gaya Health Institute 3080,Bihar,Gaya,300860,577,"Neurology,Nephrology,Oncology,Pediatrics",116 Gaya Medical Road,26.043204,70.326789,no,2025-09-30
+H200861,Bhubaneswar Health Institute 3070,Odisha,Bhubaneswar,300861,242,"Nephrology,Neurology",253 Bhubaneswar Medical Road,24.992716,75.405284,no,2025-09-30
+H200862,Ranchi Health Institute 5081,Jharkhand,Ranchi,300862,178,"Nephrology,Oncology,ENT",151 Ranchi Medical Road,14.245966,73.954603,no,2025-09-30
+H200863,Siliguri Health Institute 8318,West Bengal,Siliguri,300863,865,"General Medicine,Oncology,Cardiology,Nephrology",113 Siliguri Medical Road,10.021677,77.451081,no,2025-09-30
+H200864,Faridabad Health Institute 9888,Haryana,Faridabad,300864,259,"ENT,Gastroenterology,Orthopedics,Nephrology,General Medicine",165 Faridabad Medical Road,16.138912,85.346274,no,2025-09-30
+H200865,Ranchi Health Institute 4620,Jharkhand,Ranchi,300865,1036,"Oncology,Neurology,Orthopedics,Nephrology",267 Ranchi Medical Road,11.899762,69.605213,no,2025-09-30
+H200866,Thiruvananthapuram Health Institute 977,Kerala,Thiruvananthapuram,300866,517,"Neurology,Orthopedics,Pediatrics,ENT,Cardiology",81 Thiruvananthapuram Medical Road,31.7041,81.14588,no,2025-09-30
+H200867,Kolkata Health Institute 1287,West Bengal,Kolkata,300867,1078,"General Medicine,Cardiology",43 Kolkata Medical Road,12.605578,69.963136,no,2025-09-30
+H200868,Patna Health Institute 1080,Bihar,Patna,300868,873,"Neurology,ENT,Gastroenterology",206 Patna Medical Road,22.075656,77.732714,no,2025-09-30
+H200869,Gurgaon Health Institute 7774,Haryana,Gurgaon,300869,830,"Gastroenterology,Orthopedics,ENT",7 Gurgaon Medical Road,15.268467,87.683275,no,2025-09-30
+H200870,Cuttack Health Institute 7553,Odisha,Cuttack,300870,188,"Cardiology,Pediatrics",55 Cuttack Medical Road,15.925932,81.047613,no,2025-09-30
+H200871,Bhubaneswar Health Institute 523,Odisha,Bhubaneswar,300871,985,"Cardiology,Orthopedics,Neurology,Gastroenterology,ENT",288 Bhubaneswar Medical Road,30.367732,69.98506,yes,2025-09-30
+H200872,Patna Health Institute 5479,Bihar,Patna,300872,1159,"Pediatrics,Oncology",59 Patna Medical Road,28.102326,84.28342,no,2025-09-30
+H200873,Nagpur Health Institute 4729,Maharashtra,Nagpur,300873,36,"Gastroenterology,General Medicine,ENT,Nephrology,Cardiology",48 Nagpur Medical Road,15.687445,77.257294,no,2025-09-30
+H200874,Aurangabad Health Institute 5820,Maharashtra,Aurangabad,300874,738,"Neurology,Gastroenterology,ENT",76 Aurangabad Medical Road,27.434463,68.365243,no,2025-09-30
+H200875,Surat Health Institute 7779,Gujarat,Surat,300875,903,"Gastroenterology,Oncology,Neurology",203 Surat Medical Road,32.335623,79.300131,no,2025-09-30
+H200876,Ludhiana Health Institute 2844,Punjab,Ludhiana,300876,1011,"Orthopedics,Neurology",234 Ludhiana Medical Road,16.366652,86.323303,no,2025-09-30
+H200877,Asansol Health Institute 6782,West Bengal,Asansol,300877,630,"Pediatrics,Gastroenterology",184 Asansol Medical Road,30.668481,69.537684,no,2025-09-30
+H200878,Patna Health Institute 3803,Bihar,Patna,300878,258,"ENT,Pediatrics,Oncology,Orthopedics,Nephrology",195 Patna Medical Road,16.517137,87.37412,no,2025-09-30
+H200879,Jodhpur Health Institute 1380,Rajasthan,Jodhpur,300879,1105,"Neurology,General Medicine",205 Jodhpur Medical Road,23.966568,84.753424,no,2025-09-30
+H200880,Aurangabad Health Institute 5695,Maharashtra,Aurangabad,300880,629,"Pediatrics,General Medicine,ENT",254 Aurangabad Medical Road,26.454539,87.907526,no,2025-09-30
+H200881,Gaya Health Institute 9666,Bihar,Gaya,300881,31,"Orthopedics,Oncology,Cardiology,Pediatrics,ENT",263 Gaya Medical Road,20.49945,76.548861,no,2025-09-30
+H200882,Ranchi Health Institute 9943,Jharkhand,Ranchi,300882,1048,"Nephrology,Oncology,ENT",250 Ranchi Medical Road,14.87381,84.670834,no,2025-09-30
+H200883,Cuttack Health Institute 9129,Odisha,Cuttack,300883,915,"Neurology,Orthopedics,General Medicine,Nephrology,ENT",227 Cuttack Medical Road,25.363632,84.240256,no,2025-09-30
+H200884,Raipur Health Institute 6602,Chhattisgarh,Raipur,300884,1008,"Oncology,Orthopedics,General Medicine",107 Raipur Medical Road,30.529034,84.001057,yes,2025-09-30
+H200885,North Delhi Health Institute 5098,Delhi,North Delhi,300885,281,"Oncology,Orthopedics",241 North Delhi Medical Road,32.538651,68.421666,no,2025-09-30
+H200886,Agra Health Institute 5506,Uttar Pradesh,Agra,300886,731,"ENT,Orthopedics,General Medicine,Nephrology",126 Agra Medical Road,19.798601,76.66634,yes,2025-09-30
+H200887,Kolkata Health Institute 2495,West Bengal,Kolkata,300887,1185,"Neurology,General Medicine,Cardiology,Gastroenterology,ENT",254 Kolkata Medical Road,32.237296,70.377107,no,2025-09-30
+H200888,Chandigarh Health Institute 9862,Punjab,Chandigarh,300888,181,"Cardiology,Orthopedics,Gastroenterology",20 Chandigarh Medical Road,13.305832,75.061412,yes,2025-09-30
+H200889,Jodhpur Health Institute 6487,Rajasthan,Jodhpur,300889,436,"Orthopedics,Neurology,General Medicine,Oncology,Cardiology",273 Jodhpur Medical Road,9.612186,83.128942,no,2025-09-30
+H200890,Aurangabad Health Institute 5039,Maharashtra,Aurangabad,300890,419,"Orthopedics,Pediatrics",167 Aurangabad Medical Road,20.861436,75.439802,no,2025-09-30
+H200891,Kochi Health Institute 4633,Kerala,Kochi,300891,183,"Nephrology,ENT,General Medicine,Orthopedics",209 Kochi Medical Road,15.122423,69.268248,no,2025-09-30
+H200892,Ahmedabad Health Institute 483,Gujarat,Ahmedabad,300892,318,"Oncology,Orthopedics,Pediatrics",234 Ahmedabad Medical Road,22.614848,85.647027,no,2025-09-30
+H200893,Ludhiana Health Institute 2171,Punjab,Ludhiana,300893,673,"ENT,Pediatrics,Cardiology,Neurology,General Medicine",232 Ludhiana Medical Road,10.409717,71.801866,no,2025-09-30
+H200894,Cuttack Health Institute 1643,Odisha,Cuttack,300894,664,"Oncology,Pediatrics",183 Cuttack Medical Road,26.724172,86.076185,no,2025-09-30
+H200895,Ranchi Health Institute 7656,Jharkhand,Ranchi,300895,151,"Cardiology,Nephrology",281 Ranchi Medical Road,8.517149,81.264121,no,2025-09-30
+H200896,Madurai Health Institute 5679,Tamil Nadu,Madurai,300896,790,"Neurology,Orthopedics",145 Madurai Medical Road,32.678464,74.469465,no,2025-09-30
+H200897,Guwahati Health Institute 198,Assam,Guwahati,300897,858,"Oncology,General Medicine,Neurology",30 Guwahati Medical Road,13.484831,69.497476,no,2025-09-30
+H200898,Gaya Health Institute 8681,Bihar,Gaya,300898,882,"Orthopedics,Gastroenterology",207 Gaya Medical Road,8.923975,77.14542,no,2025-09-30
+H200899,Asansol Health Institute 2464,West Bengal,Asansol,300899,705,"Pediatrics,Neurology",267 Asansol Medical Road,13.408031,82.535223,no,2025-09-30
+H200900,Bengaluru Health Institute 5987,Karnataka,Bengaluru,300900,192,"Cardiology,Neurology,Orthopedics,General Medicine,Gastroenterology",228 Bengaluru Medical Road,15.324373,86.734792,no,2025-09-30
+H200901,Jaipur Health Institute 6477,Rajasthan,Jaipur,300901,655,"Oncology,Gastroenterology,Orthopedics",218 Jaipur Medical Road,18.11475,73.880283,no,2025-09-30
+H200902,Gaya Health Institute 1364,Bihar,Gaya,300902,217,"Neurology,Pediatrics,Cardiology",197 Gaya Medical Road,18.873717,80.283059,no,2025-09-30
+H200903,Tiruchirappalli Health Institute 4941,Tamil Nadu,Tiruchirappalli,300903,938,"Oncology,General Medicine,Pediatrics,ENT,Orthopedics",125 Tiruchirappalli Medical Road,24.026685,77.014903,no,2025-09-30
+H200904,Mysuru Health Institute 5743,Karnataka,Mysuru,300904,1072,"Gastroenterology,Pediatrics",113 Mysuru Medical Road,27.811463,70.203895,yes,2025-09-30
+H200905,Mangalore Health Institute 9127,Karnataka,Mangalore,300905,337,"General Medicine,Nephrology,Pediatrics,Cardiology,Oncology",104 Mangalore Medical Road,20.511907,86.12319,no,2025-09-30
+H200906,Gurgaon Health Institute 693,Haryana,Gurgaon,300906,1124,"Neurology,Orthopedics,Nephrology,Cardiology,Pediatrics",174 Gurgaon Medical Road,16.825952,78.53365,yes,2025-09-30
+H200907,Cuttack Health Institute 4143,Odisha,Cuttack,300907,899,"ENT,Orthopedics,Pediatrics,Oncology,Neurology",10 Cuttack Medical Road,9.141373,68.540017,no,2025-09-30
+H200908,Kozhikode Health Institute 2461,Kerala,Kozhikode,300908,658,"Nephrology,General Medicine,Orthopedics",284 Kozhikode Medical Road,11.567469,78.517285,no,2025-09-30
+H200909,Chandigarh Health Institute 9073,Punjab,Chandigarh,300909,643,"Pediatrics,Oncology,Neurology",264 Chandigarh Medical Road,12.42057,73.783662,no,2025-09-30
+H200910,Ranchi Health Institute 5735,Jharkhand,Ranchi,300910,827,"Nephrology,Orthopedics,Gastroenterology,ENT,General Medicine",283 Ranchi Medical Road,25.754842,74.693686,no,2025-09-30
+H200911,Ranchi Health Institute 6326,Jharkhand,Ranchi,300911,493,"Gastroenterology,Pediatrics,Cardiology,Orthopedics",246 Ranchi Medical Road,25.717988,71.639975,no,2025-09-30
+H200912,Warangal Health Institute 8370,Telangana,Warangal,300912,414,"ENT,Orthopedics",291 Warangal Medical Road,13.576506,69.25666,no,2025-09-30
+H200913,Ranchi Health Institute 153,Jharkhand,Ranchi,300913,1035,"ENT,General Medicine",288 Ranchi Medical Road,31.024173,84.273298,no,2025-09-30
+H200914,Jaipur Health Institute 7313,Rajasthan,Jaipur,300914,916,"Nephrology,Pediatrics,Cardiology,Neurology",267 Jaipur Medical Road,17.855799,77.150985,no,2025-09-30
+H200915,Bhubaneswar Health Institute 4788,Odisha,Bhubaneswar,300915,174,"Neurology,Pediatrics,Orthopedics,General Medicine",198 Bhubaneswar Medical Road,14.189447,70.446667,no,2025-09-30
+H200916,Patna Health Institute 5692,Bihar,Patna,300916,613,"Orthopedics,Pediatrics,Gastroenterology",153 Patna Medical Road,14.924979,79.532225,no,2025-09-30
+H200917,Ludhiana Health Institute 7348,Punjab,Ludhiana,300917,122,"Nephrology,General Medicine,Neurology",254 Ludhiana Medical Road,9.74625,75.692756,no,2025-09-30
+H200918,Surat Health Institute 4427,Gujarat,Surat,300918,555,"ENT,Cardiology,General Medicine,Orthopedics,Neurology",231 Surat Medical Road,11.008768,69.755766,no,2025-09-30
+H200919,Coimbatore Health Institute 5644,Tamil Nadu,Coimbatore,300919,303,"Cardiology,Gastroenterology",14 Coimbatore Medical Road,15.680794,77.417879,no,2025-09-30
+H200920,Coimbatore Health Institute 1359,Tamil Nadu,Coimbatore,300920,708,"Pediatrics,Nephrology,General Medicine,Orthopedics",52 Coimbatore Medical Road,23.992785,75.332248,no,2025-09-30
+H200921,Mysuru Health Institute 6593,Karnataka,Mysuru,300921,969,"Neurology,Orthopedics,General Medicine,Pediatrics,Nephrology",200 Mysuru Medical Road,11.609211,78.548623,no,2025-09-30
+H200922,Guwahati Health Institute 7974,Assam,Guwahati,300922,362,"General Medicine,Pediatrics,ENT,Gastroenterology",176 Guwahati Medical Road,32.309876,78.66613,no,2025-09-30
+H200923,Amritsar Health Institute 6111,Punjab,Amritsar,300923,936,"ENT,Oncology,General Medicine",5 Amritsar Medical Road,27.798221,71.115465,no,2025-09-30
+H200924,Bengaluru Health Institute 7702,Karnataka,Bengaluru,300924,302,"Neurology,ENT",163 Bengaluru Medical Road,20.149591,69.489119,no,2025-09-30
+H200925,Thiruvananthapuram Health Institute 6018,Kerala,Thiruvananthapuram,300925,908,"Pediatrics,Nephrology,Gastroenterology",53 Thiruvananthapuram Medical Road,28.967024,70.917355,no,2025-09-30
+H200926,Coimbatore Health Institute 7210,Tamil Nadu,Coimbatore,300926,993,"Orthopedics,Cardiology,General Medicine,Gastroenterology,ENT",198 Coimbatore Medical Road,31.057218,84.464367,no,2025-09-30
+H200927,Patna Health Institute 6092,Bihar,Patna,300927,215,"General Medicine,ENT",169 Patna Medical Road,29.559334,84.26208,no,2025-09-30
+H200928,Ahmedabad Health Institute 881,Gujarat,Ahmedabad,300928,1191,"Pediatrics,Cardiology,Gastroenterology,Orthopedics",261 Ahmedabad Medical Road,11.905372,85.345254,no,2025-09-30
+H200929,Patna Health Institute 5981,Bihar,Patna,300929,468,"Pediatrics,Gastroenterology,Oncology,Orthopedics",120 Patna Medical Road,17.382521,70.796079,no,2025-09-30
+H200930,Mysuru Health Institute 4203,Karnataka,Mysuru,300930,942,"Orthopedics,Neurology,Gastroenterology",171 Mysuru Medical Road,18.085192,76.720554,no,2025-09-30
+H200931,Jaipur Health Institute 1337,Rajasthan,Jaipur,300931,1068,"Oncology,ENT",26 Jaipur Medical Road,15.100876,76.400883,yes,2025-09-30
+H200932,Coimbatore Health Institute 6313,Tamil Nadu,Coimbatore,300932,1139,"ENT,Cardiology,Gastroenterology,Orthopedics,Nephrology",109 Coimbatore Medical Road,20.467628,83.684007,no,2025-09-30
+H200933,Patna Health Institute 9681,Bihar,Patna,300933,333,"Oncology,Gastroenterology",113 Patna Medical Road,14.050507,71.791437,no,2025-09-30
+H200934,Chennai Health Institute 7064,Tamil Nadu,Chennai,300934,951,"Pediatrics,Oncology",149 Chennai Medical Road,12.646864,72.145983,no,2025-09-30
+H200935,Hyderabad Health Institute 8998,Telangana,Hyderabad,300935,293,"Neurology,Nephrology",281 Hyderabad Medical Road,30.00125,76.016806,no,2025-09-30
+H200936,Jaipur Health Institute 5422,Rajasthan,Jaipur,300936,582,"Gastroenterology,Orthopedics,Cardiology,Nephrology,Oncology",245 Jaipur Medical Road,13.05854,84.032839,no,2025-09-30
+H200937,New Delhi Health Institute 4899,Delhi,New Delhi,300937,627,"Pediatrics,ENT",204 New Delhi Medical Road,32.113532,83.798063,no,2025-09-30
+H200938,Coimbatore Health Institute 3270,Tamil Nadu,Coimbatore,300938,591,"Nephrology,Pediatrics,Orthopedics,ENT,Cardiology",89 Coimbatore Medical Road,12.748073,87.604494,no,2025-09-30
+H200939,Hubli Health Institute 6424,Karnataka,Hubli,300939,239,"Gastroenterology,Nephrology,Cardiology,Orthopedics,Pediatrics",109 Hubli Medical Road,24.000719,71.288858,no,2025-09-30
+H200940,Ranchi Health Institute 6306,Jharkhand,Ranchi,300940,371,"Gastroenterology,Oncology,Nephrology,ENT",279 Ranchi Medical Road,9.105438,87.934661,yes,2025-09-30
+H200941,Chandigarh Health Institute 3626,Punjab,Chandigarh,300941,352,"Oncology,Nephrology,General Medicine,Gastroenterology",277 Chandigarh Medical Road,10.085703,76.769569,no,2025-09-30
+H200942,New Delhi Health Institute 9018,Delhi,New Delhi,300942,965,"Orthopedics,Cardiology,Pediatrics,General Medicine,Oncology",53 New Delhi Medical Road,13.131349,68.177515,no,2025-09-30
+H200943,Patna Health Institute 4611,Bihar,Patna,300943,1108,"Nephrology,Pediatrics,General Medicine,Oncology",245 Patna Medical Road,9.235674,79.78007,no,2025-09-30
+H200944,Kolkata Health Institute 6301,West Bengal,Kolkata,300944,142,"Pediatrics,Oncology,Gastroenterology,ENT,Orthopedics",25 Kolkata Medical Road,10.210996,73.31514,no,2025-09-30
+H200945,Guwahati Health Institute 4483,Assam,Guwahati,300945,543,"Pediatrics,Cardiology,ENT,Nephrology,Neurology",289 Guwahati Medical Road,25.137624,83.053644,no,2025-09-30
+H200946,Tiruchirappalli Health Institute 517,Tamil Nadu,Tiruchirappalli,300946,994,"ENT,Cardiology,Pediatrics,Neurology,Gastroenterology",185 Tiruchirappalli Medical Road,10.862775,74.272172,no,2025-09-30
+H200947,Ranchi Health Institute 5090,Jharkhand,Ranchi,300947,759,"Pediatrics,General Medicine,Neurology",291 Ranchi Medical Road,27.514291,84.860449,no,2025-09-30
+H200948,Ahmedabad Health Institute 6021,Gujarat,Ahmedabad,300948,255,"General Medicine,Orthopedics",115 Ahmedabad Medical Road,28.80054,82.854219,no,2025-09-30
+H200949,Raipur Health Institute 8234,Chhattisgarh,Raipur,300949,676,"Pediatrics,Orthopedics,Oncology",85 Raipur Medical Road,27.525303,74.398071,no,2025-09-30
+H200950,Patna Health Institute 430,Bihar,Patna,300950,341,"Pediatrics,ENT,Nephrology,Orthopedics,Neurology",34 Patna Medical Road,17.361923,75.545916,no,2025-09-30
+H200951,Gaya Health Institute 4861,Bihar,Gaya,300951,68,"Pediatrics,Neurology",134 Gaya Medical Road,14.329851,75.955275,no,2025-09-30
+H200952,Kolkata Health Institute 178,West Bengal,Kolkata,300952,198,"Pediatrics,ENT,Nephrology,Cardiology,General Medicine",132 Kolkata Medical Road,11.659791,73.770302,no,2025-09-30
+H200953,Gurgaon Health Institute 1290,Haryana,Gurgaon,300953,384,"General Medicine,Orthopedics,Oncology",188 Gurgaon Medical Road,25.142111,87.073014,no,2025-09-30
+H200954,Ranchi Health Institute 3336,Jharkhand,Ranchi,300954,891,"ENT,Pediatrics,Nephrology,Orthopedics",75 Ranchi Medical Road,13.912961,87.710307,no,2025-09-30
+H200955,South Delhi Health Institute 7544,Delhi,South Delhi,300955,121,"Oncology,Nephrology,Cardiology",282 South Delhi Medical Road,11.440826,72.058732,no,2025-09-30
+H200956,Jaipur Health Institute 8898,Rajasthan,Jaipur,300956,542,"Gastroenterology,Cardiology,Orthopedics,Pediatrics,Neurology",240 Jaipur Medical Road,23.152756,73.366162,no,2025-09-30
+H200957,Cuttack Health Institute 2656,Odisha,Cuttack,300957,305,"ENT,Cardiology,General Medicine,Oncology",7 Cuttack Medical Road,8.661914,72.955538,no,2025-09-30
+H200958,Gaya Health Institute 2015,Bihar,Gaya,300958,588,"Neurology,ENT,Nephrology,Cardiology",197 Gaya Medical Road,32.667908,85.660107,no,2025-09-30
+H200959,Chandigarh Health Institute 952,Punjab,Chandigarh,300959,602,"Cardiology,ENT,Orthopedics",238 Chandigarh Medical Road,25.833718,71.715167,no,2025-09-30
+H200960,Warangal Health Institute 1610,Telangana,Warangal,300960,228,"Orthopedics,Neurology,Cardiology,Pediatrics,Gastroenterology",39 Warangal Medical Road,30.310658,72.974984,no,2025-09-30
+H200961,Mysuru Health Institute 2783,Karnataka,Mysuru,300961,1141,"Pediatrics,Gastroenterology,General Medicine",174 Mysuru Medical Road,31.054615,76.948498,no,2025-09-30
+H200962,Chandigarh Health Institute 2538,Punjab,Chandigarh,300962,955,"Nephrology,Neurology,Gastroenterology,Cardiology,Oncology",113 Chandigarh Medical Road,32.279138,72.743303,no,2025-09-30
+H200963,Mumbai Health Institute 8599,Maharashtra,Mumbai,300963,824,"Neurology,Oncology,Cardiology",252 Mumbai Medical Road,22.716361,70.785348,no,2025-09-30
+H200964,South Delhi Health Institute 3188,Delhi,South Delhi,300964,321,"Neurology,Nephrology,ENT",269 South Delhi Medical Road,12.496577,69.529398,no,2025-09-30
+H200965,Lucknow Health Institute 5637,Uttar Pradesh,Lucknow,300965,269,"General Medicine,ENT,Gastroenterology,Cardiology,Pediatrics",129 Lucknow Medical Road,13.29068,71.87827,yes,2025-09-30
+H200966,Bhubaneswar Health Institute 2414,Odisha,Bhubaneswar,300966,286,"Oncology,Nephrology,Gastroenterology,Cardiology",112 Bhubaneswar Medical Road,13.04237,85.8701,no,2025-09-30
+H200967,Mumbai Health Institute 317,Maharashtra,Mumbai,300967,714,"Oncology,General Medicine,Pediatrics,Neurology,Gastroenterology",121 Mumbai Medical Road,16.861795,70.165695,no,2025-09-30
+H200968,Kochi Health Institute 1664,Kerala,Kochi,300968,726,"General Medicine,Neurology,ENT,Pediatrics",207 Kochi Medical Road,30.476873,72.028469,yes,2025-09-30
+H200969,Ranchi Health Institute 2913,Jharkhand,Ranchi,300969,152,"Gastroenterology,Cardiology,General Medicine",167 Ranchi Medical Road,29.647836,82.718631,no,2025-09-30
+H200970,Guwahati Health Institute 593,Assam,Guwahati,300970,215,"Neurology,Gastroenterology,ENT",25 Guwahati Medical Road,14.027655,86.851929,no,2025-09-30
+H200971,Guwahati Health Institute 925,Assam,Guwahati,300971,675,"General Medicine,Neurology,Gastroenterology,Nephrology",196 Guwahati Medical Road,30.511618,80.006061,no,2025-09-30
+H200972,New Delhi Health Institute 1306,Delhi,New Delhi,300972,233,"Cardiology,Pediatrics,Oncology,General Medicine",45 New Delhi Medical Road,9.369721,69.444322,no,2025-09-30
+H200973,Madurai Health Institute 4352,Tamil Nadu,Madurai,300973,150,"Neurology,General Medicine,Orthopedics",190 Madurai Medical Road,13.653431,70.326826,no,2025-09-30
+H200974,Faridabad Health Institute 1976,Haryana,Faridabad,300974,329,"Gastroenterology,Nephrology,General Medicine,ENT",123 Faridabad Medical Road,28.224647,85.866654,no,2025-09-30
+H200975,New Delhi Health Institute 2516,Delhi,New Delhi,300975,168,"Pediatrics,Oncology,Nephrology",175 New Delhi Medical Road,20.270179,78.864944,no,2025-09-30
+H200976,Chennai Health Institute 4639,Tamil Nadu,Chennai,300976,616,"Orthopedics,Cardiology,Nephrology,ENT",54 Chennai Medical Road,17.524502,85.385268,no,2025-09-30
+H200977,Patna Health Institute 3898,Bihar,Patna,300977,717,"Cardiology,ENT",58 Patna Medical Road,8.541888,73.048771,no,2025-09-30
+H200978,Guwahati Health Institute 6297,Assam,Guwahati,300978,759,"ENT,Gastroenterology,Orthopedics,Nephrology,Pediatrics",93 Guwahati Medical Road,13.284408,68.119482,no,2025-09-30
+H200979,Gurgaon Health Institute 2818,Haryana,Gurgaon,300979,243,"Nephrology,Neurology,Orthopedics,Gastroenterology,General Medicine",168 Gurgaon Medical Road,13.939997,86.122641,yes,2025-09-30
+H200980,South Delhi Health Institute 4917,Delhi,South Delhi,300980,64,"Nephrology,Pediatrics,General Medicine,Oncology,Orthopedics",236 South Delhi Medical Road,23.368027,85.494085,no,2025-09-30
+H200981,Warangal Health Institute 7899,Telangana,Warangal,300981,156,"Oncology,General Medicine,Cardiology",91 Warangal Medical Road,15.965989,78.100588,no,2025-09-30
+H200982,Lucknow Health Institute 3191,Uttar Pradesh,Lucknow,300982,411,"Neurology,Pediatrics",122 Lucknow Medical Road,29.808823,75.534713,yes,2025-09-30
+H200983,Patna Health Institute 5538,Bihar,Patna,300983,150,"ENT,Nephrology,Neurology",91 Patna Medical Road,18.423043,84.090026,no,2025-09-30
+H200984,Hyderabad Health Institute 4303,Telangana,Hyderabad,300984,578,"Pediatrics,ENT,General Medicine,Nephrology",262 Hyderabad Medical Road,28.880458,77.243001,yes,2025-09-30
+H200985,South Delhi Health Institute 1193,Delhi,South Delhi,300985,67,"Neurology,Cardiology,Oncology,Orthopedics,General Medicine",215 South Delhi Medical Road,22.102388,81.438081,no,2025-09-30
+H200986,Kolkata Health Institute 2866,West Bengal,Kolkata,300986,1078,"Pediatrics,General Medicine,Oncology,Neurology",289 Kolkata Medical Road,12.699024,78.500571,no,2025-09-30
+H200987,Kanpur Health Institute 4768,Uttar Pradesh,Kanpur,300987,833,"Neurology,Nephrology,Cardiology,Gastroenterology",233 Kanpur Medical Road,12.312635,71.110667,no,2025-09-30
+H200988,Ranchi Health Institute 4476,Jharkhand,Ranchi,300988,187,"Gastroenterology,Nephrology,General Medicine,Pediatrics",79 Ranchi Medical Road,31.478744,68.792124,no,2025-09-30
+H200989,Noida Health Institute 581,Uttar Pradesh,Noida,300989,423,"Pediatrics,Gastroenterology,Neurology,Cardiology",159 Noida Medical Road,32.891884,85.750028,yes,2025-09-30
+H200990,Guwahati Health Institute 8594,Assam,Guwahati,300990,470,"Neurology,Pediatrics,Orthopedics,Oncology,General Medicine",110 Guwahati Medical Road,30.585282,81.902404,no,2025-09-30
+H200991,Madurai Health Institute 7737,Tamil Nadu,Madurai,300991,820,"Nephrology,Gastroenterology,Orthopedics",275 Madurai Medical Road,23.495304,81.809407,yes,2025-09-30
+H200992,Nagpur Health Institute 4927,Maharashtra,Nagpur,300992,51,"General Medicine,Pediatrics,Orthopedics",83 Nagpur Medical Road,16.142585,86.999681,no,2025-09-30
+H200993,North Delhi Health Institute 3707,Delhi,North Delhi,300993,523,"General Medicine,Orthopedics,Oncology",60 North Delhi Medical Road,25.996723,76.967854,no,2025-09-30
+H200994,Bhubaneswar Health Institute 4666,Odisha,Bhubaneswar,300994,769,"Oncology,Cardiology,Gastroenterology,General Medicine,Orthopedics",97 Bhubaneswar Medical Road,15.211185,68.527794,no,2025-09-30
+H200995,Raipur Health Institute 6558,Chhattisgarh,Raipur,300995,967,"General Medicine,Nephrology,Gastroenterology,Cardiology",181 Raipur Medical Road,19.678403,69.860405,no,2025-09-30
+H200996,Siliguri Health Institute 930,West Bengal,Siliguri,300996,1129,"General Medicine,Pediatrics,Orthopedics,ENT",158 Siliguri Medical Road,31.793444,80.349028,no,2025-09-30
+H200997,Ranchi Health Institute 3710,Jharkhand,Ranchi,300997,1003,"Oncology,General Medicine,ENT,Gastroenterology",51 Ranchi Medical Road,14.462308,87.195817,no,2025-09-30
+H200998,Noida Health Institute 6103,Uttar Pradesh,Noida,300998,1168,"Gastroenterology,Orthopedics",145 Noida Medical Road,9.108641,81.329084,no,2025-09-30
+H200999,Bhubaneswar Health Institute 1588,Odisha,Bhubaneswar,300999,1141,"Cardiology,Neurology,General Medicine",167 Bhubaneswar Medical Road,16.746157,69.686136,no,2025-09-30

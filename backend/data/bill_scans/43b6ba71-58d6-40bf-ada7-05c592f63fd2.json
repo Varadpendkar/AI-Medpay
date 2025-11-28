@@ -1,0 +1,525 @@
+{
+  "hospital": "Unknown Hospital",
+  "bill_date": "2025-11-09",
+  "invoice_no": "N/A",
+  "total_amount": 0.0,
+  "subtotal": null,
+  "gst": null,
+  "tax": null,
+  "line_items": [
+    {
+      "desc": "ee Beh Sine ee aa FS ct EAN! SRS ES ab. Rae: aan: BOR a eG Eg re en be",
+      "qty": 1,
+      "unit": NaN,
+      "amount": 9.0,
+      "code": null,
+      "amount_num": 9.0
+    },
+    {
+      "desc": "ran Le Wet Bay Nee NN NE: aes, he ee ERIS enamine Te RE TARE ea Runa ere cece ae Saou S55 SSS eS REE SU ee Ae ree che Be",
+      "qty": 1,
+      "unit": null,
+      "amount": 9.0,
+      "code": null,
+      "amount_num": 9.0
+    },
+    {
+      "desc": "See a aoe |g GSN RON NOE",
+      "qty": 1,
+      "unit": null,
+      "amount": 24.0,
+      "code": null,
+      "amount_num": 24.0
+    },
+    {
+      "desc": "BIS eee ee ee aot fe SENN! SOUR Gi Pgs SUING SENN Sy ear Bete,",
+      "qty": 1,
+      "unit": null,
+      "amount": 3.0,
+      "code": null,
+      "amount_num": 3.0
+    },
+    {
+      "desc": "MEANS toes eet Bey Ces ENG EES Hoe: GPT Sey ee ee te CORSET FORCE RON as eae SMa SD agi Lace PN pr ee, ee",
+      "qty": 1,
+      "unit": 1.0,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "NES Pe ped Ogos i \u2018Lt, SS ef, a eee a | eee ene Te ORS",
+      "qty": 1,
+      "unit": 7.0,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "NOI Uf ly ; ee ES eae ire tah REA",
+      "qty": 1,
+      "unit": null,
+      "amount": 7.0,
+      "code": null,
+      "amount_num": 7.0
+    },
+    {
+      "desc": "ie. HW IY. \u2014 : . SND, BSH SAPS BH Uhl ij Eee iets RAE HEE SS ad At ADR i Se Sern a Se oe",
+      "qty": 1,
+      "unit": null,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": ", ok CO FET ES HH pe Lee ior HES AS RENN AWE eA tes nth, RE Ae",
+      "qty": 1,
+      "unit": 2.0,
+      "amount": 4.0,
+      "code": null,
+      "amount_num": 4.0
+    },
+    {
+      "desc": "eo fi beta eee eas SRT LURE AN Ce | SNe an, ee Sere",
+      "qty": 1,
+      "unit": null,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "\u2018 OR ACY Ni | RY a SER ae AMAL RN CA Use CaM Ws iets SLO Fg PORE Sey Wire RCE",
+      "qty": 1,
+      "unit": null,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "an ? CLS itp Z| v SS erent Se: i OE Pail EAE ee OS eS ae",
+      "qty": 1,
+      "unit": null,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "PR NOs BRE a ey \u201c. = EE Dart Pees Soa aoe amon",
+      "qty": 1,
+      "unit": null,
+      "amount": 3.0,
+      "code": null,
+      "amount_num": 3.0
+    },
+    {
+      "desc": "See eA RN NOOSE TAT as ay PERS Tis aE",
+      "qty": 1,
+      "unit": null,
+      "amount": 7.0,
+      "code": null,
+      "amount_num": 7.0
+    },
+    {
+      "desc": "SS ge ee Li > NES eo Se ee roe Ah ey saat eg ;",
+      "qty": 1,
+      "unit": null,
+      "amount": 4.0,
+      "code": null,
+      "amount_num": 4.0
+    },
+    {
+      "desc": "i <s TS a) J, Rien AMEE! SPE) [oo Ba \u00ab3",
+      "qty": 1,
+      "unit": 5.0,
+      "amount": 4.0,
+      "code": null,
+      "amount_num": 4.0
+    },
+    {
+      "desc": "a moo a ss a Ve A\") eee re = Nee TS eae Be > See DERE",
+      "qty": 1,
+      "unit": null,
+      "amount": 7.0,
+      "code": null,
+      "amount_num": 7.0
+    },
+    {
+      "desc": "oe Rs A ey LE) REN ue et ane nen A en Sade Ce ee kee",
+      "qty": 1,
+      "unit": null,
+      "amount": 3.0,
+      "code": null,
+      "amount_num": 3.0
+    },
+    {
+      "desc": "ee aay Beil << Qe des. rik PE SESE ge aa on agp",
+      "qty": 1,
+      "unit": null,
+      "amount": 7.0,
+      "code": null,
+      "amount_num": 7.0
+    },
+    {
+      "desc": "Sea CRY Binnie \u201c JL NCO eine eee ABER he Ob ses Hee eS oe",
+      "qty": 1,
+      "unit": null,
+      "amount": 5.0,
+      "code": null,
+      "amount_num": 5.0
+    },
+    {
+      "desc": "eae a Ne ee Pe LA ate? Peg PE ET ek",
+      "qty": 1,
+      "unit": null,
+      "amount": 2.0,
+      "code": null,
+      "amount_num": 2.0
+    },
+    {
+      "desc": "eee veto hag eer Seared See penn tet ad ose SO pe ONE",
+      "qty": 1,
+      "unit": null,
+      "amount": 8.0,
+      "code": null,
+      "amount_num": 8.0
+    },
+    {
+      "desc": "RARE RMA LS AES SE COL a ae",
+      "qty": 1,
+      "unit": null,
+      "amount": 7.0,
+      "code": null,
+      "amount_num": 7.0
+    }
+  ],
+  "ocr_confidence": 23.73046875,
+  "status": "completed",
+  "job_id": "43b6ba71-58d6-40bf-ada7-05c592f63fd2",
+  "analysis": {
+    "merchant": null,
+    "date": null,
+    "grand_total": 0.0,
+    "flagged_items": [
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 0,
+        "description": null,
+        "actual": 9.0,
+        "expected": 4.0,
+        "factor": 2.25,
+        "excess": 5.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 5.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 1,
+        "description": null,
+        "actual": 9.0,
+        "expected": 4.0,
+        "factor": 2.25,
+        "excess": 5.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 5.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 2,
+        "description": null,
+        "actual": 24.0,
+        "expected": 4.0,
+        "factor": 6.0,
+        "excess": 20.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 20.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 6,
+        "description": null,
+        "actual": 7.0,
+        "expected": 4.0,
+        "factor": 1.75,
+        "excess": 3.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 3.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 13,
+        "description": null,
+        "actual": 7.0,
+        "expected": 4.0,
+        "factor": 1.75,
+        "excess": 3.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 3.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 16,
+        "description": null,
+        "actual": 7.0,
+        "expected": 4.0,
+        "factor": 1.75,
+        "excess": 3.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 3.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 18,
+        "description": null,
+        "actual": 7.0,
+        "expected": 4.0,
+        "factor": 1.75,
+        "excess": 3.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 3.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 21,
+        "description": null,
+        "actual": 8.0,
+        "expected": 4.0,
+        "factor": 2.0,
+        "excess": 4.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 4.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 22,
+        "description": null,
+        "actual": 7.0,
+        "expected": 4.0,
+        "factor": 1.75,
+        "excess": 3.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 3.0
+      }
+    ],
+    "potential_savings": 39.2,
+    "computed_subtotal": 125.0,
+    "totals_check": {
+      "computed_subtotal": 125.0,
+      "found_subtotal": null,
+      "found_gst": 0.0,
+      "found_grand": 0.0,
+      "flags": []
+    }
+  },
+  "flagged_items": [
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 0,
+      "description": null,
+      "actual": 9.0,
+      "expected": 4.0,
+      "factor": 2.25,
+      "excess": 5.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 5.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 1,
+      "description": null,
+      "actual": 9.0,
+      "expected": 4.0,
+      "factor": 2.25,
+      "excess": 5.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 5.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 2,
+      "description": null,
+      "actual": 24.0,
+      "expected": 4.0,
+      "factor": 6.0,
+      "excess": 20.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 20.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 6,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 13,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 16,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 18,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 21,
+      "description": null,
+      "actual": 8.0,
+      "expected": 4.0,
+      "factor": 2.0,
+      "excess": 4.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 4.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 22,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    }
+  ],
+  "potential_savings": 39.2,
+  "totals_check": {
+    "computed_subtotal": 125.0,
+    "found_subtotal": null,
+    "found_gst": 0.0,
+    "found_grand": 0.0,
+    "flags": []
+  },
+  "flagged_lines": [
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 0,
+      "description": null,
+      "actual": 9.0,
+      "expected": 4.0,
+      "factor": 2.25,
+      "excess": 5.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 5.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 1,
+      "description": null,
+      "actual": 9.0,
+      "expected": 4.0,
+      "factor": 2.25,
+      "excess": 5.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 5.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 2,
+      "description": null,
+      "actual": 24.0,
+      "expected": 4.0,
+      "factor": 6.0,
+      "excess": 20.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 20.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 6,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 13,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 16,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 18,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 21,
+      "description": null,
+      "actual": 8.0,
+      "expected": 4.0,
+      "factor": 2.0,
+      "excess": 4.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 4.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 22,
+      "description": null,
+      "actual": 7.0,
+      "expected": 4.0,
+      "factor": 1.75,
+      "excess": 3.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 3.0
+    }
+  ],
+  "total_savings": 39.2,
+  "percent_flagged": 39.130434782608695
+}

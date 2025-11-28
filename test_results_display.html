@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Scanner Results Test</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        padding: 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .results-container {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+      .test-buttons {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .test-buttons button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+      }
+      .test-buttons button:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧪 Bill Scanner Results Test</h1>
+
+      <div class="test-buttons">
+        <button onclick="testLocalResults()">Test with Sample Data</button>
+        <button onclick="testServerResults()">
+          Test with Server (test-12345)
+        </button>
+      </div>
+
+      <div id="results" class="results-container"></div>
+    </div>
+
+    <script>
+      // Copy the renderResults function from bill_buster_scan.js
+      function renderResults(data) {
+        const resultsDiv = document.getElementById("results");
+        if (!resultsDiv) return;
+
+        // Extract data
+        const hospitalName =
+          data.hospital_name || data.hospital || "Unknown Hospital";
+        const billDate = data.bill_date || data.date || "N/A";
+        const invoiceNo = data.invoice_no || data.invoice_number || "N/A";
+        const totalAmount = data.total_amount || data.grand_total || 0;
+        const ocrConfidence = data.ocr_confidence || 0;
+        const lineItems = data.line_items || [];
+        const flaggedItems = data.flagged_items || [];
+        const potentialSavings = data.potential_savings || 0;
+        const totalsCheck = data.totals_check || {};
+
+        // Build flagged items lookup by line index
+        const flaggedByLine = {};
+        flaggedItems.forEach((flag) => {
+          if (flag.indices) {
+            flag.indices.forEach((idx) => {
+              if (!flaggedByLine[idx]) flaggedByLine[idx] = [];
+              flaggedByLine[idx].push(flag);
+            });
+          }
+        });
+
+        // Build HTML
+        let html = `
+                <div class="bill-summary" style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: #1f2937; margin-bottom: 1rem;">${escapeHtml(
+                      hospitalName
+                    )}</h3>
+                    <p style="color: #4b5563; margin-bottom: 0.5rem;"><strong>Date:</strong> ${billDate} | <strong>Invoice:</strong> ${invoiceNo}</p>
+                    <p style="color: #4b5563; margin-bottom: 0.5rem;"><strong>Total Amount:</strong> ₹${totalAmount.toLocaleString(
+                      "en-IN"
+                    )}</p>
+                    <p style="color: #4b5563;"><strong>OCR Confidence:</strong> ${ocrConfidence.toFixed(
+                      1
+                    )}%</p>
+                </div>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: bold;">Line Items</h4>
+                <div class="table-responsive" style="overflow-x: auto; margin-bottom: 2rem;">
+                    <table class="bill-items" style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%); color: white;">
+                                <th style="padding: 0.75rem; text-align: left; font-weight: 600;">#</th>
+                                <th style="padding: 0.75rem; text-align: left; font-weight: 600;">Description</th>
+                                <th style="padding: 0.75rem; text-align: center; font-weight: 600;">Qty</th>
+                                <th style="padding: 0.75rem; text-align: right; font-weight: 600;">Unit Price</th>
+                                <th style="padding: 0.75rem; text-align: right; font-weight: 600;">Amount</th>
+                                <th style="padding: 0.75rem; text-align: center; font-weight: 600;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+        lineItems.forEach((item, i) => {
+          const hasFlags = flaggedByLine[i] && flaggedByLine[i].length > 0;
+          const rowStyle = hasFlags
+            ? "background: #fef2f2; border-left: 4px solid #ef4444;"
+            : "background: white;";
+
+          html += `
+                    <tr style="${rowStyle} border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 0.75rem; font-weight: 500;">${
+                          i + 1
+                        }</td>
+                        <td style="padding: 0.75rem;">${escapeHtml(
+                          item.desc || item.description || ""
+                        )}</td>
+                        <td style="padding: 0.75rem; text-align: center;">${
+                          item.qty || item.quantity || 1
+                        }</td>
+                        <td style="padding: 0.75rem; text-align: right;">${
+                          item.unit || item.unit_price
+                            ? "₹" +
+                              (item.unit || item.unit_price).toLocaleString(
+                                "en-IN"
+                              )
+                            : "-"
+                        }</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 600;">₹${(
+                          item.amount || 0
+                        ).toLocaleString("en-IN")}</td>
+                        <td style="padding: 0.75rem; text-align: center;">
+                            ${
+                              hasFlags
+                                ? '<span style="color: #ef4444; font-size: 1.25rem;">❌</span>'
+                                : '<span style="color: #10b981; font-size: 1.25rem;">✓</span>'
+                            }
+                        </td>
+                    </tr>
+                `;
+        });
+
+        html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+        // Analysis Summary Card
+        html += `
+                <div style="background: ${
+                  potentialSavings > 0
+                    ? "linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%)"
+                    : "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)"
+                }; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 2px solid ${
+          potentialSavings > 0 ? "#ef4444" : "#10b981"
+        };">
+                    <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">📊 Analysis Summary</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.25rem;">Flagged Items:</div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: ${
+                              potentialSavings > 0 ? "#dc2626" : "#059669"
+                            };">${flaggedItems.length} ${
+          potentialSavings > 0 ? "⚠️" : ""
+        }</div>
+                        </div>
+                        <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.25rem;">Potential Savings:</div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: ${
+                              potentialSavings > 0 ? "#dc2626" : "#059669"
+                            };">₹${potentialSavings.toLocaleString(
+          "en-IN"
+        )}</div>
+                        </div>
+                    </div>
+                    ${
+                      potentialSavings > 0
+                        ? `
+                        <p style="background: #fef2f2; padding: 0.75rem; border-radius: 6px; border-left: 4px solid #dc2626; margin-top: 1rem;">
+                            💡 <strong>Tip:</strong> You may be able to recover ₹${potentialSavings.toLocaleString(
+                              "en-IN"
+                            )} by contesting flagged charges (conservative estimate).
+                        </p>
+                    `
+                        : `
+                        <p style="background: #f0fdf4; padding: 0.75rem; border-radius: 6px; border-left: 4px solid #10b981; margin-top: 1rem;">
+                            ✅ <strong>No major anomalies detected.</strong> Bill appears reasonable.
+                        </p>
+                    `
+                    }
+                </div>
+            `;
+
+        // Mistake Details Table (if anomalies found)
+        if (flaggedItems.length > 0) {
+          html += `
+                    <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: bold; color: #dc2626;">❌ Bill Analysis Mistakes</h4>
+                    <div class="table-responsive" style="overflow-x: auto; margin-bottom: 2rem;">
+                        <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%); color: white;">
+                                    <th style="padding: 0.75rem; text-align: left; font-weight: 600;">Mistake Type</th>
+                                    <th style="padding: 0.75rem; text-align: left; font-weight: 600;">Item Line(s)</th>
+                                    <th style="padding: 0.75rem; text-align: left; font-weight: 600;">Anomaly Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+          flaggedItems.forEach((flag, idx) => {
+            let mistakeType = flag.type || "unknown";
+            let lineNumbers = "";
+            let anomalyDetail = "";
+
+            // Format based on type
+            if (flag.type === "duplicate_item") {
+              mistakeType = "🔄 Duplicate Billing";
+              lineNumbers = `Line ${(flag.indices || [])
+                .map((i) => i + 1)
+                .join(" & ")}`;
+              anomalyDetail = `"${escapeHtml(
+                flag.description || ""
+              )}" appears ${
+                flag.indices ? flag.indices.length : 2
+              } times with same price (₹${(flag.amount || 0).toLocaleString(
+                "en-IN"
+              )}). Potential overcharge: ₹${(flag.excess || 0).toLocaleString(
+                "en-IN"
+              )}`;
+            } else if (flag.type === "inflated_vs_expected") {
+              mistakeType = "💸 Suspected Overcharge";
+              lineNumbers = `Line ${(flag.line_index || 0) + 1}`;
+              anomalyDetail = `"${escapeHtml(
+                flag.description || ""
+              )}" charged at ₹${(flag.actual || 0).toLocaleString(
+                "en-IN"
+              )}, expected ₹${(flag.expected || 0).toLocaleString("en-IN")} (${
+                flag.factor ? (flag.factor * 100).toFixed(0) + "%" : ""
+              } higher than market rate)`;
+            } else if (
+              flag.type === "subtotal_mismatch" ||
+              flag.type === "grandtotal_mismatch"
+            ) {
+              mistakeType = "🧮 Logic/Calculation Error";
+              lineNumbers =
+                flag.type === "subtotal_mismatch" ? "Subtotal" : "Grand Total";
+              anomalyDetail = `Computed: ₹${(flag.computed || 0).toLocaleString(
+                "en-IN"
+              )}, Found: ₹${(flag.found || 0).toLocaleString(
+                "en-IN"
+              )}, Difference: ₹${Math.abs(
+                (flag.computed || 0) - (flag.found || 0)
+              ).toLocaleString("en-IN")}`;
+            } else {
+              mistakeType =
+                "⚠️ " +
+                (flag.type || "Unknown Issue")
+                  .replace(/_/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase());
+              lineNumbers = flag.indices
+                ? flag.indices.map((i) => i + 1).join(", ")
+                : flag.line_index !== undefined
+                ? `Line ${flag.line_index + 1}`
+                : "N/A";
+              anomalyDetail = escapeHtml(
+                flag.reason || flag.description || "See details above"
+              );
+            }
+
+            html += `
+                        <tr style="border-bottom: 1px solid #e5e7eb; background: ${
+                          idx % 2 === 0 ? "#ffffff" : "#f9fafb"
+                        };">
+                            <td style="padding: 0.75rem; font-weight: 600; color: #dc2626;">${mistakeType}</td>
+                            <td style="padding: 0.75rem; font-weight: 500;">${lineNumbers}</td>
+                            <td style="padding: 0.75rem; color: #4b5563;">${anomalyDetail}</td>
+                        </tr>
+                    `;
+          });
+
+          html += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+        }
+
+        resultsDiv.innerHTML = html;
+      }
+
+      function escapeHtml(text) {
+        const map = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;",
+        };
+        return String(text).replace(/[&<>"']/g, (m) => map[m]);
+      }
+
+      // Test with sample data
+      function testLocalResults() {
+        const sampleData = {
+          hospital_name: "Apollo Care Hospitals",
+          bill_date: "2021-10-25",
+          invoice_no: "Invoice",
+          total_amount: 312900,
+          ocr_confidence: 90.6,
+          line_items: [
+            {
+              desc: "Knee Replacement Surgeon Fees",
+              qty: 1,
+              unit: 75000,
+              amount: 75000,
+            },
+            {
+              desc: "Implant (Prosthesis)",
+              qty: 1,
+              unit: 60000,
+              amount: 60000,
+            },
+            {
+              desc: "OT Charges (Operation Theatre)",
+              qty: 1,
+              unit: 15000,
+              amount: 15000,
+            },
+            {
+              desc: "Room Rent Deluxe A (3 days)",
+              qty: 3,
+              unit: 5000,
+              amount: 15000,
+            },
+            {
+              desc: "Physiotherapy Session",
+              qty: 5,
+              unit: 2000,
+              amount: 10000,
+            },
+            {
+              desc: "Implant (Prosthesis) Duplicate (erroneous)",
+              qty: 1,
+              unit: 60000,
+              amount: 60000,
+            },
+            {
+              desc: "Doctor Consultation Anaesthesia",
+              qty: 1,
+              unit: 8000,
+              amount: 8000,
+            },
+            {
+              desc: "Consumables & Dressing",
+              qty: 1,
+              unit: 5000,
+              amount: 5000,
+            },
+            {
+              desc: "Misc Charges (inflated)",
+              qty: 1,
+              unit: 50000,
+              amount: 50000,
+            },
+          ],
+          flagged_items: [
+            {
+              type: "duplicate_item",
+              description: "Implant (Prosthesis)",
+              indices: [1, 5],
+              amount: 60000,
+              excess: 60000,
+            },
+            {
+              type: "inflated_vs_expected",
+              description: "Misc Charges (inflated)",
+              line_index: 8,
+              actual: 50000,
+              expected: 10500,
+              factor: 4.76,
+              excess: 39500,
+            },
+            {
+              type: "subtotal_mismatch",
+              computed: 258000,
+              found: 298000,
+              diff: 40000,
+            },
+          ],
+          potential_savings: 189760,
+        };
+
+        renderResults(sampleData);
+      }
+
+      // Test with server data
+      async function testServerResults() {
+        try {
+          const resp = await fetch(
+            "http://127.0.0.1:5001/bill-buster/scan-result/test-12345"
+          );
+          const data = await resp.json();
+          renderResults(data);
+        } catch (error) {
+          alert(
+            "Error loading server data. Make sure Flask server is running on port 5001."
+          );
+          console.error(error);
+        }
+      }
+
+      // Auto-load sample data on page load
+      window.onload = () => {
+        testLocalResults();
+      };
+    </script>
+  </body>
+</html>

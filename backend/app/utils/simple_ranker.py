@@ -95,9 +95,14 @@ class PlanRanker:
     def __init__(self, project_root: Path):
         self.root = Path(project_root)
 
+        # MODEL LOADING DISABLED - WAITING FOR NEW MODEL INTEGRATION
         # Load model
-        model_path = self._find_model_path()
-        self.booster = Booster(model_file=str(model_path))
+        # model_path = self._find_model_path()
+        # self.booster = Booster(model_file=str(model_path))
+
+        raise FileNotFoundError(
+            "PlanRanker is currently disabled. Waiting for new model integration."
+        )
 
         # Load plans data
         data_dir = self.root.parent / "data"  # backend/data

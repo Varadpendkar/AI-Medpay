@@ -1,4 +1,30 @@
 /* Custom tweaks on top of Tailwind utilities */
+
+/* CRITICAL FIX: Global constraint for all pseudo-elements to prevent oversized icons */
+*::before,
+*::after {
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+/* Constrain any element with icon/checkmark content */
+[class*="bullet"]::before,
+[class*="check"]::before,
+[class*="icon"]::before,
+[class*="badge"]::before,
+[class*="reason"]::before {
+  max-width: 2rem !important;
+  max-height: 2rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* Constrain all SVG elements by default */
+svg:not([class*="canvas"]):not([class*="hero"]) {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 :root {
   --primary: #00a693;
   --accent: #0ea5e9;
@@ -36,3 +62,15 @@ body {
     transition: none !important;
   }
 }
+
+/* main.css additions - append only */
+:root {
+  --ui-radius: 12px;
+  --muted: #6b7280;
+}
+
+/* utility: small text */
+.text-muted { color: var(--muted); }
+
+/* larger page container */
+.container-max { max-width: 1200px; margin: 0 auto; padding: 1rem; }

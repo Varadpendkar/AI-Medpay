@@ -1,0 +1,205 @@
+planid,plan_name,plan_type,plan_tier,plan_category,addons,coverageamount,waitingperioddays
+PL10000,Life Insurance Corporation of India (LIC) Pure Term Plan,individual,,Pure Term Plan,accident_cover,10000000,0
+PL10001,Life Insurance Corporation of India (LIC) Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,1000000,0
+PL10002,Life Insurance Corporation of India (LIC) Convertible Term Plan,individual,,Convertible Term Plan,,5000000,0
+PL10003,HDFC Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,5000000,0
+PL10004,HDFC Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,5000000,0
+PL10005,HDFC Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,500000,0
+PL10006,Axis Max Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,2000000,0
+PL10007,Axis Max Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,5000000,0
+PL10008,Axis Max Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,1000000,0
+PL10009,ICICI Prudential Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,20000000,0
+PL10010,ICICI Prudential Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,5000000,0
+PL10011,ICICI Prudential Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,1000000,0
+PL10012,Kotak Mahindra Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,1000000,0
+PL10013,Kotak Mahindra Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,20000000,0
+PL10014,Kotak Mahindra Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,1000000,0
+PL10015,Aditya Birla Sun Life Insurance Pure Term Plan,individual,,Pure Term Plan,,10000000,0
+PL10016,Aditya Birla Sun Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,2000000,0
+PL10017,Aditya Birla Sun Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,10000000,0
+PL10018,TATA AIA Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,2000000,0
+PL10019,TATA AIA Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,500000,0
+PL10020,TATA AIA Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,500000,0
+PL10021,SBI Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,500000,0
+PL10022,SBI Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10023,SBI Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,20000000,0
+PL10024,Bajaj Allianz Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,2000000,0
+PL10025,Bajaj Allianz Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10026,Bajaj Allianz Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,5000000,0
+PL10027,PNB MetLife India Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,1000000,0
+PL10028,PNB MetLife India Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,2000000,0
+PL10029,PNB MetLife India Insurance Convertible Term Plan,individual,,Convertible Term Plan,,20000000,0
+PL10030,Reliance Nippon Life Insurance Pure Term Plan,individual,,Pure Term Plan,,10000000,0
+PL10031,Reliance Nippon Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,1000000,0
+PL10032,Reliance Nippon Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,10000000,0
+PL10033,Aviva Life Insurance India Pure Term Plan,individual,,Pure Term Plan,accident_cover,5000000,0
+PL10034,Aviva Life Insurance India Return of Premium (TROP),individual,,Return of Premium (TROP),,500000,0
+PL10035,Aviva Life Insurance India Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,500000,0
+PL10036,Sahara India Life Insurance Pure Term Plan,individual,,Pure Term Plan,,500000,0
+PL10037,Sahara India Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,2000000,0
+PL10038,Sahara India Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,2000000,0
+PL10039,Shriram Life Insurance Pure Term Plan,individual,,Pure Term Plan,,2000000,0
+PL10040,Shriram Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,2000000,0
+PL10041,Shriram Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,2000000,0
+PL10042,Bharti AXA Life Insurance Pure Term Plan,individual,,Pure Term Plan,,500000,0
+PL10043,Bharti AXA Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,20000000,0
+PL10044,Bharti AXA Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,2000000,0
+PL10045,Future Generali India Life Insurance Pure Term Plan,individual,,Pure Term Plan,,500000,0
+PL10046,Future Generali India Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10047,Future Generali India Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,2000000,0
+PL10048,Ageas Federal Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,1000000,0
+PL10049,Ageas Federal Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,1000000,0
+PL10050,Ageas Federal Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,500000,0
+PL10051,Canara HSBC Life Insurance Pure Term Plan,individual,,Pure Term Plan,,5000000,0
+PL10052,Canara HSBC Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,5000000,0
+PL10053,Canara HSBC Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,1000000,0
+PL10054,Bandhan Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,500000,0
+PL10055,Bandhan Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,10000000,0
+PL10056,Bandhan Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,,10000000,0
+PL10057,Pramerica Life Insurance Pure Term Plan,individual,,Pure Term Plan,,2000000,0
+PL10058,Pramerica Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10059,Pramerica Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,1000000,0
+PL10060,Star Union Dai-ichi Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,20000000,0
+PL10061,Star Union Dai-ichi Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),,500000,0
+PL10062,Star Union Dai-ichi Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,500000,0
+PL10063,IndiaFirst Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,5000000,0
+PL10064,IndiaFirst Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10065,IndiaFirst Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,2000000,0
+PL10066,Edelweiss Life Insurance Pure Term Plan,individual,,Pure Term Plan,,20000000,0
+PL10067,Edelweiss Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,5000000,0
+PL10068,Edelweiss Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,1000000,0
+PL10069,Credit Access Life Insurance Pure Term Plan,individual,,Pure Term Plan,accident_cover,20000000,0
+PL10070,Credit Access Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,1000000,0
+PL10071,Credit Access Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,10000000,0
+PL10072,ACKO Life Insurance Pure Term Plan,individual,,Pure Term Plan,,2000000,0
+PL10073,ACKO Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,20000000,0
+PL10074,ACKO Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,5000000,0
+PL10075,Go Digit Life Insurance Pure Term Plan,individual,,Pure Term Plan,,20000000,0
+PL10076,Go Digit Life Insurance Return of Premium (TROP),individual,,Return of Premium (TROP),accident_cover,1000000,0
+PL10077,Go Digit Life Insurance Convertible Term Plan,individual,,Convertible Term Plan,accident_cover,1000000,0
+PL10078,Acko General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"opd,hospitalcash,maternity",179161,30
+PL10079,Acko General Insurance Family Floater Gold,family_floater,Gold,Family Floater,"opd,criticalillness,hospitalcash",946170,30
+PL10080,Acko General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,ayush,482945,90
+PL10081,Aditya Birla Health Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"hospitalcash,telemedicine",1047437,180
+PL10082,Aditya Birla Health Insurance Family Floater Silver,family_floater,Silver,Family Floater,"accident_cover,vision,maternity,dental",502749,180
+PL10083,Aditya Birla Health Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"criticalillness,maternity,dental",204507,90
+PL10084,Aditya Birla Health Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,365
+PL10085,Agriculture Insurance Company of India Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,"ayush,criticalillness,vision",589460,60
+PL10086,Agriculture Insurance Company of India Family Floater Bronze,family_floater,Bronze,Family Floater,"maternity,hospitalcash",181647,60
+PL10087,Agriculture Insurance Company of India Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,hospitalcash,200470,180
+PL10088,Agriculture Insurance Company of India Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,1000000,90
+PL10089,Bajaj Allianz General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,ayush,1031249,180
+PL10090,Bajaj Allianz General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"vision,roomrentwaiver,opd",487987,90
+PL10091,Bajaj Allianz General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,ayush,226911,30
+PL10092,Cholamandalam MS General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,dental,934324,180
+PL10093,Cholamandalam MS General Insurance Family Floater Gold,family_floater,Gold,Family Floater,telemedicine,929736,30
+PL10094,Cholamandalam MS General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,dental,225640,60
+PL10095,Cholamandalam MS General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,2000000,180
+PL10096,Manipal Cigna Health Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"dental,roomrentwaiver,hospitalcash",231183,30
+PL10097,Manipal Cigna Health Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"vision,opd",222655,90
+PL10098,Manipal Cigna Health Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,opd,188979,60
+PL10099,Manipal Cigna Health Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,2000000,90
+PL10100,Navi General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"ayush,opd",992968,180
+PL10101,Navi General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"maternity,accident_cover,hospitalcash",538461,60
+PL10102,Navi General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,dental,182158,30
+PL10103,Navi General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,90
+PL10104,Go Digit Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"criticalillness,hospitalcash",172438,60
+PL10105,Go Digit Insurance Family Floater Silver,family_floater,Silver,Family Floater,"hospitalcash,maternity,opd,accident_cover",477257,180
+PL10106,Go Digit Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"opd,telemedicine,criticalillness,ayush",152618,90
+PL10107,Go Digit Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,180
+PL10108,Zuno General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"roomrentwaiver,maternity,accident_cover,opd",896754,90
+PL10109,Zuno General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,dental,210059,30
+PL10110,Zuno General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"roomrentwaiver,criticalillness",536281,60
+PL10111,ECGC Limited Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"opd,roomrentwaiver,maternity",190272,60
+PL10112,ECGC Limited Family Floater Gold,family_floater,Gold,Family Floater,"dental,accident_cover,opd",1164581,30
+PL10113,ECGC Limited Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,hospitalcash,433714,60
+PL10114,ECGC Limited Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,180
+PL10115,Future Generali India Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"accident_cover,maternity,opd,dental",199605,90
+PL10116,Future Generali India Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"maternity,telemedicine,accident_cover",233568,90
+PL10117,Future Generali India Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"ayush,telemedicine",509144,90
+PL10118,Future Generali India Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,180
+PL10119,HDFC ERGO General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"telemedicine,opd,dental,criticalillness",1025766,30
+PL10120,HDFC ERGO General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"vision,accident_cover",193295,60
+PL10121,HDFC ERGO General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,telemedicine,563053,30
+PL10122,HDFC ERGO General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,365
+PL10123,ICICI Lombard General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"criticalillness,hospitalcash,vision",222510,90
+PL10124,ICICI Lombard General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"accident_cover,criticalillness",504913,30
+PL10125,ICICI Lombard General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"vision,criticalillness",442494,60
+PL10126,IFFCO TOKIO General Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,"criticalillness,telemedicine,dental",500148,30
+PL10127,IFFCO TOKIO General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"vision,opd,criticalillness,dental",513097,30
+PL10128,IFFCO TOKIO General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"roomrentwaiver,telemedicine",466006,60
+PL10129,IFFCO TOKIO General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,90
+PL10130,Zurich Kotak General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,vision,219527,180
+PL10131,Zurich Kotak General Insurance Family Floater Silver,family_floater,Silver,Family Floater,opd,512225,180
+PL10132,Zurich Kotak General Insurance Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,"dental,criticalillness,vision,hospitalcash",1062055,90
+PL10133,Zurich Kotak General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,2000000,180
+PL10134,Liberty General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"opd,vision",817179,60
+PL10135,Liberty General Insurance Family Floater Gold,family_floater,Gold,Family Floater,accident_cover,1183780,30
+PL10136,Liberty General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,maternity,587330,180
+PL10137,Magma General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,roomrentwaiver,190601,90
+PL10138,Magma General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"ayush,hospitalcash",219111,90
+PL10139,Magma General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"hospitalcash,vision,accident_cover",223732,30
+PL10140,Niva Bupa Health Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,hospitalcash,1073699,60
+PL10141,Niva Bupa Health Insurance Family Floater Silver,family_floater,Silver,Family Floater,"opd,telemedicine",559581,30
+PL10142,Niva Bupa Health Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"vision,accident_cover,dental",535689,30
+PL10143,Niva Bupa Health Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,365
+PL10144,National Insurance Company Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"criticalillness,vision",216721,30
+PL10145,National Insurance Company Family Floater Bronze,family_floater,Bronze,Family Floater,criticalillness,208627,30
+PL10146,National Insurance Company Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,telemedicine,1098150,60
+PL10147,National Insurance Company Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,180
+PL10148,New India Assurance Company Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,accident_cover,511166,60
+PL10149,New India Assurance Company Family Floater Platinum,family_floater,Platinum,Family Floater,"telemedicine,vision,maternity,roomrentwaiver",4950665,60
+PL10150,New India Assurance Company Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,"hospitalcash,ayush",959496,60
+PL10151,New India Assurance Company Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,2000000,90
+PL10152,Raheja QBE General Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,"criticalillness,vision,telemedicine,ayush",509154,180
+PL10153,Raheja QBE General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,ayush,206833,90
+PL10154,Raheja QBE General Insurance Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,"ayush,dental,vision",1058876,30
+PL10155,Reliance General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"roomrentwaiver,hospitalcash,criticalillness,dental",1042539,30
+PL10156,Reliance General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"hospitalcash,telemedicine,ayush,roomrentwaiver",432989,180
+PL10157,Reliance General Insurance Senior Citizen Health Platinum,individual,Platinum,Senior Citizen Health,"opd,accident_cover,hospitalcash",5127745,30
+PL10158,Reliance General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,365
+PL10159,Care Health Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"maternity,hospitalcash,criticalillness,telemedicine",177553,30
+PL10160,Care Health Insurance Family Floater Silver,family_floater,Silver,Family Floater,"roomrentwaiver,dental,accident_cover",490585,60
+PL10161,Care Health Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,dental,213157,180
+PL10162,Care Health Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,180
+PL10163,Royal Sundaram General Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,ayush,523638,60
+PL10164,Royal Sundaram General Insurance Family Floater Silver,family_floater,Silver,Family Floater,dental,481493,30
+PL10165,Royal Sundaram General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"hospitalcash,ayush,criticalillness,opd",572303,180
+PL10166,SBI General Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,"vision,ayush,maternity",519890,60
+PL10167,SBI General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"telemedicine,accident_cover,criticalillness,maternity",208608,30
+PL10168,SBI General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,accident_cover,526699,30
+PL10169,SBI General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,2000000,90
+PL10170,Shriram General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,maternity,197217,180
+PL10171,Shriram General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"accident_cover,roomrentwaiver,opd",181095,30
+PL10172,Shriram General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"ayush,maternity",178883,180
+PL10173,Star Health and Allied Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,criticalillness,438934,90
+PL10174,Star Health and Allied Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"vision,accident_cover",185473,30
+PL10175,Star Health and Allied Insurance Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,roomrentwaiver,772102,180
+PL10176,Star Health and Allied Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,1000000,90
+PL10177,Tata AIG General Insurance Individual Health Insurance Bronze,individual,Bronze,Individual Health Insurance,"maternity,accident_cover,dental,vision",225719,90
+PL10178,Tata AIG General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"roomrentwaiver,vision,dental",649981,90
+PL10179,Tata AIG General Insurance Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"dental,ayush",519559,180
+PL10180,Tata AIG General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,180
+PL10181,The Oriental Insurance Company Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,opd,1028802,60
+PL10182,The Oriental Insurance Company Family Floater Bronze,family_floater,Bronze,Family Floater,telemedicine,191504,90
+PL10183,The Oriental Insurance Company Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"vision,ayush,roomrentwaiver,criticalillness",205583,30
+PL10184,The Oriental Insurance Company Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,5000000,90
+PL10185,United India Insurance Company Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,vision,514410,90
+PL10186,United India Insurance Company Family Floater Bronze,family_floater,Bronze,Family Floater,accident_cover,197063,180
+PL10187,United India Insurance Company Senior Citizen Health Silver,individual,Silver,Senior Citizen Health,"maternity,opd,roomrentwaiver",524344,60
+PL10188,United India Insurance Company Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,500000,90
+PL10189,Universal Sompo General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,maternity,1137873,60
+PL10190,Universal Sompo General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,dental,219564,60
+PL10191,Universal Sompo General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"telemedicine,maternity,accident_cover,vision",221722,30
+PL10192,Kshema General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,"roomrentwaiver,ayush,opd,telemedicine",1142559,90
+PL10193,Kshema General Insurance Family Floater Silver,family_floater,Silver,Family Floater,"ayush,telemedicine",485781,180
+PL10194,Kshema General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"hospitalcash,telemedicine",190490,60
+PL10195,Kshema General Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,1000000,365
+PL10196,Galaxy Health Insurance Individual Health Insurance Silver,individual,Silver,Individual Health Insurance,maternity,436020,60
+PL10197,Galaxy Health Insurance Family Floater Silver,family_floater,Silver,Family Floater,"telemedicine,roomrentwaiver,dental",421029,90
+PL10198,Galaxy Health Insurance Senior Citizen Health Gold,individual,Gold,Senior Citizen Health,"opd,telemedicine",1060712,180
+PL10199,Galaxy Health Insurance Critical Illness Plan,individual,Gold,Critical Illness,criticalillness,1000000,180
+PL10200,Bandhan General Insurance Individual Health Insurance Gold,individual,Gold,Individual Health Insurance,dental,1085575,180
+PL10201,Bandhan General Insurance Family Floater Bronze,family_floater,Bronze,Family Floater,"accident_cover,vision,opd",210599,30
+PL10202,Bandhan General Insurance Senior Citizen Health Bronze,individual,Bronze,Senior Citizen Health,"roomrentwaiver,criticalillness,dental",243263,90
+PL10203,Ayushman Bharat - PMJAY package,family_floater,Government,Government Scheme - PMJAY,"pmjay_package,govt_empanelled",500000,0

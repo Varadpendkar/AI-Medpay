@@ -2,6 +2,7 @@ from app.frontend_routes.dashboard import frontend_bp
 from app.frontend_routes.get_quote import frontend_bp as get_quote_bp
 from app.frontend_routes.bill_buster import frontend_bp as bill_buster_bp
 from app.frontend_routes.resources import resources_bp
+from app.chat_local import CHAT_BP
 import os
 import logging
 from flask import Flask, render_template, redirect, url_for, flash, request, jsonify, session, send_from_directory, current_app
@@ -12,7 +13,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash
 from flask_migrate import Migrate
 from pathlib import Path
-from app.utils.simple_ranker import PlanRanker
+from app.utils.new_ranker import NewPlanRanker
 import pandas as pd
 from datetime import datetime
 from app.services.bill_analyzer import parse_bill_file
@@ -37,15 +38,18 @@ app.config['PREFERRED_URL_SCHEME'] = 'http'
 
 logging.basicConfig(level=logging.INFO)
 
-RANKER_MODEL_PATH = os.environ.get('RANKER_MODEL_PATH') or str(
-    PROJECT_ROOT / 'models' / 'ltr_model.txt')
+# Initialize new LightGBM-based ranker
 try:
-    ranker = PlanRanker(PROJECT_ROOT)
-    logging.info("✅ PlanRanker initialized successfully (path=%s)",
-                 RANKER_MODEL_PATH)
+    ranker = NewPlanRanker(PROJECT_ROOT)
+    logging.info(
+        "✅ NewPlanRanker initialized successfully with LightGBM model")
 except FileNotFoundError as e:
-    logging.warning("⚠️ PlanRanker not available: %s", e)
+    logging.warning("⚠️ NewPlanRanker not available: %s", e)
     ranker = None
+except Exception as e:
+    logging.error("❌ Error initializing NewPlanRanker: %s", e)
+    ranker = None
+
 app.config.from_object(DevelopmentConfig)
 BASE_DIR = os.path.dirname(__file__)
 app.config.setdefault('UPLOAD_FOLDER', os.path.join(BASE_DIR, 'uploads'))
@@ -79,7 +83,7 @@ def inject_safe_url_for():
 migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'frontend_login'
+login_manager.login_view = 'login'
 login_manager.login_message = 'Please log in to access this page.'
 login_manager.login_message_category = 'info'
 
@@ -107,7 +111,8 @@ oauth.init_app(app)
 app.register_blueprint(frontend_bp)
 app.register_blueprint(get_quote_bp)
 app.register_blueprint(bill_buster_bp)
-app.register_blueprint(resources_bp)
+app.register_blueprint(resources_bp, url_prefix='/resources')
+app.register_blueprint(CHAT_BP)  # Register chatbot API blueprint
 
 # Safe fallback routes to ensure login/register always work
 
@@ -212,7 +217,7 @@ def safe_num(rec, *keys, default=None):
 def logout():
     logout_user()
     flash('You have been logged out successfully.', 'success')
-    return redirect(url_for('index'))
+    return redirect('/')
 
 
 def _load_user_profile(user_id):
@@ -240,18 +245,47 @@ def _load_user_profile(user_id):
     return {'user_id': str(user_id), 'age': 35, 'income': 600000, 'dependents': 0, 'health_status': 'good', 'coverage_preference': 'balanced', 'preferred_providers': '', 'risk_score': 0.2, 'past_claims_count': 0, 'past_claims_amount': 0.0, 'state': 'Maharashtra', 'target_coverage': 0, 'max_premium': 0}
 
 
-@app.route('/api/recommendations', methods=['GET'])
+@app.route('/api/recommendations', methods=['GET', 'POST'])
 def api_recommendations():
-    user_id = request.args.get('user_id') or request.args.get(
-        'uid') or request.headers.get('X-User-Id')
-    if not user_id:
-        return (jsonify({'error': 'user_id required'}), 400)
-    try:
-        limit = int(request.args.get('limit', 5))
-    except Exception:
-        limit = 5
-    variant = request.args.get('variant', 'hybrid')
-    user = _load_user_profile(user_id)
+    # Support both GET (query params) and POST (JSON payload)
+    if request.method == 'POST':
+        data = request.get_json() or {}
+        user_id = data.get('user_id')
+        limit = data.get('limit', 10)
+        # Build user profile from POST data
+        user = {
+            'user_id': user_id or 'anonymous',
+            'age': data.get('age', 35),
+            'gender': data.get('gender', 'M'),
+            'income': data.get('income', 600000),
+            'city': data.get('city', 'Mumbai'),
+            'state': data.get('state', 'Maharashtra'),
+            'premium_budget': data.get('premium_budget', 5000),
+            'occupation_type': data.get('occupation_type', 'salaried'),
+            'dependents_count': data.get('dependents_count', 0),
+            'smoking_flag': data.get('smoking_flag', False),
+            'alcohol_flag': data.get('alcohol_flag', False),
+            'bmi': data.get('bmi', 22.0),
+            'pre_existing_conditions': data.get('pre_existing_conditions', []),
+            'plan_type': data.get('plan_type', 'individual'),
+            'coverage_amount_preference': data.get('coverage_amount_preference', 500000),
+            'preferred_providers': data.get('preferred_providers', []),
+            'maternity_required': data.get('maternity_required', False),
+            'critical_illness_required': data.get('critical_illness_required', False),
+            'previous_claims_count': data.get('previous_claims_count', 0),
+        }
+    else:
+        # GET request - use existing logic
+        user_id = request.args.get('user_id') or request.args.get(
+            'uid') or request.headers.get('X-User-Id')
+        if not user_id:
+            return (jsonify({'error': 'user_id required'}), 400)
+        try:
+            limit = int(request.args.get('limit', 5))
+        except Exception:
+            limit = 5
+        variant = request.args.get('variant', 'hybrid')
+        user = _load_user_profile(user_id)
     try:
         if ranker is None:
             app.logger.warning(
@@ -295,7 +329,11 @@ def api_recommendations():
             bullets) if bullets else 'Low premium and large network contributed to this rank.')
         explain_scores = r.get('explain_scores') or {'premium_income_ratio': float(r.get(
             'premium_income_ratio', 0.0) or 0.0), 'provider_match': int(r.get('provider_match', 0) or 0)}
-        return {'plan_id': r.get('plan_id'), 'provider': r.get('provider'), 'plan_name': r.get('plan_name') or r.get('plan_id'), 'monthly_premium': float(mp) if mp is not None else float(r.get('monthly_premium', 0.0) or 0.0), 'deductible': float(r.get('deductible', 0.0) or 0.0), 'network_size': int(r.get('network_size', 0) or 0), 'score': float(r.get('score', 0.0) or 0.0), 'rank': idx, 'explain_text': explain_text, 'explain_scores': explain_scores, 'explain_top_features': r.get('explain_top_features') or []}
+        premium_val = float(mp) if mp is not None else float(
+            r.get('monthly_premium', 0.0) or 0.0)
+        coverage_val = r.get('coverage_amount') or r.get(
+            'sum_insured') or 500000
+        return {'plan_id': r.get('plan_id'), 'provider': r.get('provider'), 'plan_name': r.get('plan_name') or r.get('plan_id'), 'premium': premium_val, 'monthly_premium': premium_val, 'coverage_amount': float(coverage_val), 'deductible': float(r.get('deductible', 0.0) or 0.0), 'network_size': int(r.get('network_size', 0) or 0), 'score': float(r.get('score', 0.0) or 0.0), 'rank': idx, 'explain_text': explain_text, 'explain_scores': explain_scores, 'explain_top_features': r.get('explain_top_features') or []}
     if recs and isinstance(recs[0], dict) and ('bullets' in recs[0]):
         formatted = [_format_rec(r, i)
                      for i, r in enumerate(recs[:limit], start=1)]
@@ -400,11 +438,99 @@ def __guaranteed_index():
         )
 
 
+# DEV ONLY - Force fresh assets during debugging (REMOVE FOR PRODUCTION)
+@app.after_request
+def add_no_cache_headers(response):
+    """
+    Disable caching for all responses during development.
+    This ensures CSS/JS changes are immediately visible.
+    REMOVE THIS IN PRODUCTION!
+    """
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
+
+
+# ================================
+# AUTH ROUTES (Login/Register)
+# ================================
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    """Render login page and handle login form submission"""
+    if current_user.is_authenticated:
+        return redirect(url_for("frontend.dashboard"))
+
+    form = LoginForm()
+    if form.validate_on_submit():
+        email = form.email.data.strip().lower()
+        password = form.password.data
+        user = User.query.filter_by(email=email).first()
+        if user and user.check_password(password):
+            login_user(user, remember=form.remember.data)
+            flash("Logged in successfully.", "success")
+            next_page = request.args.get("next") or url_for("frontend.dashboard")
+            return redirect(next_page)
+        else:
+            flash("Invalid credentials. Please try again.", "danger")
+
+    return render_template("login.html", title="Log in", form=form)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    """Render registration page and handle registration form submission"""
+    if current_user.is_authenticated:
+        return redirect(url_for("frontend.dashboard"))
+
+    form = RegisterForm()
+    if form.validate_on_submit():
+        existing_user = User.query.filter_by(email=form.email.data.strip().lower()).first()
+        if existing_user:
+            flash("Email already registered. Please log in instead.", "danger")
+            return redirect(url_for("login"))
+
+        existing_username = User.query.filter_by(username=form.username.data.strip()).first()
+        if existing_username:
+            flash("Username already taken. Please choose another.", "danger")
+            return render_template("register.html", title="Register", form=form)
+
+        user = User(
+            username=form.username.data.strip(),
+            email=form.email.data.strip().lower(),
+        )
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash("Account created successfully. Please log in.", "success")
+        return redirect(url_for("login"))
+
+    return render_template("register.html", title="Register", form=form)
+
+
+@app.route("/recommendation")
+def frontend_recommendation():
+    """Render recommendation page"""
+    return render_template("recommendation.html", title="Recommendation")
+
+
+@app.route("/compare")
+def frontend_compare():
+    """Render compare page"""
+    return render_template("compare.html", title="Compare")
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     print("🚀 Starting Flask server on http://127.0.0.1:5001")
-    app.run(debug=True, host='0.0.0.0', port=5001, threaded=True)
+    print("\n📋 Registered Bill Buster routes:")
+    for rule in app.url_map.iter_rules():
+        if 'bill-buster' in rule.rule:
+            print(f"  ✓ {rule.rule} [{', '.join(rule.methods - {'HEAD', 'OPTIONS'})}]")
+    print()
+    app.run(debug=True, host='0.0.0.0', port=5001, threaded=True, use_reloader=False)
 
 
 # -------------------------------
@@ -613,87 +739,7 @@ def debug_routes():
     return html
 
 
-# Old frontend_login and frontend_register functions removed - replaced with proper route handlers below
-
-
+# Old frontend_login and frontend_register functions removed - replaced with proper route handlers above
 # Dashboard route moved to frontend_routes blueprint
-
-# Proper auth route handlers that render templates and handle forms
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    # if user already logged in, redirect to dashboard
-    if current_user.is_authenticated:
-        return redirect(url_for("frontend.dashboard"))
-
-    form = LoginForm()
-    if form.validate_on_submit():
-        email = form.email.data.strip().lower()
-        password = form.password.data
-        # Find user by email
-        user = User.query.filter_by(email=email).first()
-        if user and user.check_password(password):
-            login_user(user, remember=form.remember.data)
-            flash("Logged in successfully.", "success")
-            next_page = request.args.get(
-                "next") or url_for("frontend.dashboard")
-            return redirect(next_page)
-        else:
-            flash("Invalid credentials. Please try again.", "danger")
-
-    return render_template("login.html", title="Log in", form=form)
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if current_user.is_authenticated:
-        return redirect(url_for("frontend.dashboard"))
-
-    form = RegisterForm()
-    if form.validate_on_submit():
-        # Check if user already exists
-        existing_user = User.query.filter_by(
-            email=form.email.data.strip().lower()).first()
-        if existing_user:
-            flash("Email already registered. Please log in instead.", "danger")
-            return redirect(url_for("login"))
-
-        existing_username = User.query.filter_by(
-            username=form.username.data.strip()).first()
-        if existing_username:
-            flash("Username already taken. Please choose another.", "danger")
-            return render_template("register.html", title="Register", form=form)
-
-        # Create new user
-        user = User(
-            username=form.username.data.strip(),
-            email=form.email.data.strip().lower(),
-        )
-        user.set_password(form.password.data)
-        db.session.add(user)
-        db.session.commit()
-        flash("Account created successfully. Please log in.", "success")
-        return redirect(url_for("login"))
-
-    return render_template("register.html", title="Register", form=form)
-
-
-# Debug route to test if routes are being registered
-@app.route("/test-routes")
-def test_routes():
-    return "Routes are working! Login and register should work now."
-
-
-@app.route("/recommendation")
-def frontend_recommendation():
-    return render_template("recommendation.html", title="Recommendation")
-
-
-@app.route("/compare")
-def frontend_compare():
-    return render_template("compare.html", title="Compare")
-
-
 # Bill Buster route moved to frontend_routes blueprint
-
-
 # Resources route moved to blueprint

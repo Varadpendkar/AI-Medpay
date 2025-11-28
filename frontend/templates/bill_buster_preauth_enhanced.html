@@ -1,0 +1,601 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+<title>Pre-Authorization Cost Estimator | Bill Buster</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      .preauth-container {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 80vh;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      }
+
+      .procedure-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .procedure-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+      }
+
+      .procedure-card.selected {
+        border-color: #667eea !important;
+        border-width: 3px !important;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.15) 0%,
+          rgba(118, 75, 162, 0.15) 100%
+        ) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3) !important;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .category-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .select-modern {
+        appearance: none;
+        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23667eea'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 20px;
+        padding-right: 40px;
+      }
+
+      .select-modern:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .plan-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .plan-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        border-color: #667eea;
+      }
+
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      .skeleton-card {
+        height: 200px;
+        border-radius: 16px;
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #1f2937;
+        color: white;
+        padding: 16px 24px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .header-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .search-box {
+        position: relative;
+      }
+
+      .search-box input {
+        padding-left: 44px;
+        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .search-box input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+      }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="preauth-container p-4 sm:p-8">
+  <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="glass-card rounded-3xl p-8 mb-8">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1
+              class="text-4xl sm:text-5xl font-extrabold header-gradient mb-2"
+            >
+              Pre-Authorization Cost Estimator
+            </h1>
+            <p class="text-slate-600 text-lg">
+              Compare healthcare costs across major Indian insurers
+            </p>
+          </div>
+          <div class="text-right">
+            <div class="text-sm text-slate-500">Last Updated</div>
+            <div class="text-lg font-semibold text-slate-700">
+              {{ current_date or 'Today' }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Form -->
+      <div class="glass-card rounded-3xl p-8 mb-8">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">
+          Select Procedure & Insurer
+        </h2>
+
+        <!-- Search Procedures -->
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-slate-700 mb-3"
+            >Search Procedure</label
+          >
+          <div class="search-box">
+            <svg
+              class="search-icon w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              id="procedureSearch"
+              placeholder="Search for a medical procedure..."
+              class="w-full"
+            />
+          </div>
+        </div>
+
+        <!-- Procedure Cards Grid -->
+        <div
+          id="proceduresGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"
+        >
+          {% for proc in procedures %}
+          <div
+            class="procedure-card bg-white rounded-xl p-4 border-2 border-slate-200"
+            data-id="{{ proc.id }}"
+            data-name="{{ proc.name }}"
+            data-category="{{ proc.category or 'General' }}"
+          >
+            <div class="flex items-start justify-between mb-2">
+              <span class="category-badge"
+                >{{ proc.category or 'General' }}</span
+              >
+            </div>
+            <h3 class="font-semibold text-slate-800 text-base">
+              {{ proc.name }}
+            </h3>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Insurer & Patient Type Selection -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label
+              for="insurer"
+              class="block text-sm font-semibold text-slate-700 mb-3"
+              >Insurance Provider (Optional)</label
+            >
+            <select id="insurer" class="select-modern w-full">
+              <option value="">All Insurers</option>
+              {% for ins in insurers %}
+              <option value="{{ ins.id }}">
+                {{ ins.name }}{% if ins.sector %} ({{ ins.sector }}){% endif %}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="patient_type"
+              class="block text-sm font-semibold text-slate-700 mb-3"
+              >Patient Category</label
+            >
+            <select id="patient_type" class="select-modern w-full">
+              <option value="standard">Standard (General Ward)</option>
+              <option value="semi_private">Semi-Private Room</option>
+              <option value="private">Private Room</option>
+              <option value="suite">Suite/Premium</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 flex-wrap">
+          <button
+            id="calculateBtn"
+            class="btn-primary flex-1 sm:flex-initial"
+            disabled
+          >
+            <span class="flex items-center justify-center gap-2">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                />
+              </svg>
+              Calculate Estimates
+            </span>
+          </button>
+          <button
+            id="clearBtn"
+            class="px-6 py-3 bg-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-300 transition"
+          >
+            Clear Selection
+          </button>
+        </div>
+
+        <!-- Filter Options -->
+        <div class="mt-6 flex items-center gap-3">
+          <input
+            type="checkbox"
+            id="filterRecommended"
+            class="w-5 h-5 text-purple-600 rounded focus:ring-purple-500"
+          />
+          <label
+            for="filterRecommended"
+            class="text-sm font-medium text-slate-700"
+            >Show only AI recommended plans</label
+          >
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div class="glass-card rounded-3xl p-8">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-800">Cost Estimates</h2>
+          <div id="resultsCount" class="text-sm font-medium text-slate-600">
+            No estimates yet
+          </div>
+        </div>
+
+        <div id="resultsGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Results will be rendered here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toast notification function
+      function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+
+      // Render pre-auth results function
+      function renderPreAuthResults(plans, options = {}) {
+        const grid = document.getElementById('resultsGrid');
+        if (!plans || plans.length === 0) {
+          grid.innerHTML = '<div class="col-span-full text-center text-slate-500 p-8">No plans found</div>';
+          return;
+        }
+
+        grid.innerHTML = plans.map(plan => `
+          <div class="plan-card">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="font-bold text-lg text-slate-800">${plan.name}</h3>
+                <p class="text-sm text-slate-500">${plan.tagline || 'Insurance Plan'}</p>
+              </div>
+              ${plan.recommended ? '<div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">Recommended</div>' : ''}
+            </div>
+            
+            <div class="mb-4">
+              <div class="text-3xl font-bold text-purple-600 mb-1">₹${plan.oop.toLocaleString()}</div>
+              <div class="text-sm text-slate-500">Out-of-pocket cost</div>
+            </div>
+            
+            <div class="space-y-2 mb-4">
+              ${plan.highlights ? plan.highlights.map(h => `<div class="text-sm text-slate-600">• ${h}</div>`).join('') : ''}
+            </div>
+            
+            ${plan.breakdown ? `
+              <div class="bg-slate-50 rounded-lg p-3 text-sm">
+                <div class="font-semibold mb-2">Cost Breakdown:</div>
+                <div class="space-y-1">
+                  <div class="flex justify-between"><span>Deductible:</span><span>₹${plan.breakdown.deductible.toLocaleString()}</span></div>
+                  <div class="flex justify-between"><span>Room Rent:</span><span>₹${plan.breakdown.room_rent.toLocaleString()}</span></div>
+                  <div class="flex justify-between"><span>Implants:</span><span>₹${plan.breakdown.implants.toLocaleString()}</span></div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `).join('');
+      }
+
+      const calculateBtn = document.getElementById("calculateBtn");
+      const clearBtn = document.getElementById("clearBtn");
+      const resultsGrid = document.getElementById("resultsGrid");
+      const filterRecommended = document.getElementById("filterRecommended");
+      const procedureSearch = document.getElementById("procedureSearch");
+      const proceduresGrid = document.getElementById("proceduresGrid");
+
+      let selectedProcedure = null;
+
+      // Procedure card selection
+      proceduresGrid.addEventListener("click", (e) => {
+        console.log("Grid clicked", e.target); // Debug log
+        const card = e.target.closest(".procedure-card");
+        console.log("Card found:", card); // Debug log
+        
+        if (!card) return;
+
+        // Remove previous selection
+        document
+          .querySelectorAll(".procedure-card")
+          .forEach((c) => c.classList.remove("selected"));
+
+        // Select current card
+        card.classList.add("selected");
+        selectedProcedure = card.dataset.id;
+        
+        console.log("Selected procedure:", selectedProcedure); // Debug log
+
+        // Enable calculate button
+        calculateBtn.disabled = false;
+        calculateBtn.style.opacity = "1";
+        calculateBtn.style.cursor = "pointer";
+        
+        // Visual feedback
+        showToast(`Selected: ${card.dataset.name}`);
+      });
+
+      // Procedure search
+      procedureSearch.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        document.querySelectorAll(".procedure-card").forEach((card) => {
+          const name = card.dataset.name.toLowerCase();
+          const category = card.dataset.category.toLowerCase();
+          if (name.includes(query) || category.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+
+      // Calculate estimates
+      calculateBtn.addEventListener("click", async () => {
+        console.log("Calculate button clicked"); // Debug log
+        console.log("Selected procedure:", selectedProcedure); // Debug log
+        
+        if (!selectedProcedure) {
+          showToast("Please select a procedure first");
+          return;
+        }
+
+        const insurer = document.getElementById("insurer").value;
+        const patient_type = document.getElementById("patient_type").value;
+
+        console.log("Payload data:", { selectedProcedure, insurer, patient_type }); // Debug log
+
+        const payload = {
+          procedure_code: selectedProcedure, // Changed from 'procedure' to 'procedure_code'
+          insurer,
+          patient_type,
+        };
+
+        // Show loading skeletons
+        resultsGrid.innerHTML = "";
+        for (let i = 0; i < 3; i++) {
+          const skeleton = document.createElement("div");
+          skeleton.className = "skeleton-card skeleton";
+          resultsGrid.appendChild(skeleton);
+        }
+
+        try {
+          console.log("Making API request to /pre-auth-estimate"); // Debug log
+          
+          const res = await fetch("/pre-auth-estimate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          console.log("Response status:", res.status); // Debug log
+
+          if (!res.ok) {
+            const txt = await res.text();
+            console.error("API Error:", txt); // Debug log
+            throw new Error(txt || "Server error");
+          }
+
+          const data = await res.json();
+          console.log("API Response:", data); // Debug log
+          
+          renderPreAuthResults(data.plans || [], {
+            recommendedOnly: filterRecommended.checked,
+          });
+          document.getElementById("resultsCount").innerText = `${
+            (data.plans || []).length
+          } estimates found`;
+        } catch (err) {
+          console.error("Error:", err); // Debug log
+          resultsGrid.innerHTML = `<div class="col-span-full text-red-600 p-4 text-center">Error fetching estimates: ${err.message}</div>`;
+        }
+      });
+
+      // Clear selection
+      clearBtn.addEventListener("click", () => {
+        console.log("Clear button clicked"); // Debug log
+        
+        document
+          .querySelectorAll(".procedure-card")
+          .forEach((c) => c.classList.remove("selected"));
+        document.getElementById("insurer").value = "";
+        document.getElementById("patient_type").value = "standard";
+        procedureSearch.value = "";
+        selectedProcedure = null;
+        
+        // Disable calculate button
+        calculateBtn.disabled = true;
+        calculateBtn.style.opacity = "0.5";
+        calculateBtn.style.cursor = "not-allowed";
+        
+        resultsGrid.innerHTML = "";
+        document.getElementById("resultsCount").innerText = "No estimates yet";
+
+        // Reset search
+        document.querySelectorAll(".procedure-card").forEach((card) => {
+          card.style.display = "block";
+        });
+        
+        showToast("Selection cleared");
+      });
+
+      // Filter toggle
+      filterRecommended.addEventListener("change", () => {
+        window.dispatchEvent(
+          new CustomEvent("filterRecommendedChanged", {
+            detail: { recommendedOnly: filterRecommended.checked },
+          })
+        });
+      });
+
+      // Initialize page
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("Page loaded, initializing..."); // Debug log
+        
+        // Ensure calculate button starts disabled
+        calculateBtn.disabled = true;
+        calculateBtn.style.opacity = "0.5";
+        calculateBtn.style.cursor = "not-allowed";
+        
+        console.log("Found", document.querySelectorAll('.procedure-card').length, "procedure cards"); // Debug log
+        console.log("Grid element:", proceduresGrid); // Debug log
+      });
+    </script>
+  </div>
+</div>
+{% endblock %}

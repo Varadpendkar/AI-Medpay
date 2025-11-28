@@ -351,41 +351,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return (rr<<16) + (rg<<8) + rb;
   }
 
-  // final reveal animation (GSAP) — dynamic load if present
+  // final reveal animation (DISABLED - was causing results to disappear)
+  // This function was interfering with normal form submission
   async function finalReveal() {
-    if (!window.gsap) {
-      try {
-        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js');
-      } catch (e) {
-        console.warn('Failed to load GSAP, using fallback animation', e);
-      }
-    }
-    
-    // shrink form and show summary box
-    const formBox = document.querySelector('.card-shadow');
-    if (formBox) {
-      const svg = document.createElement('div');
-      svg.innerHTML = `<div class="mt-6 p-6 bg-white rounded-xl text-center card-shadow">
-        <div class="text-xl font-bold mb-2">🎉 Your top match is ready</div>
-        <div id="reveal-summary" class="text-sm text-slate-600">Fetching recommendations…</div>
-        <div class="mt-4">
-          <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
-        </div>
-      </div>`;
-      formBox.parentNode.insertBefore(svg, formBox.nextSibling);
-      
-      if (window.gsap) {
-        gsap.to(formBox, {duration: 0.6, y: -10, opacity: 0.4, scale: 0.98});
-      } else {
-        // CSS fallback
-        formBox.style.transition = 'all 0.6s ease';
-        formBox.style.transform = 'translateY(-10px) scale(0.98)';
-        formBox.style.opacity = '0.4';
-      }
-    }
-    
-    // show confetti-lite: simple burst
-    burstConfetti();
+    // Commented out to fix the disappearing results issue
+    // The server now handles the transition to results page
+    console.log('finalReveal disabled - letting server handle results page');
   }
 
   function burstConfetti() {
@@ -441,12 +412,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // submit handler: animate & let server handle
+  // submit handler: just let the form submit normally
   if (form) {
     form.addEventListener('submit', async (e) => {
-      // Show reveal UI immediately
-      finalReveal();
-      // Allow form submit to continue to server endpoint
+      // Validate final step before submitting
+      if (!validateStep(current)) {
+        e.preventDefault();
+        return false;
+      }
+      
+      // Show a simple loading indicator
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing...';
+        submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      }
+      
+      // Let the form submit normally to the server
+      // The server will return the results page
     });
   }
 
@@ -543,3 +526,4 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('get_quote_enhanced initialization failed:', err);
   }
 });
+// Cache buster: 1760900427

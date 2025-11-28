@@ -1,0 +1,99 @@
+{# bill_buster_preauth.html - REPLACE ENTIRE FILE #}
+{% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  <!-- Tailwind CDN (quick) + Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}?v={{ STATIC_VER|default('3') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bill_buster_enhanced.css') }}?v={{ STATIC_VER|default('3') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/modern_plan_card.css') }}?v={{ STATIC_VER|default('3') }}">
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto p-6">
+  <!-- Header / Intro -->
+  <header class="mb-6">
+    <h1 class="text-3xl font-extrabold text-slate-900">Estimate Your Pre-Authorization Costs</h1>
+    <p class="mt-2 text-slate-600">Know your expected cost before approval — accurate, transparent, instant.</p>
+    <div class="mt-3 text-sm text-slate-500">Estimator updated: <strong>{{ estimator_last_updated|default("Sept 2025") }}</strong></div>
+  </header>
+
+  <!-- Form + Controls -->
+  <section id="preauth-form" class="bg-white rounded-lg shadow-sm p-6 mb-6">
+    <form id="preauthForm" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end" autocomplete="off">
+      <div class="col-span-1">
+        <label class="block text-sm font-medium text-slate-700">Procedure</label>
+        <select id="procedure" name="procedure" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm">
+          <option value="">Select procedure</option>
+          {% for proc in procedures %}
+            <option value="{{ proc.id }}">{{ proc.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-slate-700">Insurer</label>
+        <select id="insurer" name="insurer" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm">
+          <option value="">Any insurer</option>
+          {% for ins in insurers %}
+            <option value="{{ ins.id }}">{{ ins.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="flex gap-2 items-center">
+        <div class="w-full">
+          <label class="block text-sm font-medium text-slate-700">Patient Category</label>
+          <select id="patient_type" name="patient_type" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm">
+            <option value="standard">Standard</option>
+            <option value="senior">Senior (60+)</option>
+            <option value="child">Child</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-2 ml-2">
+          <button id="calculateBtn" type="button" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-md shadow hover:from-cyan-600 hover:to-blue-700">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path></svg>
+            Calculate Estimates
+          </button>
+          <button id="clearBtn" type="button" class="text-sm text-slate-500 underline">Clear</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Results Section -->
+  <section id="resultsArea">
+    <div id="resultsMeta" class="flex items-center justify-between mb-4">
+      <div id="resultsCount" class="text-sm text-slate-600">No estimates yet</div>
+      <div class="flex items-center gap-3">
+        <label class="text-sm text-slate-600">Show only AI recommended</label>
+        <input id="filterRecommended" type="checkbox" class="h-4 w-4">
+      </div>
+    </div>
+
+    <!-- skeleton / loader area -->
+    <div id="resultsGrid" class="results-grid-modern">
+      <!-- JS will render cards here -->
+    </div>
+  </section>
+</div>
+
+<!-- Compare modal placeholder -->
+<div id="compareModalRoot"></div>
+
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    // small config for static versioning if not passed
+    window.STATIC_VER = "{{ STATIC_VER|default('3') }}";
+  </script>
+
+  <script type="module" src="{{ url_for('static', filename='js/bill_buster_enhanced.js') }}?v={{ STATIC_VER|default('3') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/bill_buster_preauth.js') }}?v={{ STATIC_VER|default('3') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/compare_modal.js') }}?v={{ STATIC_VER|default('3') }}"></script>
+{% endblock %}

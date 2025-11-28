@@ -45,28 +45,50 @@
         class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
       >
         <div class="flex items-center gap-3">
-          <img
-            src="{{ url_for('static', filename='images/logo.svg') }}"
-            alt="AI-MEDPAY"
-            class="h-8 w-auto"
-          />
-          <span class="font-semibold text-slate-800">AI-MEDPAY</span>
+          <div
+            class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
+          >
+            <img
+              src="{{ url_for('static', filename='images/logo.svg') }}"
+              alt="AI-MEDPAY"
+              class="h-6 w-6"
+            />
+          </div>
+          <span class="font-semibold text-slate-800 text-lg">AI-MEDPAY</span>
         </div>
         <nav class="hidden md:flex items-center gap-6">
           <a class="hover:underline" href="/">Home</a>
           <a class="hover:underline" href="/get-quote">Get Quote</a>
           <a class="hover:underline" href="/bill-buster">Bill Buster</a>
           <a class="hover:underline" href="/resources">Resources</a>
+          {% if current_user.is_authenticated %}
+          <a class="hover:underline" href="/dashboard">Dashboard</a>
+          {% endif %}
         </nav>
         <div class="flex items-center gap-3">
-          <a href="/login" class="px-4 py-2 rounded-md border text-sm"
+          {% if current_user.is_authenticated %}
+          <!-- Logged in user -->
+          <span class="text-sm text-slate-600"
+            >Hello, {{ current_user.name or current_user.email }}</span
+          >
+          <a
+            href="/logout"
+            class="px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-white text-sm"
+            >Log out</a
+          >
+          {% else %}
+          <!-- Not logged in -->
+          <a
+            href="/login"
+            class="px-4 py-2 rounded-md border text-sm hover:bg-slate-50"
             >Log in</a
           >
           <a
             href="/register"
-            class="px-4 py-2 rounded-md bg-primary text-white text-sm"
+            class="px-4 py-2 rounded-md bg-primary text-white text-sm hover:opacity-90"
             >Get Started</a
           >
+          {% endif %}
         </div>
       </div>
     </header>
@@ -116,21 +138,25 @@
       </div>
     </footer>
 
-    <!-- Chatbot floating button -->
-    <button
-      id="chatbot-launch"
-      aria-label="Open chat"
-      class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:scale-105 focus:outline-none"
-    >
-      💬
-    </button>
-
     <!-- Main client script -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <!-- 3D hero script -->
     <script src="{{ url_for('static', filename='js/hero_3d.js') }}"></script>
     <!-- Google auth script -->
     <script src="{{ url_for('static', filename='js/auth_google.js') }}"></script>
+    <!-- Get Quote multi-step form -->
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/get_quote.js') }}"
+    ></script>
+
+    <!-- AI Chatbot Widget (Available on all pages) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/frontend-static/css/chatbot_widget.css" />
+    <script src="/frontend-static/js/chatbot_widget.js"></script>
 
     {% block scripts %}{% endblock %}
   </body>

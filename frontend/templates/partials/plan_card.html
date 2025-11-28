@@ -1,0 +1,218 @@
+{# Plan Card Partial - Reusable for Get Quote and Pre-Auth Results #} {# Usage:
+{% include 'partials/plan_card.html' with context %} #} {# Required context:
+plan, rank, show_oop (optional), estimated_oop (optional), current_plan_oop
+(optional) #}
+
+<div
+  class="plan-card"
+  role="article"
+  aria-label="Insurance plan option {{ rank }}"
+  tabindex="0"
+>
+  {# Header #}
+  <div class="flex items-start justify-between mb-4">
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-2">
+        <h3 class="text-xl font-bold text-gray-900">
+          {{ plan.plan_name or plan.name }}
+        </h3>
+        {% if rank <= 3 %}
+        <span class="badge badge-rank-{{ rank }}" aria-label="Rank {{ rank }}">
+          #{{ rank }}
+        </span>
+        {% endif %}
+      </div>
+      <p class="text-sm font-semibold text-gray-600">
+        {{ plan.provider or 'Unknown Provider' }}
+      </p>
+      <div class="flex items-center gap-2 mt-1">
+        {% if plan.plan_type or plan.plantype %}
+        <span class="badge badge-{{ (plan.plan_type or plan.plantype)|lower }}">
+          {{ (plan.plan_type or plan.plantype)|title }}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+
+    {# Confidence Badge #} {% if plan.confidence or plan.score %}
+    <div class="confidence-badge">
+      <div class="confidence-radial">
+        <svg viewBox="0 0 32 32">
+          <circle class="bg" cx="16" cy="16" r="14"></circle>
+          <circle
+            class="fg"
+            cx="16"
+            cy="16"
+            r="14"
+            stroke-dasharray="{{ ((plan.confidence or plan.score) * 88)|round }}, 88"
+            stroke-dashoffset="0"
+          ></circle>
+        </svg>
+      </div>
+      <span
+        >{{ ((plan.confidence or plan.score) * 100)|round|int }}% match</span
+      >
+    </div>
+    {% endif %}
+  </div>
+
+  {# KPI Grid #}
+  <div class="plan-kpi-grid">
+    <div class="plan-kpi-item">
+      <div class="plan-kpi-label">Monthly Premium</div>
+      <div class="plan-kpi-value">
+        {% if plan.premium or plan.monthly_premium %} ₹{{
+        "{:,}".format((plan.premium or plan.monthly_premium)|int) }} {% else %}
+        <span class="text-gray-400 text-sm">N/A</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="plan-kpi-item">
+      <div class="plan-kpi-label">Deductible</div>
+      <div class="plan-kpi-value">
+        {% if plan.deductible %} ₹{{ "{:,}".format(plan.deductible|int) }} {%
+        else %}
+        <span class="text-gray-400 text-sm">₹0</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="plan-kpi-item">
+      <div class="plan-kpi-label">Network Size</div>
+      <div class="plan-kpi-value">
+        {% if plan.network_size or plan.networksize %} {{
+        "{:,}".format((plan.network_size or plan.networksize)|int) }} {% else %}
+        <span class="text-gray-400 text-sm">—</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="plan-kpi-item">
+      <div class="plan-kpi-label">Coverage</div>
+      <div class="plan-kpi-value">
+        {% if plan.coverage_amount or plan.coverageamount %} {% set coverage =
+        (plan.coverage_amount or plan.coverageamount)|int %} {% if coverage >=
+        10000000 %} ₹{{ (coverage / 10000000)|round(1) }}Cr {% else %} ₹{{
+        (coverage / 100000)|round(1) }}L {% endif %} {% else %}
+        <span class="text-gray-400 text-sm">—</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {# OOP Highlight (if showing OOP) #} {% if show_oop and estimated_oop is
+  defined %}
+  <div class="oop-highlight">
+    <div>
+      <div class="oop-label">Estimated Out-of-Pocket</div>
+      <div class="text-xs text-gray-600 mt-1">For selected procedure</div>
+    </div>
+    <div class="oop-value">₹{{ "{:,}".format(estimated_oop|round|int) }}</div>
+  </div>
+  {% endif %} {# Savings Indicator #} {% if show_oop and current_plan_oop and
+  estimated_oop < current_plan_oop %}
+  <div class="mt-3 text-center">
+    <div class="savings-pill">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span
+        >Save ₹{{ "{:,}".format((current_plan_oop - estimated_oop)|round|int)
+        }}</span
+      >
+    </div>
+  </div>
+  {% endif %} {# Explain Bullets (3 key benefits) #}
+  <ul class="explain-bullets" aria-label="Key benefits">
+    {% if plan.why_good_1 or plan.bullets %} {% if plan.bullets %} {% for bullet
+    in plan.bullets[:3] %} {% if bullet %}
+    <li>{{ bullet }}</li>
+    {% endif %} {% endfor %} {% else %} {% if plan.why_good_1 %}
+    <li>{{ plan.why_good_1 }}</li>
+    {% endif %} {% if plan.why_good_2 %}
+    <li>{{ plan.why_good_2 }}</li>
+    {% endif %} {% if plan.why_good_3 %}
+    <li>{{ plan.why_good_3 }}</li>
+    {% endif %} {% endif %} {% else %} {# Default bullets if no why_good fields
+    #}
+    <li>
+      Comprehensive coverage with {{ plan.network_size or '10,000+' }} hospitals
+    </li>
+    <li>
+      Competitive premium starting at ₹{{ (plan.premium or plan.monthly_premium
+      or 5000)|int|format_number }}
+    </li>
+    <li>
+      {{ (plan.claim_settlement_ratio or 95)|int }}% claim settlement ratio
+    </li>
+    {% endif %}
+  </ul>
+
+  {# CTA Row #}
+  <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+    <button
+      class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-4 rounded-lg transition-all transform hover:scale-105"
+      onclick="comparePlan('{{ plan.plan_id or plan.planid }}')"
+      aria-label="Compare {{ plan.plan_name or plan.name }}"
+    >
+      Compare
+    </button>
+
+    <button
+      class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2.5 px-4 rounded-lg transition-colors"
+      onclick="toggleDetails('{{ plan.plan_id or plan.planid }}')"
+      aria-label="View details for {{ plan.plan_name or plan.name }}"
+    >
+      Details
+    </button>
+
+    {% if show_oop %}
+    <button
+      class="flex-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-semibold py-2.5 px-4 rounded-lg transition-colors text-sm"
+      onclick="showFeedbackForm('{{ plan.plan_id or plan.planid }}', {{ estimated_oop }})"
+      aria-label="Submit actual cost for {{ plan.plan_name or plan.name }}"
+    >
+      Submit Actual Cost
+    </button>
+    {% endif %}
+  </div>
+
+  {# Expandable Details Section (hidden by default) #}
+  <div
+    id="details-{{ plan.plan_id or plan.planid }}"
+    class="hidden mt-4 pt-4 border-t border-gray-100"
+  >
+    <div class="grid grid-cols-2 gap-3 text-sm">
+      {% if plan.copay_percentage or plan.copaypercent %}
+      <div>
+        <span class="text-gray-500">Co-pay:</span>
+        <span class="font-semibold"
+          >{{ (plan.copay_percentage or plan.copaypercent)|int }}%</span
+        >
+      </div>
+      {% endif %} {% if plan.room_rent_limit %}
+      <div>
+        <span class="text-gray-500">Room Rent:</span>
+        <span class="font-semibold">₹{{ plan.room_rent_limit|int }}/day</span>
+      </div>
+      {% endif %} {% if plan.waiting_period %}
+      <div>
+        <span class="text-gray-500">Waiting Period:</span>
+        <span class="font-semibold">{{ plan.waiting_period }} days</span>
+      </div>
+      {% endif %} {% if plan.claim_settlement_ratio %}
+      <div>
+        <span class="text-gray-500">Settlement Ratio:</span>
+        <span class="font-semibold"
+          >{{ plan.claim_settlement_ratio|int }}%</span
+        >
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

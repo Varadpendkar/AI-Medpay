@@ -56,23 +56,28 @@ def _bullets(user, r):
 class PlanRanker:
     def __init__(self, project_root: Path):
         self.root = Path(project_root)
+        # MODEL LOADING DISABLED - WAITING FOR NEW MODEL INTEGRATION
         # Resolve model path with multiple fallbacks
-        env_model = os.environ.get(
-            "RANKER_MODEL_PATH") or os.environ.get("LTR_MODEL_PATH")
-        candidates = [
-            env_model,
-            str(self.root / "models" / "ltr_model.txt"),
-            "/mnt/models/recommender/current/model.txt",
-            str(self.root / "ltr_model.txt"),
-        ]
-        model_path = next((Path(p)
-                          for p in candidates if p and Path(p).exists()), None)
-        if not model_path:
-            # Last resort: raise a clear error
-            raise FileNotFoundError(
-                "No LTR model file found. Set RANKER_MODEL_PATH or place models/ltr_model.txt."
-            )
-        self.booster = Booster(model_file=str(model_path))
+        # env_model = os.environ.get(
+        #     "RANKER_MODEL_PATH") or os.environ.get("LTR_MODEL_PATH")
+        # candidates = [
+        #     env_model,
+        #     str(self.root / "models" / "ltr_model.txt"),
+        #     "/mnt/models/recommender/current/model.txt",
+        #     str(self.root / "ltr_model.txt"),
+        # ]
+        # model_path = next((Path(p)
+        #                   for p in candidates if p and Path(p).exists()), None)
+        # if not model_path:
+        #     # Last resort: raise a clear error
+        #     raise FileNotFoundError(
+        #         "No LTR model file found. Set RANKER_MODEL_PATH or place models/ltr_model.txt."
+        #     )
+        # self.booster = Booster(model_file=str(model_path))
+
+        raise FileNotFoundError(
+            "PlanRanker is currently disabled. Waiting for new model integration."
+        )
 
         data_dir = self.root.parent/"data"  # backend/data instead of backend/app/data
         self.plans = pd.read_csv(data_dir / "plans.csv")

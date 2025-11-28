@@ -120,6 +120,75 @@ endblock %} {% block head_extra %}
                 <option>rural</option>
               </select>
             </div>
+
+            <!-- New Required Fields -->
+            <div>
+              <label class="block text-sm mb-1">Marital Status *</label>
+              <select
+                name="marital_status"
+                id="marital_status"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              >
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">City *</label>
+              <input
+                name="city"
+                id="city"
+                type="text"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">State *</label>
+              <input
+                name="state"
+                id="state"
+                type="text"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Occupation Type *</label>
+              <select
+                name="occupation_type"
+                id="occupation_type"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              >
+                <option value="">Select</option>
+                <option value="salaried">Salaried</option>
+                <option value="self_employed">Self-Employed</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm mb-1">Plan Type *</label>
+              <select
+                name="plan_type"
+                id="plan_type"
+                class="w-full rounded-md border px-3 py-2"
+                required
+              >
+                <option value="">Select</option>
+                <option value="individual">Individual</option>
+                <option value="floater">Family Floater</option>
+              </select>
+            </div>
           </div>
         </fieldset>
 
@@ -188,28 +257,29 @@ endblock %} {% block head_extra %}
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm mb-1"
-                >Max Monthly Premium (INR)</label
+                >Premium Budget (INR/month) *</label
               >
               <input
-                name="max_premium_monthly"
-                id="max_premium_monthly"
+                name="premium_budget"
+                id="premium_budget"
                 type="number"
                 min="0"
                 class="w-full rounded-md border px-3 py-2"
+                required
               />
             </div>
 
             <div>
-              <label class="block text-sm mb-1">Smoking Status</label>
+              <label class="block text-sm mb-1">Smoking Status *</label>
               <select
-                name="smoking_status"
-                id="smoking_status"
+                name="smoking_flag"
+                id="smoking_flag"
                 class="w-full rounded-md border px-3 py-2"
+                required
               >
                 <option value="">Select</option>
-                <option>non-smoker</option>
-                <option>ex-smoker</option>
-                <option>smoker</option>
+                <option value="false">Non-smoker</option>
+                <option value="true">Smoker / Ex-smoker</option>
               </select>
             </div>
 
@@ -342,6 +412,29 @@ endblock %} {% block head_extra %}
               Finish & Get Recommendation
             </button>
           </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="hidden mt-6 text-center">
+          <div class="inline-block">
+            <div
+              class="animate-spin rounded-full h-8 w-8 border-4 border-blue-500 border-t-transparent"
+            ></div>
+          </div>
+          <p class="mt-2 text-blue-600 font-medium">
+            Generating personalized quotes...
+          </p>
+        </div>
+
+        <!-- Error Message -->
+        <div
+          id="error-message"
+          class="hidden mt-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+        >
+          <p class="text-red-600 font-semibold text-center">
+            ⚠️ No recommendations available. Please adjust your preferences and
+            try again.
+          </p>
         </div>
       </form>
     </div>

@@ -24,7 +24,7 @@
     <div class="my-4 text-center text-slate-400">or</div>
 
     <!-- Email / Password form (Flask-WTF friendly) -->
-    <form method="post" action="{{ url_for('auth_login') }}" novalidate>
+    <form method="post" action="{{ url_for('login') }}" novalidate>
       {{ form.csrf_token }}
       <div class="mb-3">
         <label class="block text-sm mb-1">Email</label>

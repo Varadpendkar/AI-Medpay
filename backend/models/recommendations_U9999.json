@@ -1,0 +1,355 @@
+{
+  "request_timestamp": "2025-10-19T23:24:33.912133",
+  "user_profile": {
+    "user_id": "U9999",
+    "age": 32,
+    "gender": "male",
+    "marital_status": "married",
+    "dependents": 1,
+    "region": "Maharashtra",
+    "urban_rural": "urban",
+    "income_band": "6-10L",
+    "occupation": "salaried",
+    "digital_literacy": "high",
+    "preferred_payment_mode": "annual",
+    "preferred_providers": "HDFC ERGO;Star Health",
+    "avg_annual_spend": 45000,
+    "risk_score": 0.25,
+    "chronic_conditions": "none",
+    "family_medical_history": "diabetes",
+    "existing_health_policy": "no",
+    "claim_history_count": 0,
+    "renewal_loyalty_years": 0,
+    "has_diabetes": "no",
+    "has_hypertension": "no",
+    "has_asthma": "no",
+    "has_cancer_history": "no",
+    "has_heart_disease": "no",
+    "has_thyroid": "no",
+    "has_kidney_disease": "no",
+    "has_obesity": "no",
+    "has_disability": "no",
+    "smoking_status": "non-smoker"
+  },
+  "requirements": {
+    "max_budget": 5000,
+    "min_coverage": 500000,
+    "plan_type_preference": "Family Floater",
+    "special_requirements": [
+      "maternity_coverage",
+      "cashless_hospitals_mumbai"
+    ]
+  },
+  "summary": {
+    "total_plans_evaluated": 204,
+    "plans_within_budget": 95,
+    "plans_with_min_coverage": 150,
+    "plans_matching_all_criteria": 95,
+    "score_range": {
+      "min": 0.09999999999999917,
+      "max": 0.09999999999999917
+    }
+  },
+  "recommendations": [
+    {
+      "rank": 1,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10000",
+        "plan_name": "Life Insurance Corporation of India (LIC) Pure Term Plan",
+        "provider": "34",
+        "plan_type": "1",
+        "plan_category": "5"
+      },
+      "pricing": {
+        "premium_annual": 300.0,
+        "coverage_amount": 10000000.0,
+        "value_ratio": 33333.333333333336
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 98.77,
+        "network_size": 0,
+        "cashless_percentage": 0.0,
+        "regional_match": false
+      },
+      "features": {
+        "addons": "accident_cover"
+      },
+      "fit_assessment": {
+        "affordability": "6% of budget",
+        "coverage_adequacy": "20.0x minimum",
+        "network_availability": "No"
+      }
+    },
+    {
+      "rank": 2,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10133",
+        "plan_name": "Zurich Kotak General Insurance Critical Illness Plan",
+        "provider": "60",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 2100.0,
+        "coverage_amount": 2000000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 96.38,
+        "network_size": 60,
+        "cashless_percentage": 63.33333333333333,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "42% of budget",
+        "coverage_adequacy": "4.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 3,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10143",
+        "plan_name": "Niva Bupa Health Insurance Critical Illness Plan",
+        "provider": "40",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 525.0,
+        "coverage_amount": 500000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 98.22,
+        "network_size": 81,
+        "cashless_percentage": 67.90123456790124,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "10% of budget",
+        "coverage_adequacy": "1.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 4,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10147",
+        "plan_name": "National Insurance Company Critical Illness Plan",
+        "provider": "37",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 525.0,
+        "coverage_amount": 500000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 94.26,
+        "network_size": 38,
+        "cashless_percentage": 60.526315789473685,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "10% of budget",
+        "coverage_adequacy": "1.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 5,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10151",
+        "plan_name": "New India Assurance Company Critical Illness Plan",
+        "provider": "39",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 2100.0,
+        "coverage_amount": 2000000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 98.86,
+        "network_size": 26,
+        "cashless_percentage": 46.15384615384615,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "42% of budget",
+        "coverage_adequacy": "4.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 6,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10001",
+        "plan_name": "Life Insurance Corporation of India (LIC) Return of Premium (TROP)",
+        "provider": "34",
+        "plan_type": "1",
+        "plan_category": "6"
+      },
+      "pricing": {
+        "premium_annual": 30.0,
+        "coverage_amount": 1000000.0,
+        "value_ratio": 33333.333333333336
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 99.69,
+        "network_size": 72,
+        "cashless_percentage": 65.27777777777779,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "accident_cover"
+      },
+      "fit_assessment": {
+        "affordability": "1% of budget",
+        "coverage_adequacy": "2.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 7,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10114",
+        "plan_name": "ECGC Limited Critical Illness Plan",
+        "provider": "18",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 525.0,
+        "coverage_amount": 500000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 94.99,
+        "network_size": 32,
+        "cashless_percentage": 50.0,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "10% of budget",
+        "coverage_adequacy": "1.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 8,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10188",
+        "plan_name": "United India Insurance Company Critical Illness Plan",
+        "provider": "57",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 525.0,
+        "coverage_amount": 500000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 99.38,
+        "network_size": 69,
+        "cashless_percentage": 63.76811594202898,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "10% of budget",
+        "coverage_adequacy": "1.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 9,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10195",
+        "plan_name": "Kshema General Insurance Critical Illness Plan",
+        "provider": "32",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 1050.0,
+        "coverage_amount": 1000000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 94.69,
+        "network_size": 39,
+        "cashless_percentage": 69.23076923076923,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "21% of budget",
+        "coverage_adequacy": "2.0x minimum",
+        "network_availability": "Yes"
+      }
+    },
+    {
+      "rank": 10,
+      "score": 0.09999999999999917,
+      "plan": {
+        "plan_id": "PL10199",
+        "plan_name": "Galaxy Health Insurance Critical Illness Plan",
+        "provider": "22",
+        "plan_type": "1",
+        "plan_category": "1"
+      },
+      "pricing": {
+        "premium_annual": 1050.0,
+        "coverage_amount": 1000000.0,
+        "value_ratio": 952.3809523809524
+      },
+      "quality_metrics": {
+        "claim_approval_rate": 98.03,
+        "network_size": 76,
+        "cashless_percentage": 63.1578947368421,
+        "regional_match": true
+      },
+      "features": {
+        "addons": "criticalillness"
+      },
+      "fit_assessment": {
+        "affordability": "21% of budget",
+        "coverage_adequacy": "2.0x minimum",
+        "network_availability": "Yes"
+      }
+    }
+  ]
+}

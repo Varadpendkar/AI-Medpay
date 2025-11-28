@@ -1,0 +1,52 @@
+procedure_code,procedure_name,avg_cost,typical_cost_low,typical_cost_high,common_hospitals
+KNEE_REPLACEMENT,Knee Replacement,150000,100000,220000,Apollo; Fortis; Ruby Hall
+HIP_REPLACEMENT,Hip Replacement,160000,120000,250000,Apollo; Fortis; Jupiter
+CABG,CABG (Bypass Surgery),450000,300000,800000,Max; Narayana; KEM Hospital
+ANGIOPLASTY,Coronary Angioplasty,250000,180000,350000,Max; Narayana; Apollo
+GALLBLADDER_REMOVAL,Gallbladder Removal Surgery,80000,50000,130000,Narayana; Ruby Hall; Apollo
+HERNIA_REPAIR,Hernia Repair Surgery,65000,40000,90000,Apollo; Fortis; Jehangir
+PROSTATE_SURGERY,Prostate Surgery (TURP),90000,70000,150000,Max; Medanta; KEM
+APPENDECTOMY,Appendectomy,65000,40000,90000,Narayana; AIIMS; Sahyadri
+KNEE_ARTHROSCOPY,Knee Arthroscopy,45000,25000,80000,Apollo; Fortis; Global Hospital
+GASTRIC_BYPASS,Gastric Bypass Surgery,300000,200000,450000,Max; Apollo; Fortis
+NORMAL_DELIVERY,Normal Childbirth,45000,30000,70000,Cloudnine; Apollo Cradle; Jehangir
+C_SECTION,Cesarean Section,90000,70000,130000,Cloudnine; Apollo Cradle; Jehangir
+IVF_CYCLE,IVF Cycle (per attempt),200000,120000,350000,Nova IVF; Cloudnine; Apollo
+MRI_BRAIN,MRI Brain,8500,5000,15000,Max; Medanta; Ruby Hall
+CT_SCAN,CT Scan (Full Body),7000,4000,12000,Ruby Hall; KEM; Medanta
+PET_CT,PET-CT Scan,35000,25000,60000,Max; Apollo; Medanta
+XRAY_CHEST,Chest X-Ray,500,200,1500,All major hospitals
+ULTRASOUND,Abdominal Ultrasound,2500,1000,5000,AIIMS; Fortis; Jehangir
+MAMMOGRAPHY,Mammography,3500,1500,7000,Max; Medanta; Apollo
+ENDOSCOPY,Upper GI Endoscopy,12000,6000,20000,Narayana; AIIMS; Sahyadri
+COLONOSCOPY,Colonoscopy,22000,12000,40000,Max; Medanta; Ruby Hall
+HERNIA_ENDO,Laparoscopic Hernia Repair,80000,50000,120000,Apollo; Fortis; Jehangir
+CARDIAC_CATH,Cardiac Catheterization,18000,12000,30000,Fortis; Narayana; KEM Hospital
+PACEMAKER,Pacemaker Implant,200000,150000,300000,Max; Apollo; Fortis
+ICU_DAY,ICU Stay (Per Day),12000,8000,20000,Apollo; Fortis; KEM
+HOSPITAL_DAY,General Ward (Per Day),5000,3000,8000,All major hospitals
+EYE_SURGERY,Cataract Surgery,35000,20000,60000,LV Prasad; Sankara; AIIMS
+LASIK,LASIK Eye Surgery,45000,30000,70000,LV Prasad; Sankara; Max
+TONSILLECTOMY,Tonsillectomy,30000,20000,50000,AIIMS; KEM; Apollo
+DENTAL_FILLING,Dental Filling,2000,800,4000,Clove Dental; Apollo Dental; SmileCare
+ROOT_CANAL,Root Canal Treatment,6000,3000,10000,Clove Dental; Apollo Dental; SmileCare
+ORTHODONTICS,Braces (Orthodontic Treatment),50000,30000,90000,SmileCare; Clove Dental
+CHEMO_SESSION,Chemotherapy Session (avg),20000,10000,40000,Tata Memorial; Apollo; Max
+RADIOTHERAPY,Radiotherapy Session (avg),15000,8000,30000,Tata Memorial; Apollo; Max
+BLOOD_TEST,Comprehensive Blood Test,1800,500,3000,Apollo; Max; Sahyadri
+VACCINATION,Vaccination (per dose),1000,300,3000,All clinics
+ACL_REPAIR,ACL Repair Surgery,120000,80000,180000,Apollo; Fortis; Ruby Hall
+SHOULDER_ROTATOR,Rotator Cuff Repair,90000,60000,140000,Apollo; Fortis
+SINUS_SURGERY,Sinus Surgery,40000,25000,70000,AIIMS; Apollo; KEM
+PANCREATIC_SURGERY,Pancreatic Surgery,350000,220000,600000,Max; Fortis; Apollo
+NICU_DAY,NICU Stay (Per Day),15000,10000,25000,Cloudnine; Apollo; Jehangir
+PED_SURGERY,Pediatric Surgery (avg),90000,60000,160000,Cloudnine; Narayana
+KIDNEY_STONE_REMOVAL,Kidney Stone Removal (Lithotripsy),50000,30000,90000,Apollo; Fortis; Ruby Hall
+RHINOPLASTY,Rhinoplasty,120000,80000,200000,Cosmetic Clinics; Apollo
+DIALYSIS_SESSION,Dialysis Session (per session),3000,1500,5000,Apollo; Fortis; KEM
+PROSTATE_BIOPSY,Prostate Biopsy,18000,10000,30000,Max; Medanta; KEM
+COLPOSCOPY,Colposcopy,8000,4000,15000,Cloudnine; AIIMS
+LIVER_TRANSPLANT,Liver Transplant (surgery + hospitalization),3000000,2000000,5000000,Global Hospitals; Apollo; Fortis
+KIDNEY_TRANSPLANT,Kidney Transplant (surgery + hospitalization),1200000,800000,2000000,Narayana; Apollo; AIIMS
+PHYSIOTHERAPY_SESSION,Physiotherapy (per session),800,300,2000,Rehab Centers; Apollo
+SLEEP_STUDY,Polysomnography (Sleep Study),10000,6000,18000,Max; Medanta; Apollo

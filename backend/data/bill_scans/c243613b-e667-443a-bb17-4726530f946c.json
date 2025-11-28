@@ -1,0 +1,362 @@
+{
+  "hospital": "Apollo Care Hospiials",
+  "bill_date": "2021-10-25",
+  "invoice_no": "Invoice",
+  "total_amount": 312900.0,
+  "subtotal": 298000.0,
+  "gst": 14900.0,
+  "tax": 14900.0,
+  "line_items": [
+    {
+      "desc": "Knee Replacement Surgeon Fees",
+      "qty": 1,
+      "unit": 75000.0,
+      "amount": 75000.0,
+      "code": null,
+      "amount_num": 75000.0
+    },
+    {
+      "desc": "tmpiant (Prosthesis)",
+      "qty": 1,
+      "unit": 60000.0,
+      "amount": 60000.0,
+      "code": null,
+      "amount_num": 60000.0
+    },
+    {
+      "desc": "OT Charges (Operation Theatre)",
+      "qty": 1,
+      "unit": 15000.0,
+      "amount": 15000.0,
+      "code": null,
+      "amount_num": 15000.0
+    },
+    {
+      "desc": "Room Rent Deluxe A (3 days)",
+      "qty": 3,
+      "unit": 5000.0,
+      "amount": 15000.0,
+      "code": null,
+      "amount_num": 15000.0
+    },
+    {
+      "desc": "Physiotherapy Session",
+      "qty": 5,
+      "unit": 2000.0,
+      "amount": 10000.0,
+      "code": null,
+      "amount_num": 10000.0
+    },
+    {
+      "desc": "tmpiant (Prosthesis) Duplicate (emoneous)",
+      "qty": 1,
+      "unit": 60000.0,
+      "amount": 60000.0,
+      "code": null,
+      "amount_num": 60000.0
+    },
+    {
+      "desc": "Doctor Consultation Anaesthesia",
+      "qty": 1,
+      "unit": 8000.0,
+      "amount": 8000.0,
+      "code": null,
+      "amount_num": 8000.0
+    },
+    {
+      "desc": "Consumables & Dressing",
+      "qty": 1,
+      "unit": 5000.0,
+      "amount": 5000.0,
+      "code": null,
+      "amount_num": 5000.0
+    },
+    {
+      "desc": "Misc Charges (inflated)",
+      "qty": 1,
+      "unit": 50000.0,
+      "amount": 50000.0,
+      "code": null,
+      "amount_num": 50000.0
+    },
+    {
+      "desc": "Subtotal (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 298000.0,
+      "code": null
+    },
+    {
+      "desc": "GST @5% (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 14900.0,
+      "code": null
+    },
+    {
+      "desc": "Grand Total (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 312900.0,
+      "code": null
+    }
+  ],
+  "ocr_confidence": 90.61111111111111,
+  "status": "completed",
+  "job_id": "c243613b-e667-443a-bb17-4726530f946c",
+  "analysis": {
+    "merchant": null,
+    "date": null,
+    "grand_total": 312900.0,
+    "flagged_items": [
+      {
+        "type": "duplicate_item",
+        "description": "tmpiant (Prosthesis)",
+        "indices": [
+          1,
+          5
+        ],
+        "amount": 60000.0,
+        "excess": 60000.0,
+        "score": 0.656,
+        "items": [
+          {
+            "desc": "tmpiant (Prosthesis)",
+            "qty": 1,
+            "unit": 60000.0,
+            "amount": 60000.0,
+            "code": null,
+            "amount_num": 60000.0
+          },
+          {
+            "desc": "tmpiant (Prosthesis) Duplicate (emoneous)",
+            "qty": 1,
+            "unit": 60000.0,
+            "amount": 60000.0,
+            "code": null,
+            "amount_num": 60000.0
+          }
+        ],
+        "reason": "Duplicate charge - same item billed twice",
+        "suggested_saving": 60000.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 1,
+        "description": null,
+        "actual": 60000.0,
+        "expected": 15000.0,
+        "factor": 4.0,
+        "excess": 45000.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 45000.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 4,
+        "description": null,
+        "actual": 10000.0,
+        "expected": 800.0,
+        "factor": 12.5,
+        "excess": 9200.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 9200.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 5,
+        "description": null,
+        "actual": 60000.0,
+        "expected": 15000.0,
+        "factor": 4.0,
+        "excess": 45000.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 45000.0
+      },
+      {
+        "type": "inflated_vs_expected",
+        "line_index": 8,
+        "description": null,
+        "actual": 50000.0,
+        "expected": 15000.0,
+        "factor": 3.33,
+        "excess": 35000.0,
+        "reason": "inflated_vs_expected",
+        "suggested_saving": 35000.0
+      }
+    ],
+    "potential_savings": 155360.0,
+    "computed_subtotal": 298000.0,
+    "totals_check": {
+      "computed_subtotal": 298000.0,
+      "found_subtotal": 298000.0,
+      "found_gst": 14900.0,
+      "found_grand": 312900.0,
+      "flags": []
+    }
+  },
+  "flagged_items": [
+    {
+      "type": "duplicate_item",
+      "description": "tmpiant (Prosthesis)",
+      "indices": [
+        1,
+        5
+      ],
+      "amount": 60000.0,
+      "excess": 60000.0,
+      "score": 0.656,
+      "items": [
+        {
+          "desc": "tmpiant (Prosthesis)",
+          "qty": 1,
+          "unit": 60000.0,
+          "amount": 60000.0,
+          "code": null,
+          "amount_num": 60000.0
+        },
+        {
+          "desc": "tmpiant (Prosthesis) Duplicate (emoneous)",
+          "qty": 1,
+          "unit": 60000.0,
+          "amount": 60000.0,
+          "code": null,
+          "amount_num": 60000.0
+        }
+      ],
+      "reason": "Duplicate charge - same item billed twice",
+      "suggested_saving": 60000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 1,
+      "description": null,
+      "actual": 60000.0,
+      "expected": 15000.0,
+      "factor": 4.0,
+      "excess": 45000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 45000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 4,
+      "description": null,
+      "actual": 10000.0,
+      "expected": 800.0,
+      "factor": 12.5,
+      "excess": 9200.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 9200.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 5,
+      "description": null,
+      "actual": 60000.0,
+      "expected": 15000.0,
+      "factor": 4.0,
+      "excess": 45000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 45000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 8,
+      "description": null,
+      "actual": 50000.0,
+      "expected": 15000.0,
+      "factor": 3.33,
+      "excess": 35000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 35000.0
+    }
+  ],
+  "potential_savings": 155360.0,
+  "totals_check": {
+    "computed_subtotal": 298000.0,
+    "found_subtotal": 298000.0,
+    "found_gst": 14900.0,
+    "found_grand": 312900.0,
+    "flags": []
+  },
+  "flagged_lines": [
+    {
+      "type": "duplicate_item",
+      "description": "tmpiant (Prosthesis)",
+      "indices": [
+        1,
+        5
+      ],
+      "amount": 60000.0,
+      "excess": 60000.0,
+      "score": 0.656,
+      "items": [
+        {
+          "desc": "tmpiant (Prosthesis)",
+          "qty": 1,
+          "unit": 60000.0,
+          "amount": 60000.0,
+          "code": null,
+          "amount_num": 60000.0
+        },
+        {
+          "desc": "tmpiant (Prosthesis) Duplicate (emoneous)",
+          "qty": 1,
+          "unit": 60000.0,
+          "amount": 60000.0,
+          "code": null,
+          "amount_num": 60000.0
+        }
+      ],
+      "reason": "Duplicate charge - same item billed twice",
+      "suggested_saving": 60000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 1,
+      "description": null,
+      "actual": 60000.0,
+      "expected": 15000.0,
+      "factor": 4.0,
+      "excess": 45000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 45000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 4,
+      "description": null,
+      "actual": 10000.0,
+      "expected": 800.0,
+      "factor": 12.5,
+      "excess": 9200.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 9200.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 5,
+      "description": null,
+      "actual": 60000.0,
+      "expected": 15000.0,
+      "factor": 4.0,
+      "excess": 45000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 45000.0
+    },
+    {
+      "type": "inflated_vs_expected",
+      "line_index": 8,
+      "description": null,
+      "actual": 50000.0,
+      "expected": 15000.0,
+      "factor": 3.33,
+      "excess": 35000.0,
+      "reason": "inflated_vs_expected",
+      "suggested_saving": 35000.0
+    }
+  ],
+  "total_savings": 155360.0,
+  "percent_flagged": 41.66666666666667
+}

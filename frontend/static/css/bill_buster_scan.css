@@ -1,0 +1,352 @@
+/* Bill Scanner Styling - Box-like Design */
+
+/* Scanner Dropzone - Premium Style */
+.scanner-dropzone {
+  border: 3px dashed #fb923c;
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+.scanner-dropzone:hover,
+.scanner-dropzone.active {
+  border-color: #ea580c;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(251, 146, 60, 0.2);
+}
+
+.scanner-dropzone svg {
+  margin: 0 auto 1rem;
+}
+
+.scanner-dropzone h3 {
+  color: #9a3412;
+}
+
+.scanner-dropzone p {
+  margin: 0.5rem 0;
+}
+
+/* Scanner Spinner */
+.scanner-spinner {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #fed7aa;
+  border-top-color: #ea580c;
+  border-radius: 50%;
+  animation: scanner-spin 1s linear infinite;
+}
+
+@keyframes scanner-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#progressPercent {
+  font-weight: bold;
+  color: #ea580c;
+}
+
+/* Results Container */
+#results {
+  padding: 2rem;
+  background: #fafafa;
+}
+
+/* Bill Summary Card */
+.bill-summary {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bill-summary h3 {
+  color: #1e293b;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.bill-summary p {
+  margin: 0.75rem 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bill-summary strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Results Section Header */
+#results h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #f97316;
+}
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.bill-items {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bill-items thead {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.bill-items th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.bill-items td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.bill-items tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.bill-items tbody tr:hover {
+  background: #fef3f2;
+}
+
+.bill-items tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Severity Highlighting */
+.bill-items tbody tr.severity-medium {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+}
+
+.bill-items tbody tr.severity-high {
+  background: #fee2e2;
+  border-left: 4px solid #ef4444;
+}
+
+.bill-items tbody tr.severity-medium:hover {
+  background: #fde68a;
+}
+
+.bill-items tbody tr.severity-high:hover {
+  background: #fecaca;
+}
+
+/* Icons in Table */
+.flag-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.success-icon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+/* Savings Card - Premium Design */
+.savings-card {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 2px solid #6ee7b7;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+}
+
+.savings-card.has-savings {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-color: #34d399;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+}
+
+.savings-card h4 {
+  margin: 0 0 1.5rem 0;
+  color: #065f46;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border: none;
+  padding: 0;
+}
+
+.savings-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #047857;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #065f46;
+  line-height: 1.2;
+}
+
+.savings-amount {
+  color: #16a34a;
+}
+
+.savings-note {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 12px;
+  color: #374151;
+  line-height: 1.7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.savings-note strong {
+  color: #047857;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #475569;
+  border: 2px solid #cbd5e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scanner-dropzone {
+    padding: 40px 20px;
+  }
+
+  .bill-summary {
+    padding: 1.5rem;
+  }
+
+  .bill-items {
+    font-size: 0.875rem;
+  }
+
+  .bill-items th,
+  .bill-items td {
+    padding: 10px 12px;
+  }
+
+  .savings-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  #results h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}

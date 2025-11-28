@@ -1,85 +1,217 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block head_extra %}
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(0, 166, 147, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(0, 166, 147, 0.6);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  .feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+</style>
+{% endblock %} {% block content %}
+<!-- Hero Section -->
 <section
-  class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white"
+  class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-emerald-50/30 to-sky-50/30"
 >
-  <div
-    class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-  >
-    <!-- Left: copy -->
-    <div class="space-y-6">
-      <div
-        class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-md text-sm"
-      >
-        ⚡ AI-Powered Healthcare Finance
-      </div>
-      <h1 class="text-5xl font-extrabold leading-tight">
-        Smart Insurance
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-emerald-500"
-          >Recommendations</span
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden opacity-10">
+    <div
+      class="absolute -top-24 -right-24 w-96 h-96 bg-primary rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute top-1/2 -left-24 w-96 h-96 bg-accent rounded-full blur-3xl"
+    ></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Hero Copy -->
+      <div class="space-y-8">
+        <div
+          class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-100 to-sky-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium shadow-sm"
         >
-      </h1>
-      <p class="text-slate-600 max-w-xl">
-        Personalized health insurance recommendations and medical bill
-        overcharge detection — powered by explainable AI to help you save money
-        and make confident healthcare choices.
-      </p>
-
-      <div class="flex items-center gap-4 mt-4">
-        <a
-          href="/get-quote"
-          class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:opacity-95"
-        >
-          Start Free Analysis →
-        </a>
-        <a
-          href="#demo"
-          class="inline-flex items-center gap-3 px-5 py-3 rounded-lg border font-semibold"
-          >View Demo</a
-        >
-      </div>
-
-      <!-- Stats -->
-      <div class="mt-8 grid grid-cols-3 gap-6 max-w-md">
-        <div class="text-center">
-          <div class="text-2xl font-bold text-primary">500+</div>
-          <div class="text-sm text-slate-500">Insurance Plans</div>
+          <span class="animate-pulse">⚡</span>
+          <span>AI-Powered Healthcare Finance Platform</span>
         </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-primary">95%</div>
-          <div class="text-sm text-slate-500">Accuracy Rate</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-primary">₹25K</div>
-          <div class="text-sm text-slate-500">Avg. Savings</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Right: 3D/visual -->
-    <div class="relative">
-      <div
-        id="hero-3d-canvas"
-        class="w-full h-[420px] rounded-xl shadow-lg bg-white"
-      ></div>
-
-      <!-- Floating top card (mirrors sample) -->
-      <div
-        class="absolute right-6 top-10 w-80 bg-white rounded-xl shadow-lg p-5"
-      >
-        <div class="flex items-center justify-between">
-          <div class="text-sm text-slate-500">Top Recommendation</div>
-          <span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-1 rounded"
-            >Best Match</span
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+          Your Smart
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-emerald-600"
           >
+            Healthcare Finance
+          </span>
+          Companion
+        </h1>
+
+        <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+          Get personalized insurance recommendations, detect medical bill
+          overcharges, and make confident healthcare decisions — all powered by
+          explainable AI.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+        >
+          <a
+            href="/get-quote"
+            class="group inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-primary to-emerald-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+          >
+            <span>Start Free Analysis</span>
+            <svg
+              class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#features"
+            class="inline-flex items-center gap-3 px-6 py-4 rounded-xl border-2 border-slate-300 font-semibold hover:border-primary hover:bg-slate-50 transition-all"
+          >
+            <span>Explore Features</span>
+          </a>
         </div>
-        <h3 class="mt-3 font-semibold">HDFC ERGO Optima Restore</h3>
-        <p class="text-slate-500 text-sm">Family Floater · 5L Coverage</p>
-        <div class="mt-4 flex items-center justify-between">
-          <div class="text-2xl font-bold text-primary">₹12,440</div>
-          <div class="text-sm text-slate-500 text-right">
-            <div>⭐ 4.8</div>
-            <div class="mt-1">10,000+ claims</div>
+
+        <!-- Quick Stats -->
+        <div class="pt-8 grid grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary">500+</div>
+            <div class="text-sm text-slate-500 mt-1">Insurance Plans</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary">95%</div>
+            <div class="text-sm text-slate-500 mt-1">AI Accuracy</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-primary">₹25K</div>
+            <div class="text-sm text-slate-500 mt-1">Avg. Savings</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual/Card -->
+      <div class="relative lg:pl-12">
+        <div class="relative">
+          <!-- Main card -->
+          <div class="bg-white rounded-2xl shadow-2xl p-8 animate-float">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center text-white text-xl"
+                >
+                  🎯
+                </div>
+                <div>
+                  <div class="text-xs text-slate-500">Your Top Match</div>
+                  <div class="font-semibold">AI Recommendation</div>
+                </div>
+              </div>
+              <span
+                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full"
+              >
+                Best Match
+              </span>
+            </div>
+
+            <div class="border-t pt-6">
+              <h3 class="text-xl font-bold mb-2">HDFC ERGO Optima Restore</h3>
+              <p class="text-slate-600 text-sm mb-4">
+                Family Floater • 5L Coverage • 3 Members
+              </p>
+
+              <div class="flex items-end justify-between mb-6">
+                <div>
+                  <div class="text-sm text-slate-500">Premium</div>
+                  <div class="text-4xl font-bold text-primary">₹12,440</div>
+                  <div class="text-xs text-slate-500">per year</div>
+                </div>
+                <div class="text-right">
+                  <div class="flex items-center gap-1 text-yellow-500 text-lg">
+                    ★★★★★
+                  </div>
+                  <div class="text-xs text-slate-500 mt-1">
+                    4.8 (10K+ claims)
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 mb-6">
+                <div class="bg-slate-50 rounded-lg p-3 text-center">
+                  <div class="text-2xl mb-1">⚡</div>
+                  <div class="text-xs font-medium">Instant Claim</div>
+                </div>
+                <div class="bg-slate-50 rounded-lg p-3 text-center">
+                  <div class="text-2xl mb-1">🏥</div>
+                  <div class="text-xs font-medium">1000+ Hospitals</div>
+                </div>
+              </div>
+
+              <button
+                class="w-full py-3 bg-gradient-to-r from-primary to-emerald-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all"
+              >
+                View Full Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div
+            class="absolute -top-4 -left-4 bg-white rounded-lg shadow-lg p-3 animate-pulse-glow"
+          >
+            <div class="text-xs text-slate-500">Savings</div>
+            <div class="text-lg font-bold text-emerald-600">₹8,500</div>
+          </div>
+
+          <div
+            class="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-sky-600 flex items-center justify-center text-white text-xs"
+              >
+                AI
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Confidence</div>
+                <div class="text-sm font-bold text-accent">98%</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,108 +219,469 @@
   </div>
 </section>
 
-<!-- Features -->
-<section class="max-w-7xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-bold text-center mb-6">
-    Powerful Features for Smart Healthcare Decisions
-  </h2>
-  <p class="text-center text-slate-500 max-w-2xl mx-auto mb-8">
-    AI-driven recommendations, bill analysis, and explainable decisions to help
-    you save and choose confidently.
-  </p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="p-6 bg-white rounded-xl shadow-sm flex gap-4 items-start">
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
       <div
-        class="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center"
+        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4"
       >
-        🧠
+        POWERFUL FEATURES
       </div>
-      <div>
-        <h3 class="font-semibold">AI-Powered Recommendations</h3>
-        <p class="text-sm text-slate-500">
-          Advanced ML analyzes your profile and recommends the best plans.
+      <h2 class="text-4xl lg:text-5xl font-extrabold mb-4">
+        Everything You Need in One Platform
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        AI-driven tools to help you make smarter healthcare and insurance
+        decisions
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature 1: AI Recommendations -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-3xl mb-6"
+        >
+          🧠
+        </div>
+        <h3 class="text-xl font-bold mb-3">AI-Powered Recommendations</h3>
+        <p class="text-slate-600 mb-4">
+          Advanced machine learning analyzes your profile, health needs, and
+          budget to recommend the perfect insurance plans.
+        </p>
+        <a
+          href="/get-quote"
+          class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all"
+        >
+          Get Started
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature 2: Bill Buster -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center text-3xl mb-6"
+        >
+          🧾
+        </div>
+        <h3 class="text-xl font-bold mb-3">Bill Buster Analysis</h3>
+        <p class="text-slate-600 mb-4">
+          Upload medical bills and our AI instantly detects overcharges, billing
+          errors, and potential savings opportunities.
+        </p>
+        <a
+          href="/bill-buster"
+          class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all"
+        >
+          Analyze Bills
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature 3: Explainable AI -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl mb-6"
+        >
+          🔍
+        </div>
+        <h3 class="text-xl font-bold mb-3">Explainable AI</h3>
+        <p class="text-slate-600 mb-4">
+          Understand exactly why each plan was recommended with transparent,
+          easy-to-understand explanations and comparisons.
+        </p>
+        <a
+          href="/resources"
+          class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all"
+        >
+          Learn More
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature 4: Smart Chatbot -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl mb-6"
+        >
+          💬
+        </div>
+        <h3 class="text-xl font-bold mb-3">24/7 AI Assistant</h3>
+        <p class="text-slate-600 mb-4">
+          Get instant answers about insurance, claims, coverage, and more from
+          our intelligent chatbot trained on healthcare data.
+        </p>
+        <div class="inline-flex items-center text-primary font-semibold">
+          Available Now
+          <span
+            class="ml-2 w-2 h-2 bg-emerald-500 rounded-full animate-pulse"
+          ></span>
+        </div>
+      </div>
+
+      <!-- Feature 5: Plan Comparison -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl mb-6"
+        >
+          ⚖️
+        </div>
+        <h3 class="text-xl font-bold mb-3">Smart Plan Comparison</h3>
+        <p class="text-slate-600 mb-4">
+          Compare multiple insurance plans side-by-side with detailed breakdowns
+          of coverage, premiums, and benefits.
+        </p>
+        <a
+          href="/get-quote"
+          class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all"
+        >
+          Compare Plans
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Feature 6: Network Hospitals -->
+      <div class="feature-card bg-white rounded-2xl p-8 shadow-md">
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-3xl mb-6"
+        >
+          🏥
+        </div>
+        <h3 class="text-xl font-bold mb-3">Hospital Network Finder</h3>
+        <p class="text-slate-600 mb-4">
+          Search thousands of network hospitals, check cashless facilities, and
+          find the best healthcare providers near you.
+        </p>
+        <a
+          href="/resources"
+          class="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all"
+        >
+          Find Hospitals
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-20 bg-gradient-to-br from-slate-50 to-emerald-50/30">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <div
+        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4"
+      >
+        HOW IT WORKS
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-extrabold mb-4">
+        Get Started in 3 Simple Steps
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Step 1 -->
+      <div class="text-center">
+        <div class="relative mb-6">
+          <div
+            class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center text-white text-3xl shadow-lg"
+          >
+            1
+          </div>
+          <div
+            class="absolute top-0 left-1/2 w-32 h-32 -ml-16 -mt-6 bg-primary/10 rounded-full -z-10"
+          ></div>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Share Your Profile</h3>
+        <p class="text-slate-600">
+          Tell us about your age, family size, health needs, and budget. Takes
+          less than 2 minutes.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center">
+        <div class="relative mb-6">
+          <div
+            class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-accent to-sky-600 flex items-center justify-center text-white text-3xl shadow-lg"
+          >
+            2
+          </div>
+          <div
+            class="absolute top-0 left-1/2 w-32 h-32 -ml-16 -mt-6 bg-accent/10 rounded-full -z-10"
+          ></div>
+        </div>
+        <h3 class="text-xl font-bold mb-3">AI Analyzes & Ranks</h3>
+        <p class="text-slate-600">
+          Our AI engine compares 500+ plans and ranks them based on your unique
+          requirements.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center">
+        <div class="relative mb-6">
+          <div
+            class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white text-3xl shadow-lg"
+          >
+            3
+          </div>
+          <div
+            class="absolute top-0 left-1/2 w-32 h-32 -ml-16 -mt-6 bg-purple-500/10 rounded-full -z-10"
+          ></div>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Choose & Save</h3>
+        <p class="text-slate-600">
+          Review personalized recommendations with clear explanations and choose
+          your perfect plan.
         </p>
       </div>
     </div>
 
-    <div class="p-6 bg-white rounded-xl shadow-sm flex gap-4 items-start">
-      <div
-        class="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center"
+    <div class="text-center mt-12">
+      <a
+        href="/get-quote"
+        class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-emerald-600 text-white font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
       >
-        🧾
-      </div>
-      <div>
-        <h3 class="font-semibold">Bill Buster Analysis</h3>
-        <p class="text-sm text-slate-500">
-          Upload medical bills; find overcharges & savings quickly.
-        </p>
-      </div>
+        Start Your Free Analysis Now
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          ></path>
+        </svg>
+      </a>
     </div>
+  </div>
+</section>
 
-    <div class="p-6 bg-white rounded-xl shadow-sm flex gap-4 items-start">
-      <div
-        class="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center"
-      >
-        🔍
+<!-- Statistics Section -->
+<section class="py-20 bg-gradient-to-r from-primary to-emerald-600 text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-5xl font-extrabold mb-2">500+</div>
+        <div class="text-emerald-100">Insurance Plans Analyzed</div>
       </div>
       <div>
-        <h3 class="font-semibold">Explainable AI</h3>
-        <p class="text-sm text-slate-500">
-          See why each plan was suggested with transparent explanations.
-        </p>
-      </div>
-    </div>
-
-    <div class="p-6 bg-white rounded-xl shadow-sm flex gap-4 items-start">
-      <div
-        class="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center"
-      >
-        🛡️
+        <div class="text-5xl font-extrabold mb-2">10K+</div>
+        <div class="text-emerald-100">Bills Analyzed</div>
       </div>
       <div>
-        <h3 class="font-semibold">Comprehensive Coverage</h3>
-        <p class="text-sm text-slate-500">
-          Compare top insurers across networks and claim ratios.
-        </p>
+        <div class="text-5xl font-extrabold mb-2">95%</div>
+        <div class="text-emerald-100">AI Accuracy Rate</div>
+      </div>
+      <div>
+        <div class="text-5xl font-extrabold mb-2">₹25K</div>
+        <div class="text-emerald-100">Average Savings</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Testimonials -->
-<section class="bg-slate-50 py-12">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-2xl font-bold text-center mb-6">What Our Users Say</h3>
-    <div id="testimonials" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-6 bg-white rounded-xl shadow">
-        <div class="text-yellow-400">★★★★★</div>
-        <p class="text-slate-600 italic mt-4">
-          "AI-MEDPAY saved me ₹15,000 on my family's insurance. The
-          recommendations were spot-on!"
-        </p>
-        <div class="mt-4 font-semibold">Priya Sharma</div>
-        <div class="text-sm text-slate-500">Software Engineer</div>
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <div
+        class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4"
+      >
+        TESTIMONIALS
       </div>
-      <div class="p-6 bg-white rounded-xl shadow">
-        <div class="text-yellow-400">★★★★★</div>
-        <p class="text-slate-600 italic mt-4">
-          "Bill Buster identified overcharges I never noticed — saved ₹8,000 on
-          a hospital bill."
+      <h2 class="text-4xl lg:text-5xl font-extrabold mb-4">
+        Trusted by Thousands
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        See what our users say about their experience with AI-MEDPAY
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div
+        class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <div class="flex items-center gap-1 text-yellow-400 text-xl mb-4">
+          ★★★★★
+        </div>
+        <p class="text-slate-700 italic mb-6 leading-relaxed">
+          "AI-MEDPAY saved me ₹15,000 on my family's insurance. The AI
+          recommendations were incredibly accurate and the explanations helped
+          me understand exactly what I was getting."
         </p>
-        <div class="mt-4 font-semibold">Rajesh Kumar</div>
-        <div class="text-sm text-slate-500">Business Owner</div>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center text-white font-bold"
+          >
+            PS
+          </div>
+          <div>
+            <div class="font-semibold">Priya Sharma</div>
+            <div class="text-sm text-slate-500">Software Engineer, Mumbai</div>
+          </div>
+        </div>
       </div>
-      <div class="p-6 bg-white rounded-xl shadow">
-        <div class="text-yellow-400">★★★★★</div>
-        <p class="text-slate-600 italic mt-4">
-          "Transparent recommendations and excellent support. Highly
-          recommended!"
+
+      <div
+        class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <div class="flex items-center gap-1 text-yellow-400 text-xl mb-4">
+          ★★★★★
+        </div>
+        <p class="text-slate-700 italic mb-6 leading-relaxed">
+          "The Bill Buster feature is amazing! It identified overcharges I never
+          would have caught — saved ₹8,000 on a hospital bill. Highly
+          recommend!"
         </p>
-        <div class="mt-4 font-semibold">Dr. Anita Patel</div>
-        <div class="text-sm text-slate-500">Medical Professional</div>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-sky-600 flex items-center justify-center text-white font-bold"
+          >
+            RK
+          </div>
+          <div>
+            <div class="font-semibold">Rajesh Kumar</div>
+            <div class="text-sm text-slate-500">Business Owner, Delhi</div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <div class="flex items-center gap-1 text-yellow-400 text-xl mb-4">
+          ★★★★★
+        </div>
+        <p class="text-slate-700 italic mb-6 leading-relaxed">
+          "As a doctor, I appreciate the transparency and accuracy. The AI
+          chatbot answers questions I had about coverage instantly. Excellent
+          platform!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold"
+          >
+            AP
+          </div>
+          <div>
+            <div class="font-semibold">Dr. Anita Patel</div>
+            <div class="text-sm text-slate-500">
+              Medical Professional, Bangalore
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl lg:text-5xl font-extrabold mb-6">
+      Ready to Save on Healthcare?
+    </h2>
+    <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+      Join thousands of smart users who have already saved lakhs on insurance
+      and medical bills with AI-MEDPAY.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="/get-quote"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-slate-900 font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+      >
+        Get Your Free Quote
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          ></path>
+        </svg>
+      </a>
+      <a
+        href="/bill-buster"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white text-white font-bold hover:bg-white hover:text-slate-900 transition-all"
+      >
+        Analyze a Bill
+      </a>
+    </div>
+    <p class="text-sm text-slate-400 mt-6">
+      No credit card required • Free forever • Get results in 2 minutes
+    </p>
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,40 @@
+{
+  "hospital": "OCRConfidentce: 90.6%:",
+  "bill_date": "2025-10-27",
+  "invoice_no": "N/A",
+  "total_amount": 0.0,
+  "subtotal": null,
+  "gst": null,
+  "tax": null,
+  "line_items": [],
+  "ocr_confidence": 52.363013698630134,
+  "status": "completed",
+  "job_id": "33ca444c-1570-4aa3-8030-5c7df23d008d",
+  "analysis": {
+    "merchant": null,
+    "date": null,
+    "grand_total": 0.0,
+    "flagged_items": [],
+    "potential_savings": 0.0,
+    "computed_subtotal": 0,
+    "totals_check": {
+      "computed_subtotal": 0,
+      "found_subtotal": null,
+      "found_gst": 0.0,
+      "found_grand": 0.0,
+      "flags": []
+    }
+  },
+  "flagged_items": [],
+  "potential_savings": 0.0,
+  "totals_check": {
+    "computed_subtotal": 0,
+    "found_subtotal": null,
+    "found_gst": 0.0,
+    "found_grand": 0.0,
+    "flags": []
+  },
+  "flagged_lines": [],
+  "total_savings": 0.0,
+  "percent_flagged": 0
+}

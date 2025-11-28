@@ -1,0 +1,8 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#f1f5f9"/>
+  <circle cx="100" cy="80" r="30" fill="#cbd5e1"/>
+  <rect x="70" y="85" width="10" height="35" fill="#94a3b8"/>
+  <rect x="80" y="95" width="40" height="10" fill="#94a3b8"/>
+  <rect x="85" y="120" width="30" height="50" rx="5" fill="#94a3b8"/>
+  <text x="100" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">Hospital</text>
+</svg>

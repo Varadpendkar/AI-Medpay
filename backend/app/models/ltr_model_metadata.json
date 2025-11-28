@@ -1,0 +1,19 @@
+{
+  "features": [
+    "age",
+    "dependents",
+    "risk_score",
+    "income",
+    "premium",
+    "deductible",
+    "copay",
+    "coverage_amount",
+    "network_size",
+    "claim_rejection_rate",
+    "waiting_period_days"
+  ],
+  "model_path": "/Users/varadpendkar/Documents/project/backend/app/models/ltr_model.txt",
+  "training_sessions": 80,
+  "validation_sessions": 20,
+  "n_estimators": 100
+}

@@ -1,0 +1,419 @@
+{% extends "base.html" %} {% block head_extra %}
+<title>Pre-Authorization Cost Estimator | Bill Buster</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .preauth-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 80vh;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+
+  .procedure-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #e2e8f0;
+    background: white;
+  }
+
+  .procedure-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+  }
+
+  .procedure-card.selected {
+    border-color: #667eea !important;
+    border-width: 3px !important;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.15) 0%,
+      rgba(118, 75, 162, 0.15) 100%
+    ) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3) !important;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .category-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1f2937;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(300px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .plan-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .plan-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="preauth-container p-4 sm:p-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="glass-card rounded-2xl p-6 mb-6">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">
+        Pre-Authorization Cost Estimator
+      </h1>
+      <p class="text-gray-600">
+        Compare healthcare costs across major Indian insurers
+      </p>
+    </div>
+
+    <!-- Form -->
+    <div class="glass-card rounded-2xl p-6 mb-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Select Procedure</h2>
+
+      <!-- Procedure Cards -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-6"
+        id="proceduresGrid"
+      >
+        {% for proc in procedures %}
+        <div
+          class="procedure-card rounded-lg p-3 border-2"
+          data-id="{{ proc.id }}"
+          data-name="{{ proc.name }}"
+        >
+          <div class="flex items-start justify-between mb-2">
+            <span class="category-badge">{{ proc.category or 'General' }}</span>
+          </div>
+          <h3 class="font-semibold text-gray-800 text-sm">{{ proc.name }}</h3>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Insurer Selection -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2"
+            >Insurance Provider (Optional)</label
+          >
+          <select
+            id="insurer"
+            class="w-full p-2 border border-gray-300 rounded-lg"
+          >
+            <option value="">All Insurers</option>
+            {% for ins in insurers %}
+            <option value="{{ ins.id }}">{{ ins.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2"
+            >Patient Category</label
+          >
+          <select
+            id="patient_type"
+            class="w-full p-2 border border-gray-300 rounded-lg"
+          >
+            <option value="standard">Standard</option>
+            <option value="semi_private">Semi-Private Room</option>
+            <option value="private">Private Room</option>
+            <option value="suite">Suite/Premium</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-3">
+        <button id="calculateBtn" class="btn-primary" disabled>
+          Calculate Estimates
+        </button>
+        <button
+          id="clearBtn"
+          class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="glass-card rounded-2xl p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Cost Estimates</h2>
+      <div id="resultsCount" class="text-sm text-gray-600 mb-4">
+        No estimates yet
+      </div>
+      <div id="resultsGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!-- Results will appear here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Toast notification
+  function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  // Render results
+  function renderResults(data) {
+    const grid = document.getElementById("resultsGrid");
+    const plans = data.plans || data || [];
+    const ragContext = data.rag_context || {};
+
+    if (!plans || plans.length === 0) {
+      grid.innerHTML =
+        '<div class="text-center text-gray-500 py-8">No plans found</div>';
+      return;
+    }
+
+    // Add RAG context info if available
+    let contextHtml = "";
+    if (ragContext.coverage_info) {
+      contextHtml = `
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4 rounded">
+          <h4 class="font-semibold text-blue-800">AI Analysis</h4>
+          <p class="text-sm text-blue-700">${ragContext.coverage_info}</p>
+          <p class="text-xs text-blue-600 mt-1">Cost Range: ${
+            ragContext.cost_range || "Varies"
+          }</p>
+          ${
+            ragContext.recommendations
+              ? `
+            <div class="mt-2">
+              <span class="text-xs font-semibold text-blue-800">Recommendations:</span>
+              <ul class="text-xs text-blue-700 ml-4">
+                ${ragContext.recommendations
+                  .map((rec) => `<li>• ${rec}</li>`)
+                  .join("")}
+              </ul>
+            </div>
+          `
+              : ""
+          }
+        </div>
+      `;
+    }
+
+    grid.innerHTML =
+      contextHtml +
+      plans
+        .map(
+          (plan) => `
+    <div class="plan-card">
+      <div class="flex justify-between items-start mb-3">
+        <div>
+          <h3 class="font-bold text-lg">${plan.name}</h3>
+          <p class="text-sm text-gray-500">${
+            plan.tagline || "Insurance Plan"
+          }</p>
+        </div>
+        ${
+          plan.recommended
+            ? '<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Recommended</span>'
+            : ""
+        }
+      </div>
+      
+      <div class="mb-3">
+        <div class="text-2xl font-bold text-purple-600">₹${plan.oop.toLocaleString()}</div>
+        <div class="text-sm text-gray-500">Out-of-pocket cost</div>
+      </div>
+      
+      <div class="space-y-1 text-sm text-gray-600">
+        ${
+          plan.highlights
+            ? plan.highlights.map((h) => `<div>• ${h}</div>`).join("")
+            : ""
+        }
+      </div>
+    </div>
+  `
+        )
+        .join("");
+  }
+
+  // Variables
+  let selectedProcedure = null;
+  const calculateBtn = document.getElementById("calculateBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const proceduresGrid = document.getElementById("proceduresGrid");
+  const resultsGrid = document.getElementById("resultsGrid");
+
+  // Procedure selection
+  proceduresGrid.addEventListener("click", function (e) {
+    const card = e.target.closest(".procedure-card");
+    if (!card) return;
+
+    console.log("Card clicked:", card.dataset.name);
+
+    // Remove previous selection
+    document
+      .querySelectorAll(".procedure-card")
+      .forEach((c) => c.classList.remove("selected"));
+
+    // Select current card
+    card.classList.add("selected");
+    selectedProcedure = card.dataset.id;
+
+    // Enable calculate button
+    calculateBtn.disabled = false;
+    calculateBtn.style.opacity = "1";
+
+    showToast(`Selected: ${card.dataset.name}`);
+  });
+
+  // Calculate estimates
+  calculateBtn.addEventListener("click", async function () {
+    if (!selectedProcedure) {
+      showToast("Please select a procedure first");
+      return;
+    }
+
+    const insurer = document.getElementById("insurer").value;
+    const patientType = document.getElementById("patient_type").value;
+
+    console.log("Making API call with:", {
+      selectedProcedure,
+      insurer,
+      patientType,
+    });
+
+    // Show loading
+    resultsGrid.innerHTML =
+      '<div class="text-center py-8"><div class="animate-pulse">Loading estimates...</div></div>';
+
+    try {
+      const response = await fetch("/pre-auth-estimate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          procedure_code: selectedProcedure,
+          insurer: insurer,
+          patient_type: patientType,
+        }),
+      });
+
+      console.log("Response status:", response.status);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Server error: ${errorText}`);
+      }
+
+      const data = await response.json();
+      console.log("API Response:", data);
+
+      renderResults(data);
+      const planCount = (data.plans || data || []).length;
+      document.getElementById(
+        "resultsCount"
+      ).textContent = `${planCount} estimates found`;
+
+      // Show RAG context if available
+      if (data.rag_context) {
+        console.log("RAG Context:", data.rag_context);
+      }
+
+      showToast("Estimates calculated successfully!");
+    } catch (error) {
+      console.error("Error:", error);
+      resultsGrid.innerHTML = `<div class="text-red-600 text-center py-8">Error: ${error.message}</div>`;
+      showToast("Error calculating estimates");
+    }
+  });
+
+  // Clear selection
+  clearBtn.addEventListener("click", function () {
+    // Clear selections
+    document
+      .querySelectorAll(".procedure-card")
+      .forEach((c) => c.classList.remove("selected"));
+    document.getElementById("insurer").value = "";
+    document.getElementById("patient_type").value = "standard";
+    selectedProcedure = null;
+
+    // Disable calculate button
+    calculateBtn.disabled = true;
+    calculateBtn.style.opacity = "0.5";
+
+    // Clear results
+    resultsGrid.innerHTML = "";
+    document.getElementById("resultsCount").textContent = "No estimates yet";
+
+    showToast("Selection cleared");
+  });
+
+  // Initialize
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Page loaded");
+    console.log(
+      "Found",
+      document.querySelectorAll(".procedure-card").length,
+      "procedure cards"
+    );
+
+    // Ensure button starts disabled
+    calculateBtn.disabled = true;
+    calculateBtn.style.opacity = "0.5";
+  });
+</script>
+{% endblock %}

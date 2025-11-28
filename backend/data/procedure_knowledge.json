@@ -1,0 +1,52 @@
+[
+  {
+    "procedure": "Appendectomy",
+    "category": "General Surgery",
+    "typical_cost_range": "150000-300000",
+    "insurance_coverage": "80-90% typically covered",
+    "common_exclusions": "Day-care procedures may have lower coverage",
+    "duration": "2-3 days hospitalization",
+    "complications": "Post-operative infections, adhesions",
+    "network_preference": "Multi-specialty hospitals preferred"
+  },
+  {
+    "procedure": "Heart Surgery",
+    "category": "Cardiac Surgery",
+    "typical_cost_range": "500000-1500000",
+    "insurance_coverage": "85-95% coverage for emergency cases",
+    "common_exclusions": "Pre-existing conditions may affect coverage",
+    "duration": "5-10 days hospitalization",
+    "complications": "High-risk procedure, ICU required",
+    "network_preference": "Cardiac specialty hospitals mandatory"
+  },
+  {
+    "procedure": "Knee Surgery",
+    "category": "Orthopedic",
+    "typical_cost_range": "200000-500000",
+    "insurance_coverage": "70-85% typical coverage",
+    "common_exclusions": "Sports injuries may have waiting periods",
+    "duration": "3-5 days hospitalization",
+    "complications": "Physiotherapy required post-surgery",
+    "network_preference": "Orthopedic specialists required"
+  },
+  {
+    "procedure": "Cataract Surgery",
+    "category": "Ophthalmology",
+    "typical_cost_range": "50000-150000",
+    "insurance_coverage": "90-100% coverage after waiting period",
+    "common_exclusions": "Premium lenses may not be covered",
+    "duration": "Day-care procedure",
+    "complications": "Rare complications",
+    "network_preference": "Eye hospitals or multi-specialty"
+  },
+  {
+    "procedure": "Kidney Stone Surgery",
+    "category": "Urology",
+    "typical_cost_range": "100000-250000",
+    "insurance_coverage": "80-90% coverage",
+    "common_exclusions": "Laser treatments may have lower coverage",
+    "duration": "2-4 days hospitalization",
+    "complications": "Infection risk, bleeding",
+    "network_preference": "Urology departments required"
+  }
+]

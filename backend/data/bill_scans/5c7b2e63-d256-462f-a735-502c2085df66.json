@@ -1,0 +1,134 @@
+{
+  "hospital": "Apollo Care Hospiials",
+  "bill_date": "2021-10-25",
+  "invoice_no": "Invoice",
+  "total_amount": 0.0,
+  "line_items": [
+    {
+      "desc": "Knee Replacement Surgeon Fees",
+      "qty": 1,
+      "unit": 75000.0,
+      "amount": 75000.0,
+      "code": null,
+      "amount_num": 75000.0
+    },
+    {
+      "desc": "tmpiant (Prosthesis)",
+      "qty": 1,
+      "unit": 60000.0,
+      "amount": 60000.0,
+      "code": null,
+      "amount_num": 60000.0
+    },
+    {
+      "desc": "OT Charges (Operation Theatre)",
+      "qty": 1,
+      "unit": 15000.0,
+      "amount": 15000.0,
+      "code": null,
+      "amount_num": 15000.0
+    },
+    {
+      "desc": "Room Rent Deluxe A (3 days)",
+      "qty": 3,
+      "unit": 5000.0,
+      "amount": 15000.0,
+      "code": null,
+      "amount_num": 15000.0
+    },
+    {
+      "desc": "Physiotherapy Session",
+      "qty": 5,
+      "unit": 2000.0,
+      "amount": 10000.0,
+      "code": null,
+      "amount_num": 10000.0
+    },
+    {
+      "desc": "tmpiant (Prosthesis) Duplicate (emoneous)",
+      "qty": 1,
+      "unit": 60000.0,
+      "amount": 60000.0,
+      "code": null,
+      "amount_num": 60000.0
+    },
+    {
+      "desc": "Doctor Consultation Anaesthesia",
+      "qty": 1,
+      "unit": 8000.0,
+      "amount": 8000.0,
+      "code": null,
+      "amount_num": 8000.0
+    },
+    {
+      "desc": "Consumables & Dressing",
+      "qty": 1,
+      "unit": 5000.0,
+      "amount": 5000.0,
+      "code": null,
+      "amount_num": 5000.0
+    },
+    {
+      "desc": "Misc Charges (inflated)",
+      "qty": 1,
+      "unit": 50000.0,
+      "amount": 50000.0,
+      "code": null,
+      "amount_num": 50000.0
+    },
+    {
+      "desc": "Subtotal (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 298000.0,
+      "code": null,
+      "amount_num": 298000.0
+    },
+    {
+      "desc": "GST @5% (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 14900.0,
+      "code": null,
+      "amount_num": 14900.0
+    },
+    {
+      "desc": "Grand Total (0)",
+      "qty": 1,
+      "unit": null,
+      "amount": 312900.0,
+      "code": null,
+      "amount_num": 312900.0
+    }
+  ],
+  "ocr_confidence": 90.61111111111111,
+  "status": "completed",
+  "job_id": "5c7b2e63-d256-462f-a735-502c2085df66",
+  "analysis": {
+    "merchant": null,
+    "date": null,
+    "grand_total": 0.0,
+    "flagged_items": [],
+    "potential_savings": 0.0,
+    "computed_subtotal": 923800.0,
+    "totals_check": {
+      "computed_subtotal": 923800.0,
+      "found_subtotal": null,
+      "found_gst": 0.0,
+      "found_grand": 0.0,
+      "flags": []
+    }
+  },
+  "flagged_items": [],
+  "potential_savings": 0.0,
+  "totals_check": {
+    "computed_subtotal": 923800.0,
+    "found_subtotal": null,
+    "found_gst": 0.0,
+    "found_grand": 0.0,
+    "flags": []
+  },
+  "flagged_lines": [],
+  "total_savings": 0.0,
+  "percent_flagged": 0.0
+}
