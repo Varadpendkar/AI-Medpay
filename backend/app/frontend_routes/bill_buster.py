@@ -378,7 +378,7 @@ def pre_auth_page():
 
 @frontend_bp.route('/pre-auth-estimate', methods=['POST'])
 def pre_auth_estimate():
-    """Calculate OOP estimates for a procedure using RAG-enhanced recommendations"""
+    """Calculate OOP estimates for a procedure using RAG-enhanced recommendations with hospital context"""
     import random
     from pathlib import Path
     
@@ -388,29 +388,56 @@ def pre_auth_estimate():
     data = request.form.to_dict() if request.form else (request.json or {})
     proc_code = data.get('procedure_code') or data.get('procedure')
     insurer = data.get('insurer', '')
+    hospital = data.get('hospital', '')  # NEW: Hospital parameter
     patient_type = data.get('patient_type', 'standard')
     
     if not proc_code:
         return jsonify({"error": "procedure is required"}), 400
     
-    # Initialize RAG system for procedure-specific recommendations
+    # Initialize RAG system for procedure-specific recommendations with hospital context
     try:
-        from app.services.procedure_rag import create_procedure_rag
+        from app.services.procedure_rag import ProcedureRAG
         project_root = Path(__file__).parent.parent.parent
-        rag_system = create_procedure_rag(project_root)
+        data_dir = project_root / "backend" / "data"
+        rag_system = ProcedureRAG(data_dir)
         
-        # Get RAG-based cost estimation
-        user_profile = {"age": 35, "patient_type": patient_type}  # Mock profile
-        rag_estimate = rag_system.estimate_costs(proc_code, user_profile)
+        # Search for procedure with hospital context
+        search_query = f"{proc_code} cost estimation coverage"
+        procedure_results = rag_system.search_procedure(search_query, hospital_chain=hospital, top_k=3)
         
-        # Use RAG context for better cost estimation
-        if not rag_estimate.get('error'):
-            base_cost = rag_estimate['estimated_cost']
-            cost_range = rag_estimate['cost_range']
-            coverage_info = rag_estimate['coverage_info']
-            recommendations = rag_estimate['recommendations']
+        # Get RAG-based cost estimation with hospital adjustments
+        if procedure_results:
+            primary_result = procedure_results[0]
+            
+            # Use hospital-adjusted costs if available
+            if hospital and 'hospital_adjusted_cost' in primary_result:
+                cost_str = primary_result['hospital_adjusted_cost']
+            else:
+                cost_str = primary_result.get('typical_cost_range', '150000-300000')
+            
+            # Parse cost range
+            if '-' in cost_str:
+                min_cost, max_cost = map(int, cost_str.split('-'))
+            else:
+                min_cost, max_cost = 150000, 300000
+                
+            base_cost = (min_cost + max_cost) // 2
+            cost_range = {"min": min_cost, "max": max_cost}
+            coverage_info = primary_result.get('insurance_coverage', 'Standard coverage applies')
+            
+            # Enhanced recommendations with hospital context
+            recommendations = [
+                f"Estimated cost: ₹{min_cost:,} - ₹{max_cost:,}",
+                primary_result.get('insurance_coverage', 'Check with insurer'),
+                primary_result.get('network_preference', 'Network hospital recommended')
+            ]
+            
+            # Add hospital-specific notes
+            if hospital and 'hospital_notes' in primary_result:
+                recommendations.append(primary_result['hospital_notes'])
+            
         else:
-            # Fallback to default if RAG fails
+            # Fallback to default if no results
             base_cost = 200000
             cost_range = {"min": 150000, "max": 300000}
             coverage_info = "Standard coverage applies"

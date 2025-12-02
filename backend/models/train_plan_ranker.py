@@ -505,7 +505,7 @@ with open(metadata_path, 'w') as f:
 print(f"✓ Training metadata saved to: {metadata_path}")
 
 print("\n" + "="*80)
-print("✅ MODEL TRAINING COMPLETED SUCCESSFULLY!")
+print(" MODEL TRAINING COMPLETED SUCCESSFULLY!")
 print("="*80)
 print(f"\nModel artifacts saved:")
 print(f"  1. plan_ranker.pkl - Trained model")

@@ -7,7 +7,12 @@
     "common_exclusions": "Day-care procedures may have lower coverage",
     "duration": "2-3 days hospitalization",
     "complications": "Post-operative infections, adhesions",
-    "network_preference": "Multi-specialty hospitals preferred"
+    "network_preference": "Multi-specialty hospitals preferred",
+    "hospital_variations": {
+      "apollo": "Premium pricing, robotic surgery available, 15-20% higher costs",
+      "fortis": "Standard corporate rates, good insurance tie-ups",
+      "aiims": "Heavily subsidized, 70-80% lower costs, longer wait times"
+    }
   },
   {
     "procedure": "Heart Surgery",
@@ -17,7 +22,13 @@
     "common_exclusions": "Pre-existing conditions may affect coverage",
     "duration": "5-10 days hospitalization",
     "complications": "High-risk procedure, ICU required",
-    "network_preference": "Cardiac specialty hospitals mandatory"
+    "network_preference": "Cardiac specialty hospitals mandatory",
+    "hospital_variations": {
+      "apollo": "Advanced cardiac care, international standards, 25-30% premium",
+      "medanta": "Specialized cardiac institute, cutting-edge technology, highest costs",
+      "narayana": "Value-based cardiac care, cost-effective without compromising quality",
+      "aiims": "Government rates, excellent care, very long waiting periods"
+    }
   },
   {
     "procedure": "Knee Surgery",
@@ -27,7 +38,12 @@
     "common_exclusions": "Sports injuries may have waiting periods",
     "duration": "3-5 days hospitalization",
     "complications": "Physiotherapy required post-surgery",
-    "network_preference": "Orthopedic specialists required"
+    "network_preference": "Orthopedic specialists required",
+    "hospital_variations": {
+      "apollo": "Robotic knee replacement available, premium implants, 20% higher",
+      "fortis": "Good orthopedic department, standard implants, competitive pricing",
+      "manipal": "Specialized orthopedic care, moderate premium over government rates"
+    }
   },
   {
     "procedure": "Cataract Surgery",

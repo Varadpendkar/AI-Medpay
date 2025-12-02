@@ -84,12 +84,13 @@ class ProcedureRAG:
         
         logger.info(f"Built FAISS index with {self.index.ntotal} procedures")
     
-    def search_procedure(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+    def search_procedure(self, query: str, hospital_chain: str = None, top_k: int = 3) -> List[Dict[str, Any]]:
         """
-        Search for relevant procedures based on query.
+        Search for relevant procedures based on query with optional hospital context.
         
         Args:
             query: Search query (e.g., "heart surgery cost estimation")
+            hospital_chain: Optional hospital chain (apollo, fortis, max, etc.)
             top_k: Number of top results to return
             
         Returns:
@@ -97,9 +98,15 @@ class ProcedureRAG:
         """
         if not self.index or not self.procedures:
             return []
+        
+        # Enhance query with hospital context if provided
+        enhanced_query = query
+        if hospital_chain:
+            hospital_context = self._get_hospital_context(hospital_chain)
+            enhanced_query = f"{query} {hospital_context}"
             
         # Encode query
-        query_embedding = self.model.encode([query])
+        query_embedding = self.model.encode([enhanced_query])
         faiss.normalize_L2(query_embedding)
         
         # Search
@@ -110,9 +117,73 @@ class ProcedureRAG:
             if idx < len(self.procedures):
                 result = self.procedures[idx].copy()
                 result['similarity_score'] = float(score)
+                
+                # Add hospital-specific adjustments
+                if hospital_chain:
+                    result = self._apply_hospital_adjustments(result, hospital_chain)
+                
                 results.append(result)
         
         return results
+    
+    def _get_hospital_context(self, hospital_chain: str) -> str:
+        """Get hospital-specific context for enhanced search."""
+        hospital_contexts = {
+            'apollo': 'premium multi-specialty hospital high-end facilities',
+            'fortis': 'corporate hospital chain quality healthcare',
+            'max': 'super speciality hospital advanced medical care',
+            'manipal': 'healthcare network comprehensive services',
+            'narayana': 'affordable quality healthcare value-based care',
+            'aster': 'international standards medical excellence',
+            'aiims': 'government hospital subsidized rates medical college',
+            'pgimer': 'government medical institute research hospital',
+            'medanta': 'multi-specialty hospital advanced technology',
+            'kokilaben': 'premium hospital luxury healthcare services'
+        }
+        return hospital_contexts.get(hospital_chain.lower(), '')
+    
+    def _apply_hospital_adjustments(self, procedure_data: Dict, hospital_chain: str) -> Dict:
+        """Apply hospital-specific cost and coverage adjustments."""
+        # Hospital tier pricing multipliers
+        hospital_multipliers = {
+            'apollo': 1.3,      # Premium pricing
+            'fortis': 1.25,     # Premium pricing
+            'max': 1.2,         # High-end pricing
+            'medanta': 1.35,    # Premium pricing
+            'kokilaben': 1.4,   # Luxury pricing
+            'manipal': 1.1,     # Moderate pricing
+            'aster': 1.15,      # Moderate-premium pricing
+            'narayana': 0.9,    # Value pricing
+            'aiims': 0.3,       # Government subsidized
+            'pgimer': 0.35,     # Government subsidized
+        }
+        
+        multiplier = hospital_multipliers.get(hospital_chain.lower(), 1.0)
+        
+        # Adjust cost range
+        cost_range = procedure_data.get('typical_cost_range', '100000-300000')
+        if '-' in cost_range:
+            low, high = cost_range.split('-')
+            low_adjusted = int(int(low) * multiplier)
+            high_adjusted = int(int(high) * multiplier)
+            procedure_data['hospital_adjusted_cost'] = f"{low_adjusted}-{high_adjusted}"
+        
+        # Add hospital-specific notes
+        hospital_notes = {
+            'apollo': 'Premium facilities, international standards, higher out-of-pocket',
+            'fortis': 'Corporate hospital with good insurance network coverage',
+            'max': 'Super-specialty care with comprehensive insurance acceptance',
+            'medanta': 'Advanced medical technology, premium pricing',
+            'kokilaben': 'Luxury healthcare services, highest cost tier',
+            'narayana': 'Value-based healthcare, cost-effective option',
+            'aiims': 'Government hospital, heavily subsidized, long waiting times',
+            'pgimer': 'Government medical institute, very low cost, limited private rooms'
+        }
+        
+        procedure_data['hospital_notes'] = hospital_notes.get(hospital_chain.lower(), '')
+        procedure_data['hospital_chain'] = hospital_chain.lower()
+        
+        return procedure_data
     
     def get_procedure_context(self, procedure_name: str) -> Dict[str, Any]:
         """

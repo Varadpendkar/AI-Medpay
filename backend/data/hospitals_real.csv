@@ -1,0 +1,31 @@
+hospital_id,name,state,city,pincode,bed_count,specialties,address,latitude,longitude,is_empanelled_public,created_at,hospital_chain,tier
+H001,Apollo Hospitals Chennai,Tamil Nadu,Chennai,600006,1000,"Cardiology,Oncology,Neurology,Orthopedics,Gastroenterology",21 Greams Lane Off Greams Road,13.0643,80.2685,yes,2025-11-29,apollo,tier1
+H002,Apollo Hospitals Hyderabad,Telangana,Hyderabad,500033,750,"Cardiology,Oncology,Neurology,Transplant Surgery",Film Nagar Jubilee Hills Road No 72,17.4239,78.4077,yes,2025-11-29,apollo,tier1
+H003,Apollo Hospitals Delhi,Delhi,New Delhi,110076,650,"Cardiology,Oncology,Neurology,Orthopedics",Sarita Vihar Delhi Mathura Road,28.5355,77.2910,yes,2025-11-29,apollo,tier1
+H004,Apollo Hospitals Bangalore,Karnataka,Bangalore,560054,500,"Cardiology,Oncology,Neurology,Pediatrics",154/11 Bannerghatta Road Opp IIM,12.9016,77.5712,yes,2025-11-29,apollo,tier1
+H005,Apollo Hospitals Mumbai,Maharashtra,Mumbai,400053,400,"Cardiology,Oncology,Gastroenterology,ENT",Plot No 13 Parsik Hill Road Sector 23,19.2056,72.9679,yes,2025-11-29,apollo,tier1
+H006,Fortis Hospital Mohali,Punjab,Mohali,160062,355,"Cardiology,Neurology,Orthopedics,Oncology",Sector 62 Phase VIII,30.7046,76.7179,yes,2025-11-29,fortis,tier1
+H007,Fortis Memorial Research Institute Gurgaon,Haryana,Gurgaon,122002,1000,"Cardiology,Oncology,Neurology,Transplant Surgery",Sector 44 Opposite HUDA City Centre,28.4595,77.0266,yes,2025-11-29,fortis,tier1
+H008,Fortis Hospital Bangalore,Karnataka,Bangalore,560076,400,"Cardiology,Oncology,Neurology,Orthopedics",14 Cunningham Road,12.9716,77.5946,yes,2025-11-29,fortis,tier1
+H009,Fortis Hospital Mumbai,Maharashtra,Mumbai,400070,350,"Cardiology,Oncology,Gastroenterology,Nephrology",Mulund Goregaon Link Road,19.1738,72.9573,yes,2025-11-29,fortis,tier1
+H010,Max Super Speciality Hospital Saket,Delhi,New Delhi,110017,500,"Cardiology,Oncology,Neurology,Orthopedics",1-2 Press Enclave Road Saket,28.5245,77.2066,yes,2025-11-29,max,tier1
+H011,Max Hospital Gurgaon,Haryana,Gurgaon,122001,350,"Cardiology,Oncology,Neurology,Gastroenterology",Block B Sushant Lok Phase I,28.4701,77.0648,yes,2025-11-29,max,tier1
+H012,Max Hospital Mohali,Punjab,Mohali,160055,200,"Cardiology,Neurology,Orthopedics,Pediatrics",Civil Hospital Complex Phase 6,30.7333,76.7794,yes,2025-11-29,max,tier2
+H013,Manipal Hospital Bangalore,Karnataka,Bangalore,560017,650,"Cardiology,Oncology,Neurology,Gastroenterology",98 Hal Airport Road,12.9699,77.6205,yes,2025-11-29,manipal,tier1
+H014,Manipal Hospital Goa,Goa,Panaji,403001,300,"Cardiology,Neurology,Orthopedics,General Medicine",Dona Paula,15.4589,73.8078,yes,2025-11-29,manipal,tier2
+H015,Narayana Health Bangalore,Karnataka,Bangalore,560099,1400,"Cardiology,Oncology,Neurology,Pediatrics",258/A Bommasandra Industrial Area,12.8056,77.6803,yes,2025-11-29,narayana,tier1
+H016,Narayana Health Kolkata,West Bengal,Kolkata,700156,400,"Cardiology,Oncology,Neurology,Nephrology",120/1 Andul Road,22.6203,88.3370,yes,2025-11-29,narayana,tier1
+H017,Aster CMI Hospital Bangalore,Karnataka,Bangalore,560092,500,"Cardiology,Oncology,Neurology,Gastroenterology",No 43/2 Hebbal Kempapura Main Road,13.0358,77.6044,yes,2025-11-29,aster,tier1
+H018,Aster Medcity Kochi,Kerala,Kochi,682027,670,"Cardiology,Oncology,Neurology,Transplant Surgery",Kuttisahib Road Cheranelloor,9.9312,76.2673,yes,2025-11-29,aster,tier1
+H019,AIIMS New Delhi,Delhi,New Delhi,110029,2478,"Cardiology,Oncology,Neurology,All Specialties",Sri Aurobindo Marg Ansari Nagar,28.5672,77.2100,yes,2025-11-29,aiims,government
+H020,AIIMS Jodhpur,Rajasthan,Jodhpur,342005,750,"Cardiology,Neurology,Orthopedics,General Medicine",Basni Phase 2,26.2389,73.0243,yes,2025-11-29,aiims,government
+H021,PGIMER Chandigarh,Punjab,Chandigarh,160012,1900,"Cardiology,Oncology,Neurology,All Specialties",Sector 12,30.7614,76.7721,yes,2025-11-29,pgimer,government
+H022,Medanta The Medicity Gurgaon,Haryana,Gurgaon,122001,1250,"Cardiology,Oncology,Neurology,Transplant Surgery",Sector 38,28.4403,77.0428,yes,2025-11-29,medanta,tier1
+H023,Kokilaben Dhirubhai Ambani Hospital Mumbai,Maharashtra,Mumbai,400053,750,"Cardiology,Oncology,Neurology,Gastroenterology",Rao Saheb Achutrao Patwardhan Marg,19.1136,72.8697,yes,2025-11-29,kokilaben,tier1
+H024,Tata Memorial Hospital Mumbai,Maharashtra,Mumbai,400012,629,"Oncology,Radiation Oncology,Surgical Oncology",Dr Ernest Borges Marg Parel,19.0176,72.8562,yes,2025-11-29,tata,government
+H025,King George Medical University Lucknow,Uttar Pradesh,Lucknow,226003,1500,"Cardiology,Neurology,Gastroenterology,All Specialties",Chowk Lucknow,26.8467,80.9462,yes,2025-11-29,kgmu,government
+H026,Apollo Hospitals Kolkata,West Bengal,Kolkata,700054,500,"Cardiology,Oncology,Neurology,Gastroenterology",58 Canal Circular Road,22.5726,88.3639,yes,2025-11-29,apollo,tier1
+H027,Fortis Hospital Noida,Uttar Pradesh,Noida,201301,400,"Cardiology,Oncology,Neurology,Orthopedics",B-22 Sector 62,28.6139,77.3910,yes,2025-11-29,fortis,tier1
+H028,Max Hospital Patparganj,Delhi,New Delhi,110092,300,"Cardiology,Neurology,Orthopedics,Pediatrics",108A IP Extension Patparganj,28.6517,77.2824,yes,2025-11-29,max,tier2
+H029,Manipal Hospital Delhi,Delhi,New Delhi,110075,"Cardiology,Neurology,Gastroenterology,Orthopedics",Palam Vihar Extension Sector 6,28.5355,77.0910,yes,2025-11-29,manipal,tier2
+H030,Aster RV Hospital Bangalore,Karnataka,Bangalore,560078,250,"Cardiology,Neurology,Orthopedics,Gastroenterology",CA-37 24th Main JP Nagar 1st Phase,12.9081,77.5910,yes,2025-11-29,aster,tier2
