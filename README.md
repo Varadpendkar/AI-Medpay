@@ -686,7 +686,7 @@ Varad Pendkar - Full Stack Development & AI/ML Integration
 
 For questions or issues:
 
-- **Email**: support@aimedpay.com
+- **Email**: varadpendkar@gmail.com
 - **Chatbot**: Available on all pages (purple bubble)
 - **GitHub Issues**: [Repository Issues](https://github.com/Varadpendkar/Aimedpay.github.io/issues)
 
