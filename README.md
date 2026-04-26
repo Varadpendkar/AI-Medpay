@@ -4,11 +4,17 @@ An AI-powered health insurance platform built with Flask, PostgreSQL, LightGBM, 
 
 ---
 
+## Live Demo
+
+![AI-MedPay Demo](Assets/demo.gif)
+
+---
+
 ## Application Screenshots
 
 ### Home Page
 
-![Home Page](assets/Home_page.png)
+![Home Page](Assets/Home_page.png)
 
 The landing page presents a live AI recommendation card alongside platform statistics: 500+ indexed insurance plans, 95% model accuracy, and an average user saving of Rs. 25,000.
 
@@ -16,7 +22,7 @@ The landing page presents a live AI recommendation card alongside platform stati
 
 ### Get a Quote — User Input Form
 
-![Get Quote](assets/Get_Quote.png)
+![Get Quote](Assets/Get_Quote.png)
 
 A four-step guided form collects user demographics (age, income, dependents, region, city, occupation type, plan type) and pre-existing conditions. A live profile panel on the right displays recommendation confidence in real time — reaching 95% as fields are completed.
 
@@ -24,7 +30,7 @@ A four-step guided form collects user demographics (age, income, dependents, reg
 
 ### Insurance Quote Results
 
-![Quote Results](assets/Final_output.png)
+![Quote Results](Assets/Final_output.png)
 
 The output page ranks matching insurance plans using the LightGBM model. Each card shows premium, deductible, network hospital count, rank, and a plain-language explanation of why the plan was recommended (e.g., "Excellent value: Rs. 191 coverage per Rs. 1 premium").
 
@@ -144,6 +150,7 @@ AI-Medpay/
 ├── scripts/index_docs.py
 │
 └── assets/
+    ├── demo.gif
     ├── Home_page.png
     ├── Get_Quote.png
     └── Final_output.png
